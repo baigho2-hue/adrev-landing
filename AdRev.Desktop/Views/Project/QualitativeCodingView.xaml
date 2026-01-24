@@ -1,0 +1,116 @@
+<UserControl x:Class="AdRev.Desktop.Views.Project.QualitativeCodingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AdRev.Desktop"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/> <!-- Sources List -->
+            <ColumnDefinition Width="*"/>   <!-- Editor -->
+            <ColumnDefinition x:Name="ColQualMap" Width="0"/> <!-- Map column, hidden by default -->
+            <ColumnDefinition Width="280"/> <!-- Codebook -->
+        </Grid.ColumnDefinitions>
+
+         <!-- LEFT: Project Explorer -->
+        <Border Background="#F9F9F9" BorderBrush="#EEE" BorderThickness="0,0,1,0" Padding="15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0">
+                    <TextBlock Text="Explorateur" FontWeight="Bold" Margin="0,0,0,15" FontSize="14" Foreground="#333"/>
+                    
+                    <Expander Header="Cas &amp; Classifications" IsExpanded="False" Margin="0,0,0,10" Background="Transparent" BorderThickness="0">
+                        <StackPanel Margin="10,5,0,0">
+                            <Button Content="Noeuds de Cas (Cases)" HorizontalAlignment="Left" Background="Transparent" BorderThickness="0" FontSize="13" Margin="0,2" Foreground="#444" Cursor="Hand"/>
+                            <Button Content="Feuilles de Classification" HorizontalAlignment="Left" Background="Transparent" BorderThickness="0" FontSize="13" Margin="0,2" Foreground="#444" Cursor="Hand"/>
+                        </StackPanel>
+                    </Expander>
+
+                    <Separator Background="#E0E0E0" Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Sources" FontWeight="SemiBold" Margin="0,0,0,8" Foreground="#555"/>
+                    <UniformGrid Columns="2" Margin="0,0,0,10">
+                        <Button x:Name="BtnImportFiles" Click="ImportFiles_Click" Content="+ Fichiers" Margin="0,0,5,0"/>
+                        <Button x:Name="BtnImportFolder" Click="ImportFolder_Click" Content="+ Dossier" Margin="5,0,0,0"/>
+                    </UniformGrid>
+                    
+                    <TextBlock Text="Saisie Rapide" FontWeight="SemiBold" Margin="0,10,0,8" Foreground="#555"/>
+                    <Button x:Name="BtnNewInterview" Click="NewInterview_Click" Content="Entretien Individuel" HorizontalAlignment="Left" Background="Transparent" BorderThickness="0" FontSize="13" Margin="0,2" Foreground="#444" Cursor="Hand"/>
+                    <Button x:Name="BtnNewFocusGroup" Click="NewFocusGroup_Click" Content="Focus Group" HorizontalAlignment="Left" Background="Transparent" BorderThickness="0" FontSize="13" Margin="0,2" Foreground="#444" Cursor="Hand"/>
+                </StackPanel>
+                
+                <ListBox x:Name="SourceFilesList" Grid.Row="1" Background="Transparent" BorderThickness="0" SelectionChanged="SourceFilesList_SelectionChanged">
+                    <!-- Les fichiers importés apparaîtront ici -->
+                </ListBox>
+            </Grid>
+        </Border>
+
+        <!-- CENTER: Coding Editor -->
+        <Grid Grid.Column="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/> <!-- Media Controls -->
+            </Grid.RowDefinitions>
+            
+            <Border BorderBrush="#EEE" BorderThickness="0,0,0,1" Padding="10">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="CurrentFileNameTextBlock" Text="Aucun fichier" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,20,0"/>
+                    <TextBlock x:Name="CodingHintTextBlock" Text="Sélectionnez du texte et cliquez sur un code à droite pour encoder." Foreground="#444" VerticalAlignment="Center" FontStyle="Italic"/>
+                </StackPanel>
+            </Border>
+
+            <Grid Grid.Row="1">
+                <RichTextBox x:Name="CodingRichTextBox" BorderThickness="0" Padding="30" FontSize="16" FontFamily="Calibri">
+                    <FlowDocument>
+                        <Paragraph>Importez un fichier texte ou Word pour commencer le codage qualitatif.</Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <Image x:Name="CodingImageHost" Stretch="Uniform" Visibility="Collapsed" Margin="20"/>
+                <Grid x:Name="CodingVideoHost" Visibility="Collapsed" Background="Black">
+                    <MediaElement x:Name="CodingMediaElement" LoadedBehavior="Manual" Stretch="Uniform"/>
+                </Grid>
+            </Grid>
+
+            <Border x:Name="MediaControlsPanel" Grid.Row="2" Background="#F1F1F1" Padding="10" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Play" Click="MediaPlay_Click" Width="60" Margin="5,0"/>
+                    <Button Content="Pause" Click="MediaPause_Click" Width="60" Margin="5,0"/>
+                    <Button Content="Stop" Click="MediaStop_Click" Width="60" Margin="5,0"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- RIGHT: Codebook -->
+        <Border Grid.Column="3" Background="#F9F9F9" BorderBrush="#EEE" BorderThickness="1,0,0,0" Padding="15">
+            <StackPanel>
+                <TextBlock Text="Codes &amp; Thèmes" FontWeight="Bold" Margin="0,0,0,15"/>
+                
+                <StackPanel x:Name="CodeListPanel">
+                    <!-- Les codes et thèmes apparaîtront ici -->
+                </StackPanel>
+
+                <Border x:Name="NewCodeInputPanel" Visibility="Collapsed" Background="White" BorderBrush="#DDD" BorderThickness="1" CornerRadius="5" Padding="10" Margin="0,15,0,0">
+                    <StackPanel>
+                        <TextBlock Text="Thème :" FontSize="12" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="NewCodeThemeComboBox" IsEditable="True" Margin="0,0,0,10" Height="30"/>
+                        <TextBlock Text="Code :" FontSize="12" Margin="0,0,0,5"/>
+                        <TextBox x:Name="NewCodeNameTextBox" Margin="0,0,0,10" Height="30"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button Content="Annuler" Click="CancelNewCode_Click" Background="Transparent" Margin="0,0,5,0"/>
+                            <Button Content="Ajouter" Click="ConfirmNewCode_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                
+                <Button x:Name="BtnNewCode" Content="+ Nouveau Code" Click="ShowNewCodePanel_Click" Margin="0,20,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

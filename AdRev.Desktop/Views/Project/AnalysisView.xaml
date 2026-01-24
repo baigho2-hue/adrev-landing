@@ -1,0 +1,137 @@
+<UserControl x:Class="AdRev.Desktop.Views.Project.AnalysisView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AdRev.Desktop"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200">
+    <TabControl BorderThickness="0" Background="Transparent" Padding="0">
+        <!-- QUANTITATIVE ANALYSIS -->
+        <TabItem Header="Analyse Quantitative">
+            <Grid Background="#F5F7F8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Sidebar: Plan d'Analyse -->
+                <Grid Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Border BorderBrush="#E0E0E0" BorderThickness="0,0,1,0" Grid.RowSpan="4"/>
+
+                    <StackPanel Grid.Row="0">
+                        <Grid Margin="15,15,15,10">
+                             <TextBlock Text="Plan d'Analyse" FontSize="16" FontWeight="Bold" Foreground="{StaticResource PrimaryBrush}" VerticalAlignment="Center"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" Margin="20,0,20,10">
+                        <TextBlock Text="Source de Données" Style="{StaticResource LabelStyle}"/>
+                        <Button Click="ImportData_Click" Height="35" Margin="0,5,0,5" Background="White" BorderBrush="#DDD" BorderThickness="1" Cursor="Hand">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xE8E5;" FontFamily="Segoe MDL2 Assets" Margin="0,0,8,0" VerticalAlignment="Center" Foreground="{StaticResource PrimaryBrush}" FontSize="14"/>
+                                <TextBlock Text="Importer Fichier" VerticalAlignment="Center" FontWeight="SemiBold" Foreground="#444"/>
+                            </StackPanel>
+                        </Button>
+                        <TextBlock x:Name="ActiveDataSourceText" Text="Aucune donnée chargée" FontSize="11" Foreground="#888" TextTrimming="CharacterEllipsis"/>
+                    </StackPanel>
+
+                    <Expander Grid.Row="2" Style="{StaticResource ScientificExpanderStyle}" Header="Plan d'Analyse Défini" Tag="#EDE7F6" Foreground="#4527A0" Margin="15,0,15,10" IsExpanded="True">
+                         <ScrollViewer VerticalScrollBarVisibility="Auto">
+                             <ItemsControl x:Name="PlanItemsList">
+                                 <!-- DataTemplate from original code -->
+                             </ItemsControl>
+                         </ScrollViewer>
+                    </Expander>
+
+                    <Expander Grid.Row="3" Header="Ajouter une Analyse" Style="{StaticResource ScientificExpanderStyle}" Tag="#F5F5F5">
+                        <Border Padding="15">
+                            <StackPanel>
+                                <TextBlock Text="Titre" Style="{StaticResource LabelStyle}"/>
+                                <TextBox x:Name="PlanTitleBox" Height="30" Margin="0,0,0,10"/>
+                                <TextBlock Text="Test" Style="{StaticResource LabelStyle}"/>
+                                <ComboBox x:Name="PlanTestTypeCombo" Height="30" Margin="0,0,0,10"/>
+                                <Button Content="Ajouter" Click="AddToPlan_Click" Height="35"/>
+                            </StackPanel>
+                        </Border>
+                    </Expander>
+                </Grid>
+                
+                <!-- Main Preview Area -->
+                <Grid Grid.Column="1" Background="#F3F4F6">
+                    <FlowDocumentScrollViewer x:Name="AnalysisDocViewer" VerticalScrollBarVisibility="Auto">
+                        <FlowDocument x:Name="AnalysisDoc" PagePadding="60" Background="White" ColumnWidth="2000" FontFamily="Times New Roman" FontSize="12">
+                            <Paragraph TextAlignment="Center" Margin="0,0,0,30">
+                                <Run Text="Rapport d'Analyse Statistique" FontSize="20" FontWeight="Bold" Foreground="#2c3e50"/>
+                            </Paragraph>
+                            <Paragraph>
+                                <Run Text="Effectuez une analyse pour voir les résultats." FontStyle="Italic" Foreground="Gray"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </FlowDocumentScrollViewer>
+                </Grid>
+            </Grid>
+        </TabItem>
+
+        <!-- QUALITATIVE ANALYSIS -->
+        <TabItem Header="Analyse Qualitative">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Tableau de Bord Analyse Qualitative" FontSize="24" FontWeight="Bold" Foreground="{StaticResource PrimaryBrush}" Margin="0,0,0,20"/>
+
+                    <Grid Grid.Row="1" Margin="0,0,0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Border Style="{StaticResource CardStyle}" Margin="0,0,10,0">
+                            <StackPanel>
+                                <TextBlock Text="0" FontSize="32" FontWeight="Bold" Foreground="{StaticResource SecondaryBrush}" x:Name="TxtVerbatimCount"/>
+                                <TextBlock Text="Verbatims Analysés" Foreground="#888"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Column="1" Style="{StaticResource CardStyle}" Margin="5,0,5,0">
+                            <StackPanel>
+                                <TextBlock Text="0" FontSize="32" FontWeight="Bold" Foreground="#E65100" x:Name="TxtCodeCount"/>
+                                <TextBlock Text="Codes" Foreground="#888"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Style="{StaticResource CardStyle}" Height="300" Margin="0,0,15,0">
+                             <Canvas x:Name="WordCloudCanvas">
+                                 <TextBlock Text="Initialisation du nuage..." Canvas.Left="20" Canvas.Top="20"/>
+                             </Canvas>
+                        </Border>
+                        <Border Grid.Column="1" Style="{StaticResource CardStyle}">
+                            <StackPanel>
+                                <TextBlock Text="Fréquence des Codes" FontWeight="Bold" Margin="0,0,0,10"/>
+                                <ListBox x:Name="CodeFreqListBox" BorderThickness="0"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+    </TabControl>
+</UserControl>

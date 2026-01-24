@@ -1,0 +1,34 @@
+﻿<Window x:Class="AdRev.Desktop.MethodologyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdRev.Desktop"
+        mc:Ignorable="d"
+        Title="MethodologyWindow" Height="450" Width="800">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Contrôle de la méthodologie"
+                   FontSize="20"
+                   Margin="0,0,0,20" />
+
+            <TextBlock Text="Titre du protocole :" />
+            <TextBlock x:Name="TitleStatusTextBlock" Margin="0,0,0,10" />
+
+            <TextBlock Text="Question de recherche :" />
+            <TextBlock x:Name="ResearchQuestionStatusTextBlock" Margin="0,0,0,10" />
+
+            <TextBlock Text="Objectif général :" />
+            <TextBlock x:Name="GeneralObjectiveStatusTextBlock" Margin="0,0,0,10" />
+
+            <TextBlock Text="Objectifs spécifiques :" />
+            <TextBlock x:Name="SpecificObjectivesStatusTextBlock" Margin="0,0,0,10" />
+
+            <TextBlock x:Name="OverallStatusTextBlock"
+                   Margin="0,20,0,0"
+                   FontWeight="Bold"
+                   FontSize="16" />
+        </StackPanel>
+    </Grid>
+
+</Window>

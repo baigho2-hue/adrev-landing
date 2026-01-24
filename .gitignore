@@ -1,0 +1,36 @@
+# .gitignore pour AdRev (WPF / .NET)
+
+## Dossiers de compilation
+bin/
+obj/
+publish/
+
+## Fichiers de configuration utilisateur
+*.user
+*.userosscache
+*.sln.docstates
+
+## Fichiers du système d'exploitation
+.DS_Store
+Thumbs.db
+
+## Fichiers Visual Studio & IDE
+.vs/
+.idea/
+*.suo
+*.user
+*.sln.docstates
+
+## Fichiers de licence et temporaires
+*.log
+*.tmp
+LicenseData
+
+## Gros fichiers binaires (A héberger via GitHub Releases)
+Releases/
+*.msi
+*.exe
+*.dll
+*.pdb
+AdRev.Desktop/Obfuscated/
+AdRev.Setup/AdRevSetup.msi

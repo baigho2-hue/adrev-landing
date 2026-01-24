@@ -1,0 +1,103 @@
+<UserControl x:Class="AdRev.Desktop.Views.Project.FinalReportView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AdRev.Desktop"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200">
+    <Grid Background="#F5F7F8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Border Grid.Row="0" Background="White" BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="25">
+            <StackPanel>
+                <TextBlock Text="Génération du Rapport d'Étude" FontSize="22" FontWeight="Bold" Foreground="#2C3E50"/>
+                <TextBlock Text="Finalisez votre travail en exportant le rapport complet au format Word." Foreground="#666" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/> <!-- Main Editor -->
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="1.2*"/> <!-- Assistant Panel -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Left: Report Configuration & Content -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="0,0,10,0">
+                <StackPanel>
+                    <!-- Configuration Card -->
+                    <Border Style="{StaticResource CardStyle}" Margin="0,0,0,20">
+                        <StackPanel>
+                            <TextBlock Text="Structure Académique &amp; Logique Scientifique" FontWeight="Bold" FontSize="16" Margin="0,0,0,15" Foreground="{StaticResource PrimaryBrush}"/>
+                            
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <StackPanel Margin="0,0,10,0">
+                                    <TextBlock Text="Niveau de Recherche" Style="{StaticResource LabelStyle}"/>
+                                    <ComboBox x:Name="AcademicLevelCombo" Height="35" SelectionChanged="AcademicLevelCombo_SelectionChanged" Cursor="Hand"/>
+                                    
+                                    <StackPanel x:Name="TargetJournalPanel" Margin="0,10,0,0" Visibility="Collapsed">
+                                        <TextBlock Text="Revue Cible (Pour Article)" Style="{StaticResource LabelStyle}" Foreground="#1976D2"/>
+                                        <ComboBox x:Name="TargetJournalCombo" Height="35" DisplayMemberPath="JournalName" SelectionChanged="TargetJournalCombo_SelectionChanged" Cursor="Hand"/>
+                                        <TextBlock Text="Les critères (mots-clés, structure) seront appliqués." FontSize="10" Foreground="#78909C" Margin="0,2,0,0" FontStyle="Italic"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                
+                                <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                                    <TextBlock Text="Statut de Rédaction" Style="{StaticResource LabelStyle}"/>
+                                    <TextBlock x:Name="ReportProjectStatusText" Text="Phase de Finalisation" Foreground="#2E7D32" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,8,0,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Conclusion Card -->
+                    <Border Style="{StaticResource CardStyle}" Margin="0,0,0,20">
+                        <StackPanel>
+                            <TextBlock Text="Conclusion et Recommandations (Logique Scientifique)" FontWeight="Bold" FontSize="16" Margin="0,0,0,10" Foreground="#1565C0"/>
+                            <TextBlock Text="Résumez l'apport de l'étude par rapport aux objectifs et proposez des recommandations concrètes." FontSize="11" Foreground="#777" Margin="0,0,0,10" FontStyle="Italic"/>
+                            <TextBox x:Name="TxtFinalConclusion" MinHeight="250" TextWrapping="Wrap" AcceptsReturn="True" 
+                                     FontSize="14" FontFamily="Times New Roman" Padding="15" BorderBrush="#BBDEFB"
+                                     GotFocus="ReportBox_GotFocus"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Export Card -->
+                    <Border Style="{StaticResource CardStyle}" Background="#E3F2FD" BorderBrush="#BBDEFB">
+                        <StackPanel>
+                            <TextBlock Text="Génération du Document Final" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+                            <TextBlock Text="Le rapport Word inclura les sections Protocole, Résultats, Discussion et Conclusion selon les normes académiques." Foreground="#555" Margin="0,0,0,20" TextWrapping="Wrap"/>
+                            <Button x:Name="BtnExportFinalReport" Content="GÉNÉRER LE RAPPORT COMPLET (.DOCX)" Click="BtnExportFinalReport_Click" 
+                                    Style="{StaticResource ModernButtonStyle}" Height="55" FontSize="14" FontWeight="Bold" Cursor="Hand"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Right: Scientific Assistant Panel -->
+            <Border Grid.Column="2" Background="White" CornerRadius="12" BorderBrush="#E0E0E0" BorderThickness="1" Padding="20">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                        <TextBlock Text="🔬" FontSize="20" Margin="0,0,10,0"/>
+                        <TextBlock Text="ASSISTANT SCIENTIFIQUE" FontWeight="Bold" Foreground="#37474F" VerticalAlignment="Center" FontSize="12"/>
+                    </StackPanel>
+
+                    <Border Background="#FFF8E1" CornerRadius="8" Padding="15" Margin="0,0,0,20" BorderBrush="#FFE082" BorderThickness="1">
+                        <StackPanel>
+                            <TextBlock x:Name="TxtWritingAssistantTitle" Text="Sélectionnez une section" FontWeight="Bold" Foreground="#F57C00" Margin="0,0,0,8" FontSize="11"/>
+                            <TextBlock x:Name="TxtWritingAssistantContent" Text="Cliquez dans une zone de texte pour recevoir des conseils de rédaction et de logique scientifique." TextWrapping="Wrap" FontSize="11" Foreground="#5D4037" LineHeight="18"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,16 @@
+  Identification des projets à restaurer...
+  Tous les projets sont à jour pour la restauration.
+  AdRev.Domain -> C:\Users\HP\Documents\AdRev\AdRev.Domain\bin\Debug\net8.0-windows\AdRev.Domain.dll
+  AdRev.Core -> C:\Users\HP\Documents\AdRev\AdRev.Core\bin\Debug\net8.0-windows\AdRev.Core.dll
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2338,27): warning CS8600: Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_ldyzee3r_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2338,27): warning CS8600: Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+  AdRev.Desktop -> C:\Users\HP\Documents\AdRev\AdRev.Desktop\bin\Debug\net8.0-windows\win-x64\AdRev.Desktop.dll
+
+La génération a réussi.
+
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2338,27): warning CS8600: Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_ldyzee3r_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2338,27): warning CS8600: Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+    2 Avertissement(s)
+    0 Erreur(s)
+
+Temps écoulé 00:00:04.38

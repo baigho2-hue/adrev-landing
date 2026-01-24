@@ -1,0 +1,56 @@
+  Identification des projets à restaurer...
+  Tous les projets sont à jour pour la restauration.
+  AdRev.Domain -> C:\Users\HP\Documents\AdRev\AdRev.Domain\bin\Debug\net8.0-windows\AdRev.Domain.dll
+C:\Users\HP\Documents\AdRev\AdRev.Core\Protocols\ProtocolService.cs(18,88): warning CS8625: Impossible de convertir un littéral ayant une valeur null en type référence non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Core\AdRev.Core.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Core\Common\ResearchProjectService.cs(85,24): warning CS8603: Existence possible d'un retour de référence null. [C:\Users\HP\Documents\AdRev\AdRev.Core\AdRev.Core.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Core\Common\ResearchProjectService.cs(97,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Core\AdRev.Core.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Core\Common\ResearchProjectService.cs(177,49): warning CS8600: Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Core\AdRev.Core.csproj]
+  AdRev.Core -> C:\Users\HP\Documents\AdRev\AdRev.Core\bin\Debug\net8.0-windows\AdRev.Core.dll
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1480,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1482,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1518,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1525,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1527,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1771,38): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1773,35): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2041,46): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2336,27): warning CS8600: Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1480,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1482,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1518,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1525,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1527,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1771,38): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1773,35): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2041,46): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2336,27): warning CS8600: Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+  AdRev.Desktop -> C:\Users\HP\Documents\AdRev\AdRev.Desktop\bin\Debug\net8.0-windows\win-x64\AdRev.Desktop.dll
+
+La génération a réussi.
+
+C:\Users\HP\Documents\AdRev\AdRev.Core\Protocols\ProtocolService.cs(18,88): warning CS8625: Impossible de convertir un littéral ayant une valeur null en type référence non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Core\AdRev.Core.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Core\Common\ResearchProjectService.cs(85,24): warning CS8603: Existence possible d'un retour de référence null. [C:\Users\HP\Documents\AdRev\AdRev.Core\AdRev.Core.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Core\Common\ResearchProjectService.cs(97,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Core\AdRev.Core.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Core\Common\ResearchProjectService.cs(177,49): warning CS8600: Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Core\AdRev.Core.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1480,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1482,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1518,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1525,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1527,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1771,38): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1773,35): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2041,46): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2336,27): warning CS8600: Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_wkoerp3l_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1480,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1482,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1518,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1525,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1527,17): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1771,38): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(1773,35): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2041,46): warning CS8602: Déréférencement d'une éventuelle référence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(2336,27): warning CS8600: Conversion de littéral ayant une valeur null ou d'une éventuelle valeur null en type non-nullable. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+    22 Avertissement(s)
+    0 Erreur(s)
+
+Temps écoulé 00:00:04.04

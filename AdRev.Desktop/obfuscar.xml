@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<Obfuscator>
+  <Var name="InPath" value="bin\Release\net8.0-windows\win-x64" />
+  <Var name="OutPath" value="Obfuscated" />
+  <Var name="KeepPublicApi" value="true" />
+  <Var name="HidePrivateApi" value="true" />
+  <Var name="RenameProperties" value="false" /> <!-- Critical for WPF Bindings -->
+  <Var name="RenameEvents" value="false" />     <!-- Critical for WPF Events -->
+  <Var name="RenameFields" value="true" />
+  <Var name="UseUnicodeNames" value="true" />
+  <Var name="HideStrings" value="true" />
+
+  <Module file="$(InPath)\AdRev.Desktop.dll" />
+  <Module file="$(InPath)\AdRev.Core.dll" />
+  <Module file="$(InPath)\AdRev.Domain.dll" />
+</Obfuscator>

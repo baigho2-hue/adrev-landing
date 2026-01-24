@@ -1,0 +1,101 @@
+<UserControl x:Class="AdRev.Desktop.Views.Project.DiscussionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AdRev.Desktop"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200">
+    <Grid Background="#F4F7F9">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Header -->
+            <RowDefinition Height="*"/>    <!-- Main Studio -->
+        </Grid.RowDefinitions>
+
+        <Border Background="White" Padding="25,12" BorderBrush="#E0E0E0" BorderThickness="0,0,0,1">
+            <Grid>
+                 <StackPanel>
+                    <TextBlock Text="STUDIO D'INTERPRÉTATION SCIENTIFIQUE" FontSize="18" FontWeight="ExtraBold" Foreground="#1A237E"/>
+                    <TextBlock Text="Édition de la discussion et gestion bibliographique" FontSize="10" Foreground="#78909C"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button Click="GenerateSmartDiscussion_Click" Content="✨ Structure IA" Margin="0,0,10,0" Padding="15,5"/>
+                    <Button Click="SaveDiscussion_Click" Content="💾 Sauvegarder" Padding="15,5" Background="{StaticResource PrimaryBrush}" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="1" Margin="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.5*"/> <!-- Editor -->
+                <ColumnDefinition Width="1.5*"/> <!-- Library & Support -->
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <TabControl x:Name="DiscussionTabControl" BorderThickness="0" Background="Transparent">
+                    <TabItem Header="Discussion Principale">
+                        <TextBox x:Name="TxtDiscussionMain" AcceptsReturn="True" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto" Padding="20" FontSize="14" FontFamily="Georgia"/>
+                    </TabItem>
+                    <TabItem Header="Forces &amp; Limites">
+                        <TextBox x:Name="TxtDiscussionLimits" AcceptsReturn="True" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto" Padding="20" FontSize="14" FontFamily="Georgia"/>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+
+            <Grid Grid.Column="1" Margin="15,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="1.2*"/>
+                </Grid.RowDefinitions>
+
+                <Border Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                    <StackPanel>
+                        <TextBlock Text="📚 Ajouter une Citation" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="TxtDoiSearch" Tag="DOI ou Titre..." Height="30" VerticalContentAlignment="Center"/>
+                            <Button Grid.Column="1" Content="+" Click="QuickAddCitation_Click" Width="30" Margin="5,0,0,0"/>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+                     <DockPanel>
+                        <TextBlock Text="📖 Bibliographie du Projet" FontWeight="Bold" DockPanel.Dock="Top" Margin="0,0,0,10"/>
+                        <ListBox x:Name="CitationsListBox" BorderThickness="0">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="#EEE" BorderThickness="0,0,0,1" Padding="0,5">
+                                        <Grid>
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Title}" FontWeight="SemiBold" TextTrimming="CharacterEllipsis"/>
+                                                <TextBlock Text="{Binding Authors}" FontSize="10" Foreground="Gray"/>
+                                            </StackPanel>
+                                            <Button Content="Insérer" Click="InsertCitation_Click" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10" Tag="{Binding}"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </DockPanel>
+                </Border>
+
+                <Border Grid.Row="2" Background="#E3F2FD" CornerRadius="8" Padding="15">
+                    <StackPanel>
+                        <TextBlock Text="💡 Aide à la Rédaction" FontWeight="Bold" Foreground="#1976D2" Margin="0,0,0,10"/>
+                        <TextBlock x:Name="TxtDiscussionExpertTips" TextWrapping="Wrap" FontSize="12" Foreground="#444"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
