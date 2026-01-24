@@ -1,4 +1,4 @@
-# AdRev - Science Suite 2.0 🔬🚀
+# AdRev - Science Suite 1.0 🔬🚀
 
 **AdRev (Advanced Research Visibility)** est la première plateforme intégrée de recherche médicale conçue pour transformer le chaos des données brutes en publications de rang mondial.
 
