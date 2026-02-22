@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../AdRev.Core/AdRev.Core.csproj" />
+  <Project Path="../AdRev.Domain/AdRev.Domain.csproj" />
+  <Project Path="AdRev.Desktop.csproj" />
+</Solution>

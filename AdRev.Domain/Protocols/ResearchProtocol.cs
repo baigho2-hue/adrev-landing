@@ -75,10 +75,13 @@ public class ResearchProtocol
     // Gestion Bibliographique
     public ReferenceStyle ReferenceStyle { get; set; } = ReferenceStyle.Vancouver;
     public List<Citation> Citations { get; set; } = new List<Citation>();
+<<<<<<< HEAD
     
     // Ressources (Tableaux / Figures)
     public List<ProtocolResource> Resources { get; set; } = new List<ProtocolResource>();
 
     // Annexes (Questionnaire, Guide d'entretien, Consentement...)
     public List<ProtocolAppendix> Appendices { get; set; } = new List<ProtocolAppendix>();
+=======
+>>>>>>> origin/main
 }

@@ -52,6 +52,7 @@ namespace AdRev.Desktop
 
         private void BtnAddVariable_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             // Trouver le prochain numéro disponible Q1, Q2...
             int nextNum = 1;
             var qVars = Variables.Where(v => v.Name.StartsWith("Q") && int.TryParse(v.Name.Substring(1), out _))
@@ -68,6 +69,13 @@ namespace AdRev.Desktop
             {
                 Prompt = "Nouvelle variable à définir",
                 Name = $"Q{nextNum}",
+=======
+            // Créer une nouvelle variable par défaut
+            var newVar = new StudyVariable
+            {
+                Prompt = "Nouvelle Question",
+                Name = $"VAR_{Variables.Count + 1}",
+>>>>>>> origin/main
                 Type = VariableType.Text,
                 GroupName = "SECTION 1" // Groupe par défaut
             };
@@ -119,7 +127,10 @@ namespace AdRev.Desktop
             {
                 _currentVariable = selected;
                 EditorPanel.IsEnabled = true;
+<<<<<<< HEAD
                 EditorPanel.DataContext = selected;
+=======
+>>>>>>> origin/main
                 _isUpdating = true; 
 
                 // Remplir le formulaire
@@ -160,7 +171,10 @@ namespace AdRev.Desktop
                 string suggestedName = GenerateSlug(TxtPrompt.Text);
                 if (suggestedName.Length > 12) suggestedName = suggestedName.Substring(0, 12);
                 TxtName.Text = suggestedName.ToUpper();
+<<<<<<< HEAD
                 if (_currentVariable != null) _currentVariable.Name = TxtName.Text;
+=======
+>>>>>>> origin/main
             }
             UpdatePreview();
         }
@@ -338,6 +352,7 @@ namespace AdRev.Desktop
                 MessageBox.Show($"Erreur lors de l'export Word : {ex.Message}", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+<<<<<<< HEAD
 
         private void BtnRecode_Click(object sender, RoutedEventArgs e)
         {
@@ -350,5 +365,7 @@ namespace AdRev.Desktop
                 MessageBox.Show("Règles de recodage enregistrées.", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
+=======
+>>>>>>> origin/main
     }
 }

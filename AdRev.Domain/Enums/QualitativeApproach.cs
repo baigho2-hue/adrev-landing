@@ -4,6 +4,7 @@ namespace AdRev.Domain.Enums
 {
     public enum QualitativeApproach
     {
+<<<<<<< HEAD
         [Description("Phénoménologique (Expérience vécue)")]
         Phenomenological,
 
@@ -33,5 +34,15 @@ namespace AdRev.Domain.Enums
 
         [Description("Déductive (Framework Analysis)")]
         Deductive
+=======
+        [Description("Inductive (Grounded Theory, Phénoménologie)")]
+        Inductive,
+
+        [Description("Déductive (Framework Analysis, Analyse de contenu dirigée)")]
+        Deductive,
+
+        [Description("Mixte / Hybride")]
+        Mixed
+>>>>>>> origin/main
     }
 }

@@ -5,7 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AdRev.Desktop"
              mc:Ignorable="d" 
+<<<<<<< HEAD
              Loaded="UserControl_Loaded"
+=======
+>>>>>>> origin/main
              d:DesignHeight="700" d:DesignWidth="1100">
     <UserControl.Resources>
         <local:EnumDescriptionConverter x:Key="EnumDescriptionConverter"/>
@@ -24,7 +27,11 @@
 
         <Style x:Key="LabelStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="13"/>
+<<<<<<< HEAD
             <Setter Property="Foreground" Value="{StaticResource CalmSubHeaderBrush}"/>
+=======
+            <Setter Property="Foreground" Value="#333"/>
+>>>>>>> origin/main
             <Setter Property="Margin" Value="0,0,0,5"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="FontFamily" Value="Segoe UI"/>
@@ -39,6 +46,7 @@
         </Grid.RowDefinitions>
 
         <!-- Menu Bar (Onglets) -->
+<<<<<<< HEAD
         <Border Grid.Row="0" Background="{StaticResource CalmAltBackgroundBrush}" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="0,0,0,1" Padding="5">
              <Menu Background="Transparent">
                 <MenuItem Header="{DynamicResource MenuFile}" FontSize="14" Margin="5,0,10,0">
@@ -53,27 +61,56 @@
                 </MenuItem>
                 
                 <MenuItem x:Name="MenuDiscussion" Header="{DynamicResource MenuDiscussionAssistant}" 
+=======
+        <Border Grid.Row="0" Background="#F8F9FA" BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="5">
+             <Menu Background="Transparent">
+                <MenuItem Header="Fichier" FontSize="14" Margin="5,0,10,0">
+                    <MenuItem x:Name="MenuFileNew" Header="Nouveau" Click="MenuFileNew_Click"/>
+                    <MenuItem x:Name="MenuFileSave" Header="Enregistrer" Click="CreateProtocol_Click"/>
+                    <MenuItem x:Name="MenuFileExport" Header="Exporter en Word (.docx)" Click="ExportWord_Click"/>
+                </MenuItem>
+                
+                <MenuItem Header="Édition" FontSize="14" Margin="5,0,10,0">
+                    <MenuItem Header="Copier" Command="ApplicationCommands.Copy"/>
+                    <MenuItem Header="Coller" Command="ApplicationCommands.Paste"/>
+                </MenuItem>
+
+                <MenuItem x:Name="MenuDiscussion" Header="Assistant Discussion 💬" 
+>>>>>>> origin/main
                           FontSize="14" 
                           FontWeight="Bold" 
                           Foreground="{StaticResource PrimaryBrush}" 
                           Margin="20,0,10,0"
                           Click="MenuDiscussion_Click"
+<<<<<<< HEAD
                           ToolTip="{DynamicResource TooltipDiscussion}"/>
+=======
+                          ToolTip="Ouvrir la fenêtre d'aide à la discussion"/>
+>>>>>>> origin/main
             </Menu>
         </Border>
 
         <!-- Contenu Principal : Multi-Vues -->
+<<<<<<< HEAD
         <Grid Grid.Row="1" Background="{StaticResource CalmBackgroundBrush}">
+=======
+        <Grid Grid.Row="1">
+>>>>>>> origin/main
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="250"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <!-- Navigation Latérale -->
+<<<<<<< HEAD
             <Border Grid.Column="0" Background="{StaticResource CalmAltBackgroundBrush}" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="0,0,1,0" Padding="0,15,0,0">
                 <ListBox x:Name="SideMenuListBox" BorderThickness="0" Background="Transparent" 
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                          SelectionChanged="SideMenu_SelectionChanged">
+=======
+            <Border Grid.Column="0" Background="White" BorderBrush="#EEEEEE" BorderThickness="0,0,1,0" Padding="0,15,0,0">
+                <ListBox x:Name="SideMenuListBox" BorderThickness="0" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+>>>>>>> origin/main
                     <ListBox.Resources>
                         <Style TargetType="ListBoxItem">
                             <Setter Property="Padding" Value="20,12"/>
@@ -88,11 +125,19 @@
                                         </Border>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsSelected" Value="True">
+<<<<<<< HEAD
                                                 <Setter TargetName="bd" Property="Background" Value="#F1F5F9"/>
                                                 <Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource CalmSubHeaderBrush}"/>
                                                 <Setter TargetName="bd" Property="BorderThickness" Value="4,0,0,0"/>
                                                 <Setter Property="Foreground" Value="{StaticResource CalmSubHeaderBrush}"/>
                                                 <Setter Property="FontWeight" Value="ExtraBold"/>
+=======
+                                                <Setter TargetName="bd" Property="Background" Value="#E3F2FD"/>
+                                                <Setter TargetName="bd" Property="BorderBrush" Value="#2196F3"/>
+                                                <Setter TargetName="bd" Property="BorderThickness" Value="4,0,0,0"/>
+                                                <Setter Property="Foreground" Value="#1976D2"/>
+                                                <Setter Property="FontWeight" Value="SemiBold"/>
+>>>>>>> origin/main
                                             </Trigger>
                                             <Trigger Property="IsMouseOver" Value="True">
                                                 <Setter TargetName="bd" Property="Background" Value="#F5F5F5"/>
@@ -104,6 +149,7 @@
                         </Style>
                     </ListBox.Resources>
                     
+<<<<<<< HEAD
                     <ListBoxItem Content="{DynamicResource Step1GeneralInfo}" Tag="1"/>
                     <ListBoxItem Content="{DynamicResource Step2IntroContext}" Tag="2"/>
                     <ListBoxItem Content="{DynamicResource Step3Objectives}" Tag="3"/>
@@ -118,6 +164,22 @@
                     <ListBoxItem Content="{DynamicResource Step12ExpectedResults}" Tag="12"/>
                     <ListBoxItem Content="{DynamicResource Step13Conclusion}" Tag="13"/>
                     <ListBoxItem Content="{DynamicResource Step14References}" Tag="14"/>
+=======
+                    <ListBoxItem Content="1. Informations Générales" Tag="1"/>
+                    <ListBoxItem Content="2. Introduction &amp; Contexte" Tag="2"/>
+                    <ListBoxItem Content="3. Objectifs de l'Étude" Tag="3"/>
+                    <ListBoxItem Content="4. Cadre Conceptuel" Tag="4"/>
+                    <ListBoxItem Content="5. Design &amp; Cadre" Tag="5"/>
+                    <ListBoxItem Content="6. Population &amp; Critères" Tag="6"/>
+                    <ListBoxItem Content="7. Echantillonnage" Tag="7"/>
+                    <ListBoxItem Content="8. Collecte de données" Tag="8"/>
+                    <ListBoxItem Content="9. Budget &amp; Ressources" Tag="9"/>
+                    <ListBoxItem Content="10. Considérations Éthiques" Tag="10"/>
+                    <ListBoxItem Content="11. Plan d'Analyse (SAP/TAP)" Tag="11"/>
+                    <ListBoxItem Content="12. Résultats Attendus" Tag="12"/>
+                    <ListBoxItem Content="13. Conclusion" Tag="13"/>
+                    <ListBoxItem Content="14. Références" Tag="14"/>
+>>>>>>> origin/main
                 </ListBox>
             </Border>
 
@@ -126,6 +188,7 @@
                 <!-- ÉTAPE 1 : INFORMATIONS GÉNÉRALES -->
                 <ScrollViewer x:Name="View_Step1" VerticalScrollBarVisibility="Auto" Visibility="Visible">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep1}" Tag="#F1F5F9" Foreground="{StaticResource CalmSubHeaderBrush}" IsExpanded="True">
                             <StackPanel>
                                 <StackPanel Margin="0,0,0,15">
@@ -135,6 +198,17 @@
                                      </StackPanel>
                                      <StackPanel Margin="0,0,0,10">
                                          <TextBlock Text="{DynamicResource LabelResearchDomain}" Style="{StaticResource LabelStyle}" FontWeight="SemiBold"/>
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 1/14 : Informations Générales" Tag="#E3F2FD" Foreground="#1565C0">
+                            <StackPanel>
+                                <StackPanel Margin="0,0,0,15">
+                                     <StackPanel Margin="0,0,0,15">
+                                         <TextBlock Text="Titre du protocole" Style="{StaticResource LabelStyle}" FontWeight="SemiBold"/>
+                                         <TextBox x:Name="TitleTextBox" Height="40" FontSize="14" VerticalContentAlignment="Center" Padding="5" Tag="Sujet de recherche, Titre complet du protocole..."/>
+                                     </StackPanel>
+                                     <StackPanel Margin="0,0,0,10">
+                                         <TextBlock Text="Domaine de Recherche" Style="{StaticResource LabelStyle}" FontWeight="SemiBold"/>
+>>>>>>> origin/main
                                          <ComboBox x:Name="DomainComboBox" Height="35" VerticalContentAlignment="Center" Padding="10,0" SelectionChanged="DomainComboBox_SelectionChanged" SelectedIndex="0">
                                             <ComboBox.ItemTemplate>
                                                 <DataTemplate>
@@ -144,7 +218,11 @@
                                          </ComboBox>
                                      </StackPanel>
                                      <StackPanel Margin="0,0,0,10">
+<<<<<<< HEAD
                                          <TextBlock Text="{DynamicResource LabelRefStyle}" Style="{StaticResource LabelStyle}" FontWeight="SemiBold"/>
+=======
+                                         <TextBlock Text="Style de Référence Bibliographique" Style="{StaticResource LabelStyle}" FontWeight="SemiBold"/>
+>>>>>>> origin/main
                                          <ComboBox x:Name="RefStyleComboStep1" Height="35" VerticalContentAlignment="Center" Padding="10,0" SelectionChanged="RefStyleCombo_SelectionChanged" SelectedIndex="0">
                                             <ComboBox.ItemTemplate>
                                                 <DataTemplate>
@@ -155,7 +233,11 @@
                                      </StackPanel>
                                 </StackPanel>
                                 <Rectangle Height="1" Fill="#EEEEEE" Margin="0,10,0,20"/>
+<<<<<<< HEAD
                                 <TextBlock Text="{DynamicResource LabelPrincipalAuthor}" Style="{StaticResource HeaderTextStyle}" FontSize="16" Margin="0,0,0,10"/>
+=======
+                                <TextBlock Text="Auteur Principal" Style="{StaticResource HeaderTextStyle}" FontSize="16" Margin="0,0,0,10"/>
+>>>>>>> origin/main
                                 <Grid Margin="0,0,0,15">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="80"/>
@@ -170,7 +252,11 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                     <StackPanel Grid.Column="0">
+<<<<<<< HEAD
                                         <TextBlock Text="{DynamicResource LabelTitle}" Style="{StaticResource LabelStyle}" FontSize="11"/>
+=======
+                                        <TextBlock Text="Titre" Style="{StaticResource LabelStyle}" FontSize="11"/>
+>>>>>>> origin/main
                                         <ComboBox x:Name="AuthorTitleBox" SelectedIndex="0" Height="30" VerticalContentAlignment="Center">
                                             <ComboBoxItem Content="Dr"/>
                                             <ComboBoxItem Content="Pr"/>
@@ -180,6 +266,7 @@
                                         </ComboBox>
                                     </StackPanel>
                                     <StackPanel Grid.Column="2">
+<<<<<<< HEAD
                                         <TextBlock Text="{DynamicResource LabelFirstName}" Style="{StaticResource LabelStyle}" FontSize="11"/>
                                          <TextBox x:Name="AuthorFirstNameBox" Height="30" Tag="Prénom"/>
                                     </StackPanel>
@@ -200,6 +287,28 @@
                                 <Border Background="#F9F9F9" BorderBrush="#EEEEEE" BorderThickness="1" CornerRadius="5" Padding="15">
                                     <StackPanel>
                                         <TextBlock Text="{DynamicResource LabelAddCoAuthor}" Style="{StaticResource LabelStyle}" FontSize="12" FontWeight="Bold" Margin="0,0,0,10"/>
+=======
+                                        <TextBlock Text="Prénom" Style="{StaticResource LabelStyle}" FontSize="11"/>
+                                         <TextBox x:Name="AuthorFirstNameBox" Height="30" Tag="Prénom"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="4">
+                                        <TextBlock Text="Nom" Style="{StaticResource LabelStyle}" FontSize="11"/>
+                                         <TextBox x:Name="AuthorLastNameBox" Height="30" Tag="Nom"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+                                        <TextBlock Text="Institution" Style="{StaticResource LabelStyle}" FontSize="11"/>
+                                         <TextBox x:Name="AuthorInstitutionBox" Height="30" ToolTip="Université, Hôpital, Centre de recherche..." Tag="Affiliation Institutionnelle"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Grid.Column="4">
+                                        <TextBlock Text="Email" Style="{StaticResource LabelStyle}" FontSize="11"/>
+                                         <TextBox x:Name="AuthorEmailBox" Height="30" ToolTip="email@exemple.com" Tag="contact@exemple.com"/>
+                                    </StackPanel>
+                                </Grid>
+                                <TextBlock Text="Co-Auteurs" Style="{StaticResource HeaderTextStyle}" FontSize="16" Margin="0,10,0,5"/>
+                                <Border Background="#F9F9F9" BorderBrush="#EEEEEE" BorderThickness="1" CornerRadius="5" Padding="15">
+                                    <StackPanel>
+                                        <TextBlock Text="Ajouter un co-auteur :" Style="{StaticResource LabelStyle}" FontSize="12" FontWeight="Bold" Margin="0,0,0,10"/>
+>>>>>>> origin/main
                                         <Grid Margin="0,0,0,5">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/> 
@@ -221,7 +330,11 @@
                                                 </DataTemplate>
                                             </ListBox.ItemTemplate>
                                         </ListBox>
+<<<<<<< HEAD
                                         <Button Content="{DynamicResource BtnRemoveSelection}" Click="RemoveCoAuthor_Click" HorizontalAlignment="Right" Margin="0,5,0,0" FontSize="11" Background="Transparent" BorderThickness="0" Foreground="#CC3333" Cursor="Hand"/>
+=======
+                                        <Button Content="🗑️ Retirer la sélection" Click="RemoveCoAuthor_Click" HorizontalAlignment="Right" Margin="0,5,0,0" FontSize="11" Background="Transparent" BorderThickness="0" Foreground="#CC3333" Cursor="Hand"/>
+>>>>>>> origin/main
                                     </StackPanel>
                                 </Border>
                             </StackPanel>
@@ -232,16 +345,27 @@
                 <!-- ÉTAPE 2 : INTRODUCTION -->
                 <ScrollViewer x:Name="View_Introduction" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep2}" Tag="#E1F5FE" Foreground="#0277BD" IsExpanded="True">
                              <StackPanel>
                                 <TextBlock Text="{DynamicResource LabelIntroStructure}" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 2/14 : Introduction &amp; Contexte" Tag="#E1F5FE" Foreground="#0277BD">
+                             <StackPanel>
+                                <TextBlock Text="Structure de l'Introduction (Max 2000 mots)" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
+>>>>>>> origin/main
                                 <Grid Margin="0,0,0,10">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelContext}" Style="{StaticResource LabelStyle}" VerticalAlignment="Center"/>
                                     <Button Grid.Column="1" Content="{DynamicResource BtnCiteSource}" Click="AddCitation_Click" Tag="Context" Height="25" FontSize="11" Padding="10,0" Background="#E0E0E0" Foreground="Black" Margin="0"/>
+=======
+                                    <TextBlock Text="1. Contexte (Définitions principales...)" Style="{StaticResource LabelStyle}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="1" Content="➕ Citer une source" Click="AddCitation_Click" Tag="Context" Height="25" FontSize="11" Padding="10,0" Background="#E0E0E0" Foreground="Black" Margin="0"/>
+>>>>>>> origin/main
                                 </Grid>
                                  <TextBox x:Name="ContextTextBox" Height="300" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,15" VerticalScrollBarVisibility="Auto" Tag="Décrivez l'état actuel des connaissances, les définitions et le contexte global de votre étude..."/>
                                 <Grid Margin="0,0,0,2">
@@ -249,6 +373,7 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelJustification}" Style="{StaticResource LabelStyle}"/>
                                     <Button Grid.Column="1" Content="{DynamicResource BtnCite}" Click="AddCitation_Click" Tag="ProblemTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </Grid>
@@ -256,6 +381,15 @@
                                 <TextBlock Text="{DynamicResource LabelResearchQuestion}" Style="{StaticResource LabelStyle}"/>
                                  <TextBox x:Name="ResearchQuestionTextBox" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" Tag="Ex: Quel est l'impact de X sur Y dans la population Z ?"/>
                                 <TextBlock Text="{DynamicResource LabelHypotheses}" Style="{StaticResource LabelStyle}"/>
+=======
+                                    <TextBlock Text="2. Justification du Problème (Données, Lacunes...)" Style="{StaticResource LabelStyle}"/>
+                                    <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="ProblemTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+                                </Grid>
+                                 <TextBox x:Name="ProblemTextBox" Height="80" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" Tag="Quelle est la lacune ou le problème spécifique que cette étude vise à résoudre ?"/>
+                                <TextBlock Text="3. Question de Recherche (Max 3)" Style="{StaticResource LabelStyle}"/>
+                                 <TextBox x:Name="ResearchQuestionTextBox" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" Tag="Ex: Quel est l'impact de X sur Y dans la population Z ?"/>
+                                <TextBlock Text="4. Hypothèses (Max 2)" Style="{StaticResource LabelStyle}"/>
+>>>>>>> origin/main
                                  <TextBox x:Name="HypothesesTextBox" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" Tag="Ex: Il existe une corrélation positive entre..."/>
                             </StackPanel>
                         </Expander>
@@ -265,11 +399,19 @@
                 <!-- ÉTAPE 3 : OBJECTIFS -->
                 <ScrollViewer x:Name="View_Objectives" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep3}" Tag="#E8F5E9" Foreground="#2E7D32" IsExpanded="True">
                             <StackPanel>
                                 <TextBlock Text="{DynamicResource LabelStudyObjectives}" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
                                 <TextBlock Text="{DynamicResource LabelGeneralObjective}" Style="{StaticResource LabelStyle}" FontWeight="Bold"/>
                                 <TextBlock Text="{DynamicResource LabelBloomTaxonomy}" FontSize="10" Foreground="#666" Margin="0,0,0,2"/>
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 3/14 : Objectifs de l'Étude" Tag="#E8F5E9" Foreground="#2E7D32">
+                            <StackPanel>
+                                <TextBlock Text="Objectifs de l'étude" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
+                                <TextBlock Text="Objectif Général (Max 2)" Style="{StaticResource LabelStyle}" FontWeight="Bold"/>
+                                <TextBlock Text="Utilisez des verbes d'action précis (Taxonomie de Bloom)." FontSize="10" Foreground="#666" Margin="0,0,0,2"/>
+>>>>>>> origin/main
                                 <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
                                     <TextBlock x:Name="OGCountAlert" Text="⚠️ Attention : Limitez-vous à 3 Objectifs Généraux." Foreground="Red" FontWeight="Bold" FontSize="11" Visibility="Collapsed" Margin="0,0,10,0"/>
                                     <TextBlock x:Name="OGBloomAlert" Text="⚠️ Utilisez un verbe d'action Bloom." Foreground="#FF8C00" FontWeight="Bold" FontSize="11" Visibility="Collapsed"/>
@@ -277,7 +419,11 @@
                                  <TextBox x:Name="GeneralObjectiveTextBox" Height="120" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" 
                                           TextChanged="GeneralObjectiveTextBox_TextChanged" Text=""
                                           PreviewKeyDown="ObjectiveTextBox_PreviewKeyDown" Tag="OG1: Déterminer l'efficacité de..."/>
+<<<<<<< HEAD
                                 <TextBlock Text="{DynamicResource LabelSpecificObjectives}" Style="{StaticResource LabelStyle}" FontWeight="Bold"/>
+=======
+                                <TextBlock Text="Objectifs Spécifiques (Max 4 par OG)" Style="{StaticResource LabelStyle}" FontWeight="Bold"/>
+>>>>>>> origin/main
                                 <TextBlock x:Name="OSSuggestions" Text="💡 Verbes suggérés : ..." FontSize="11" Foreground="#1565C0" FontStyle="Italic" Margin="0,0,0,2" Visibility="Collapsed"/>
                                 <Grid Margin="0,0,0,2">
                                     <Grid.ColumnDefinitions>
@@ -289,8 +435,13 @@
                                         <TextBlock x:Name="OSBloomAlert" Text="⚠️ Utilisez des verbes d'action Bloom." Foreground="#FF8C00" FontWeight="Bold" FontSize="11" Visibility="Collapsed"/>
                                     </StackPanel>
                                     <StackPanel Grid.Column="1" Orientation="Horizontal">
+<<<<<<< HEAD
                                         <Button Content="{DynamicResource BtnLinkToOG}" Click="LinkOSToOG_Click" FontSize="10" Padding="5,2" Background="#E3F2FD" BorderBrush="#2196F3" Foreground="#1565C0" Margin="0,0,5,0"/>
                                         <Button Content="{DynamicResource BtnAjustNumber}" Click="RenumberOS_Click" FontSize="10" Padding="5,2" Background="#FFF3E0" BorderBrush="#FF9800" Foreground="#E65100" ToolTip="Renumérote automatiquement les OS (ex: corrige les doublons ou sauts)"/>
+=======
+                                        <Button Content="Lier aux OG 🔗" Click="LinkOSToOG_Click" FontSize="10" Padding="5,2" Background="#E3F2FD" BorderBrush="#2196F3" Foreground="#1565C0" Margin="0,0,5,0"/>
+                                        <Button Content="🔢 Ajuster N°" Click="RenumberOS_Click" FontSize="10" Padding="5,2" Background="#FFF3E0" BorderBrush="#FF9800" Foreground="#E65100" ToolTip="Renumérote automatiquement les OS (ex: corrige les doublons ou sauts)"/>
+>>>>>>> origin/main
                                     </StackPanel>
                                 </Grid>
                                  <TextBox x:Name="SpecificObjectivesTextBox" Height="250" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10"
@@ -304,19 +455,32 @@
                 <!-- ÉTAPE 4 : CADRE CONCEPTUEL -->
                 <ScrollViewer x:Name="View_ConceptualModel" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                      <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep4}" Tag="#E8EAF6" Foreground="#283593" IsExpanded="True">
                              <StackPanel>
                                 <TextBlock Text="{DynamicResource LabelConcepts}" Style="{StaticResource LabelStyle}"/>
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 4/14 : Cadre Conceptuel" Tag="#E8EAF6" Foreground="#283593">
+                             <StackPanel>
+                                <TextBlock Text="Définition des Concepts Clés" Style="{StaticResource LabelStyle}"/>
+>>>>>>> origin/main
                                  <TextBox x:Name="ConceptsTextBox" Height="100" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,15" Tag="Définissez les variables indépendantes, dépendantes et les concepts théoriques majeurs..."/>
                                 <Grid Margin="0,0,0,2">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelConceptualModel}" Style="{StaticResource LabelStyle}"/>
                                     <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="ConceptualModelTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </Grid>
                                  <TextBlock Text="{DynamicResource LabelConceptualModelDesc}" FontSize="10" Foreground="#666" Margin="0,0,0,5"/>
+=======
+                                    <TextBlock Text="Modèle Conceptuel (Optionnel)" Style="{StaticResource LabelStyle}"/>
+                                    <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="ConceptualModelTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+                                </Grid>
+                                 <TextBlock Text="Décrivez les relations entre les variables." FontSize="10" Foreground="#666" Margin="0,0,0,5"/>
+>>>>>>> origin/main
                                 <TextBox x:Name="ConceptualModelTextBox" Height="100" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" Tag="Expliquez comment les variables interagissent entre elles (Schéma ou texte)..."/>
                             </StackPanel>
                         </Expander>
@@ -326,9 +490,15 @@
                 <!-- ÉTAPE 5 : METHODOLOGIE - Design & Cadre -->
                 <ScrollViewer x:Name="View_Methodology_Design" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep5}" Tag="#E8F5E9" Foreground="#2E7D32" IsExpanded="True">
                             <StackPanel>
                                 <TextBlock Text="{DynamicResource LabelStudyType}" Style="{StaticResource LabelStyle}" FontWeight="SemiBold"/>
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 5/14 : Méthodologie - Design &amp; Cadre" Tag="#E8F5E9" Foreground="#2E7D32">
+                            <StackPanel>
+                                <TextBlock Text="Type d'étude (Approche)" Style="{StaticResource LabelStyle}" FontWeight="SemiBold"/>
+>>>>>>> origin/main
                                 <ComboBox x:Name="StudyTypeComboBox" Height="40" Padding="10" VerticalContentAlignment="Center" FontSize="14" Margin="0,0,0,10" SelectionChanged="StudyTypeComboBox_SelectionChanged">
                                     <ComboBox.ItemTemplate>
                                         <DataTemplate>
@@ -337,6 +507,7 @@
                                     </ComboBox.ItemTemplate>
                                 </ComboBox>
                                 <StackPanel x:Name="QualitativeTypePanel" Visibility="Collapsed" Margin="0,0,0,15">
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelQualitativeApproach}" Style="{StaticResource LabelStyle}" FontWeight="SemiBold" Foreground="{StaticResource SecondaryBrush}"/>
                                     <ComboBox x:Name="QualitativeApproachComboBox" Height="40" Padding="10" VerticalContentAlignment="Center" FontSize="14" SelectionChanged="QualitativeApproachComboBox_SelectionChanged" Margin="0,0,0,10">
                                         <ComboBox.ItemTemplate>
@@ -351,13 +522,25 @@
                                         <ComboBox.ItemTemplate>
                                             <DataTemplate>
                                                 <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}" Foreground="Black"/>
+=======
+                                    <TextBlock Text="Approche Qualitative" Style="{StaticResource LabelStyle}" FontWeight="SemiBold" Foreground="{StaticResource SecondaryBrush}"/>
+                                    <ComboBox x:Name="QualitativeApproachComboBox" Height="40" Padding="10" VerticalContentAlignment="Center" FontSize="14" SelectionChanged="RefreshAudit_LostFocus">
+                                        <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+>>>>>>> origin/main
                                             </DataTemplate>
                                         </ComboBox.ItemTemplate>
                                     </ComboBox>
                                 </StackPanel>
+<<<<<<< HEAD
 
                                 <StackPanel x:Name="EpidemiologyTypePanel" Visibility="Collapsed" Margin="0,0,0,15">
                                     <TextBlock x:Name="DesignPrecisionLabel" Text="{DynamicResource LabelDesignPrecision}" Style="{StaticResource LabelStyle}" FontWeight="SemiBold" Foreground="{StaticResource SecondaryBrush}"/>
+=======
+                                <StackPanel x:Name="EpidemiologyTypePanel" Visibility="Collapsed" Margin="0,0,0,15">
+                                    <TextBlock x:Name="DesignPrecisionLabel" Text="Précision du Devis (Méthodologie)" Style="{StaticResource LabelStyle}" FontWeight="SemiBold" Foreground="{StaticResource SecondaryBrush}"/>
+>>>>>>> origin/main
                                     <ComboBox x:Name="EpidemiologyTypeComboBox" Height="40" Padding="10" VerticalContentAlignment="Center" FontSize="14" SelectionChanged="EpidemiologyTypeComboBox_SelectionChanged">
                                         <ComboBox.ItemTemplate>
                                             <DataTemplate>
@@ -371,17 +554,28 @@
                                        <ColumnDefinition Width="*"/>
                                        <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelStudySetting}" Style="{StaticResource LabelStyle}"/>
+=======
+                                    <TextBlock Text="Cadre de l'étude (Lieu, Période)" Style="{StaticResource LabelStyle}"/>
+>>>>>>> origin/main
                                     <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="StudySettingTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </Grid>
                                 <TextBox x:Name="StudySettingTextBox" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" LostFocus="RefreshAudit_LostFocus" Tag="Où et quand se déroule l'étude ? (Ville, Hôpital, Services concernés...)"/>
                                 <Border x:Name="PanelQualityGuidelines" Visibility="Collapsed" Background="#E8F5E9" BorderBrush="#4CAF50" BorderThickness="1" CornerRadius="5" Padding="15" Margin="0,15,0,0">
                                     <StackPanel>
                                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+<<<<<<< HEAD
                                             <TextBlock Text="{DynamicResource HeaderQualityGuidelines}" FontWeight="Bold" FontSize="14" Foreground="#2E7D32" VerticalAlignment="Center"/>
                                             <TextBlock x:Name="QualityStandardName" Text="(COREQ/STROBE)" Foreground="#2E7D32" Margin="10,0,0,0" VerticalAlignment="Center" FontStyle="Italic"/>
                                         </StackPanel>
                                         <TextBlock Text="{DynamicResource LabelQualityGuidelinesDesc}" FontSize="11" Foreground="#555" Margin="0,0,0,10"/>
+=======
+                                            <TextBlock Text="✅ Critères de Qualité Méthodologique" FontWeight="Bold" FontSize="14" Foreground="#2E7D32" VerticalAlignment="Center"/>
+                                            <TextBlock x:Name="QualityStandardName" Text="(COREQ/STROBE)" Foreground="#2E7D32" Margin="10,0,0,0" VerticalAlignment="Center" FontStyle="Italic"/>
+                                        </StackPanel>
+                                        <TextBlock Text="Cochez les éléments au fur et à mesure que vous les intégrez :" FontSize="11" Foreground="#555" Margin="0,0,0,10"/>
+>>>>>>> origin/main
                                         <ScrollViewer MaxHeight="300" VerticalScrollBarVisibility="Auto">
                                             <StackPanel x:Name="QualityGuidelinesList"/>
                                         </ScrollViewer>
@@ -395,6 +589,7 @@
                 <!-- ÉTAPE 6 : METHODOLOGIE - Population & Critères -->
                 <ScrollViewer x:Name="View_Methodology_Population" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep6}" Tag="#F1F8E9" Foreground="#33691E" IsExpanded="True">
                             <StackPanel>
                                 <TextBlock Text="{DynamicResource LabelPopulation}" Style="{StaticResource LabelStyle}"/>
@@ -404,6 +599,17 @@
                                         <CheckBox x:Name="IsMulticentricCheckBox" Content="{DynamicResource LabelMulticentric}" FontWeight="SemiBold" Margin="0,0,0,10" Checked="IsMulticentricCheckBox_Checked" Unchecked="IsMulticentricCheckBox_Unchecked"/>
                                         <StackPanel x:Name="MulticentricDetailsPanel" Visibility="Collapsed">
                                             <TextBlock Text="{DynamicResource LabelStudyCenters}" Style="{StaticResource LabelStyle}" FontSize="11"/>
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 6/14 : Méthodologie - Population &amp; Critères" Tag="#F1F8E9" Foreground="#33691E">
+                            <StackPanel>
+                                <TextBlock Text="Population d'étude" Style="{StaticResource LabelStyle}"/>
+                                 <TextBox x:Name="PopulationTextBox" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" Tag="Définissez la population source et la population cible (ex: Patients diabétiques de type 2)..."/>
+                                <Border Background="#F5F5F5" BorderBrush="#DDDDDD" BorderThickness="1" CornerRadius="5" Padding="10" Margin="0,0,0,15">
+                                    <StackPanel>
+                                        <CheckBox x:Name="IsMulticentricCheckBox" Content="Étude Multicentrique" FontWeight="SemiBold" Margin="0,0,0,10" Checked="IsMulticentricCheckBox_Checked" Unchecked="IsMulticentricCheckBox_Unchecked"/>
+                                        <StackPanel x:Name="MulticentricDetailsPanel" Visibility="Collapsed">
+                                            <TextBlock Text="Centres participants (un par ligne) :" Style="{StaticResource LabelStyle}" FontSize="11"/>
+>>>>>>> origin/main
                                              <TextBox x:Name="StudyCentersTextBox" Height="60" TextWrapping="Wrap" AcceptsReturn="True" ToolTip="Listez les centres participants à l'étude" Tag="Ex: CHU A, Centre Médical B, etc."/>
                                         </StackPanel>
                                     </StackPanel>
@@ -420,13 +626,21 @@
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                             <TextBlock Text="{DynamicResource LabelInclusionCriteria}" Style="{StaticResource LabelStyle}"/>
+=======
+                                            <TextBlock Text="Critères d'Inclusion" Style="{StaticResource LabelStyle}"/>
+>>>>>>> origin/main
                                             <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="InclusionTextBox" Height="22" FontSize="10" Padding="5,0" Background="#E0E0E0" Foreground="Black"/>
                                         </Grid>
                                          <TextBox x:Name="InclusionTextBox" Height="80" TextWrapping="Wrap" AcceptsReturn="True" Tag="Ex: Âge > 18 ans, Consentement signé..."/>
                                     </StackPanel>
                                     <StackPanel Grid.Column="2">
+<<<<<<< HEAD
                                         <TextBlock Text="{DynamicResource LabelExclusionCriteria}" Style="{StaticResource LabelStyle}"/>
+=======
+                                        <TextBlock Text="Critères de Non-Inclusion" Style="{StaticResource LabelStyle}"/>
+>>>>>>> origin/main
                                          <TextBox x:Name="ExclusionTextBox" Height="80" TextWrapping="Wrap" AcceptsReturn="True" Tag="Ex: Comorbidités graves, Grossesse..."/>
                                     </StackPanel>
                                 </Grid>
@@ -438,6 +652,7 @@
                 <!-- ÉTAPE 7 : METHODOLOGIE - Echantillonnage -->
                 <ScrollViewer x:Name="View_Methodology_Sampling" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep7}" Tag="#FFF8E1" Foreground="#FF6F00" IsExpanded="True">
                             <StackPanel>
                                 <Border Background="#FFF9E6" BorderBrush="#FFD700" BorderThickness="1" CornerRadius="5" Padding="10" Margin="0,0,0,15">
@@ -456,11 +671,34 @@
                                             <CheckBox x:Name="IsStratifiedCheckBox" Content="{DynamicResource LabelStratifiedSampling}" FontSize="11" Margin="0,0,0,5" Checked="IsStratifiedCheckBox_Checked" Unchecked="IsStratifiedCheckBox_Unchecked"/>
                                             <StackPanel x:Name="StratificationDetailsPanel" Visibility="Collapsed">
                                                 <TextBlock Text="{DynamicResource LabelStratificationCriteria}" FontSize="10" Foreground="#666" Margin="15,0,0,2"/>
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 7/14 : Méthodologie - Echantillonnage" Tag="#FFF8E1" Foreground="#FF6F00">
+                            <StackPanel>
+                                <Border Background="#FFF9E6" BorderBrush="#FFD700" BorderThickness="1" CornerRadius="5" Padding="10" Margin="0,0,0,15">
+                                    <StackPanel>
+                                        <TextBlock Text="⚙️ Configuration de l'Échantillonnage" FontWeight="Bold" FontSize="13" Margin="0,0,0,10"/>
+                                        <TextBlock Text="Type d'échantillonnage :" Style="{StaticResource LabelStyle}" FontSize="11"/>
+                                        <ComboBox x:Name="SamplingTypeComboBox" Height="32" Padding="8" VerticalContentAlignment="Center" FontSize="12" Margin="0,0,0,10" SelectionChanged="SamplingTypeComboBox_SelectionChanged">
+                                            <ComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+                                                </DataTemplate>
+                                            </ComboBox.ItemTemplate>
+                                        </ComboBox>
+                                        <StackPanel x:Name="StratificationPanel" Visibility="Collapsed" Margin="0,0,0,10">
+                                            <CheckBox x:Name="IsStratifiedCheckBox" Content="Échantillonnage stratifié" FontSize="11" Margin="0,0,0,5" Checked="IsStratifiedCheckBox_Checked" Unchecked="IsStratifiedCheckBox_Unchecked"/>
+                                            <StackPanel x:Name="StratificationDetailsPanel" Visibility="Collapsed">
+                                                <TextBlock Text="Critères de stratification :" FontSize="10" Foreground="#666" Margin="15,0,0,2"/>
+>>>>>>> origin/main
                                                 <TextBox x:Name="StratificationCriteriaTextBox" Height="40" TextWrapping="Wrap" AcceptsReturn="True" Margin="15,0,0,0" FontSize="11" ToolTip="Ex: Âge, Sexe, Région géographique..."/>
                                             </StackPanel>
                                         </StackPanel>
                                         <StackPanel x:Name="ClusterPanel" Visibility="Collapsed" Margin="0,0,0,10">
+<<<<<<< HEAD
                                             <CheckBox x:Name="IsClusterCheckBox" Content="{DynamicResource LabelClusterSampling}" FontSize="11" Margin="0,0,0,5" Checked="IsClusterCheckBox_Checked" Unchecked="IsClusterCheckBox_Unchecked"/>
+=======
+                                            <CheckBox x:Name="IsClusterCheckBox" Content="Échantillonnage en grappe" FontSize="11" Margin="0,0,0,5" Checked="IsClusterCheckBox_Checked" Unchecked="IsClusterCheckBox_Unchecked"/>
+>>>>>>> origin/main
                                             <StackPanel x:Name="ClusterDetailsPanel" Visibility="Collapsed">
                                                 <Grid Margin="15,0,0,0">
                                                     <Grid.ColumnDefinitions>
@@ -469,11 +707,19 @@
                                                         <ColumnDefinition Width="*"/>
                                                     </Grid.ColumnDefinitions>
                                                     <StackPanel>
+<<<<<<< HEAD
                                                         <TextBlock Text="{DynamicResource LabelClusterSize}" FontSize="10" Foreground="#666"/>
                                                         <TextBox x:Name="ClusterSizeTextBox" Height="28" FontSize="11" Foreground="Black" ToolTip="Nombre moyen de sujets par grappe"/>
                                                     </StackPanel>
                                                     <StackPanel Grid.Column="2">
                                                         <TextBlock Text="{DynamicResource LabelDesignEffect}" FontSize="10" Foreground="#666"/>
+=======
+                                                        <TextBlock Text="Taille moyenne des grappes :" FontSize="10" Foreground="#666"/>
+                                                        <TextBox x:Name="ClusterSizeTextBox" Height="28" FontSize="11" Foreground="Black" ToolTip="Nombre moyen de sujets par grappe"/>
+                                                    </StackPanel>
+                                                    <StackPanel Grid.Column="2">
+                                                        <TextBlock Text="Effet de plan (Design Effect) :" FontSize="10" Foreground="#666"/>
+>>>>>>> origin/main
                                                         <TextBox x:Name="DesignEffectTextBox" Text="1.5" Height="28" FontSize="11" Foreground="Black" ToolTip="Généralement entre 1.5 et 2.0"/>
                                                     </StackPanel>
                                                 </Grid>
@@ -481,7 +727,11 @@
                                         </StackPanel>
                                         <Border Background="White" BorderBrush="#FFD700" BorderThickness="1" CornerRadius="4" Margin="0,10,0,0" Padding="10">
                                             <StackPanel>
+<<<<<<< HEAD
                                                 <TextBlock Text="{DynamicResource HeaderAttrition}" FontWeight="Bold" FontSize="12" Margin="0,0,0,5"/>
+=======
+                                                <TextBlock Text="Gestion des perdus de vue (Attrition)" FontWeight="Bold" FontSize="12" Margin="0,0,0,5"/>
+>>>>>>> origin/main
                                                 <Grid>
                                                     <Grid.ColumnDefinitions>
                                                         <ColumnDefinition Width="Auto"/>
@@ -489,24 +739,40 @@
                                                         <ColumnDefinition Width="80"/>
                                                         <ColumnDefinition Width="Auto"/>
                                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                                     <TextBlock Text="{DynamicResource LabelEstimatedRate}" VerticalAlignment="Center"/>
                                                     <TextBox Grid.Column="2" x:Name="ExpectedLossRateTextBox" Text="10" Height="35" FontSize="14" FontWeight="Bold" Foreground="Black" Background="White" BorderBrush="Gray" BorderThickness="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0"/>
                                                     <TextBlock Grid.Column="3" Text="%" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="14"/>
                                                 </Grid>
                                                 <TextBlock Text="{DynamicResource LabelAttritionDesc}" FontSize="10" Foreground="#777" Margin="0,3,0,0" FontStyle="Italic"/>
+=======
+                                                    <TextBlock Text="Taux estimé :" VerticalAlignment="Center"/>
+                                                    <TextBox Grid.Column="2" x:Name="ExpectedLossRateTextBox" Text="10" Height="35" FontSize="14" FontWeight="Bold" Foreground="Black" Background="White" BorderBrush="Gray" BorderThickness="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0"/>
+                                                    <TextBlock Grid.Column="3" Text="%" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="14"/>
+                                                </Grid>
+                                                <TextBlock Text="Ce taux sera ajouté à la taille calculée pour garantir la puissance statistique." FontSize="10" Foreground="#777" Margin="0,3,0,0" FontStyle="Italic"/>
+>>>>>>> origin/main
                                             </StackPanel>
                                         </Border>
                                     </StackPanel>
                                 </Border>
                                 <Border Background="#F0F4C3" CornerRadius="5" Padding="15" Margin="0,0,0,10" BorderBrush="#CDDC39" BorderThickness="1">
                                     <StackPanel>
+<<<<<<< HEAD
                                         <TextBlock Text="{DynamicResource HeaderSampleCalculator}" FontWeight="Bold" FontSize="14" Foreground="#827717" Margin="0,0,0,10"/>
+=======
+                                        <TextBlock Text="➗ Assistant de Calcul de Taille d'Échantillon" FontWeight="Bold" FontSize="14" Foreground="#827717" Margin="0,0,0,10"/>
+>>>>>>> origin/main
                                         <Grid Margin="0,0,0,10">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="Auto"/>
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                             <TextBlock Text="{DynamicResource LabelCalculationMethod}" VerticalAlignment="Center" Margin="0,0,10,0" FontWeight="SemiBold"/>
+=======
+                                            <TextBlock Text="Méthode :" VerticalAlignment="Center" Margin="0,0,10,0" FontWeight="SemiBold"/>
+>>>>>>> origin/main
                                             <ComboBox Grid.Column="1" x:Name="CalculatorSelector" Height="35" VerticalContentAlignment="Center" SelectionChanged="CalculatorSelector_SelectionChanged">
                                                 <ComboBoxItem Content="Aucun (Saisie libre)" Tag="None" IsSelected="True"/>
                                                 <ComboBoxItem Content="Estimation d'une Prévalence (Cochran/Schwartz)" Tag="Cochran"/>
@@ -517,7 +783,11 @@
                                 </Border>
                                 <Border x:Name="PanelCochran" Visibility="Collapsed" Background="#F0F8FF" BorderBrush="#ADD8E6" BorderThickness="1" CornerRadius="5" Padding="10" Margin="0,0,0,10">
                                     <StackPanel>
+<<<<<<< HEAD
                                         <TextBlock Text="{DynamicResource TitleCochran}" FontSize="11" Foreground="#555" Margin="0,0,0,5"/>
+=======
+                                        <TextBlock Text="Formule de Cochran / Schwartz (Population Finie ou Infinie)" FontSize="11" Foreground="#555" Margin="0,0,0,5"/>
+>>>>>>> origin/main
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -527,6 +797,7 @@
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
                                             <StackPanel Margin="0,0,5,0">
+<<<<<<< HEAD
                                                 <TextBlock Text="{DynamicResource LabelPrevP}" FontSize="10"/>
                                                 <TextBox x:Name="Calc_Cochran_P" Text="50" Foreground="Black" ToolTip="Ex: 50 pour 50%"/>
                                             </StackPanel>
@@ -540,20 +811,43 @@
                                             </StackPanel>
                                             <StackPanel Grid.Column="3" Margin="0,0,5,0">
                                                 <TextBlock Text="{DynamicResource LabelConfidenceZ}" FontSize="10"/>
+=======
+                                                <TextBlock Text="Prévalence p (%)" FontSize="10"/>
+                                                <TextBox x:Name="Calc_Cochran_P" Text="50" Foreground="Black" ToolTip="Ex: 50 pour 50%"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1" Margin="0,0,5,0">
+                                                <TextBlock Text="Précision d (%)" FontSize="10"/>
+                                                <TextBox x:Name="Calc_Cochran_D" Text="5" Foreground="Black" ToolTip="Marge d'erreur, ex: 5%"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="2" Margin="0,0,5,0">
+                                                <TextBlock Text="Population N" FontSize="10" FontWeight="Bold"/>
+                                                <TextBox x:Name="Calc_Cochran_N" Text="" Foreground="Black" ToolTip="Laisser vide si inconnue/infinie"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="3" Margin="0,0,5,0">
+                                                <TextBlock Text="Confiance (Z)" FontSize="10"/>
+>>>>>>> origin/main
                                                 <ComboBox x:Name="Calc_Cochran_Z" SelectedIndex="1">
                                                     <ComboBoxItem Content="90%" Tag="1.65"/>
                                                     <ComboBoxItem Content="95%" Tag="1.96"/>
                                                     <ComboBoxItem Content="99%" Tag="2.58"/>
                                                 </ComboBox>
                                             </StackPanel>
+<<<<<<< HEAD
                                             <Button Grid.Column="4" Content="{DynamicResource BtnCalculate}" Click="CalculateCochran_Click" Padding="10,0" VerticalAlignment="Bottom" Height="22"/>
+=======
+                                            <Button Grid.Column="4" Content="Calculer" Click="CalculateCochran_Click" Padding="10,0" VerticalAlignment="Bottom" Height="22"/>
+>>>>>>> origin/main
                                         </Grid>
                                         <TextBlock x:Name="ResultCochran" Text="N = ?" FontWeight="Bold" Foreground="#007ACC" Margin="0,5,0,0" HorizontalAlignment="Right"/>
                                     </StackPanel>
                                 </Border>
                                 <Border x:Name="PanelComparison" Visibility="Collapsed" Background="#FFF5E5" BorderBrush="#FFDAB9" BorderThickness="1" CornerRadius="5" Padding="10" Margin="0,0,0,10">
                                     <StackPanel>
+<<<<<<< HEAD
                                         <TextBlock Text="{DynamicResource TitleComparison}" FontSize="11" Foreground="#555" Margin="0,0,0,5"/>
+=======
+                                        <TextBlock Text="Comparaison de Deux Proportions (Cas-Témoins / Cohorte)" FontSize="11" Foreground="#555" Margin="0,0,0,5"/>
+>>>>>>> origin/main
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -563,6 +857,7 @@
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
                                             <StackPanel Margin="0,0,5,0">
+<<<<<<< HEAD
                                                 <TextBlock Text="{DynamicResource LabelP1}" FontSize="10"/>
                                                 <TextBox x:Name="Calc_Comp_P1" Text="30" Foreground="Black"/>
                                             </StackPanel>
@@ -572,13 +867,28 @@
                                             </StackPanel>
                                             <StackPanel Grid.Column="2" Margin="0,0,5,0">
                                                 <TextBlock Text="{DynamicResource LabelAlpha}" FontSize="10"/>
+=======
+                                                <TextBlock Text="P1 (Exposés/Cas) %" FontSize="10"/>
+                                                <TextBox x:Name="Calc_Comp_P1" Text="30" Foreground="Black"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1" Margin="0,0,5,0">
+                                                <TextBlock Text="P2 (Témoins/Non) %" FontSize="10"/>
+                                                <TextBox x:Name="Calc_Comp_P2" Text="15" Foreground="Black"/>
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="2" Margin="0,0,5,0">
+                                                <TextBlock Text="Confiance (Alpha)" FontSize="10"/>
+>>>>>>> origin/main
                                                 <ComboBox x:Name="Calc_Comp_Alpha" SelectedIndex="1">
                                                     <ComboBoxItem Content="5% (1.96)" Tag="1.96"/>
                                                     <ComboBoxItem Content="1% (2.58)" Tag="2.58"/>
                                                 </ComboBox>
                                             </StackPanel>
                                             <StackPanel Grid.Column="3" Margin="0,0,5,0">
+<<<<<<< HEAD
                                                 <TextBlock Text="{DynamicResource LabelPower}" FontSize="10"/>
+=======
+                                                <TextBlock Text="Puissance (1-Beta)" FontSize="10"/>
+>>>>>>> origin/main
                                                 <ComboBox x:Name="Calc_Comp_Power" SelectedIndex="1">
                                                     <ComboBoxItem Content="80% (0.84)" Tag="0.84"/>
                                                     <ComboBoxItem Content="90% (1.28)" Tag="1.28"/>
@@ -609,6 +919,7 @@
                 <!-- ÉTAPE 8 : METHODOLOGIE - Collecte de données -->
                 <ScrollViewer x:Name="View_Methodology_Data" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep8}" Tag="#E0F2F1" Foreground="#00695C" IsExpanded="True">
                             <StackPanel>
                                 <Border Background="#f8fdfd" IsEnabled="True" CornerRadius="8" Padding="5" Margin="0,2,0,8" BorderBrush="#e0eeec" BorderThickness="1" HorizontalAlignment="Center">
@@ -651,6 +962,28 @@
                                             </StackPanel>
                                         </Button>
                                     </StackPanel>
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 8/13 : Méthodologie - Collecte de données" Tag="#E0F2F1" Foreground="#00695C">
+                            <StackPanel>
+                                <Border Background="#E8F5E9" CornerRadius="5" Padding="10" Margin="0,0,0,15" BorderBrush="#4CAF50" BorderThickness="1">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel>
+                                            <TextBlock Text="📝 Dictionnaire des Variables / Masque de Saisie" FontWeight="Bold" Foreground="#2E7D32"/>
+                                            <TextBlock Text="Définissez les variables de l'étude (comme dans Epi Info 'Make View')" FontSize="11" Foreground="#555"/>
+                                        </StackPanel>
+                                        <Button Grid.Column="1" Content="Ouvrir le Concepteur" Padding="15,5" Background="#4CAF50" Foreground="White" BorderThickness="0" Click="OpenVariableDesigner_Click" Cursor="Hand">
+                                            <Button.Resources>
+                                                <Style TargetType="Border">
+                                                    <Setter Property="CornerRadius" Value="4"/>
+                                                </Style>
+                                            </Button.Resources>
+                                        </Button>
+                                    </Grid>
+>>>>>>> origin/main
                                 </Border>
                                 <Grid Margin="0,0,0,2">
                                     <Grid.ColumnDefinitions>
@@ -669,6 +1002,7 @@
                 <!-- ÉTAPE 9 : BUDGET -->
                 <ScrollViewer x:Name="View_Budget" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep9}" Tag="#FFF3E0" Foreground="#EF6C00" IsExpanded="True">
                             <StackPanel>
                                 <TextBlock Text="{DynamicResource LabelBudgetEstimation}" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
@@ -676,19 +1010,36 @@
                                     <StackPanel>
                                         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                                             <TextBlock Text="{DynamicResource LabelBudgetSuggestions}" FontWeight="Bold" Foreground="#1565C0"/>
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 9/14 : Budget &amp; Ressources" Tag="#FFF3E0" Foreground="#EF6C00">
+                            <StackPanel>
+                                <TextBlock Text="Estimation des Ressources &amp; Budget" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
+                                <Border x:Name="BudgetSuggestionsPanel" Background="#E3F2FD" BorderBrush="#2196F3" BorderThickness="1" CornerRadius="5" Padding="15" Margin="0,0,0,15">
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                            <TextBlock Text="💡 Suggestions basées sur votre méthode :" FontWeight="Bold" Foreground="#1565C0"/>
+>>>>>>> origin/main
                                             <TextBlock x:Name="BudgetSuggestionType" Text="(Type)" Margin="5,0,0,0" FontStyle="Italic" Foreground="#1565C0"/>    
                                         </StackPanel>
                                         <TextBlock x:Name="BudgetSuggestionsText" Text="• Personnel..." TextWrapping="Wrap" FontSize="13"/>
                                     </StackPanel>
                                 </Border>
+<<<<<<< HEAD
                                 <TextBlock Text="{DynamicResource LabelBudgetDetail}" Style="{StaticResource LabelStyle}"/>
+=======
+                                <TextBlock Text="Détail du Budget" Style="{StaticResource LabelStyle}"/>
+>>>>>>> origin/main
                                 <TextBox x:Name="BudgetTextBox" Height="200" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,15" VerticalContentAlignment="Top" Padding="10"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelBudgetTotal}" VerticalAlignment="Center" FontWeight="Bold"/>
+=======
+                                    <TextBlock Text="Total Estimé (Devise locale) :" VerticalAlignment="Center" FontWeight="Bold"/>
+>>>>>>> origin/main
                                     <TextBox Grid.Column="1" x:Name="BudgetTotalBox" Margin="10,0,0,0" Height="30" Width="150" HorizontalAlignment="Left"/>
                                 </Grid>
                             </StackPanel>
@@ -699,17 +1050,28 @@
                 <!-- ÉTAPE 10 : CONSIDERATIONS ETHIQUES -->
                 <ScrollViewer x:Name="View_Ethics" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                      <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep10}" Tag="#FFEBEE" Foreground="#C62828" IsExpanded="True">
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 10/14 : Considérations Éthiques" Tag="#FFEBEE" Foreground="#C62828">
+>>>>>>> origin/main
                             <StackPanel>
                                 <Grid Margin="0,0,0,2">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelEthicsTitle}" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
                                     <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="EthicsTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </Grid>
                                 <TextBlock Text="{DynamicResource LabelEthicsDesc}" FontSize="11" Foreground="#666" Margin="0,0,0,5"/>
+=======
+                                    <TextBlock Text="Considérations Éthiques" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
+                                    <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="EthicsTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+                                </Grid>
+                                <TextBlock Text="Décrivez les mesures prises pour protéger les participants (consentement, confidentialité, approbation éthique...)." FontSize="11" Foreground="#666" Margin="0,0,0,5"/>
+>>>>>>> origin/main
                                 <TextBox x:Name="EthicsTextBox" Height="150" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,15"/>
                             </StackPanel>
                         </Expander>
@@ -719,24 +1081,39 @@
                 <!-- ÉTAPE 11 : PLAN D'ANALYSE -->
                 <ScrollViewer x:Name="View_DataAnalysis" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep11}" Tag="#EDE7F6" Foreground="#4527A0" IsExpanded="True">
                             <StackPanel>
                                 <TextBlock Text="{DynamicResource LabelAnalysisPlanDesc}" FontSize="11" Foreground="#666" Margin="0,0,0,15" FontStyle="Italic"/>
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 11/14 : Plan d'Analyse des Données" Tag="#EDE7F6" Foreground="#4527A0">
+                            <StackPanel>
+                                <TextBlock Text="Cette section est CRUCIALE : elle définit comment vous allez répondre à vos objectifs." FontSize="11" Foreground="#666" Margin="0,0,0,15" FontStyle="Italic"/>
+>>>>>>> origin/main
                                 <Grid Margin="0,0,0,5">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelAnalysisPlanTitle}" Style="{StaticResource LabelStyle}" VerticalAlignment="Center"/>
                                     <Button Grid.Column="1" Content="{DynamicResource BtnAutoPlan}" Click="GenerateProtocolPlan_Click" Height="25" FontSize="11" Padding="12,0" Margin="0,0,8,0" Background="#FFF3E0" Foreground="#E65100" BorderBrush="#FFCC80" BorderThickness="1"/>
+=======
+                                    <TextBlock Text="Description du Plan d'Analyse" Style="{StaticResource LabelStyle}" VerticalAlignment="Center"/>
+                                    <Button Grid.Column="1" Content="✨ Générer Plan Automatique" Click="GenerateProtocolPlan_Click" Height="25" FontSize="11" Padding="12,0" Margin="0,0,8,0" Background="#FFF3E0" Foreground="#E65100" BorderBrush="#FFCC80" BorderThickness="1"/>
+>>>>>>> origin/main
                                     <Button Grid.Column="2" Content="➕ Citer" Click="AddCitation_Click" Tag="DataAnalysisTextBox" Height="25" FontSize="11" Padding="10,0" Background="#E0E0E0" Foreground="Black"/>
                                 </Grid>
                                 <TextBox x:Name="DataAnalysisTextBox" Height="350" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10" Tag="Le plan généré apparaîtra ici. Vous pouvez ensuite le modifier librement."/>
                                 <Border Background="#E3F2FD" Padding="10" CornerRadius="5">
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="ℹ️" Margin="0,0,10,0"/>
+<<<<<<< HEAD
                                         <TextBlock Text="{DynamicResource LabelAnalysisInfo}" FontSize="11" Foreground="#1565C0" TextWrapping="Wrap"/>
+=======
+                                        <TextBlock Text="Le plan rédigé ici sera automatiquement disponible dans l'onglet 'Analyse' de la fenêtre principale." FontSize="11" Foreground="#1565C0" TextWrapping="Wrap"/>
+>>>>>>> origin/main
                                     </StackPanel>
                                 </Border>
                             </StackPanel>
@@ -747,17 +1124,28 @@
                 <!-- ÉTAPE 12 : RESULTATS ATTENDUS -->
                 <ScrollViewer x:Name="View_Results" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep12}" Tag="#E0F7FA" Foreground="#006064" IsExpanded="True">
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 12/14 : Résultats Attendus" Tag="#E0F7FA" Foreground="#006064">
+>>>>>>> origin/main
                             <StackPanel>
                                 <Grid Margin="0,0,0,2">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelExpectedResultsTitle}" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
                                     <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="ExpectedResultsTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </Grid>
                                 <TextBlock Text="{DynamicResource LabelExpectedResultsDesc}" FontSize="11" Foreground="#666" Margin="0,0,0,5"/>
+=======
+                                    <TextBlock Text="Résultats Attendus" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
+                                    <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="ExpectedResultsTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+                                </Grid>
+                                <TextBlock Text="Quels sont les résultats escomptés et leur impact ?" FontSize="11" Foreground="#666" Margin="0,0,0,5"/>
+>>>>>>> origin/main
                                 <TextBox x:Name="ExpectedResultsTextBox" Height="200" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,15"/>
                             </StackPanel>
                         </Expander>
@@ -767,17 +1155,28 @@
                 <!-- ÉTAPE 13 : CONCLUSION -->
                 <ScrollViewer x:Name="View_Conclusion" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep13}" Tag="#ECEFF1" Foreground="#37474F" IsExpanded="True">
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 13/13 : Conclusion" Tag="#ECEFF1" Foreground="#37474F">
+>>>>>>> origin/main
                             <StackPanel>
                                 <Grid Margin="0,0,0,2">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelConclusionTitle}" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
                                     <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="ConclusionTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </Grid>
                                 <TextBlock Text="{DynamicResource LabelConclusionDesc}" FontSize="11" Foreground="#666" Margin="0,0,0,5"/>
+=======
+                                    <TextBlock Text="Conclusion" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
+                                    <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="ConclusionTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+                                </Grid>
+                                <TextBlock Text="Synthèse, retombées et recommandations." FontSize="11" Foreground="#666" Margin="0,0,0,5"/>
+>>>>>>> origin/main
                                 <TextBox x:Name="ConclusionTextBox" Height="200" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,15"/>
                             </StackPanel>
                         </Expander>
@@ -787,19 +1186,32 @@
                 <!-- ÉTAPE 14 : REFERENCES -->
                 <ScrollViewer x:Name="View_References" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                     <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="{DynamicResource HeaderStep14}" Tag="#FAFAFA" Foreground="#424242" IsExpanded="True">
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 14/14 : Références Bibliographiques" Tag="#FAFAFA" Foreground="#424242">
+>>>>>>> origin/main
                             <StackPanel>
                                 <Grid Margin="0,0,0,10">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <TextBlock Text="{DynamicResource LabelReferencesTitle}" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
                                     <ComboBox Grid.Column="1" x:Name="RefStyleComboStep14" Height="30" Width="150" VerticalContentAlignment="Center" SelectionChanged="RefStyleCombo_SelectionChanged" SelectedIndex="0"/>
                                 </Grid>
                                 <TextBlock Text="{DynamicResource LabelReferencesAutoDesc}" FontSize="11" Foreground="#666" Margin="0,0,0,5"/>
                                 <TextBox x:Name="ReferencesTextBox" Height="500" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" VerticalScrollBarVisibility="Auto" IsReadOnly="False"/>
                                 <Button Content="{DynamicResource BtnRegenerateRefs}" Click="RegenerateReferences_Click" HorizontalAlignment="Right" Width="150" Height="30" FontSize="12"/>
+=======
+                                    <TextBlock Text="Références Bibliographiques" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
+                                    <ComboBox Grid.Column="1" x:Name="RefStyleComboStep14" Height="30" Width="150" VerticalContentAlignment="Center" SelectionChanged="RefStyleCombo_SelectionChanged" SelectedIndex="0"/>
+                                </Grid>
+                                <TextBlock Text="Liste générée automatiquement :" FontSize="11" Foreground="#666" Margin="0,0,0,5"/>
+                                <TextBox x:Name="ReferencesTextBox" Height="500" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" VerticalScrollBarVisibility="Auto" IsReadOnly="False"/>
+                                <Button Content="🔄 Régénérer la liste" Click="RegenerateReferences_Click" HorizontalAlignment="Right" Width="150" Height="30" FontSize="12"/>
+>>>>>>> origin/main
                             </StackPanel>
                         </Expander>
                     </StackPanel>
@@ -818,6 +1230,7 @@
 
                 <!-- Navigation Gauche -->
                 <StackPanel Grid.Column="0" Orientation="Horizontal">
+<<<<<<< HEAD
                     <Button Content="{DynamicResource BtnPrevious}" Click="PrevSection_Click" Height="40" Width="120" Margin="0,0,10,0" Background="#F0F0F0" Foreground="Black" BorderThickness="0"/>
                     <Button Content="{DynamicResource BtnNext}" Click="NextSection_Click" Height="40" Width="120" Background="#F0F0F0" Foreground="Black" BorderThickness="0"/>
                 </StackPanel>
@@ -832,6 +1245,17 @@
 
                 <!-- Bouton Action -->
                 <Button Grid.Column="2" Content="{DynamicResource BtnValidateSave}" Click="CreateProtocol_Click" Height="45" Width="200" FontSize="15" FontWeight="Bold"/>
+=======
+                    <Button Content="⬅️ Précédent" Click="PrevSection_Click" Height="40" Width="120" Margin="0,0,10,0" Background="#F0F0F0" Foreground="Black" BorderThickness="0"/>
+                    <Button Content="Suivant ➡️" Click="NextSection_Click" Height="40" Width="120" Background="#F0F0F0" Foreground="Black" BorderThickness="0"/>
+                </StackPanel>
+
+                <!-- Zone de messages de validation -->
+                <ListBox Grid.Column="1" x:Name="ValidationMessagesListBox" BorderThickness="0" Background="Transparent" Foreground="{StaticResource ErrorBrush}" FontSize="12" MaxHeight="60" Margin="20,0,20,0" VerticalAlignment="Center"/>
+
+                <!-- Bouton Action -->
+                <Button Grid.Column="2" Content="Valider et Enregistrer" Click="CreateProtocol_Click" Height="45" Width="200" FontSize="15" FontWeight="Bold"/>
+>>>>>>> origin/main
             </Grid>
         </Border>
     </Grid>

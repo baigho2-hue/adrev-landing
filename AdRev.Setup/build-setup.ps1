@@ -8,6 +8,7 @@ if (-not (Get-Command "wix" -ErrorAction SilentlyContinue)) {
     exit 1
 }
 
+<<<<<<< HEAD
 # 1.1 Read Version from Project
 $projectFile = "..\AdRev.Desktop\AdRev.Desktop.csproj"
 if (Test-Path $projectFile) {
@@ -20,6 +21,8 @@ else {
 }
 Write-Host "Target Version: $version" -ForegroundColor Magenta
 
+=======
+>>>>>>> origin/main
 
 
 # 2. Obfuscation setup (Security)
@@ -33,8 +36,11 @@ Write-Host "Building AdRev.Desktop (Release)..." -ForegroundColor Cyan
 dotnet build "..\AdRev.Desktop\AdRev.Desktop.csproj" -c Release
 Write-Host "Building AdRev.CLI (Release)..." -ForegroundColor Cyan
 dotnet build "..\AdRev.CLI\AdRev.CLI.csproj" -c Release
+<<<<<<< HEAD
 Write-Host "Building AdRev.LicenseGenerator (Release)..." -ForegroundColor Cyan
 dotnet build "..\AdRev.LicenseGenerator\AdRev.LicenseGenerator.csproj" -c Release
+=======
+>>>>>>> origin/main
 
 # 4. Obfuscate
 Write-Host "Obfuscating Assemblies..." -ForegroundColor Cyan
@@ -66,7 +72,11 @@ $publishArgs = @(
     "-r", "win-x64",
     "--no-build",        # Critical: extensive use of pre-built (and patched) logic
     "--self-contained", "true",
+<<<<<<< HEAD
     "-p:PublishSingleFile=false",
+=======
+    "-p:PublishSingleFile=true",
+>>>>>>> origin/main
     "-p:IncludeNativeLibrariesForSelfExtract=true",
     "-o", $publishDir
 )
@@ -78,6 +88,7 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 
+<<<<<<< HEAD
 
 # 5.1 Harvest Files
 Write-Host "Harvesting Files..." -ForegroundColor Cyan
@@ -91,12 +102,21 @@ Write-Host "Building MSI (Version $version)..." -ForegroundColor Cyan
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "Success: AdRev1.0.msi created." -ForegroundColor Green
+=======
+# 6. Build MSI
+Write-Host "Building MSI..." -ForegroundColor Cyan
+& wix build Product.wxs -o "AdRevSetup.msi"
+
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "Success: AdRevSetup.msi created." -ForegroundColor Green
+>>>>>>> origin/main
     
     # 4. Organize Outputs
     Write-Host "Organizing releases..." -ForegroundColor Cyan
     $releaseDir = "..\Releases"
     if (-not (Test-Path $releaseDir)) { New-Item -ItemType Directory -Path $releaseDir | Out-Null }
     
+<<<<<<< HEAD
     Copy-Item "AdRev$version.msi" -Destination $releaseDir -Force
     Copy-Item "$publishDir\AdRev.Desktop.exe" -Destination $releaseDir -Force
 
@@ -122,6 +142,10 @@ if ($LASTEXITCODE -eq 0) {
     else {
         Write-Host "Bundle Build failed." -ForegroundColor Red
     }
+=======
+    Copy-Item "AdRevSetup.msi" -Destination $releaseDir -Force
+    Copy-Item "$publishDir\AdRev.Desktop.exe" -Destination $releaseDir -Force
+>>>>>>> origin/main
     
     # Copy CLI Tools
     $toolsDir = "$releaseDir\Tools"
@@ -130,6 +154,7 @@ if ($LASTEXITCODE -eq 0) {
     Copy-Item "..\AdRev.CLI\bin\Release\net8.0-windows\AdRev.CLI.runtimeconfig.json" -Destination $toolsDir -Force
     Copy-Item "..\AdRev.CLI\bin\Release\net8.0-windows\*.dll" -Destination $toolsDir -Force # Dependencies (Core/Domain)
 
+<<<<<<< HEAD
     # Copy License Generator
     $genDir = "$releaseDir\LicenseGenerator"
     if (-not (Test-Path $genDir)) { New-Item -ItemType Directory -Path $genDir | Out-Null }
@@ -145,5 +170,13 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "  - Generator: LicenseGenerator\AdRev.LicenseGenerator.exe" -ForegroundColor Gray
 }
 else {
+=======
+    Write-Host "🎉 Build Complete!" -ForegroundColor Green
+    Write-Host "Files available in: $(Resolve-Path $releaseDir)" -ForegroundColor White
+    Write-Host "  - Setup: AdRevSetup.msi" -ForegroundColor Gray
+    Write-Host "  - Portable: AdRev.Desktop.exe" -ForegroundColor Gray
+    Write-Host "  - Tools: Tools\AdRev.CLI.exe" -ForegroundColor Gray
+} else {
+>>>>>>> origin/main
     Write-Host "MSI Build failed." -ForegroundColor Red
 }

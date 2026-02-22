@@ -103,7 +103,11 @@ namespace AdRev.Desktop
                 case "FAQ":
                     TopicTitle.Text = "FAQ & Support";
                     AddHeader(doc, "Besoin d'aide ?");
+<<<<<<< HEAD
                     AddParagraph(doc, "Pour toute question technique ou commerciale, contactez-nous à : baigho2@gmail.com");
+=======
+                    AddParagraph(doc, "Pour toute question technique, veuillez contacter le support informatique du laboratoire ou consulter la documentation PDF complète.");
+>>>>>>> origin/main
                     AddParagraph(doc, "Version : 1.0 - Janvier 2026");
                     break;
 
@@ -116,12 +120,18 @@ namespace AdRev.Desktop
                     AddHeader(doc, "🌍 Offre Spéciale Mali");
                     AddParagraph(doc, "AdRev s'engage pour la recherche au Mali avec des tarifs adaptés :");
                     AddBullet(doc, "Pack Étudiant : 10 000 FCFA (1 an) / 20 000 FCFA (3 ans)");
+<<<<<<< HEAD
                     AddBullet(doc, "Pack Professionnel : 45 000 FCFA (Renouvellement : 25 000 FCFA)");
                     AddBullet(doc, "Pack Elite : 75 000 FCFA (Renouvellement : 50 000 FCFA)");
                     AddBullet(doc, "Pack Institutionnel : 500 000 FCFA / an (7 PC)");
                     AddBullet(doc, "Version Illimitée : 1 000 000 FCFA (Paiement unique)");
                     AddParagraph(doc, "Paiements : Orange Money au 00223 79 27 64 70", false);
                     AddParagraph(doc, "Envoyez votre confirmation de paiement à : baigho2@gmail.com", true);
+=======
+                    AddBullet(doc, "Pack Professionnel : 45 000 FCFA / Elite : 50 000 FCFA");
+                    AddBullet(doc, "Pack Institutionnel : 200 000 FCFA / an (7 PC)");
+                    AddParagraph(doc, "Paiements : Orange Money, Moov, Espèces.", false);
+>>>>>>> origin/main
 
                     AddHeader(doc, "Crédits");
                     AddParagraph(doc, "Développé par l'équipe AdRev avec WPF & .NET 8.");

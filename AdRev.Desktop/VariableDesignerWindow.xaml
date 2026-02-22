@@ -5,17 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdRev.Desktop"
         mc:Ignorable="d"
+<<<<<<< HEAD
         Title="AdRev - Concepteur de Variables" Height="Auto" Width="Auto"
         MinHeight="600" MinWidth="1024"
         WindowState="Maximized"
         WindowStartupLocation="CenterScreen"
         Icon="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png"
         Background="{StaticResource BackgroundBrush}">
+=======
+        Title="AdRev - Concepteur de Variables" Height="750" Width="1350"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackgroundBrush}">
+    
+>>>>>>> origin/main
     <Window.Resources>
         <local:EnumDescriptionConverter x:Key="EnumDescriptionConverter"/>
         
         <Style x:Key="SectionHeaderStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="14"/>
+<<<<<<< HEAD
             <Setter Property="FontWeight" Value="ExtraBold"/>
             <Setter Property="Foreground" Value="{StaticResource CalmSubHeaderBrush}"/>
             <Setter Property="Margin" Value="0,0,0,15"/>
@@ -29,6 +37,11 @@
             <Setter Property="CornerRadius" Value="8"/>
             <Setter Property="Padding" Value="20"/>
             <Setter Property="Margin" Value="0,0,10,0"/>
+=======
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="{StaticResource PrimaryDarkBrush}"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+>>>>>>> origin/main
         </Style>
     </Window.Resources>
 
@@ -40,13 +53,18 @@
         </Grid.RowDefinitions>
 
         <!-- 1. Header Area -->
+<<<<<<< HEAD
         <Border Grid.Row="0" Background="{StaticResource CalmHeaderBrush}" Padding="25,18">
+=======
+        <Border Grid.Row="0" Background="{StaticResource PrimaryDarkBrush}" Padding="25,15">
+>>>>>>> origin/main
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 
+<<<<<<< HEAD
                 <StackPanel Orientation="Horizontal">
                     <Image Source="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png" Width="30" Height="30" Margin="0,0,15,0" VerticalAlignment="Center"/>
                     <StackPanel>
@@ -59,16 +77,31 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="PROJET : " FontWeight="SemiBold" Foreground="#64748B" FontSize="11" VerticalAlignment="Center"/>
                         <TextBlock x:Name="TxtProjectTitle" Text="Nouveau Projet" FontWeight="Bold" Foreground="#F8FAFC" FontSize="14" VerticalAlignment="Center"/>
+=======
+                <StackPanel>
+                    <TextBlock Text="CONCEPTEUR DE VARIABLES SCIENTIFIQUES" Foreground="White" FontSize="20" FontWeight="Black"/>
+                    <TextBlock Text="Structurez vos données de collecte avec précision et rigueur académique." Foreground="#B0BEC5" FontSize="12" Margin="0,2,0,0"/>
+                </StackPanel>
+                
+                <Border Grid.Column="1" Background="#1A237E" CornerRadius="8" Padding="15,8" VerticalAlignment="Center" BorderBrush="#3949AB" BorderThickness="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="PROJET : " FontWeight="SemiBold" Foreground="#9FA8DA" FontSize="11"/>
+                        <TextBlock x:Name="TxtProjectTitle" Text="Nouveau Projet" FontWeight="Bold" Foreground="White" FontSize="13"/>
+>>>>>>> origin/main
                     </StackPanel>
                 </Border>
             </Grid>
         </Border>
 
         <!-- 2. Main Work Area -->
+<<<<<<< HEAD
         <Grid Grid.Row="1" Background="{StaticResource CalmBackgroundBrush}">
             <Grid.Margin>
                 <Thickness Left="20" Top="20" Right="20" Bottom="20"/>
             </Grid.Margin>
+=======
+        <Grid Grid.Row="1" Margin="20">
+>>>>>>> origin/main
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="320"/> <!-- List Sidebar -->
                 <ColumnDefinition Width="420"/> <!-- Editor -->
@@ -76,7 +109,11 @@
             </Grid.ColumnDefinitions>
 
             <!-- LEFT: Variable List -->
+<<<<<<< HEAD
             <Border Grid.Column="0" Style="{StaticResource CalmCardStyle}" Background="{StaticResource CalmAltBackgroundBrush}">
+=======
+            <Border Grid.Column="0" Margin="0,0,10,0" Style="{StaticResource CardStyle}">
+>>>>>>> origin/main
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -91,8 +128,13 @@
                             <GroupStyle>
                                 <GroupStyle.HeaderTemplate>
                                     <DataTemplate>
+<<<<<<< HEAD
                                         <Border Background="#E2E8F0" Padding="10,5" CornerRadius="4" Margin="0,5">
                                             <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="{StaticResource CalmSubHeaderBrush}" FontSize="12"/>
+=======
+                                        <Border Background="#F5F7F9" Padding="10,5" CornerRadius="4" Margin="0,5">
+                                            <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="{StaticResource PrimaryBrush}" FontSize="12"/>
+>>>>>>> origin/main
                                         </Border>
                                     </DataTemplate>
                                 </GroupStyle.HeaderTemplate>
@@ -107,12 +149,21 @@
                                             <ColumnDefinition Width="30"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                         <Border Width="24" Height="24" CornerRadius="12" Background="{StaticResource CalmBackgroundBrush}" HorizontalAlignment="Left">
                                             <TextBlock Text="V" Foreground="{StaticResource CalmSubHeaderBrush}" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
                                         <StackPanel Grid.Column="1" VerticalAlignment="Center">
                                             <TextBlock Text="{Binding Prompt}" FontWeight="SemiBold" FontSize="12" TextTrimming="CharacterEllipsis" Foreground="{StaticResource CalmTextBrush}"/>
                                             <TextBlock Text="{Binding Name}" FontSize="10" Foreground="#64748B"/>
+=======
+                                        <Border Width="24" Height="24" CornerRadius="12" Background="#E8EAF6" HorizontalAlignment="Left">
+                                            <TextBlock Text="V" Foreground="{StaticResource PrimaryBrush}" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding Prompt}" FontWeight="SemiBold" FontSize="12" TextTrimming="CharacterEllipsis"/>
+                                            <TextBlock Text="{Binding Name}" FontSize="10" Foreground="Gray"/>
+>>>>>>> origin/main
                                         </StackPanel>
                                     </Grid>
                                 </Border>
@@ -139,6 +190,7 @@
             </Border>
 
             <!-- CENTER: Editor -->
+<<<<<<< HEAD
             <ScrollViewer Grid.Column="1" Margin="0" VerticalScrollBarVisibility="Auto">
                 <Border Style="{StaticResource CalmCardStyle}" Background="White">
                     <StackPanel x:Name="EditorPanel" IsEnabled="False">
@@ -148,6 +200,17 @@
                             <StackPanel Margin="10">
                                 <TextBlock Text="Question (Libellé)" Style="{StaticResource LabelStyle}"/>
                                 <TextBox x:Name="TxtPrompt" Text="{Binding Prompt, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" TextChanged="TxtPrompt_TextChanged" Height="60" TextWrapping="Wrap" AcceptsReturn="True"/>
+=======
+            <ScrollViewer Grid.Column="1" Margin="10,0" VerticalScrollBarVisibility="Auto">
+                <Border Style="{StaticResource CardStyle}" Padding="25">
+                    <StackPanel x:Name="EditorPanel" IsEnabled="False">
+                        <TextBlock Text="CONFIGURATEUR" Style="{StaticResource SectionHeaderStyle}"/>
+                        
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Informations Générales" Tag="#E3F2FD" Foreground="#1565C0" IsExpanded="True" Margin="0,0,0,15">
+                            <StackPanel Margin="10">
+                                <TextBlock Text="Question (Libellé)" Style="{StaticResource LabelStyle}"/>
+                                <TextBox x:Name="TxtPrompt" TextChanged="TxtPrompt_TextChanged" Height="60" TextWrapping="Wrap" AcceptsReturn="True"/>
+>>>>>>> origin/main
                                 
                                 <Grid Margin="0,15,0,0">
                                     <Grid.ColumnDefinitions>
@@ -157,7 +220,11 @@
                                     </Grid.ColumnDefinitions>
                                     <StackPanel>
                                         <TextBlock Text="Nom Technique" Style="{StaticResource LabelStyle}"/>
+<<<<<<< HEAD
                                         <TextBox x:Name="TxtName" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" CharacterCasing="Upper"/>
+=======
+                                        <TextBox x:Name="TxtName" CharacterCasing="Upper"/>
+>>>>>>> origin/main
                                     </StackPanel>
                                     <StackPanel Grid.Column="2">
                                         <TextBlock Text="Type de Donnée" Style="{StaticResource LabelStyle}"/>
@@ -178,7 +245,11 @@
                             </StackPanel>
                         </Expander>
 
+<<<<<<< HEAD
                         <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Logique et Visibilité" Tag="#F8FAFC" Foreground="{StaticResource CalmSubHeaderBrush}" Margin="0,0,0,15">
+=======
+                        <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Logique et Visibilité" Tag="#FFF3E0" Foreground="#E65100" Margin="0,0,0,15">
+>>>>>>> origin/main
                             <StackPanel Margin="10">
                                 <TextBlock Text="Condition d'Affichage" Style="{StaticResource LabelStyle}"/>
                                 <TextBox x:Name="TxtCondition" TextChanged="TxtCondition_TextChanged" ToolTip="Ex: [SEXE] = 'F'"/>
@@ -192,7 +263,11 @@
                         <!-- Paramètres Spécifiques (Dynamic) -->
                         <Border x:Name="OptionsPanel" Background="#F8F9FA" CornerRadius="8" Padding="15" BorderBrush="#E0E0E0" BorderThickness="1">
                             <StackPanel>
+<<<<<<< HEAD
                                 <TextBlock Text="PARAMÈTRES AVANCÉS" FontWeight="Bold" FontSize="11" Foreground="{StaticResource CalmSubHeaderBrush}" Margin="0,0,0,10"/>
+=======
+                                <TextBlock Text="PARAMÈTRES AVANCÉS" FontWeight="Bold" FontSize="11" Foreground="#546E7A" Margin="0,0,0,10"/>
+>>>>>>> origin/main
                                 
                                 <StackPanel x:Name="PanelChoices" Visibility="Collapsed">
                                     <TextBlock Text="Options de réponse (Séparez par des virgules)" Style="{StaticResource LabelStyle}"/>
@@ -227,6 +302,7 @@
                                     <TextBox x:Name="TxtTheme" TextChanged="TxtTheme_TextChanged" Tag="Thème"/>
                                     <TextBox x:Name="TxtSubTheme" TextChanged="TxtSubTheme_TextChanged" Tag="Sous-thème" Margin="0,8,0,0"/>
                                 </StackPanel>
+<<<<<<< HEAD
 
                                 <!-- Recoding Section -->
                                 <StackPanel Margin="0,15,0,0">
@@ -236,6 +312,8 @@
                                     <TextBlock Text="Définit comment cette variable sera transformée lors de l'analyse." 
                                                FontSize="10" Foreground="Gray" FontStyle="Italic" TextWrapping="Wrap" Margin="0,2,0,0"/>
                                 </StackPanel>
+=======
+>>>>>>> origin/main
                             </StackPanel>
                         </Border>
                     </StackPanel>
@@ -249,6 +327,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
+<<<<<<< HEAD
                 <Border Background="{StaticResource CalmSubHeaderBrush}" Padding="15,10" CornerRadius="8,8,0,0">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xE890;" FontFamily="Segoe MDL2 Assets" Foreground="#F1F5F9" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="16"/>
@@ -257,6 +336,16 @@
                 </Border>
                 
                 <Border Grid.Row="1" Background="White" BorderBrush="{StaticResource CalmSubHeaderBrush}" BorderThickness="1,0,1,1" CornerRadius="0,0,8,8">
+=======
+                <Border Background="{StaticResource PrimaryBrush}" Padding="15,10" CornerRadius="8,8,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE890;" FontFamily="Segoe MDL2 Assets" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="16"/>
+                        <TextBlock Text="APERÇU SCIENTIFIQUE (Times New Roman)" Foreground="White" FontWeight="Bold" FontSize="12" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                
+                <Border Grid.Row="1" Background="White" BorderBrush="{StaticResource PrimaryBrush}" BorderThickness="1,0,1,1" CornerRadius="0,0,8,8">
+>>>>>>> origin/main
                     <TextBox x:Name="TxtPreview" 
                              BorderThickness="0"
                              FontFamily="Times New Roman" 
@@ -273,7 +362,11 @@
         </Grid>
 
         <!-- 3. Footer Operations -->
+<<<<<<< HEAD
         <Border Grid.Row="2" Background="#F8FAFC" Padding="25,18" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="0,1,0,0">
+=======
+        <Border Grid.Row="2" Background="#ECEFF1" Padding="25,15" BorderBrush="#CFD8DC" BorderThickness="0,1,0,0">
+>>>>>>> origin/main
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -281,16 +374,28 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 
+<<<<<<< HEAD
                 <Button Grid.Column="0" Click="BtnExport_Click" Style="{StaticResource ModernButtonStyle}" Background="#EA580C" Foreground="White">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="&#xE8A1;" FontFamily="Segoe MDL2 Assets" Margin="0,0,10,0" VerticalAlignment="Center"/>
                         <TextBlock Text="Exporter en Word (MS Word)" VerticalAlignment="Center"/>
+=======
+                <Button Grid.Column="0" Click="BtnExport_Click" Style="{StaticResource ModernButtonStyle}" Background="#F57C00">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE8A1;" FontFamily="Segoe MDL2 Assets" Margin="0,0,10,0"/>
+                        <TextBlock Text="Exporter en Word (MS Word)"/>
+>>>>>>> origin/main
                     </StackPanel>
                 </Button>
 
                 <StackPanel Grid.Column="2" Orientation="Horizontal">
+<<<<<<< HEAD
                     <Button Content="Fermer" Click="Close_Click" Margin="0,0,15,0" Width="120" Background="Transparent" Foreground="#475569" BorderBrush="#94A3B8"/>
                     <Button Content="ENREGISTRER LE MASQUE" Click="BtnSave_Click" Style="{StaticResource ModernButtonStyle}" Background="{StaticResource CalmSubHeaderBrush}" Foreground="White" Width="280"/>
+=======
+                    <Button Content="Fermer" Click="Close_Click" Margin="0,0,15,0" Width="100" Background="Transparent" Foreground="#455A64" BorderBrush="#90A4AE"/>
+                    <Button Content="ENREGISTRER LE MASQUE" Click="BtnSave_Click" Style="{StaticResource ModernButtonStyle}" Width="280"/>
+>>>>>>> origin/main
                 </StackPanel>
             </Grid>
         </Border>

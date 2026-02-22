@@ -62,6 +62,7 @@ namespace AdRev.Desktop.Services
                     AddHeading(body, "RÉFÉRENCES BIBLIOGRAPHIQUES");
                     AddParagraph(body, protocol.References);
                 }
+<<<<<<< HEAD
 
                 if (protocol.Appendices != null && protocol.Appendices.Any())
                 {
@@ -73,6 +74,8 @@ namespace AdRev.Desktop.Services
                         AddParagraph(body, app.Content);
                     }
                 }
+=======
+>>>>>>> origin/main
             });
         }
 
@@ -156,6 +159,7 @@ namespace AdRev.Desktop.Services
             });
         }
 
+<<<<<<< HEAD
         public void ExportAppendicesOnly(List<ProtocolAppendix> appendices, string projectTitle, string filePath)
         {
             CreateWordDocument(filePath, (body) =>
@@ -194,6 +198,8 @@ namespace AdRev.Desktop.Services
             });
         }
 
+=======
+>>>>>>> origin/main
         public void ExportVariableSheetToWord(ResearchProtocol protocol, string filePath)
         {
             CreateWordDocument(filePath, (body) =>

@@ -650,10 +650,14 @@ namespace AdRev.Core.Services
                     item.IsMet = !string.IsNullOrWhiteSpace(protocol.StudySetting);
                     break;
                 case "17": // Guide d'entretien => DataCollection
+<<<<<<< HEAD
                     item.IsMet = protocol.Appendices.Any(a => a.Type == AppendixType.InterviewGuide) || !string.IsNullOrWhiteSpace(protocol.DataCollection);
                     break;
                 case "32": // Consentement (Generic check if we used COREQ sections)
                     item.IsMet = protocol.Appendices.Any(a => a.Type == AppendixType.InformedConsent);
+=======
+                    item.IsMet = !string.IsNullOrWhiteSpace(protocol.DataCollection);
+>>>>>>> origin/main
                     break;
             }
         }
@@ -680,9 +684,12 @@ namespace AdRev.Core.Services
                 case "6": // Variables
                     item.IsMet = protocol.Variables != null && protocol.Variables.Count > 0;
                     break;
+<<<<<<< HEAD
                 case "7": // Sources de données
                     item.IsMet = protocol.Appendices.Any(a => a.Type == AppendixType.Questionnaire || a.Type == AppendixType.DataCollectionForm);
                     break;
+=======
+>>>>>>> origin/main
                 case "9": // Taille d'étude
                     item.IsMet = !string.IsNullOrWhiteSpace(protocol.SamplingMethod);
                     break;
@@ -745,7 +752,10 @@ namespace AdRev.Core.Services
                 case "1": item.IsMet = protocol.Title?.ToLower().Contains("systematic") == true || protocol.Title?.ToLower().Contains("revue") == true; break;
                 case "5": item.IsMet = !string.IsNullOrWhiteSpace(protocol.InclusionCriteria); break;
                 case "6": item.IsMet = !string.IsNullOrWhiteSpace(protocol.DataCollection); break;
+<<<<<<< HEAD
                 case "7": item.IsMet = protocol.Appendices.Any(a => a.Type == AppendixType.SearchStrategy); break;
+=======
+>>>>>>> origin/main
             }
         }
 

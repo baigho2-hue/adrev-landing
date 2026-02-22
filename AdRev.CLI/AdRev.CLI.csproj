@@ -10,6 +10,7 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+<<<<<<< HEAD
 
     <!-- Options pour un EXE "pro" -->
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
@@ -20,6 +21,8 @@
     <PublishReadyToRun>true</PublishReadyToRun>
     <!-- Facultatif : compaction / compression du single-file -->
     <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+=======
+>>>>>>> origin/main
   </PropertyGroup>
 
 </Project>

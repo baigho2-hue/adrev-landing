@@ -4,7 +4,10 @@
         xmlns:local="clr-namespace:AdRev.Desktop"
         Title="Assistant Discussion" Height="750" Width="1000"
         WindowStartupLocation="CenterScreen"
+<<<<<<< HEAD
         Icon="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png"
+=======
+>>>>>>> origin/main
         WindowStyle="None" AllowsTransparency="True" Background="Transparent">
 
     <Border Background="{StaticResource BackgroundBrush}" CornerRadius="20" BorderBrush="#DDD" BorderThickness="1">
@@ -24,7 +27,11 @@
                     </Grid.ColumnDefinitions>
                     
                     <StackPanel Orientation="Horizontal">
+<<<<<<< HEAD
                         <Image Source="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png" Width="30" Height="30" Margin="0,0,15,0" VerticalAlignment="Center"/>
+=======
+                        <TextBlock Text="💬" FontSize="24" VerticalAlignment="Center" Margin="0,0,15,0"/>
+>>>>>>> origin/main
                         <StackPanel VerticalAlignment="Center">
                             <TextBlock Text="Assistant Discussion &amp; Commentaires" FontSize="20" FontWeight="Bold" Foreground="White"/>
                             <TextBlock Text="Élaborez vos arguments scientifiques avec l'assistance AdRev" FontSize="12" Foreground="#AACCFF"/>

@@ -1,8 +1,13 @@
 ﻿using AdRev.Domain.Protocols;
+<<<<<<< HEAD
 using AdRev.Core.Services;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+=======
+using System.Collections.Generic;
+using System.Linq;
+>>>>>>> origin/main
 
 namespace AdRev.Core.Protocols
 {

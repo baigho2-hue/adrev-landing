@@ -1,10 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+<<<<<<< HEAD
   <ItemGroup>
     <ProjectReference Include="..\AdRev.Domain\AdRev.Domain.csproj" />
     <ProjectReference Include="..\AdRev.Core\AdRev.Core.csproj" />
   </ItemGroup>
 
+=======
+>>>>>>> origin/main
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>

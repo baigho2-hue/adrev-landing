@@ -4,7 +4,10 @@
         Title="Activation AdRev" Height="580" Width="420"
         WindowStyle="None" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
+<<<<<<< HEAD
         Icon="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png"
+=======
+>>>>>>> origin/main
         AllowsTransparency="True" Background="Transparent">
     
     <Window.Resources>
@@ -86,6 +89,7 @@
 
             <!-- Footer -->
             <StackPanel Grid.Row="2" Margin="0,20,0,0">
+<<<<<<< HEAD
                 <TextBlock Text="Pour obtenir une licence : Envoyer confirmation de paiement à baigho2@gmail.com" 
                            Foreground="#707080" FontSize="11" HorizontalAlignment="Center" Margin="0,0,0,5"/>
                 <TextBlock Text="Paiement Orange Money : 00223 79 27 64 70" 
@@ -101,6 +105,10 @@
                     </Button.Resources>
                 </Button>
 
+=======
+                <TextBlock Text="Besoin d'aide ? support@adrev.com" 
+                           Foreground="#707080" FontSize="11" HorizontalAlignment="Center"/>
+>>>>>>> origin/main
                 <Button Content="Quitter" Click="Exit_Click" Background="Transparent" Foreground="#606070" BorderThickness="0" Margin="0,10,0,0" Cursor="Hand"/>
             </StackPanel>
         </Grid>

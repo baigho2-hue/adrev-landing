@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+<<<<<<< HEAD
     <Version>1.0.0</Version>
     <NoWarn>$(NoWarn);NU1701</NoWarn>
     <ApplicationIcon>Assets\AppIcon.ico</ApplicationIcon>
@@ -18,6 +19,16 @@
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
+=======
+    
+    <!-- Optimized Publishing Settings to protect source code -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <SelfContained>true</SelfContained>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+>>>>>>> origin/main
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,14 +42,18 @@
 
   <ItemGroup>
     <PackageReference Include="DocumentFormat.OpenXml" Version="3.4.1" />
+<<<<<<< HEAD
     <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
     <PackageReference Include="MaterialDesignThemes" Version="5.3.0" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3800.47" />
+=======
+>>>>>>> origin/main
     <PackageReference Include="Obfuscar" Version="2.2.50">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="System.Management" Version="10.0.2" />
+<<<<<<< HEAD
     <PackageReference Include="QRCoder" Version="1.4.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
@@ -49,4 +64,11 @@
   <Target Name="Obfuscate" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Release' ">
     <Exec Command="&quot;$(Obfuscar)&quot; obfuscar.xml" />
   </Target>
+=======
+  </ItemGroup>
+
+  <!-- <Target Name="Obfuscate" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Release' ">
+    <Exec Command="&quot;$(Obfuscar)&quot; obfuscar.xml" />
+  </Target> -->
+>>>>>>> origin/main
 </Project>

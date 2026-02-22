@@ -30,6 +30,7 @@ namespace AdRev.Domain.Enums
         [Description("De Convenance")]
         Convenience,
         
+<<<<<<< HEAD
         [Description("Théorique (Grounded Theory)")]
         Theoretical,
 
@@ -78,6 +79,19 @@ namespace AdRev.Domain.Enums
 
         [Description("Par Saturation (Critère d'arrêt)")]
         Saturation,
+=======
+        [Description("Raisonné (Purposive)")]
+        Purposive,
+        
+        [Description("Boule de Neige")]
+        Snowball,
+        
+        [Description("Par Quotas")]
+        Quota,
+
+        [Description("Théorique (Grounded Theory)")]
+        Theoretical,
+>>>>>>> origin/main
         
         // Autres
         [Description("Exhaustif (Recensement)")]

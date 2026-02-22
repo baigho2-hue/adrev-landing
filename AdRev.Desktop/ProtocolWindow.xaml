@@ -5,6 +5,7 @@
         Title="Éditeur de Protocole" Height="700" Width="1100"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None" ResizeMode="CanResize"
+<<<<<<< HEAD
         Icon="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png"
         Background="{StaticResource BackgroundBrush}">
 
@@ -12,16 +13,27 @@
         <WindowChrome CaptionHeight="60" ResizeBorderThickness="8" CornerRadius="0" GlassFrameThickness="0"/>
     </WindowChrome.WindowChrome>
 
+=======
+        Background="{StaticResource BackgroundBrush}">
+
+>>>>>>> origin/main
     <Window.Resources>
         <!-- Role to Access Level Mapping simulation -->
         <local:EnumDescriptionConverter x:Key="EnumDescriptionConverter"/>
         
         <!-- Global Text Style Preference -->
+<<<<<<< HEAD
         <!-- Global Text Style Preference -->
+=======
+>>>>>>> origin/main
         <Style TargetType="{x:Type TextBox}">
             <Setter Property="FontFamily" Value="Times New Roman"/>
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="Padding" Value="5"/>
+<<<<<<< HEAD
+=======
+            <!-- LineHeight tricky in TextBox, usually depends on font metrics. Can simulate with Block.LineHeight if RichTextBox, but for TextBox just stick to Font. -->
+>>>>>>> origin/main
         </Style>
 
         <!-- RichTextBox if used -->
@@ -57,6 +69,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                 <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
                     <Image Source="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png" Width="24" Height="24" Margin="0,0,10,0"/>
                     <StackPanel>
@@ -68,6 +81,14 @@
                 <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
                     <Button Content="TEST VISIBILITY" Background="Red" Foreground="White" Width="100" Height="30" Click="InsertResource_Click" Margin="0,0,20,0" FontWeight="Bold"/>
 
+=======
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Édition de Protocole de Recherche" Foreground="White" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock x:Name="ProjectTitleTextBlock" Text="Aucun projet lié" Foreground="#AACCFF" FontSize="12" Margin="0,2,0,0"/>
+                </StackPanel>
+                
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+>>>>>>> origin/main
                     <StackPanel Orientation="Horizontal" Margin="0,0,20,0" x:Name="SharingRolePanel">
                         <TextBlock Text="Simuler en tant que :" Foreground="#AACCFF" FontSize="11" VerticalAlignment="Center" Margin="0,0,10,0"/>
                         
@@ -87,8 +108,13 @@
                             </ComboBox.ItemTemplate>
                         </ComboBox>
                     </StackPanel>
+<<<<<<< HEAD
                     <Button x:Name="BtnMinimize" Content="&#xE921;" Click="Minimize_Click" Style="{StaticResource WindowControlButtonStyle}" WindowChrome.IsHitTestVisibleInChrome="True"/>
                     <Button x:Name="BtnClose" Content="&#xE8BB;" Click="Close_Click" Style="{StaticResource CloseButtonStyle}" WindowChrome.IsHitTestVisibleInChrome="True"/>
+=======
+                    <Button Content="➖" Click="Minimize_Click" Width="40" Height="30" Background="Transparent" Foreground="White" BorderThickness="0" Margin="0,0,5,0" FontWeight="Bold"/>
+                    <Button Content="❌" Click="Close_Click" Width="40" Height="30" Background="#CC3333" Foreground="White" BorderThickness="0" FontWeight="Bold"/>
+>>>>>>> origin/main
                 </StackPanel>
             </Grid>
         </Border>
@@ -101,8 +127,11 @@
                     <MenuItem x:Name="MenuFileSave" Header="Enregistrer" Click="CreateProtocol_Click"/>
                     <MenuItem x:Name="MenuFileExport" Header="Exporter en Word (.docx)" Click="ExportWord_Click"/>
                     <Separator/>
+<<<<<<< HEAD
                     <MenuItem Header="Tableau de Bord / Accueil" Click="MenuHome_Click" FontWeight="Bold" Foreground="{StaticResource PrimaryBrush}"/>
                     <Separator/>
+=======
+>>>>>>> origin/main
                     <MenuItem Header="Quitter" Click="Close_Click"/>
                 </MenuItem>
                 
@@ -111,10 +140,13 @@
                     <MenuItem Header="Coller" Command="ApplicationCommands.Paste"/>
                 </MenuItem>
 
+<<<<<<< HEAD
                 <MenuItem Header="Insertion" FontSize="14" Margin="5,0,10,0">
                      <MenuItem x:Name="MenuInsertResource" Header="Tableau / Figure..." Click="InsertResource_Click" FontWeight="Bold"/>
                 </MenuItem>
 
+=======
+>>>>>>> origin/main
                 <!-- Assistant Discussion comme un 'Onglet' Menu Principal -->
                 <MenuItem x:Name="MenuDiscussion" Header="Assistant Discussion 💬" 
                           FontSize="14" 
@@ -141,7 +173,11 @@
                             <Setter Property="Padding" Value="20,12"/>
                             <Setter Property="FontSize" Value="14"/>
                             <Setter Property="Cursor" Value="Hand"/>
+<<<<<<< HEAD
                             <Setter Property="Margin" Value="0,5"/>
+=======
+                            <Setter Property="Margin" Value="0,2"/>
+>>>>>>> origin/main
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="ListBoxItem">
@@ -180,8 +216,11 @@
                     <ListBoxItem Content="12. Résultats Attendus" Tag="12"/>
                     <ListBoxItem Content="13. Conclusion" Tag="13"/>
                     <ListBoxItem Content="14. Références" Tag="14"/>
+<<<<<<< HEAD
                     <ListBoxItem Content="15. Annexes" Tag="16"/>
                     <ListBoxItem Content="16. Traçabilité (Logs)" Tag="15"/>
+=======
+>>>>>>> origin/main
                 </ListBox>
             </Border>
 
@@ -192,7 +231,11 @@
             <ScrollViewer x:Name="View_Step1" VerticalScrollBarVisibility="Auto" Visibility="Visible">
                 <StackPanel MaxWidth="800">
                      <!-- Carte Informations Générales -->
+<<<<<<< HEAD
                     <Expander IsExpanded="True" Style="{StaticResource ScientificExpanderStyle}" Header="Étape 1/16 : Informations Générales" Tag="#E3F2FD" Foreground="#1565C0">
+=======
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 1/14 : Informations Générales" Tag="#E3F2FD" Foreground="#1565C0">
+>>>>>>> origin/main
                         <StackPanel>
                             
                             <StackPanel Margin="0,0,0,15">
@@ -327,7 +370,11 @@
             <!-- ÉTAPE 2 : INTRODUCTION -->
             <ScrollViewer x:Name="View_Introduction" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 2/16 : Introduction &amp; Contexte" Tag="#E1F5FE" Foreground="#0277BD">
+=======
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 2/14 : Introduction &amp; Contexte" Tag="#E1F5FE" Foreground="#0277BD">
+>>>>>>> origin/main
                          <StackPanel>
                             <TextBlock Text="Structure de l'Introduction (Max 2000 mots)" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
                             
@@ -337,10 +384,14 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="1. Contexte (Définitions principales...)" Style="{StaticResource LabelStyle}" VerticalAlignment="Center"/>
+<<<<<<< HEAD
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                                     <Button x:Name="BtnInsert_Context" Content="Inserer Tab/Fig" Click="InsertResource_Click" Margin="0,0,5,0" Height="25" FontSize="11" Padding="8,0" Background="#E3F2FD" Foreground="#1565C0" BorderThickness="0"/>
                                     <Button Content="➕ Citer une source" Click="AddCitation_Click" Tag="Context" Height="25" FontSize="11" Padding="10,0" Background="#E0E0E0" Foreground="Black" Margin="0"/>
                                 </StackPanel>
+=======
+                                <Button Grid.Column="1" Content="➕ Citer une source" Click="AddCitation_Click" Tag="Context" Height="25" FontSize="11" Padding="10,0" Background="#E0E0E0" Foreground="Black" Margin="0"/>
+>>>>>>> origin/main
                             </Grid>
                              <TextBox x:Name="ContextTextBox" Height="300" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,15" VerticalScrollBarVisibility="Auto" Tag="Décrivez l'état actuel des connaissances, les définitions et le contexte global de votre étude..."/>
 
@@ -350,10 +401,14 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="2. Justification du Problème (Données, Lacunes...)" Style="{StaticResource LabelStyle}"/>
+<<<<<<< HEAD
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                                     <Button x:Name="BtnInsert_Problem" Content="Inserer Tab/Fig" Click="InsertResource_Click" Margin="0,0,5,0" Height="22" FontSize="10" Padding="8,0" Background="#E3F2FD" Foreground="#1565C0" BorderThickness="0"/>
                                     <Button Content="➕ Citer" Click="AddCitation_Click" Tag="ProblemTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </StackPanel>
+=======
+                                <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="ProblemTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+>>>>>>> origin/main
                             </Grid>
                              <TextBox x:Name="ProblemTextBox" Height="80" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" Tag="Quelle est la lacune ou le problème spécifique que cette étude vise à résoudre ?"/>
 
@@ -370,7 +425,11 @@
             <!-- ÉTAPE 3 : OBJECTIFS -->
             <ScrollViewer x:Name="View_Objectives" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 3/16 : Objectifs de l'Étude" Tag="#E8F5E9" Foreground="#2E7D32">
+=======
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 3/14 : Objectifs de l'Étude" Tag="#E8F5E9" Foreground="#2E7D32">
+>>>>>>> origin/main
                         <StackPanel>
                             <TextBlock Text="Objectifs de l'étude" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
                             
@@ -415,9 +474,15 @@
             </ScrollViewer>
 
             <!-- ÉTAPE 4 : CADRE CONCEPTUEL -->
+<<<<<<< HEAD
             <ScrollViewer x:Name="View_ConceptualFramework" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                  <StackPanel MaxWidth="800">
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 4/16 : Cadre Conceptuel" Tag="#E8EAF6" Foreground="#283593">
+=======
+            <ScrollViewer x:Name="View_Step3" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
+                 <StackPanel MaxWidth="800">
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 4/14 : Cadre Conceptuel" Tag="#E8EAF6" Foreground="#283593">
+>>>>>>> origin/main
                          <StackPanel>
                             <TextBlock Text="Définition des Concepts Clés" Style="{StaticResource LabelStyle}"/>
                              <TextBox x:Name="ConceptsTextBox" Height="100" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,15" Tag="Définissez les variables indépendantes, dépendantes et les concepts théoriques majeurs..."/>
@@ -440,7 +505,11 @@
             <!-- ÉTAPE 5 : METHODOLOGIE - Design & Cadre -->
             <ScrollViewer x:Name="View_Methodology_Design" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                     <Expander IsExpanded="True" Style="{StaticResource ScientificExpanderStyle}" Header="Étape 5/16 : Méthodologie - Design &amp; Cadre" Tag="#E8F5E9" Foreground="#2E7D32">
+=======
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 5/14 : Méthodologie - Design &amp; Cadre" Tag="#E8F5E9" Foreground="#2E7D32">
+>>>>>>> origin/main
                         <StackPanel>
                             <TextBlock Text="Type d'étude (Approche)" Style="{StaticResource LabelStyle}" FontWeight="SemiBold"/>
                             <ComboBox x:Name="StudyTypeComboBox" Height="40" Padding="10" VerticalContentAlignment="Center" FontSize="14" Margin="0,0,0,10" SelectionChanged="StudyTypeComboBox_SelectionChanged">
@@ -451,6 +520,7 @@
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
 
+<<<<<<< HEAD
                             <StackPanel x:Name="QualitativeTypePanel" Visibility="Collapsed" Margin="0,0,0,15" Background="#F0F0FF">
                                 <TextBlock Text="Approche Qualitative" Style="{StaticResource LabelStyle}" FontWeight="SemiBold" Foreground="{StaticResource SecondaryBrush}"/>
                                 <ComboBox x:Name="QualitativeApproachComboBox" Height="40" Padding="10" VerticalContentAlignment="Center" FontSize="14" SelectionChanged="RefreshAudit_LostFocus" Margin="0,0,0,10" Background="White" Foreground="Black">
@@ -473,6 +543,17 @@
                                 <TextBlock Text="Note: Si ce message est visible, le panel est bien affiché." FontSize="10" Foreground="Gray" Margin="0,5,0,0"/>
 
 
+=======
+                            <StackPanel x:Name="QualitativeTypePanel" Visibility="Collapsed" Margin="0,0,0,15">
+                                <TextBlock Text="Approche Qualitative" Style="{StaticResource LabelStyle}" FontWeight="SemiBold" Foreground="{StaticResource SecondaryBrush}"/>
+                                <ComboBox x:Name="QualitativeApproachComboBox" Height="40" Padding="10" VerticalContentAlignment="Center" FontSize="14" SelectionChanged="RefreshAudit_LostFocus">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+>>>>>>> origin/main
                             </StackPanel>
 
                             <StackPanel x:Name="EpidemiologyTypePanel" Visibility="Collapsed" Margin="0,0,0,15">
@@ -492,10 +573,14 @@
                                    <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Cadre de l'étude (Lieu, Période)" Style="{StaticResource LabelStyle}"/>
+<<<<<<< HEAD
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                                     <Button x:Name="BtnInsert_Setting" Content="Inserer Tab/Fig" Click="InsertResource_Click" Margin="0,0,5,0" Height="22" FontSize="10" Padding="8,0" Background="#E3F2FD" Foreground="#1565C0" BorderThickness="0"/>
                                     <Button Content="➕ Citer" Click="AddCitation_Click" Tag="StudySettingTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </StackPanel>
+=======
+                                <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="StudySettingTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+>>>>>>> origin/main
                             </Grid>
                             <TextBox x:Name="StudySettingTextBox" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" LostFocus="RefreshAudit_LostFocus" Tag="Où et quand se déroule l'étude ? (Ville, Hôpital, Services concernés...)"/>
 
@@ -522,7 +607,11 @@
             <!-- ÉTAPE 6 : METHODOLOGIE - Population & Critères -->
             <ScrollViewer x:Name="View_Methodology_Population" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 6/16 : Méthodologie - Population &amp; Critères" Tag="#F1F8E9" Foreground="#33691E">
+=======
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 6/14 : Méthodologie - Population &amp; Critères" Tag="#F1F8E9" Foreground="#33691E">
+>>>>>>> origin/main
                         <StackPanel>
                             <TextBlock Text="Population d'étude" Style="{StaticResource LabelStyle}"/>
                              <TextBox x:Name="PopulationTextBox" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" Tag="Définissez la population source et la population cible (ex: Patients diabétiques de type 2)..."/>
@@ -570,7 +659,11 @@
             <!-- ÉTAPE 7 : METHODOLOGIE - Echantillonnage -->
             <ScrollViewer x:Name="View_Methodology_Sampling" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 7/16 : Méthodologie - Echantillonnage" Tag="#FFF8E1" Foreground="#FF6F00">
+=======
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 7/14 : Méthodologie - Echantillonnage" Tag="#FFF8E1" Foreground="#FF6F00">
+>>>>>>> origin/main
                         <StackPanel>
                              <!-- Section Échantillonnage Avancé -->
                             <Border Background="#FFF9E6" BorderBrush="#FFD700" BorderThickness="1" CornerRadius="5" Padding="10" Margin="0,0,0,15">
@@ -581,11 +674,18 @@
                                     <ComboBox x:Name="SamplingTypeComboBox" Height="32" Padding="8" VerticalContentAlignment="Center" FontSize="12" Margin="0,0,0,10" SelectionChanged="SamplingTypeComboBox_SelectionChanged">
                                         <ComboBox.ItemTemplate>
                                             <DataTemplate>
+<<<<<<< HEAD
                                                 <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}" Foreground="Black"/>
                                             </DataTemplate>
                                         </ComboBox.ItemTemplate>
                                     </ComboBox>
 
+=======
+                                                <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+                                            </DataTemplate>
+                                        </ComboBox.ItemTemplate>
+                                    </ComboBox>
+>>>>>>> origin/main
                                     
                                     <!-- Options Stratification -->
                                     <StackPanel x:Name="StratificationPanel" Visibility="Collapsed" Margin="0,0,0,10">
@@ -757,10 +857,14 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Texte final sur l'échantillonnage :" Style="{StaticResource LabelStyle}"/>
+<<<<<<< HEAD
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                                     <Button x:Name="BtnInsert_Sampling" Content="Inserer Tab/Fig" Click="InsertResource_Click" Margin="0,0,5,0" Height="22" FontSize="10" Padding="8,0" Background="#E3F2FD" Foreground="#1565C0" BorderThickness="0"/>
                                     <Button Content="➕ Citer" Click="AddCitation_Click" Tag="SamplingTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </StackPanel>
+=======
+                                <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="SamplingTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+>>>>>>> origin/main
                             </Grid>
                              <TextBox x:Name="SamplingTextBox" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10" Tag="Détaillez la procédure de sélection des participants (ex: tirage au sort, recrutement consécutif...)"/>
                         </StackPanel>
@@ -771,7 +875,11 @@
             <!-- ÉTAPE 8 : METHODOLOGIE - Collecte de données -->
             <ScrollViewer x:Name="View_Methodology_Data" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 8/16 : Méthodologie - Collecte de données" Tag="#E0F2F1" Foreground="#00695C">
+=======
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 8/13 : Méthodologie - Collecte de données" Tag="#E0F2F1" Foreground="#00695C">
+>>>>>>> origin/main
                         <StackPanel>
                             <!-- Nouveau bouton pour le masque de saisie -->
                             <Border Background="#E8F5E9" CornerRadius="5" Padding="10" Margin="0,0,0,15" BorderBrush="#4CAF50" BorderThickness="1">
@@ -800,10 +908,14 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Procédures de Collecte" Style="{StaticResource LabelStyle}"/>
+<<<<<<< HEAD
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                                     <Button x:Name="BtnInsert_Collection" Content="Inserer Tab/Fig" Click="InsertResource_Click" Margin="0,0,5,0" Height="22" FontSize="10" Padding="8,0" Background="#E3F2FD" Foreground="#1565C0" BorderThickness="0"/>
                                     <Button Content="➕ Citer" Click="AddCitation_Click" Tag="DataCollectionTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </StackPanel>
+=======
+                                <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="DataCollectionTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+>>>>>>> origin/main
                             </Grid>
                              <TextBox x:Name="DataCollectionTextBox" Height="250" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10" Tag="Décrivez les outils (Questionnaires, Mesures cliniques) et les procédures de collecte..."/>
                         </StackPanel>
@@ -814,7 +926,11 @@
             <!-- ÉTAPE 9 : BUDGET (Nouveau) -->
             <ScrollViewer x:Name="View_Budget" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 9/16 : Budget &amp; Ressources" Tag="#FFF3E0" Foreground="#EF6C00">
+=======
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 9/14 : Budget &amp; Ressources" Tag="#FFF3E0" Foreground="#EF6C00">
+>>>>>>> origin/main
                         <StackPanel>
                             <TextBlock Text="Estimation des Ressources &amp; Budget" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
                             
@@ -847,9 +963,15 @@
 
             <!-- ÉTAPE 10 : CONCLUSION & ETHIQUE -->
             <!-- ÉTAPE 10 : CONSIDERATIONS ETHIQUES -->
+<<<<<<< HEAD
             <ScrollViewer x:Name="View_Ethics" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                  <StackPanel MaxWidth="800">
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 10/16 : Considérations Éthiques" Tag="#FFEBEE" Foreground="#C62828">
+=======
+            <ScrollViewer x:Name="View_Step10" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
+                 <StackPanel MaxWidth="800">
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 10/14 : Considérations Éthiques" Tag="#FFEBEE" Foreground="#C62828">
+>>>>>>> origin/main
                         <StackPanel>
                             <Grid Margin="0,0,0,2">
                                 <Grid.ColumnDefinitions>
@@ -869,7 +991,11 @@
             <!-- ÉTAPE 11 : PLAN D'ANALYSE (Indépendant) -->
             <ScrollViewer x:Name="View_DataAnalysis" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 11/16 : Plan d'Analyse des Données" Tag="#EDE7F6" Foreground="#4527A0">
+=======
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 11/14 : Plan d'Analyse des Données" Tag="#EDE7F6" Foreground="#4527A0">
+>>>>>>> origin/main
                         <StackPanel>
                             <TextBlock Text="Cette section est CRUCIALE : elle définit comment vous allez répondre à vos objectifs." FontSize="11" Foreground="#666" Margin="0,0,0,15" FontStyle="Italic"/>
                             <Grid Margin="0,0,0,5">
@@ -877,6 +1003,7 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
+<<<<<<< HEAD
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Description du Plan d'Analyse" Style="{StaticResource LabelStyle}" VerticalAlignment="Center"/>
@@ -885,6 +1012,12 @@
                                     <Button x:Name="BtnInsert_Analysis" Content="Inserer Tab/Fig" Click="InsertResource_Click" Margin="0,0,5,0" Height="25" FontSize="11" Padding="8,0" Background="#E3F2FD" Foreground="#1565C0" BorderThickness="0"/>
                                     <Button Content="➕ Citer" Click="AddCitation_Click" Tag="DataAnalysisTextBox" Height="25" FontSize="11" Padding="10,0" Background="#E0E0E0" Foreground="Black"/>
                                 </StackPanel>
+=======
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Description du Plan d'Analyse" Style="{StaticResource LabelStyle}" VerticalAlignment="Center"/>
+                                <Button Grid.Column="1" Content="✨ Générer Plan Automatique" Click="GenerateProtocolPlan_Click" Height="25" FontSize="11" Padding="12,0" Margin="0,0,8,0" Background="#FFF3E0" Foreground="#E65100" BorderBrush="#FFCC80" BorderThickness="1"/>
+                                <Button Grid.Column="2" Content="➕ Citer" Click="AddCitation_Click" Tag="DataAnalysisTextBox" Height="25" FontSize="11" Padding="10,0" Background="#E0E0E0" Foreground="Black"/>
+>>>>>>> origin/main
                             </Grid>
                             <TextBox x:Name="DataAnalysisTextBox" Height="350" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10" Tag="Le plan généré apparaîtra ici. Vous pouvez ensuite le modifier librement."/>
                             
@@ -902,7 +1035,11 @@
             <!-- ÉTAPE 12 : RESULTATS ATTENDUS -->
             <ScrollViewer x:Name="View_Results" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
+<<<<<<< HEAD
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 12/16 : Résultats Attendus" Tag="#E0F7FA" Foreground="#006064">
+=======
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 12/14 : Résultats Attendus" Tag="#E0F7FA" Foreground="#006064">
+>>>>>>> origin/main
                         <StackPanel>
                             <Grid Margin="0,0,0,2">
                                 <Grid.ColumnDefinitions>
@@ -910,10 +1047,14 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Résultats Attendus" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
+<<<<<<< HEAD
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                                     <Button x:Name="BtnInsert_Results" Content="Inserer Tab/Fig" Click="InsertResource_Click" Margin="0,0,5,0" Height="22" FontSize="10" Padding="8,0" Background="#E3F2FD" Foreground="#1565C0" BorderThickness="0"/>
                                     <Button Content="➕ Citer" Click="AddCitation_Click" Tag="ExpectedResultsTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </StackPanel>
+=======
+                                <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="ExpectedResultsTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+>>>>>>> origin/main
                             </Grid>
                             <TextBlock Text="Quels sont les résultats escomptés et leur impact ?" FontSize="11" Foreground="#666" Margin="0,0,0,5"/>
                             <TextBox x:Name="ExpectedResultsTextBox" Height="200" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,15"/>
@@ -922,10 +1063,17 @@
                 </StackPanel>
             </ScrollViewer>
 
+<<<<<<< HEAD
             <!-- ÉTAPE 13 : CONCLUSION -->
             <ScrollViewer x:Name="View_Conclusion" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 13/16 : Conclusion" Tag="#ECEFF1" Foreground="#37474F">
+=======
+            <!-- ÉTAPE 12 : CONCLUSION -->
+            <ScrollViewer x:Name="View_Conclusion" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
+                <StackPanel MaxWidth="800">
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 12/13 : Conclusion" Tag="#ECEFF1" Foreground="#37474F">
+>>>>>>> origin/main
                         <StackPanel>
                             <Grid Margin="0,0,0,2">
                                 <Grid.ColumnDefinitions>
@@ -933,10 +1081,14 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Conclusion" Style="{StaticResource HeaderTextStyle}" FontSize="16"/>
+<<<<<<< HEAD
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                                     <Button x:Name="BtnInsert_Conclusion" Content="Inserer Tab/Fig" Click="InsertResource_Click" Margin="0,0,5,0" Height="22" FontSize="10" Padding="8,0" Background="#E3F2FD" Foreground="#1565C0" BorderThickness="0"/>
                                     <Button Content="➕ Citer" Click="AddCitation_Click" Tag="ConclusionTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
                                 </StackPanel>
+=======
+                                <Button Grid.Column="1" Content="➕ Citer" Click="AddCitation_Click" Tag="ConclusionTextBox" Height="22" FontSize="10" Padding="8,0" Background="#E0E0E0" Foreground="Black"/>
+>>>>>>> origin/main
                             </Grid>
                             <TextBlock Text="Synthèse, retombées et recommandations." FontSize="11" Foreground="#666" Margin="0,0,0,5"/>
                             <TextBox x:Name="ConclusionTextBox" Height="200" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,15"/>
@@ -945,10 +1097,17 @@
                 </StackPanel>
             </ScrollViewer>
 
+<<<<<<< HEAD
             <!-- ÉTAPE 14 : REFERENCES -->
             <ScrollViewer x:Name="View_References" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
                 <StackPanel MaxWidth="800">
                     <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 14/16 : Références Bibliographiques" Tag="#FAFAFA" Foreground="#424242">
+=======
+            <!-- ÉTAPE 13 : REFERENCES -->
+            <ScrollViewer x:Name="View_References" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
+                <StackPanel MaxWidth="800">
+                    <Expander Style="{StaticResource ScientificExpanderStyle}" Header="Étape 13/13 : Références Bibliographiques" Tag="#FAFAFA" Foreground="#424242">
+>>>>>>> origin/main
                         <StackPanel>
                             <Grid Margin="0,0,0,10">
                                 <Grid.ColumnDefinitions>
@@ -966,6 +1125,7 @@
                     </Expander>
                 </StackPanel>
             </ScrollViewer>
+<<<<<<< HEAD
 
             <!-- ÉTAPE 15 : ANNEXES -->
             <ScrollViewer x:Name="View_Appendices" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
@@ -1086,6 +1246,8 @@
                     </Expander>
                 </StackPanel>
             </ScrollViewer>
+=======
+>>>>>>> origin/main
             
             </Grid>
         </Grid>
@@ -1101,15 +1263,24 @@
 
                 <!-- Navigation Gauche -->
                 <StackPanel Grid.Column="0" Orientation="Horizontal">
+<<<<<<< HEAD
                     <Button Content="⬅️ Précédent" Click="PrevSection_Click" Height="30" Width="120" Margin="0,0,10,0" Background="#F0F0F0" Foreground="Black" BorderThickness="0"/>
                     <Button Content="Suivant ➡️" Click="NextSection_Click" Height="30" Width="120" Background="#F0F0F0" Foreground="Black" BorderThickness="0"/>
+=======
+                    <Button Content="⬅️ Précédent" Click="PrevSection_Click" Height="40" Width="120" Margin="0,0,10,0" Background="#F0F0F0" Foreground="Black" BorderThickness="0"/>
+                    <Button Content="Suivant ➡️" Click="NextSection_Click" Height="40" Width="120" Background="#F0F0F0" Foreground="Black" BorderThickness="0"/>
+>>>>>>> origin/main
                 </StackPanel>
 
                 <!-- Zone de messages de validation -->
                 <ListBox Grid.Column="1" x:Name="ValidationMessagesListBox" BorderThickness="0" Background="Transparent" Foreground="{StaticResource ErrorBrush}" FontSize="12" MaxHeight="60" Margin="20,0,20,0" VerticalAlignment="Center"/>
 
                 <!-- Bouton Action -->
+<<<<<<< HEAD
                 <Button Grid.Column="2" Content="Valider et Enregistrer" Click="CreateProtocol_Click" Height="35" Width="200" FontSize="14" FontWeight="Bold"/>
+=======
+                <Button Grid.Column="2" Content="Valider et Enregistrer" Click="CreateProtocol_Click" Height="45" Width="200" FontSize="15" FontWeight="Bold"/>
+>>>>>>> origin/main
             </Grid>
         </Border>
 

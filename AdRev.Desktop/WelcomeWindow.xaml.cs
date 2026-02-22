@@ -16,12 +16,15 @@ namespace AdRev.Desktop
             HwidBox.Text = service.GetHardwareId();
         }
 
+<<<<<<< HEAD
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;
             this.Close();
         }
 
+=======
+>>>>>>> origin/main
         private void CopyHwid_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(NameBox.Text) || string.IsNullOrWhiteSpace(EmailBox.Text))

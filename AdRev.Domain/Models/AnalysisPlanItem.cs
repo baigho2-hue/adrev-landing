@@ -12,6 +12,7 @@ namespace AdRev.Domain.Models
         // Selected variable names
         public List<string> Variables { get; set; } = new List<string>();
 
+<<<<<<< HEAD
         // Explicit bindings for UI
         public string Variable1 { get; set; } = string.Empty; // Primary / Dependent
         public string Variable2 { get; set; } = string.Empty; // Secondary / Independent
@@ -20,6 +21,8 @@ namespace AdRev.Domain.Models
         public bool IncludeTable { get; set; } = true;
         public bool IncludeChart { get; set; } = true;
 
+=======
+>>>>>>> origin/main
         // Status
         public bool IsExecuted { get; set; }
         public string ResultSummary { get; set; } = string.Empty;

@@ -4,10 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AdRev.Desktop"
+<<<<<<< HEAD
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1200">
     <Grid Background="#F1F5F9">
+=======
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200">
+    <Grid Background="White">
+>>>>>>> origin/main
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="320"/>
             <ColumnDefinition Width="*"/>
@@ -15,7 +21,11 @@
         </Grid.ColumnDefinitions>
 
         <!-- Sidebar: Records List -->
+<<<<<<< HEAD
         <Border Background="#F8FAFC" BorderBrush="#CBD5E1" BorderThickness="0,0,1,0">
+=======
+        <Border BorderBrush="#E0E0E0" BorderThickness="0,0,1,0">
+>>>>>>> origin/main
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/> <!-- Header -->
@@ -24,39 +34,70 @@
                     <RowDefinition Height="Auto"/> <!-- Footer -->
                 </Grid.RowDefinitions>
                 
+<<<<<<< HEAD
                 <Border Padding="20,15" Background="#F1F5F9" BorderBrush="#CBD5E1" BorderThickness="0,0,0,1">
                     <StackPanel>
                         <TextBlock Text="📁 Base de Données" FontWeight="Bold" FontSize="16" Foreground="#1E293B"/>
                         <TextBlock Text="Gestion des entrées" FontSize="11" Foreground="#64748B"/>
+=======
+                <Border Padding="20,15" Background="#F8F9FA" BorderBrush="#EEE" BorderThickness="0,0,0,1">
+                    <StackPanel>
+                        <TextBlock Text="📁 Base de Données" FontWeight="Bold" FontSize="16" Foreground="#1976D2"/>
+                        <TextBlock Text="Gestion des entrées" FontSize="11" Foreground="Gray"/>
+>>>>>>> origin/main
                     </StackPanel>
                 </Border>
 
                 <Border Grid.Row="1" Padding="15">
                     <StackPanel>
+<<<<<<< HEAD
                         <Button x:Name="BtnNewRecord" Click="BtnNewRecord_Click" Style="{StaticResource MaterialDesignOutlinedButton}" Height="45" Margin="0,0,0,10">
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="Plus" Margin="0,0,8,0" VerticalAlignment="Center"/>
+=======
+                        <Button x:Name="BtnNewRecord" Click="BtnNewRecord_Click" Background="#E3F2FD" BorderBrush="#2196F3" Foreground="#1976D2" Height="40" Cursor="Hand">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="+" FontSize="18" FontWeight="Bold" Margin="0,-2,8,0"/>
+>>>>>>> origin/main
                                 <TextBlock Text="Nouveau Record" FontWeight="SemiBold"/>
                             </StackPanel>
                         </Button>
                         
+<<<<<<< HEAD
                         <TextBox x:Name="TxtSearchRecords" 
                                  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                  materialDesign:HintAssist.Hint="Rechercher..."
                                  materialDesign:TextFieldAssist.HasClearButton="True"
                                  TextChanged="TxtSearchRecords_TextChanged" Padding="5"/>
+=======
+                        <Border Margin="0,15,0,0" CornerRadius="4" BorderBrush="#DDD" BorderThickness="1" Background="#FAFAFA">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="🔍" VerticalAlignment="Center" Margin="8,0,5,0" Foreground="Gray"/>
+                                <TextBox x:Name="TxtSearchRecords" Grid.Column="1" BorderThickness="0" Background="Transparent" Padding="5" Tag="Rechercher..." TextChanged="TxtSearchRecords_TextChanged"/>
+                            </Grid>
+                        </Border>
+>>>>>>> origin/main
                     </StackPanel>
                 </Border>
 
                 <ListBox x:Name="RecordsListBox" Grid.Row="2" BorderThickness="0" Background="Transparent" Padding="5" SelectionChanged="RecordsListBox_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
+<<<<<<< HEAD
                             <materialDesign:Card Padding="8" Margin="0,0,0,8" UniformCornerRadius="4">
+=======
+                            <Border Padding="12,10" Background="White" BorderBrush="#EEE" BorderThickness="1" CornerRadius="4" Margin="0,0,0,5">
+>>>>>>> origin/main
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                                     <materialDesign:PackIcon Kind="FileDocument" Width="24" Height="24" Foreground="{DynamicResource PrimaryHueMidBrush}" VerticalAlignment="Center" Margin="0,0,10,0"/>
                                     
                                     <StackPanel Grid.Column="1" VerticalAlignment="Center">
@@ -65,10 +106,22 @@
                                     </StackPanel>
                                 </Grid>
                             </materialDesign:Card>
+=======
+                                    <Ellipse Width="35" Height="35" Fill="#E3F2FD" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="📄" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-47,0,12,0" Foreground="#1976D2" FontSize="16"/>
+                                    
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                        <TextBlock Text="{Binding RecordName}" FontWeight="Bold" FontSize="13" Foreground="#333"/>
+                                        <TextBlock Text="{Binding Timestamp}" FontSize="10" Foreground="Gray"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+>>>>>>> origin/main
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
 
+<<<<<<< HEAD
                 <Border Grid.Row="3" Padding="10" Background="{DynamicResource MaterialDesignPaper}" BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="0,1,0,0">
                     <StackPanel>
                         <TextBlock x:Name="TxtRecordCount" Text="0 entrée(s) enregistrée(s)" FontSize="10" Foreground="{DynamicResource MaterialDesignBodyLight}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
@@ -79,6 +132,10 @@
                             </StackPanel>
                         </Button>
                     </StackPanel>
+=======
+                <Border Grid.Row="3" Padding="10" Background="#F5F5F5" BorderBrush="#EEE" BorderThickness="0,1,0,0">
+                    <TextBlock x:Name="TxtRecordCount" Text="0 entrée(s) enregistrée(s)" FontSize="10" Foreground="Gray" HorizontalAlignment="Center"/>
+>>>>>>> origin/main
                 </Border>
             </Grid>
         </Border>
@@ -90,13 +147,21 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
+<<<<<<< HEAD
             <materialDesign:Card Margin="20,20,20,0" Padding="20,15" UniformCornerRadius="8" Background="White" BorderBrush="#CBD5E1" BorderThickness="1">
                 <Grid>
                     <Grid.ColumnDefinitions>
+=======
+            <Border Background="White" BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="20,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+>>>>>>> origin/main
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     
+<<<<<<< HEAD
                     <TextBox x:Name="TxtRecordName" 
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                              materialDesign:HintAssist.Hint="Nom de l'enregistrement (ex: Patient_001)"
@@ -113,6 +178,24 @@
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="10">
                     <StackPanel x:Name="DataEntryFormPanel" MaxWidth="800" HorizontalAlignment="Left">
                         <TextBlock Text="Veuillez définir les variables dans le 'Concepteur de Variables' pour générer le formulaire." Foreground="#64748B" FontStyle="Italic"/>
+=======
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="🏷️ Nom de l'enregistrement :" VerticalAlignment="Center" Margin="0,0,10,0" FontWeight="SemiBold" Foreground="#555"/>
+                        <TextBox x:Name="TxtRecordName" Width="250" Padding="8,5" BorderBrush="#DDD" VerticalAlignment="Center" Tag="Ex: Patient_001, Site_A_Obs_1"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                        <Button Content="📐 Concepteur" Click="OpenVariableDesigner_Click" Margin="0,0,10,0" Padding="15,5" Background="White" BorderBrush="#2196F3" Foreground="#2196F3" FontWeight="SemiBold"/>
+                        <Button x:Name="BtnSaveRecordActual" Content="💾 Sauvegarder l'entrée" Click="BtnSaveRecord_Click" Padding="20,8" Background="#2196F3" Foreground="White" BorderThickness="0" FontWeight="Bold"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Expander Grid.Row="1" Style="{StaticResource ScientificExpanderStyle}" Header="Formulaire de Saisie" Tag="#E8EAF6" Foreground="#1A237E" IsExpanded="True" Margin="20">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="10">
+                    <StackPanel x:Name="DataEntryFormPanel" MaxWidth="800" HorizontalAlignment="Left">
+                        <TextBlock Text="Veuillez définir les variables dans le 'Concepteur de Variables' pour générer le formulaire." Foreground="#888" FontStyle="Italic"/>
+>>>>>>> origin/main
                     </StackPanel>
                 </ScrollViewer>
             </Expander>
