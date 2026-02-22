@@ -27,11 +27,8 @@ namespace AdRev.Core.Protocols
             if (isQualitative)
             {
                 sb.Append(" La taille d'échantillon prévisionnelle est basée sur le principe de saturation des données ");
-<<<<<<< HEAD
                 if (protocol.SamplingType == SamplingType.Purposeful) 
-=======
-                if (protocol.SamplingType == SamplingType.Purposive) 
->>>>>>> origin/main
+
                     sb.Append("(diversification maximale jusqu'à redondance de l'information).");
                 else
                     sb.Append("plutôt que sur une représentativité statistique.");
@@ -141,7 +138,6 @@ namespace AdRev.Core.Protocols
                         ? "Un échantillonnage de convenance sera utilisé, sélectionnant les participants disponibles et volontaires pour les entretiens."
                         : "Un échantillonnage de convenance sera utilisé, avec une sélection des sujets facilement accessibles.";
                 
-<<<<<<< HEAD
                 case SamplingType.Quota:
                     return isQualitative 
                         ? "Un échantillonnage par quotas sera utilisé pour assurer une diversité contrôlée (âge, sexe, etc.) sans viser la représentativité statistique."
@@ -189,18 +185,6 @@ namespace AdRev.Core.Protocols
                 case SamplingType.Saturation:
                     return "Le recrutement se poursuivra selon un principe de saturation : il s'arrêtera lorsqu'aucune nouvelle information significative n'émergera des données.";
 
-=======
-                case SamplingType.Purposive:
-                    return "Un échantillonnage raisonné (purposive) sera utilisé, avec une sélection intentionnelle de sujets " + 
-                           (isQualitative ? "capables d'apporter une information riche sur le phénomène étudié." : "ayant des caractéristiques spécifiques.");
-                
-                case SamplingType.Snowball:
-                    return "Un échantillonnage « boule de neige » sera utilisé, où les participants recrutent d'autres participants (utile pour les populations difficiles d'accès).";
-                
-                case SamplingType.Quota:
-                    return "Un échantillonnage par quotas sera utilisé pour respecter des proportions prédéfinies dans l'échantillon.";
-                
->>>>>>> origin/main
                 case SamplingType.Census:
                     return "Un recensement exhaustif de la population sera réalisé (pas d'échantillonnage).";
                 

@@ -63,11 +63,7 @@ namespace AdRev.Core.Services
                     return false;
                 }
 
-<<<<<<< HEAD
                 // 1. Check HWID (Enterprise/Multiple are floating, others are locked)
-=======
-                // 1. Check HWID (Skip if Institutional/Enterprise for flexibility)
->>>>>>> origin/main
                 if (metadata.Type != LicenseType.Enterprise && metadata.Hwid != GetHardwareId())
                 {
                     message = "Cette licence n'est pas valide pour cet ordinateur.";
@@ -80,33 +76,20 @@ namespace AdRev.Core.Services
                     if (metadata.Type == LicenseType.Trial)
                         message = $"Votre période d'essai a expiré le {metadata.ExpiryDate.ToShortDateString()}.";
                     else
-<<<<<<< HEAD
                         message = $"Votre licence a expiré le {metadata.ExpiryDate.ToShortDateString()}.";
-=======
-                        message = $"Votre licence annuelle a expiré le {metadata.ExpiryDate.ToShortDateString()}.";
->>>>>>> origin/main
+
                     return false;
                 }
 
                 string label = !string.IsNullOrEmpty(metadata.FeaturesLabel) ? metadata.FeaturesLabel :
-<<<<<<< HEAD
                                metadata.Type == LicenseType.Unlimited ? "Version Illimitée" : 
                                metadata.Type == LicenseType.Pro ? "Version Professionnelle" :
                                metadata.Type == LicenseType.Elite ? "Version Elite" :
                                metadata.Type == LicenseType.Student ? "Version Étudiant" :
                                metadata.Type == LicenseType.Enterprise ? "Licence Institutionnelle / Multiple" :
                                "Essai Gratuit";
-                               
+                                
                 if (metadata.Type != LicenseType.Unlimited && metadata.Type != LicenseType.Enterprise)
-=======
-                               metadata.Type == LicenseType.Lifetime ? "Licence Professionnelle à Vie" : 
-                               metadata.Type == LicenseType.Annual ? "Licence Annuelle" :
-                               metadata.Type == LicenseType.Student ? "Licence Étudiant" :
-                               metadata.Type == LicenseType.Enterprise ? "Licence Entreprise" :
-                               "Essai Gratuit";
-                               
-                if (metadata.Type != LicenseType.Lifetime && metadata.Type != LicenseType.Enterprise)
->>>>>>> origin/main
                     label += $" (Expire le {metadata.ExpiryDate.ToShortDateString()})";
 
                 if (!string.IsNullOrEmpty(metadata.RegisteredEmail))

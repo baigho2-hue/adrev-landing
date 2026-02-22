@@ -1,9 +1,6 @@
 using System;
 using System.Windows;
-<<<<<<< HEAD
 using System.Diagnostics;
-=======
->>>>>>> origin/main
 using AdRev.Core.Services;
 
 namespace AdRev.Desktop
@@ -53,7 +50,6 @@ namespace AdRev.Desktop
             }
         }
 
-<<<<<<< HEAD
         private void RequestLicense_Click(object sender, RoutedEventArgs e)
         {
             string hwid = HwidText.Text;
@@ -72,8 +68,6 @@ namespace AdRev.Desktop
             }
         }
 
-=======
->>>>>>> origin/main
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();

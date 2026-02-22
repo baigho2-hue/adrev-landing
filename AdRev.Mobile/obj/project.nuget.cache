@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BIjAd6lG0Mg=",
+  "dgSpecHash": "vV+j7Sm4nDo=",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Mobile\\AdRev.Mobile.csproj",
   "expectedPackageFiles": [
@@ -157,9 +157,9 @@
     "C:\\Users\\HP\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.10.2.1\\xamarin.kotlinx.coroutines.core.jvm.1.10.2.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\xamarin.kotlinx.serialization.core\\1.9.0.1\\xamarin.kotlinx.serialization.core.1.9.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\xamarin.kotlinx.serialization.core.jvm\\1.9.0.1\\xamarin.kotlinx.serialization.core.jvm.1.9.0.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.android.ref.35\\35.0.105\\microsoft.android.ref.35.35.0.105.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.android.runtime.35.android-arm64\\35.0.105\\microsoft.android.runtime.35.android-arm64.35.0.105.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\microsoft.android.runtime.35.android-x64\\35.0.105\\microsoft.android.runtime.35.android-x64.35.0.105.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\microsoft.android.ref.35\\35.0.105\\microsoft.android.ref.35.35.0.105.nupkg.sha512"
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.android.runtime.35.android-x64\\35.0.105\\microsoft.android.runtime.35.android-x64.35.0.105.nupkg.sha512"
   ],
   "logs": []
 }

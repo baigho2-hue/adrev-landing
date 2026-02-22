@@ -367,8 +367,6 @@ namespace AdRev.Core.Services
             if (pValue < 0.05) return "* (p < 0.05)";
             return "NS (Non Significatif)";
         }
-<<<<<<< HEAD
-
         public string ToRoman(int number)
         {
             if ((number < 0) || (number > 3999)) return number.ToString();
@@ -381,7 +379,6 @@ namespace AdRev.Core.Services
 
             return thousands[number / 1000] + hundreds[(number % 1000) / 100] + tens[(number % 100) / 10] + ones[number % 10];
         }
-=======
->>>>>>> origin/main
+
     }
 }

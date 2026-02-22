@@ -3,6 +3,8 @@
   <ItemGroup>
     <ProjectReference Include="..\AdRev.Core\AdRev.Core.csproj" />
     <ProjectReference Include="..\AdRev.Domain\AdRev.Domain.csproj" />
+    <!-- Ajoutez la dépendance NuGet ici -->
+    <PackageReference Include="UglyToad.PdfPig" Version="0.1.9-alpha001-patch1" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -35,42 +35,26 @@ namespace AdRev.Core.Services
             switch (license.Type)
             {
                 case LicenseType.Trial:
-<<<<<<< HEAD
                     // Trial limited to Student features as requested
                     return feature == AppFeature.BasicProtocol ||
                            feature == AppFeature.DescriptiveStats ||
                            feature == AppFeature.BloomValidation ||
                            feature == AppFeature.StatisticalSuggester;
-=======
-                    // Full access during trial
-                    return true;
->>>>>>> origin/main
 
                 case LicenseType.Student:
                     return feature == AppFeature.BasicProtocol ||
                            feature == AppFeature.DescriptiveStats ||
-<<<<<<< HEAD
                            feature == AppFeature.BloomValidation ||
                            feature == AppFeature.StatisticalSuggester;
 
                 case LicenseType.Pro:
-=======
-                           feature == AppFeature.BloomValidation;
-
-                case LicenseType.Annual: // Assuming Professional
-                case LicenseType.Lifetime:
->>>>>>> origin/main
                     return feature != AppFeature.RegressionAnalysis &&
                            feature != AppFeature.QualitativeAnalysis &&
                            feature != AppFeature.CloudSync;
 
-<<<<<<< HEAD
                 case LicenseType.Elite:
                 case LicenseType.Enterprise:
                 case LicenseType.Unlimited:
-=======
-                case LicenseType.Enterprise:
->>>>>>> origin/main
                     return true; // All features
 
                 default:
@@ -86,18 +70,11 @@ namespace AdRev.Core.Services
             return license.Type switch
             {
                 LicenseType.Student => "Édition Étudiant",
-<<<<<<< HEAD
                 LicenseType.Pro => "Édition Professionnelle",
                 LicenseType.Elite => "Édition Elite",
                 LicenseType.Enterprise => "Édition Institutionnelle",
                 LicenseType.Unlimited => "Édition Illimitée",
                 LicenseType.Trial => "Période d'Essai (7 jours)",
-=======
-                LicenseType.Annual => "Édition Professionnelle",
-                LicenseType.Lifetime => "Édition Professionnelle",
-                LicenseType.Enterprise => "Édition Institutionnelle / Elite",
-                LicenseType.Trial => "Période d'Essai (Full Access)",
->>>>>>> origin/main
                 _ => "Inconnu"
             };
         }

@@ -1,17 +1,15 @@
-<<<<<<< HEAD
-﻿using System;
+using System;
 using System.Linq;
-=======
-﻿using System.Configuration;
-using System.Data;
->>>>>>> origin/main
 using System.Windows;
+using AdRev.Core.Services;
+using AdRev.Domain.Models;
 
 namespace AdRev.Desktop
 {
-<<<<<<< HEAD
     public partial class App : Application
     {
+        private readonly LicensingService _licensingService = new LicensingService();
+
         public App()
         {
             this.DispatcherUnhandledException += App_DispatcherUnhandledException;
@@ -31,29 +29,41 @@ namespace AdRev.Desktop
         private void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
             LogException(e.Exception, "DispatcherUnhandledException");
-            MessageBox.Show($"Une erreur inattendue est survenue: {e.Exception.Message}", "Erreur Critique");
-            e.Handled = true;
-=======
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
-    {
-        private readonly AdRev.Core.Services.LicensingService _licensingService = new AdRev.Core.Services.LicensingService();
+            
+            var ex = e.Exception;
+            string message = ex.Message;
+            while (ex.InnerException != null)
+            {
+                ex = ex.InnerException;
+                message += "\n\nInner Exception: " + ex.Message;
+            }
 
-        public App()
-        {
-            this.DispatcherUnhandledException += App_DispatcherUnhandledException;
->>>>>>> origin/main
+            MessageBox.Show($"Une erreur inattendue est survenue : {message}\n\n{ex.StackTrace}", "Erreur Critique", MessageBoxButton.OK, MessageBoxImage.Error);
+            e.Handled = true;
         }
 
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
-<<<<<<< HEAD
             try
             {
+                // 1. Check if License is Valid
+                if (!_licensingService.IsActivated(out string _))
+                {
+                    // Show Activation Window
+                    var activationWindow = new ActivationWindow();
+                    bool? result = activationWindow.ShowDialog();
+
+                    if (result != true)
+                    {
+                        // User closed activation or it failed
+                        Shutdown();
+                        return;
+                    }
+                }
+
+                // 2. License OK, show MainWindow
                 MainWindow window = new MainWindow();
                 window.Show();
             }
@@ -106,40 +116,6 @@ namespace AdRev.Desktop
             {
                 return key;
             }
-=======
-            // 1. Check if License is Valid
-            if (!_licensingService.IsActivated(out string _))
-            {
-                // Show Activation Window
-                var activationWindow = new ActivationWindow();
-                bool? result = activationWindow.ShowDialog();
-
-                if (result != true)
-                {
-                    // User closed activation or it failed
-                    Shutdown();
-                    return;
-                }
-            }
-
-            // 2. License OK, show MainWindow
-            MainWindow main = new MainWindow();
-            main.Show();
-        }
-
-        private void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
-        {
-            var ex = e.Exception;
-            string message = ex.Message;
-            while (ex.InnerException != null)
-            {
-                ex = ex.InnerException;
-                message += "\n\nInner Exception: " + ex.Message;
-            }
-
-            MessageBox.Show($"Une erreur inattendue est survenue : {message}\n\n{ex.StackTrace}", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
-            e.Handled = true;
->>>>>>> origin/main
         }
     }
 }

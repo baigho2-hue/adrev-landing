@@ -171,15 +171,9 @@ namespace AdRev.Core.Common
             var projects = new List<ResearchProject>();
             if (!Directory.Exists(_storagePath)) return projects;
 
-<<<<<<< HEAD
             // 1. Load Local Projects (Legacy + New) - RECURSIVE SEARCH
             var files = Directory.GetFiles(_storagePath, "Project_*.json", SearchOption.AllDirectories).ToList();
             files.AddRange(Directory.GetFiles(_storagePath, "adrev_project.json", SearchOption.AllDirectories));
-=======
-            // 1. Load Local Projects (Legacy + New)
-            var files = Directory.GetFiles(_storagePath, "Project_*.json").ToList();
-            files.AddRange(Directory.GetFiles(_storagePath, "adrev_project.json")); // unlikely in root but possible
->>>>>>> origin/main
 
             foreach (var file in files)
             {
@@ -247,4 +241,3 @@ namespace AdRev.Core.Common
         }
     }
 }
-

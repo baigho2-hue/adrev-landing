@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "w5iEx9EopjI=",
-  "success": false,
+  "dgSpecHash": "2yztTh9B03o=",
+  "success": true,
   "projectFilePath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\documentformat.openxml\\3.0.1\\documentformat.openxml.3.0.1.nupkg.sha512",
@@ -9,18 +9,68 @@
     "C:\\Users\\HP\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.codedom\\9.0.1\\system.codedom.9.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\system.management\\9.0.1\\system.management.9.0.1.nupkg.sha512"
+    "C:\\Users\\HP\\.nuget\\packages\\system.management\\9.0.1\\system.management.9.0.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.1\\system.security.cryptography.protecteddata.9.0.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\uglytoad.pdfpig\\0.1.9-alpha001-patch1\\uglytoad.pdfpig.0.1.9-alpha001-patch1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\uglytoad.pdfpig.core\\1.7.0-custom-5\\uglytoad.pdfpig.core.1.7.0-custom-5.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\uglytoad.pdfpig.fonts\\1.7.0-custom-5\\uglytoad.pdfpig.fonts.1.7.0-custom-5.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\uglytoad.pdfpig.tokenization\\1.7.0-custom-5\\uglytoad.pdfpig.tokenization.1.7.0-custom-5.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\uglytoad.pdfpig.tokens\\1.7.0-custom-5\\uglytoad.pdfpig.tokens.1.7.0-custom-5.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.13\\microsoft.netcore.app.runtime.win-x64.9.0.13.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.13\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.13.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.13\\microsoft.aspnetcore.app.runtime.win-x64.9.0.13.nupkg.sha512"
   ],
   "logs": [
     {
-      "code": "NU1103",
-      "level": "Error",
-      "message": "Package stable UglyToad.PdfPig avec la version (>= 0.1.13) introuvable\r\n  - Version(s) 2 trouvée(s) dans nuget.org [version la plus proche\u00A0: 1.7.0-custom-5]\r\n  - Version(s) 0 trouvée(s) dans Microsoft Visual Studio Offline Packages\r\n  - Version(s) 0 trouvée(s) dans C:\\Program Files\\dotnet\\library-packs",
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "UglyToad.PdfPig 0.1.9-alpha001-patch1 dépend de UglyToad.PdfPig.Core (>= 0.1.9-alpha001-patch1) mais UglyToad.PdfPig.Core 0.1.9-alpha001-patch1 est introuvable. UglyToad.PdfPig.Core 1.7.0-custom-5 a été résolu à la place.",
       "projectPath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj",
+      "warningLevel": 1,
       "filePath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj",
-      "libraryId": "UglyToad.PdfPig",
+      "libraryId": "UglyToad.PdfPig.Core",
       "targetGraphs": [
-        "net9.0"
+        "net9.0",
+        "net9.0/win-x64"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "UglyToad.PdfPig 0.1.9-alpha001-patch1 dépend de UglyToad.PdfPig.Fonts (>= 0.1.9-alpha001-patch1) mais UglyToad.PdfPig.Fonts 0.1.9-alpha001-patch1 est introuvable. UglyToad.PdfPig.Fonts 1.7.0-custom-5 a été résolu à la place.",
+      "projectPath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj",
+      "libraryId": "UglyToad.PdfPig.Fonts",
+      "targetGraphs": [
+        "net9.0",
+        "net9.0/win-x64"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "UglyToad.PdfPig 0.1.9-alpha001-patch1 dépend de UglyToad.PdfPig.Tokenization (>= 0.1.9-alpha001-patch1) mais UglyToad.PdfPig.Tokenization 0.1.9-alpha001-patch1 est introuvable. UglyToad.PdfPig.Tokenization 1.7.0-custom-5 a été résolu à la place.",
+      "projectPath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj",
+      "libraryId": "UglyToad.PdfPig.Tokenization",
+      "targetGraphs": [
+        "net9.0",
+        "net9.0/win-x64"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "UglyToad.PdfPig 0.1.9-alpha001-patch1 dépend de UglyToad.PdfPig.Tokens (>= 0.1.9-alpha001-patch1) mais UglyToad.PdfPig.Tokens 0.1.9-alpha001-patch1 est introuvable. UglyToad.PdfPig.Tokens 1.7.0-custom-5 a été résolu à la place.",
+      "projectPath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj",
+      "libraryId": "UglyToad.PdfPig.Tokens",
+      "targetGraphs": [
+        "net9.0",
+        "net9.0/win-x64"
       ]
     }
   ]

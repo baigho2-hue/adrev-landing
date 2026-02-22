@@ -1,5 +1,0 @@
-C:\Users\HP\Documents\AdRev\AdRev.CLI\obj\Release\net8.0-windows\win-x64\AdRev.CLI.csproj.AssemblyReference.cache
-C:\Users\HP\Documents\AdRev\AdRev.CLI\obj\Release\net8.0-windows\win-x64\AdRev.CLI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\HP\Documents\AdRev\AdRev.CLI\obj\Release\net8.0-windows\win-x64\AdRev.CLI.AssemblyInfoInputs.cache
-C:\Users\HP\Documents\AdRev\AdRev.CLI\obj\Release\net8.0-windows\win-x64\AdRev.CLI.AssemblyInfo.cs
-C:\Users\HP\Documents\AdRev\AdRev.CLI\obj\Release\net8.0-windows\win-x64\AdRev.CLI.csproj.CoreCompileInputs.cache

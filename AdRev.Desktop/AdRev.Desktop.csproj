@@ -43,7 +43,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Drawing.Common" Version="9.0.1" />
     <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="9.0.1" />
-    <PackageReference Include="UglyToad.PdfPig" Version="0.1.7" />
+    <!-- Utiliser une version disponible sur NuGet (prérélease si nécessaire) -->
+    <PackageReference Include="UglyToad.PdfPig" Version="0.1.9-alpha001-patch1" />
   </ItemGroup>
 
   <Target Name="Obfuscate" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Release' ">

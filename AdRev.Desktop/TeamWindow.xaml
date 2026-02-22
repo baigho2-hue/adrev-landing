@@ -4,10 +4,7 @@
         xmlns:local="clr-namespace:AdRev.Desktop"
         Title="Gestion de l'équipe" Height="500" Width="700"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-<<<<<<< HEAD
         Icon="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png"
-=======
->>>>>>> origin/main
         Background="#F9F9F9">
     
     <Window.Resources>
@@ -23,18 +20,12 @@
 
         <!-- Header -->
         <Border BorderBrush="#DDD" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,15">
-<<<<<<< HEAD
             <StackPanel Orientation="Horizontal">
                 <Image Source="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png" Width="32" Height="32" Margin="0,0,15,0" VerticalAlignment="Center"/>
                 <StackPanel>
                     <TextBlock Text="Travail en Équipe" FontSize="22" FontWeight="Bold" Foreground="#333"/>
                     <TextBlock Text="Invitez des collaborateurs pour travailler sur ce projet." FontSize="14" Foreground="#777"/>
                 </StackPanel>
-=======
-            <StackPanel>
-                <TextBlock Text="Travail en Équipe" FontSize="22" FontWeight="Bold" Foreground="#333"/>
-                <TextBlock Text="Invitez des collaborateurs pour travailler sur ce projet." FontSize="14" Foreground="#777"/>
->>>>>>> origin/main
             </StackPanel>
         </Border>
 

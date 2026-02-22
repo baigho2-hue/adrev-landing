@@ -3,10 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows.Media;
-<<<<<<< HEAD
 using AdRev.Desktop.Windows;
-=======
->>>>>>> origin/main
 using System.Collections.Generic;
 using System.Linq;
 using AdRev.Core.Protocols;
@@ -48,7 +45,6 @@ namespace AdRev.Desktop.Views.Project
         public ProtocolView()
         {
             InitializeComponent();
-<<<<<<< HEAD
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -58,15 +54,6 @@ namespace AdRev.Desktop.Views.Project
                 SideMenuListBox.SelectedIndex = 0;
             }
             UpdateView();
-=======
-            
-            // Wire up selection changed and set initial index ONLY after components are initialized
-            if (SideMenuListBox != null)
-            {
-                SideMenuListBox.SelectionChanged += SideMenu_SelectionChanged;
-                SideMenuListBox.SelectedIndex = 0;
-            }
->>>>>>> origin/main
         }
 
         public void LoadProject(AdRev.Domain.Models.ResearchProject project, FunctionalRole role = FunctionalRole.PrincipalInvestigator, UserAccessLevel access = UserAccessLevel.Admin)
@@ -78,14 +65,12 @@ namespace AdRev.Desktop.Views.Project
             StudyTypeComboBox.ItemsSource = System.Enum.GetValues(typeof(StudyType));
             StudyTypeComboBox.SelectedIndex = 0;
             
-            // Note: EpidemiologyTypeComboBox and QualitativeApproachComboBox might be null if not in XAML yet
             if (EpidemiologyTypeComboBox != null)
             {
                 EpidemiologyTypeComboBox.ItemsSource = System.Enum.GetValues(typeof(EpidemiologicalStudyType));
                 EpidemiologyTypeComboBox.SelectedIndex = 0;
             }
 
-<<<<<<< HEAD
             if (QualitativeApproachComboBox != null)
             {
                 QualitativeApproachComboBox.ItemsSource = System.Enum.GetValues(typeof(QualitativeApproach));
@@ -101,10 +86,6 @@ namespace AdRev.Desktop.Views.Project
             
             UpdateSamplingTypes();
 
-=======
->>>>>>> origin/main
-            // ... Initialize other combos ...
-            
             CoAuthorsListBox.ItemsSource = _tempCoAuthors;
 
             if (_project != null)
@@ -114,18 +95,11 @@ namespace AdRev.Desktop.Views.Project
                 DomainComboBox.SelectedItem = _project.Domain;
                 AuthorInstitutionBox.Text = _project.Institution;
                 ProcessAuthors(_project.Authors);
-<<<<<<< HEAD
                 _tempVariables = _project.Variables ?? new List<AdRev.Domain.Variables.StudyVariable>();
             }
             
             RefStyleComboStep1.ItemsSource = System.Enum.GetValues(typeof(ReferenceStyle));
             RefStyleComboStep1.SelectedItem = _project?.ReferenceStyle ?? ReferenceStyle.Vancouver;
-=======
-            }
-            
-            RefStyleComboStep1.ItemsSource = System.Enum.GetValues(typeof(ReferenceStyle));
-            RefStyleComboStep1.SelectedItem = ReferenceStyle.Vancouver;
->>>>>>> origin/main
 
             DomainComboBox.ItemsSource = System.Enum.GetValues(typeof(ScientificDomain));
             DomainComboBox.SelectedIndex = 0;
@@ -133,17 +107,13 @@ namespace AdRev.Desktop.Views.Project
             UpdateView();
         }
 
-<<<<<<< HEAD
         public void LoadVariables(List<AdRev.Domain.Variables.StudyVariable> variables)
         {
             _tempVariables = variables ?? new List<AdRev.Domain.Variables.StudyVariable>();
         }
 
-=======
->>>>>>> origin/main
         private void DomainComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // Logic moved from ProtocolWindow
         }
 
         private void ProcessAuthors(string authorsCsv)
@@ -209,7 +179,6 @@ namespace AdRev.Desktop.Views.Project
 
         private void UpdateView()
         {
-<<<<<<< HEAD
             this.Dispatcher.InvokeAsync(() => {
                 // Reset all to Collapsed
                 if (View_Step1 != null) View_Step1.Visibility = Visibility.Collapsed;
@@ -262,58 +231,6 @@ namespace AdRev.Desktop.Views.Project
                 bool canEdit = CanUserEditStep(_currentStep);
                 SetProtocolReadOnly(!canEdit);
             });
-=======
-            // Reset all to Collapsed
-            if (View_Step1 != null) View_Step1.Visibility = Visibility.Collapsed;
-            if (View_Introduction != null) View_Introduction.Visibility = Visibility.Collapsed;
-            if (View_Objectives != null) View_Objectives.Visibility = Visibility.Collapsed;
-            if (View_ConceptualModel != null) View_ConceptualModel.Visibility = Visibility.Collapsed;
-            if (View_Methodology_Design != null) View_Methodology_Design.Visibility = Visibility.Collapsed;
-            if (View_Methodology_Population != null) View_Methodology_Population.Visibility = Visibility.Collapsed;
-            if (View_Methodology_Sampling != null) View_Methodology_Sampling.Visibility = Visibility.Collapsed;
-            if (View_Methodology_Data != null) View_Methodology_Data.Visibility = Visibility.Collapsed;
-            if (View_Budget != null) View_Budget.Visibility = Visibility.Collapsed;
-            if (View_Ethics != null) View_Ethics.Visibility = Visibility.Collapsed;
-            if (View_DataAnalysis != null) View_DataAnalysis.Visibility = Visibility.Collapsed;
-            if (View_Results != null) View_Results.Visibility = Visibility.Collapsed;
-            if (View_Conclusion != null) View_Conclusion.Visibility = Visibility.Collapsed;
-            if (View_References != null) View_References.Visibility = Visibility.Collapsed;
-
-            // Sync Side Menu if needed
-            if (SideMenuListBox != null && SideMenuListBox.SelectedIndex != _currentStep - 1)
-            {
-                SideMenuListBox.SelectedIndex = _currentStep - 1;
-            }
-
-            // Show current
-            switch (_currentStep)
-            {
-                case 1: if (View_Step1 != null) View_Step1.Visibility = Visibility.Visible; break;
-                case 2: if (View_Introduction != null) View_Introduction.Visibility = Visibility.Visible; break;
-                case 3: if (View_Objectives != null) View_Objectives.Visibility = Visibility.Visible; break;
-                case 4: if (View_ConceptualModel != null) View_ConceptualModel.Visibility = Visibility.Visible; break;
-                case 5: 
-                    if (View_Methodology_Design != null) View_Methodology_Design.Visibility = Visibility.Visible;
-                    UpdateQualityGuidelines((StudyType)StudyTypeComboBox.SelectedItem);
-                    break;
-                case 6: if (View_Methodology_Population != null) View_Methodology_Population.Visibility = Visibility.Visible; break;
-                case 7: if (View_Methodology_Sampling != null) View_Methodology_Sampling.Visibility = Visibility.Visible; break;
-                case 8: if (View_Methodology_Data != null) View_Methodology_Data.Visibility = Visibility.Visible; break;
-                case 9: 
-                    if (View_Budget != null) View_Budget.Visibility = Visibility.Visible; 
-                    UpdateBudgetView();
-                    break;
-                case 10: if (View_Ethics != null) View_Ethics.Visibility = Visibility.Visible; break;
-                case 11: if (View_DataAnalysis != null) View_DataAnalysis.Visibility = Visibility.Visible; break;
-                case 12: if (View_Results != null) View_Results.Visibility = Visibility.Visible; break;
-                case 13: if (View_Conclusion != null) View_Conclusion.Visibility = Visibility.Visible; break;
-                case 14: if (View_References != null) View_References.Visibility = Visibility.Visible; break;
-            }
-
-            // Apply Permissions
-            bool canEdit = CanUserEditStep(_currentStep);
-            SetProtocolReadOnly(!canEdit);
->>>>>>> origin/main
         }
 
         private void NextSection_Click(object sender, RoutedEventArgs e)
@@ -561,9 +478,16 @@ namespace AdRev.Desktop.Views.Project
                 cb.Opacity = isReadOnly ? 0.8 : 1.0;
             }
 
+            foreach (var chk in FindVisualChildren<CheckBox>(this))
+            {
+                chk.IsEnabled = !isReadOnly;
+                chk.Opacity = isReadOnly ? 0.8 : 1.0;
+            }
+
             foreach (var btn in FindVisualChildren<Button>(this))
             {
-                if (btn.Content is string s && (s.Contains("➕") || s.Contains("🗑️") || s.Contains("Calculer") || s.Contains("Générer")))
+                // On désactive les boutons d'action spécifiques si en lecture seule
+                if (btn.Content is string s && (s.Contains("➕") || s.Contains("🗑️") || s.Contains("Calculer") || s.Contains("Générer") || s.Contains("Add") || s.Contains("Validate") || s.Contains("Save")))
                 {
                     btn.IsEnabled = !isReadOnly;
                 }
@@ -602,8 +526,6 @@ namespace AdRev.Desktop.Views.Project
                 RegenerateReferencesList();
             }
         }
-
-        // --- Objectives Logic ---
 
         private void ObjectiveTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
@@ -706,8 +628,8 @@ namespace AdRev.Desktop.Views.Project
             var lines = text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             
             var groups = lines.Where(l => l.Trim().StartsWith("OS"))
-                               .GroupBy(l => l.Trim().Split('.')[0])
-                               .ToDictionary(g => g.Key, g => g.Count());
+                                .GroupBy(l => l.Trim().Split('.')[0])
+                                .ToDictionary(g => g.Key, g => g.Count());
             
             bool tooMany = false;
             string alertMsg = "";
@@ -797,7 +719,7 @@ namespace AdRev.Desktop.Views.Project
             }
             SpecificObjectivesTextBox.Text = sb.ToString();
         }
-        
+
         private void LinkOSToOG_Click(object sender, RoutedEventArgs e)
         {
              var ogText = GeneralObjectiveTextBox.Text;
@@ -871,8 +793,6 @@ namespace AdRev.Desktop.Views.Project
             OSSuggestions.Text = suggestions;
             OSSuggestions.Visibility = Visibility.Visible;
         }
-
-        // --- Calculators Logic ---
 
         private void CalculatorSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -962,8 +882,6 @@ namespace AdRev.Desktop.Views.Project
             catch { MessageBox.Show("Erreur de calcul."); }
         }
 
-        // --- Citation Management ---
-
         private void AddCitation_Click(object sender, RoutedEventArgs e)
         {
             var btn = sender as Button;
@@ -1051,8 +969,6 @@ namespace AdRev.Desktop.Views.Project
             return text;
         }
 
-        // --- Protocol Building ---
-
         private ResearchProtocol BuildProtocolFromUI()
         {
             return new ResearchProtocol
@@ -1061,16 +977,11 @@ namespace AdRev.Desktop.Views.Project
                 ProjectId = _project?.Id,
                 Title = TitleTextBox?.Text ?? "",
                 StudyType = StudyTypeComboBox?.SelectedItem is StudyType st ? st : StudyType.Quantitative,
-<<<<<<< HEAD
                 QualitativeApproach = QualitativeApproachComboBox?.SelectedItem is QualitativeApproach qa ? qa : QualitativeApproach.Inductive,
                 EpidemiologyType = EpidemiologyTypeComboBox?.SelectedItem is EpidemiologicalStudyType et ? et : EpidemiologicalStudyType.CrossSectionalDescriptive,
                 Domain = DomainComboBox?.SelectedItem is ScientificDomain sd ? sd : ScientificDomain.Biomedical,
                 PrincipalAuthor = new Author { FirstName = AuthorFirstNameBox?.Text ?? "", LastName = AuthorLastNameBox?.Text ?? "", Institution = AuthorInstitutionBox?.Text ?? "", Email = AuthorEmailBox?.Text ?? "" },
                 CoAuthors = _tempCoAuthors.ToList<AdRev.Domain.Models.Author>(),
-=======
-                Domain = DomainComboBox?.SelectedItem is ScientificDomain sd ? sd : ScientificDomain.Biomedical,
-                PrincipalAuthor = new Author { FirstName = AuthorFirstNameBox?.Text ?? "", LastName = AuthorLastNameBox?.Text ?? "", Institution = AuthorInstitutionBox?.Text ?? "", Email = AuthorEmailBox?.Text ?? "" },
->>>>>>> origin/main
                 Context = ContextTextBox?.Text ?? "",
                 ProblemJustification = ProblemTextBox?.Text ?? "",
                 ResearchQuestion = ResearchQuestionTextBox?.Text ?? "",
@@ -1106,8 +1017,6 @@ namespace AdRev.Desktop.Views.Project
                 Citations = _citations
             };
         }
-
-        // --- SAP/TAP Generation ---
 
         private void GenerateProtocolPlan_Click(object sender, RoutedEventArgs e)
         {
@@ -1150,12 +1059,9 @@ namespace AdRev.Desktop.Views.Project
             }
         }
 
-        // --- Other Handlers ---
-
         private void OpenVariableDesigner_Click(object sender, RoutedEventArgs e)
         {
             var win = new VariableDesignerWindow(_tempVariables, _project?.Title ?? "Nouveau Projet");
-<<<<<<< HEAD
             if (win.ShowDialog() == true)
             {
                 var newVars = win.Variables.ToList();
@@ -1166,15 +1072,11 @@ namespace AdRev.Desktop.Views.Project
                 var parent = Window.GetWindow(this) as AdRev.Desktop.Windows.ProjectWindow;
                 parent?.SyncVariablesToAllViews();
             }
-=======
-            if (win.ShowDialog() == true) _tempVariables = win.Variables.ToList();
->>>>>>> origin/main
         }
 
         private void StudyTypeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (QualitativeTypePanel == null || EpidemiologyTypePanel == null) return;
-<<<<<<< HEAD
             if (StudyTypeComboBox.SelectedItem == null) return;
 
             var st = (StudyType)StudyTypeComboBox.SelectedItem;
@@ -1275,12 +1177,6 @@ namespace AdRev.Desktop.Views.Project
                    t == SamplingType.EventContextual ||
                    t == SamplingType.Quota || // In this app context, Quota in Quali is common
                    t == SamplingType.Convenience;
-=======
-            var st = (StudyType)StudyTypeComboBox.SelectedItem;
-            QualitativeTypePanel.Visibility = st == StudyType.Qualitative ? Visibility.Visible : Visibility.Collapsed;
-            EpidemiologyTypePanel.Visibility = st == StudyType.Quantitative ? Visibility.Visible : Visibility.Collapsed;
-            UpdateQualityGuidelines(st);
->>>>>>> origin/main
         }
 
         private void EpidemiologyTypeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -1291,7 +1187,6 @@ namespace AdRev.Desktop.Views.Project
         private void SamplingTypeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (StratificationPanel == null || ClusterPanel == null) return;
-<<<<<<< HEAD
             if (SamplingTypeComboBox.SelectedItem == null) return;
 
             var type = (SamplingType)SamplingTypeComboBox.SelectedItem;
@@ -1306,11 +1201,6 @@ namespace AdRev.Desktop.Views.Project
                     QualitativeSamplingComboBox.SelectedItem = SamplingTypeComboBox.SelectedItem;
                 }
             }
-=======
-            var type = (SamplingType)SamplingTypeComboBox.SelectedItem;
-            StratificationPanel.Visibility = (type == SamplingType.Stratified || type == SamplingType.StratifiedCluster) ? Visibility.Visible : Visibility.Collapsed;
-            ClusterPanel.Visibility = (type == SamplingType.ClusterSampling || type == SamplingType.StratifiedCluster || type == SamplingType.MultiStage) ? Visibility.Visible : Visibility.Collapsed;
->>>>>>> origin/main
         }
 
         private void IsMulticentricCheckBox_Checked(object sender, RoutedEventArgs e) { if (MulticentricDetailsPanel != null) MulticentricDetailsPanel.Visibility = Visibility.Visible; }

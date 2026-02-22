@@ -57,12 +57,13 @@ namespace AdRev.CLI
 
             if (!Enum.TryParse(typeStr, true, out LicenseType type))
             {
-                Console.WriteLine($"Error: Invalid license type '{typeStr}'. Valid values: Lifetime, Annual, Enterprise, Student, Trial.");
+                Console.WriteLine($"Error: Invalid license type '{typeStr}'. Valid values: Student, Pro, Elite, Enterprise, Unlimited, Trial.");
                 Environment.Exit(1);
             }
 
             DateTime expiry = DateTime.MaxValue;
-            if (type == LicenseType.Annual) expiry = DateTime.UtcNow.AddYears(1);
+            if (type == LicenseType.Pro) expiry = DateTime.UtcNow.AddYears(1);
+            else if (type == LicenseType.Elite) expiry = DateTime.UtcNow.AddYears(1);
             else if (type == LicenseType.Trial) expiry = DateTime.UtcNow.AddDays(7);
             
             // Override days if provided
@@ -141,7 +142,7 @@ namespace AdRev.CLI
             Console.WriteLine("  get-hwid   : Show the HWID of the current machine");
             Console.WriteLine("");
             Console.WriteLine("Usage (Generate):");
-            Console.WriteLine("  AdRev.CLI generate --hwid <ID> [--type <Type>] [--email <Email>] [--label <Label>] [--days <Days>]");
+            Console.WriteLine("    AdRev.CLI generate --hwid <ID> [--type <Type>] [--email <Email>] [--label <Label>] [--days <Days>]");
             Console.WriteLine("");
             Console.WriteLine("Usage (Inspect):");
             Console.WriteLine("  AdRev.CLI inspect --key <LicenseKey>");
