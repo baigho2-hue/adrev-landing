@@ -1,0 +1,13 @@
+  Identification des projets à restaurer...
+  Tous les projets sont à jour pour la restauration.
+  AdRev.Domain -> c:\Users\HP\Documents\AdRev\AdRev.Domain\bin\Debug\net8.0\AdRev.Domain.dll
+  AdRev.Core -> c:\Users\HP\Documents\AdRev\AdRev.Core\bin\Debug\net8.0-windows\AdRev.Core.dll
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\App.xaml(14,15): error : MC3000 : XML 'The 'ResourceDictionary' start tag on line 8 position 10 does not match the end tag of 'ResourceDictionary.MergedDictionaries'. Line 14, position 15.' non valide. [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+
+ÉCHEC de la build.
+
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\App.xaml(14,15): error : MC3000 : XML 'The 'ResourceDictionary' start tag on line 8 position 10 does not match the end tag of 'ResourceDictionary.MergedDictionaries'. Line 14, position 15.' non valide. [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps écoulé 00:00:01.48

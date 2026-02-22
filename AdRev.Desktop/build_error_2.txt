@@ -1,0 +1,7 @@
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\AnalysisView.xaml(263,23): error : MC3000 : XML 'The 'Grid' start tag on line 253 position 22 does not match the end tag of 'Grid.RowDefinitions'. Line 263, position 23.' non valide. [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+
+ÉCHEC de la build.
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps écoulé 00:00:01.82

@@ -1,0 +1,40 @@
+<Window x:Class="AdRev.Desktop.Windows.RecodeDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Recodage de Variable" Height="Auto" Width="Auto" 
+        MinHeight="400" MinWidth="600"
+        MaxHeight="700"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Définir les règles de recodage" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <DataGrid Name="RulesGrid" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="True" Margin="0,0,0,10">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header="Plage ?" Binding="{Binding IsRange}" Width="60"/>
+                <DataGridTextColumn Header="Valeur Source / Min" Binding="{Binding RangeMin}" Width="*"/>
+                <DataGridTextColumn Header="Max (exclus)" Binding="{Binding RangeMax}" Width="*"/>
+                <DataGridTextColumn Header="Valeur Cible (Source Exacte si pas plage)" Binding="{Binding SourceValue}" Width="*"/>
+                <DataGridTextColumn Header="Nouvelle Valeur (Target)" Binding="{Binding TargetValue}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="0,0,0,10">
+            <TextBlock Text="Format : " FontWeight="Bold"/>
+            <TextBlock Text="- Pour une plage : Cochez 'Plage', remplissez Min et Max. (ex: Min=0, Max=18 -> Target='Mineur')"/>
+            <TextBlock Text="- Pour une valeur exacte : Décochez 'Plage', remplissez 'Valeur Cible' (ex: Source='F' -> Target='Femme')"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Annuler" Width="80" Margin="0,0,10,0" Click="Cancel_Click"/>
+            <Button Content="Enregistrer" Width="80" Click="Save_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

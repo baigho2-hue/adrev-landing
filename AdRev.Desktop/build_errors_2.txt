@@ -1,0 +1,19 @@
+  Identification des projets à restaurer...
+  Tous les projets sont à jour pour la restauration.
+  AdRev.Domain -> c:\Users\HP\Documents\AdRev\AdRev.Domain\bin\Debug\net8.0\AdRev.Domain.dll
+  AdRev.Core -> c:\Users\HP\Documents\AdRev\AdRev.Core\bin\Debug\net8.0-windows\AdRev.Core.dll
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\MobileSyncWindow.xaml(40,22): error MC1000: Erreur de build inconnue, 'MC3074 : la balise 'Card' n'existe pas dans l'espace de noms XML 'http://materialdesigninxaml.net/winfx/xaml/themes'. Ligne 40 Position 22.'  [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\AnalysisView.xaml(40,26): error MC1000: Erreur de build inconnue, 'MC3074 : la balise 'Card' n'existe pas dans l'espace de noms XML 'http://materialdesigninxaml.net/winfx/xaml/themes'. Ligne 40 Position 26.'  [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\DataEntryView.xaml(38,34): error MC1000: Erreur de build inconnue, 'MC3074 : la balise 'PackIcon' n'existe pas dans l'espace de noms XML 'http://materialdesigninxaml.net/winfx/xaml/themes'. Ligne 38 Position 34.'  [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Shared\SimpleMessageDialog.xaml(6,6): error MC1000: Erreur de build inconnue, 'MC3074 : la balise 'Card' n'existe pas dans l'espace de noms XML 'http://materialdesigninxaml.net/winfx/xaml/themes'. Ligne 6 Position 6.'  [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+
+ÉCHEC de la build.
+
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\MobileSyncWindow.xaml(40,22): error MC1000: Erreur de build inconnue, 'MC3074 : la balise 'Card' n'existe pas dans l'espace de noms XML 'http://materialdesigninxaml.net/winfx/xaml/themes'. Ligne 40 Position 22.'  [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\AnalysisView.xaml(40,26): error MC1000: Erreur de build inconnue, 'MC3074 : la balise 'Card' n'existe pas dans l'espace de noms XML 'http://materialdesigninxaml.net/winfx/xaml/themes'. Ligne 40 Position 26.'  [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\DataEntryView.xaml(38,34): error MC1000: Erreur de build inconnue, 'MC3074 : la balise 'PackIcon' n'existe pas dans l'espace de noms XML 'http://materialdesigninxaml.net/winfx/xaml/themes'. Ligne 38 Position 34.'  [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Shared\SimpleMessageDialog.xaml(6,6): error MC1000: Erreur de build inconnue, 'MC3074 : la balise 'Card' n'existe pas dans l'espace de noms XML 'http://materialdesigninxaml.net/winfx/xaml/themes'. Ligne 6 Position 6.'  [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+    0 Avertissement(s)
+    4 Erreur(s)
+
+Temps écoulé 00:00:01.75

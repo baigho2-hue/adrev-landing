@@ -1,0 +1,106 @@
+<Window x:Class="AdRev.Desktop.NewProjectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Nouveau Projet de Recherche" Height="520" Width="600"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Nouveau Projet" Style="{StaticResource MaterialDesignHeadline4TextBlock}" Foreground="{DynamicResource PrimaryHueMidBrush}"/>
+            <TextBlock Text="Informations Générales" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Opacity="0.6"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <TextBox x:Name="TitleTextBox" materialDesign:HintAssist.Hint="Titre du Projet" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,0,20"/>
+                
+                <Grid Margin="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <ComboBox x:Name="TypeComboBox" materialDesign:HintAssist.Hint="Type d'Étude" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        <ComboBoxItem Content="Quantitative (Statistique)"/>
+                        <ComboBoxItem Content="Qualitative (Entretien/FocusGroup)"/>
+                        <ComboBoxItem Content="Mixte (Quantitatif + Qualitatif)"/>
+                    </ComboBox>
+                    
+                    <ComboBox x:Name="DomainComboBox" Grid.Column="2" materialDesign:HintAssist.Hint="Domaine de Recherche" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        <ComboBoxItem Content="Biomédical / Clinique"/>
+                        <ComboBoxItem Content="Santé Publique"/>
+                        <ComboBoxItem Content="Sciences Sociales"/>
+                    </ComboBox>
+                </Grid>
+
+                <TextBox x:Name="AuthorTextBox" materialDesign:HintAssist.Hint="Auteur Principal" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,0,10"/>
+                <TextBox x:Name="InstitutionTextBox" materialDesign:HintAssist.Hint="Institution / Affiliation" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+                <Grid Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="PathTextBox" materialDesign:HintAssist.Hint="Emplacement du Projet (Dossier Physique)" Style="{StaticResource MaterialDesignFloatingHintTextBox}" IsReadOnly="True"/>
+                    <Button Grid.Column="1" Click="BrowsePath_Click" Content="..." Margin="10,0,0,0" VerticalAlignment="Bottom" ToolTip="Choisir un dossier"/>
+                </Grid>
+
+                <Grid Margin="0,15,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <PasswordBox x:Name="ProjectPasswordField" materialDesign:HintAssist.Hint="Mot de passe (optionnel)" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                    <TextBlock Grid.Column="2" Text="Protégez vos données sensibles" FontSize="11" Opacity="0.6" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                </Grid>
+
+                <!-- Cloud Sync Suggestions -->
+                <StackPanel x:Name="CloudShortcuts" Margin="0,15,0,0">
+                    <TextBlock Text="Suggestions de sauvegarde Cloud :" FontSize="11" Foreground="{DynamicResource PrimaryHueMidBrush}" Margin="0,0,0,5"/>
+                    <ItemsControl x:Name="CloudProvidersItems">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueMidBrush}" 
+                                        Click="CloudShortcut_Click" Padding="4" Height="Auto" HorizontalAlignment="Left" Margin="0,0,10,0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="CloudCheck" Margin="0,0,5,0" Width="16" Height="16"/>
+                                        <TextBlock Text="{Binding Name}" FontSize="11"/>
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Content="Annuler" IsCancel="True" Style="{StaticResource MaterialDesignFlatButton}" Margin="0,0,10,0"/>
+            <Button Content="Créer le Projet" Click="CreateProject_Click" Style="{StaticResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,185 @@
+<Window x:Class="AdRev.Desktop.MobileSyncWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Synchronisation Mobile" 
+        Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource MaterialDesignPaper}">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Synchronisation Mobile" 
+                       Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                       Margin="0,0,0,10"/>
+            <TextBlock Text="Connectez votre appareil mobile à AdRev pour faciliter la collecte de données"
+                       Style="{StaticResource MaterialDesignBody2TextBlock}"
+                       Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+        </StackPanel>
+
+        <!-- Content -->
+        <TabControl Grid.Row="1" Style="{StaticResource MaterialDesignTabControl}">
+            
+            <!-- Tab Jumelage -->
+            <TabItem Header="Jumelage">
+                <Grid Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Status du serveur -->
+                    <materialDesign:Card Grid.Row="0" Padding="16" Margin="0,0,0,20">
+                        <StackPanel>
+                            <TextBlock Text="Statut du serveur" 
+                                       Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                       Margin="0,0,0,10"/>
+                            <StackPanel Orientation="Horizontal">
+                                <Ellipse x:Name="ServerStatusIndicator" 
+                                         Width="12" Height="12" 
+                                         Fill="Red" 
+                                         Margin="0,0,10,0"/>
+                                <TextBlock x:Name="ServerStatusText" 
+                                           Text="Serveur arrêté"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBlock x:Name="ServerUrlText" 
+                                       Text="http://localhost:5000"
+                                       Margin="0,10,0,0"
+                                       FontFamily="Consolas"
+                                       Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                        </StackPanel>
+                    </materialDesign:Card>
+
+                    <!-- Code de jumelage -->
+                    <materialDesign:Card Grid.Row="1" Padding="16" Margin="0,0,0,20">
+                        <StackPanel>
+                            <TextBlock Text="Code de jumelage" 
+                                       Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                       Margin="0,0,0,10"/>
+                            
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock x:Name="PairingCodeText" 
+                                               Text="------"
+                                               FontSize="48"
+                                               FontWeight="Bold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,10"/>
+                                    <TextBlock x:Name="PairingExpiryText" 
+                                               Text="Aucun code actif"
+                                               HorizontalAlignment="Center"
+                                               Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                                </StackPanel>
+
+                                <Image x:Name="QRCodeImage" 
+                                       Grid.Column="1"
+                                       Width="150" Height="150"
+                                       Margin="20,0,0,0"/>
+                            </Grid>
+
+                            <Button x:Name="GenerateCodeButton"
+                                    Content="Générer un nouveau code"
+                                    Style="{StaticResource MaterialDesignRaisedButton}"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,20,0,0"
+                                    Click="GenerateCodeButton_Click"/>
+
+                            <TextBlock Text="Scannez le QR code ou entrez le code à 6 chiffres dans l'application mobile"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center"
+                                       Margin="0,10,0,0"
+                                       Foreground="{DynamicResource MaterialDesignBodyLight}"/>
+                        </StackPanel>
+                    </materialDesign:Card>
+
+                    <!-- Instructions -->
+                    <materialDesign:Card Grid.Row="2" Padding="16">
+                        <StackPanel>
+                            <TextBlock Text="Instructions" 
+                                       Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                       Margin="0,0,0,10"/>
+                            <TextBlock TextWrapping="Wrap">
+                                <Run Text="1. Assurez-vous que votre appareil mobile est connecté au même réseau WiFi que cet ordinateur"/>
+                                <LineBreak/><LineBreak/>
+                                <Run Text="2. Cliquez sur 'Générer un nouveau code' pour créer un code de jumelage"/>
+                                <LineBreak/><LineBreak/>
+                                <Run Text="3. Dans l'application mobile AdRev, scannez le QR code ou entrez le code manuellement"/>
+                                <LineBreak/><LineBreak/>
+                                <Run Text="4. Une fois jumelé, l'appareil apparaîtra dans l'onglet 'Appareils'"/>
+                            </TextBlock>
+                        </StackPanel>
+                    </materialDesign:Card>
+                </Grid>
+            </TabItem>
+
+            <!-- Tab Appareils -->
+            <TabItem Header="Appareils">
+                <Grid Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" 
+                               Text="Appareils jumelés" 
+                               Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                               Margin="0,0,0,10"/>
+
+                    <ListView x:Name="DevicesListView" 
+                              Grid.Row="1">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Nom" Width="200" DisplayMemberBinding="{Binding DeviceName}"/>
+                                <GridViewColumn Header="ID" Width="250" DisplayMemberBinding="{Binding DeviceId}"/>
+                                <GridViewColumn Header="Jumelé le" Width="150" DisplayMemberBinding="{Binding PairedAt, StringFormat='{}{0:dd/MM/yyyy HH:mm}'}"/>
+                                <GridViewColumn Header="Dernière sync" Width="150" DisplayMemberBinding="{Binding LastSyncAt, StringFormat='{}{0:dd/MM/yyyy HH:mm}'}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+
+            <!-- Tab Logs -->
+            <TabItem Header="Logs">
+                <Grid Margin="20">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <TextBox x:Name="LogsTextBox"
+                                 IsReadOnly="True"
+                                 TextWrapping="Wrap"
+                                 FontFamily="Consolas"
+                                 FontSize="11"
+                                 Background="#1E1E1E"
+                                 Foreground="#D4D4D4"
+                                 Padding="10"/>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <!-- Footer -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button x:Name="StartServerButton"
+                    Content="Démarrer le serveur"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    Margin="0,0,10,0"
+                    Click="StartServerButton_Click"/>
+            <Button Content="Fermer"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Click="CloseButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="!(loc.ProductName)" Manufacturer="AdRev Team" Version="$(var.Version)" UpgradeCode="B0807755-6E58-4856-8344-93C372153AD5" InstallerVersion="500">
+    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+    
+    <MediaTemplate EmbedCab="yes" />
+
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLFOLDER" Name="AdRev">
+        <!-- Main Executable Component -->
+        <Component Id="MainExecutable" Guid="3E38F686-2E75-4C34-8A6B-9F2248550293">
+          <File Id="AdRev.Desktop.exe" Source="..\AdRev.Desktop\bin\Release\net8.0-windows\win-x64\publish\AdRev.Desktop.exe" KeyPath="yes" />
+          
+          <Shortcut Id="DesktopShortcut" 
+                    Directory="DesktopFolder" 
+                    Name="!(loc.ProductName)" 
+                    WorkingDirectory="INSTALLFOLDER" 
+                    Icon="AdRevIcon.ico" 
+                    IconIndex="0"
+                    Advertise="no" />
+                    
+          <Shortcut Id="StartMenuShortcut" 
+                    Directory="ProgramMenuFolder" 
+                    Name="!(loc.ProductName)" 
+                    WorkingDirectory="INSTALLFOLDER" 
+                    Icon="AdRevIcon.ico" 
+                    IconIndex="0"
+                    Advertise="no" />
+
+          <RegistryValue Root="HKCU" Key="Software\AdRev" Name="installed" Type="integer" Value="1" KeyPath="no" />
+        </Component>
+      </Directory>
+    </StandardDirectory>
+
+    <!-- Shortcuts Directories -->
+    <StandardDirectory Id="DesktopFolder" />
+    <StandardDirectory Id="ProgramMenuFolder" />
+
+    <!-- Features -->
+    <Feature Id="ProductFeature" Title="!(loc.FeatureTitle)" Level="1">
+      <ComponentRef Id="MainExecutable" />
+      <ComponentGroupRef Id="PublishedComponents" />
+    </Feature>
+
+    <!-- Icon -->
+    <Icon Id="AdRevIcon.ico" SourceFile="..\AdRev.Desktop\Assets\AppIcon.ico" />
+  </Package>
+</Wix>

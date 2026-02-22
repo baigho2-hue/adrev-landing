@@ -1,0 +1,187 @@
+<Window x:Class="AdRev.Desktop.Windows.ProjectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdRev.Desktop"
+        xmlns:win="clr-namespace:AdRev.Desktop.Windows"
+        xmlns:project="clr-namespace:AdRev.Desktop.Views.Project"
+        mc:Ignorable="d"
+        Title="AdRev Project" Height="750" Width="1150"
+        MinHeight="600" MinWidth="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BackgroundBrush}">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="40" ResizeBorderThickness="8" CornerRadius="0" GlassFrameThickness="0"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Title Bar -->
+            <RowDefinition Height="Auto"/> <!-- Progress Stepper -->
+            <RowDefinition Height="Auto"/> <!-- Ribbon -->
+            <RowDefinition Height="*"/>    <!-- Content -->
+            <RowDefinition Height="25"/>   <!-- Status Bar -->
+        </Grid.RowDefinitions>
+
+        <!-- 1. TOP TITLE BAR -->
+        <Border Grid.Row="0" Background="{StaticResource CalmHeaderBrush}" Padding="10,5,10,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,30,5" WindowChrome.IsHitTestVisibleInChrome="True">
+                     <TextBlock Text="AdRev Project" Foreground="White" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                     <TextBlock x:Name="TxtProjectTitleHeader" Text="Project Name" Foreground="#B0BEC5" FontSize="14" VerticalAlignment="Center" FontStyle="Italic"/>
+                </StackPanel>
+
+                <!-- Project Quick Actions -->
+                <StackPanel Grid.Column="1" Orientation="Horizontal" WindowChrome.IsHitTestVisibleInChrome="True">
+                     <Button Content="&#xE74E;" Click="QuickSave_Click" ToolTip="{DynamicResource TooltipSave}" Background="Transparent" Foreground="#E0E0E0" BorderThickness="0" FontFamily="Segoe MDL2 Assets" FontSize="14" Margin="0,0,5,0" Padding="5"/>
+                </StackPanel>
+
+                <!-- Window Controls -->
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Top" Margin="0,-5,-10,0">
+                    <Button x:Name="BtnMinimizeProject" Style="{StaticResource WindowControlButtonStyle}" Content="&#xE921;" Click="Minimize_Click" ToolTip="{DynamicResource TooltipMinimize}" WindowChrome.IsHitTestVisibleInChrome="True"/>
+                    <Button x:Name="BtnMaximizeProject" Style="{StaticResource WindowControlButtonStyle}" Content="&#xE922;" Click="Maximize_Click" ToolTip="{DynamicResource TooltipMaximize}" WindowChrome.IsHitTestVisibleInChrome="True"/>
+                    <Button x:Name="BtnCloseProject" Style="{StaticResource CloseButtonStyle}" Content="&#xE8BB;" Click="Close_Click" ToolTip="{DynamicResource TooltipClose}" WindowChrome.IsHitTestVisibleInChrome="True"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- 2. PROGRESS STEPPER -->
+        <Border Grid.Row="1" Background="{StaticResource CalmAltBackgroundBrush}" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="0,0,0,1" Padding="20,10">
+            <Grid HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/> <!-- Protocol -->
+                    <ColumnDefinition Width="60"/>   <!-- Line -->
+                    <ColumnDefinition Width="Auto"/> <!-- Variables -->
+                    <ColumnDefinition Width="60"/>   <!-- Line -->
+                    <ColumnDefinition Width="Auto"/> <!-- Data -->
+                    <ColumnDefinition Width="60"/>   <!-- Line -->
+                    <ColumnDefinition Width="Auto"/> <!-- Analysis -->
+                    <ColumnDefinition Width="60"/>   <!-- Line -->
+                    <ColumnDefinition Width="Auto"/> <!-- Report -->
+                </Grid.ColumnDefinitions>
+
+                <StackPanel x:Name="StepProtocol" Grid.Column="0">
+                    <Ellipse Width="24" Height="24" Fill="{StaticResource PrimaryBrush}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="1" Foreground="White" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" Margin="0,-22,0,0"/>
+                    <TextBlock Text="{DynamicResource StepProtocol}" FontSize="10" FontWeight="Bold" Foreground="{StaticResource PrimaryBrush}" Margin="0,8,0,0" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <Rectangle Grid.Column="1" Height="2" Fill="#EEE" VerticalAlignment="Center" Margin="5,0,5,20"/>
+
+                <StackPanel x:Name="StepVariables" Grid.Column="2" Opacity="0.4">
+                    <Ellipse Width="24" Height="24" Fill="#CCC" HorizontalAlignment="Center"/>
+                    <TextBlock Text="2" Foreground="White" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" Margin="0,-22,0,0"/>
+                    <TextBlock Text="{DynamicResource StepVariables}" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,8,0,0" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <Rectangle Grid.Column="3" Height="2" Fill="#EEE" VerticalAlignment="Center" Margin="5,0,5,20"/>
+
+                <StackPanel x:Name="StepData" Grid.Column="4" Opacity="0.4">
+                    <Ellipse Width="24" Height="24" Fill="#CCC" HorizontalAlignment="Center"/>
+                    <TextBlock Text="3" Foreground="White" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" Margin="0,-22,0,0"/>
+                    <TextBlock Text="{DynamicResource StepData}" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,8,0,0" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <Rectangle Grid.Column="5" Height="2" Fill="#EEE" VerticalAlignment="Center" Margin="5,0,5,20"/>
+
+                <StackPanel x:Name="StepAnalysis" Grid.Column="6" Opacity="0.4">
+                    <Ellipse Width="24" Height="24" Fill="#CCC" HorizontalAlignment="Center"/>
+                    <TextBlock Text="4" Foreground="White" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" Margin="0,-22,0,0"/>
+                    <TextBlock Text="{DynamicResource StepAnalysis}" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,8,0,0" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <Rectangle Grid.Column="7" Height="2" Fill="#EEE" VerticalAlignment="Center" Margin="5,0,5,20"/>
+
+                <StackPanel x:Name="StepReport" Grid.Column="8" Opacity="0.4">
+                    <Ellipse Width="24" Height="24" Fill="#CCC" HorizontalAlignment="Center"/>
+                    <TextBlock Text="5" Foreground="White" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" Margin="0,-22,0,0"/>
+                    <TextBlock Text="{DynamicResource StepReport}" FontSize="10" FontWeight="Bold" Foreground="#888" Margin="0,8,0,0" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- 3. RIBBON FOR PROJECT (Order synced with TabControl) -->
+        <Border Grid.Row="2" Background="{StaticResource MenuBarBrush}" BorderBrush="#DDD" BorderThickness="0,0,0,1" Padding="12,5">
+            <StackPanel Orientation="Horizontal" Height="50">
+                <RadioButton x:Name="RibbonDashboard" Style="{StaticResource RibbonTabButtonStyle}" Content="TABLEAU DE BORD" IsChecked="True" Checked="Ribbon_Checked" Tag="0"/>
+                <RadioButton x:Name="RibbonStep1" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonProtocol}" Checked="Ribbon_Checked" Tag="1"/>
+                <RadioButton x:Name="RibbonLibrary" Style="{StaticResource RibbonTabButtonStyle}" Content="BIBLIOTHÈQUE" Checked="Ribbon_Checked" Tag="11"/>
+                <RadioButton x:Name="RibbonStep2" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonVariables}" Checked="Ribbon_Checked" Tag="2"/>
+                <RadioButton x:Name="RibbonStep3" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonEntry}" Checked="Ribbon_Checked" Tag="3"/>
+                <RadioButton x:Name="RibbonStep4" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonStats}" Checked="Ribbon_Checked" Tag="4"/>
+                <RadioButton x:Name="RibbonStep5" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonQualiDash}" Checked="Ribbon_Checked" Tag="5"/>
+                <RadioButton x:Name="RibbonStep5b" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonCoding}" Checked="Ribbon_Checked" Tag="6"/>
+                <RadioButton x:Name="RibbonStep6" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonDiscussion}" Checked="Ribbon_Checked" Tag="7"/>
+                <RadioButton x:Name="RibbonStep7" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonReport}" Checked="Ribbon_Checked" Tag="8"/>
+                <RadioButton x:Name="RibbonStep8" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonArticle}" Checked="Ribbon_Checked" Tag="9"/>
+                <RadioButton x:Name="RibbonStep9" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonQuality}" Checked="Ribbon_Checked" Tag="10"/>
+            </StackPanel>
+        </Border>
+
+        <!-- 4. PROJECT CONTENT TABS -->
+        <TabControl x:Name="ProjectTabControl" Grid.Row="3" Background="Transparent" BorderThickness="0" Margin="0,-1,0,0" SelectedIndex="0">
+            <TabControl.Template>
+                <ControlTemplate TargetType="TabControl">
+                    <ContentPresenter ContentSource="SelectedContent" />
+                </ControlTemplate>
+            </TabControl.Template>
+
+            <TabItem x:Name="TabDashboard"> <!-- Index 0 -->
+                <project:ProjectDashboardView x:Name="ViewDashboard"/>
+            </TabItem>
+            <TabItem x:Name="TabProtocol"> <!-- Index 1 -->
+                <project:ProtocolView x:Name="ViewProtocol"/>
+            </TabItem>
+            <TabItem x:Name="TabVariables"> <!-- Index 2 -->
+                <project:VariableDesignView x:Name="ViewVariableDesign"/>
+            </TabItem>
+            <TabItem x:Name="TabDataEntry"> <!-- Index 3 -->
+                <project:DataEntryView x:Name="ViewDataEntry"/>
+            </TabItem>
+            <TabItem x:Name="TabAnalysis"> <!-- Index 4 -->
+                <project:AnalysisView x:Name="ViewAnalysis"/>
+            </TabItem>
+            <TabItem x:Name="TabQualitativeAnalysis"> <!-- Index 5 -->
+                <project:QualitativeAnalysisView x:Name="ViewQualitativeAnalysis"/>
+            </TabItem>
+            <TabItem x:Name="TabQualitativeCoding"> <!-- Index 6 -->
+                <project:QualitativeCodingView x:Name="ViewQualitativeCoding"/>
+            </TabItem>
+            <TabItem x:Name="TabDiscussion"> <!-- Index 7 -->
+                <project:DiscussionView x:Name="ViewDiscussion"/>
+            </TabItem>
+            <TabItem x:Name="TabFinalReport"> <!-- Index 8 -->
+                <project:FinalReportView x:Name="ViewFinalReport"/>
+            </TabItem>
+            <TabItem x:Name="TabJournal"> <!-- Index 9 -->
+                <project:JournalArticleView x:Name="ViewJournalArticle"/>
+            </TabItem>
+            <TabItem x:Name="TabQuality"> <!-- Index 10 -->
+                <project:QualityCheckView x:Name="ViewQualityCheck"/>
+            </TabItem>
+            <TabItem x:Name="TabLibrary"> <!-- Index 11 -->
+                <project:LibraryView x:Name="ViewLibrary"/>
+            </TabItem>
+        </TabControl>
+
+        <!-- 5. STATUS BAR -->
+        <StatusBar Grid.Row="4" Background="{StaticResource CalmBackgroundBrush}">
+            <StatusBarItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{DynamicResource LabelProjectStatus}" Foreground="#555" Margin="0,0,5,0"/>
+                    <TextBlock x:Name="StatusBarProjectStatus" Text="En cours" FontWeight="SemiBold" Foreground="{StaticResource PrimaryBrush}"/>
+                </StackPanel>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{DynamicResource LabelLastSaved}" Foreground="#888" Margin="0,0,5,0"/>
+                    <TextBlock x:Name="StatusBarLastSaved" Text="{DynamicResource StatusNever}" Foreground="#888"/>
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+  Identification des projets ├á restaurer...
+  Tous les projets sont ├á jour pour la restauration.
+  AdRev.Domain -> C:\Users\HP\Documents\AdRev\AdRev.Domain\bin\Debug\net8.0\AdRev.Domain.dll
+  AdRev.Core -> C:\Users\HP\Documents\AdRev\AdRev.Core\bin\Debug\net8.0-windows\AdRev.Core.dll
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(212,35): warning CS8604: Existence possible d'un argument de r├®f├®rence null pour le param├¿tre 'project' dans 'void MainWindow.OpenProjectWindow(ResearchProject project, int initialTabIndex = 0)'. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(290,27): error CS0246: Le nom de type ou d'espace de noms 'Button' est introuvable (vous manque-t-il une directive using ou une r├®f├®rence d'assembly┬á?) [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\LibraryView.xaml.cs(133,48): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\LibraryView.xaml.cs(168,50): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\LibraryView.xaml.cs(212,21): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\LibraryView.xaml.cs(229,17): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\LibraryView.xaml.cs(241,107): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+
+├ëCHEC de la build.
+
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(212,35): warning CS8604: Existence possible d'un argument de r├®f├®rence null pour le param├¿tre 'project' dans 'void MainWindow.OpenProjectWindow(ResearchProject project, int initialTabIndex = 0)'. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\LibraryView.xaml.cs(133,48): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\LibraryView.xaml.cs(168,50): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\LibraryView.xaml.cs(212,21): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\LibraryView.xaml.cs(229,17): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Views\Project\LibraryView.xaml.cs(241,107): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(290,27): error CS0246: Le nom de type ou d'espace de noms 'Button' est introuvable (vous manque-t-il une directive using ou une r├®f├®rence d'assembly┬á?) [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_3dtgxzvh_wpftmp.csproj]
+    6 Avertissement(s)
+    1 Erreur(s)
+
+Temps ├®coul├® 00:00:02.77

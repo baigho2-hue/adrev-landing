@@ -1,0 +1,7 @@
+c:\Users\HP\Documents\AdRev\AdRev.Desktop\MainWindow.xaml.cs(94,25): error CS0103: Le nom 'OpenProtocolWindow' n'existe pas dans le contexte actuel [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_sg0mfqgs_wpftmp.csproj]
+
+ÉCHEC de la build.
+    7 Avertissement(s)
+    1 Erreur(s)
+
+Temps écoulé 00:00:02.26

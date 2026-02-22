@@ -1,0 +1,13 @@
+  Identification des projets ├á restaurer...
+  Tous les projets sont ├á jour pour la restauration.
+  AdRev.Domain -> C:\Users\HP\Documents\AdRev\AdRev.Domain\bin\Debug\net8.0\AdRev.Domain.dll
+  AdRev.Core -> C:\Users\HP\Documents\AdRev\AdRev.Core\bin\Debug\net8.0-windows\AdRev.Core.dll
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\WelcomeWindow.xaml.cs(10,16): error CS0104: 'UserProfile' est une r├®f├®rence ambigu├½ entre 'AdRev.Desktop.Services.UserProfile' et 'AdRev.Core.Services.UserProfile' [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_cmwnobu1_wpftmp.csproj]
+
+├ëCHEC de la build.
+
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\WelcomeWindow.xaml.cs(10,16): error CS0104: 'UserProfile' est une r├®f├®rence ambigu├½ entre 'AdRev.Desktop.Services.UserProfile' et 'AdRev.Core.Services.UserProfile' [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_cmwnobu1_wpftmp.csproj]
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ├®coul├® 00:00:01.95

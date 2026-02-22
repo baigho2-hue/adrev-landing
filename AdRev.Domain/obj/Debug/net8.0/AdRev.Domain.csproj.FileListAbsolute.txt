@@ -1,0 +1,11 @@
+C:\Users\HP\Documents\AdRev\AdRev.Domain\bin\Debug\net8.0\AdRev.Domain.deps.json
+C:\Users\HP\Documents\AdRev\AdRev.Domain\bin\Debug\net8.0\AdRev.Domain.dll
+C:\Users\HP\Documents\AdRev\AdRev.Domain\bin\Debug\net8.0\AdRev.Domain.pdb
+C:\Users\HP\Documents\AdRev\AdRev.Domain\obj\Debug\net8.0\AdRev.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\AdRev\AdRev.Domain\obj\Debug\net8.0\AdRev.Domain.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\AdRev\AdRev.Domain\obj\Debug\net8.0\AdRev.Domain.AssemblyInfo.cs
+C:\Users\HP\Documents\AdRev\AdRev.Domain\obj\Debug\net8.0\AdRev.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\AdRev\AdRev.Domain\obj\Debug\net8.0\AdRev.Domain.dll
+C:\Users\HP\Documents\AdRev\AdRev.Domain\obj\Debug\net8.0\refint\AdRev.Domain.dll
+C:\Users\HP\Documents\AdRev\AdRev.Domain\obj\Debug\net8.0\AdRev.Domain.pdb
+C:\Users\HP\Documents\AdRev\AdRev.Domain\obj\Debug\net8.0\ref\AdRev.Domain.dll

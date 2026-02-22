@@ -1,0 +1,97 @@
+<Window x:Class="AdRev.Desktop.CitationEntryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ajouter une Référence" Height="700" Width="600"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        MouseDown="Window_MouseDown">
+    
+    <Border Background="White" CornerRadius="20" BorderBrush="#DDD" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/> <!-- Header -->
+                <RowDefinition Height="*"/>    <!-- Content -->
+                <RowDefinition Height="Auto"/> <!-- Actions -->
+            </Grid.RowDefinitions>
+
+            <!-- Custom Header -->
+            <Border Grid.Row="0" Background="{StaticResource PrimaryBrush}" CornerRadius="19,19,0,0" Padding="20,15">
+                <Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="📚" FontSize="20" VerticalAlignment="Center" Margin="0,0,12,0"/>
+                        <TextBlock Text="Ajouter une Référence" FontSize="18" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <Button Content="✕" Click="Cancel_Click" HorizontalAlignment="Right" Background="Transparent" Foreground="White" BorderThickness="0" FontSize="16" Cursor="Hand"/>
+                </Grid>
+            </Border>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="25">
+                <StackPanel>
+                    <!-- Search Card -->
+                    <Border Background="#F8F9FA" CornerRadius="12" Padding="15" Margin="0,0,0,25">
+                        <StackPanel>
+                            <TextBlock Text="Recherche Automatique" FontWeight="Bold" Margin="0,0,0,10" Foreground="{StaticResource PrimaryBrush}"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel>
+                                    <TextBlock Text="DOI, PMID ou Titre" Style="{StaticResource LabelStyle}" FontSize="12"/>
+                                    <TextBox x:Name="CitDoiBox" Height="40" Margin="0" Tag="Ex: 10.1038/nature12345"/>
+                                </StackPanel>
+                                <Button Grid.Column="1" Content="🔍 Rechercher" Click="SearchDoi_Click" Style="{StaticResource ModernButtonStyle}" Height="40" Width="120" Margin="10,18,0,0" FontSize="12"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+
+                    <Separator Margin="0,0,0,25" Opacity="0.5"/>
+
+                    <!-- Manual Fields -->
+                    <TextBlock Text="Saisie Manuelle" FontWeight="Bold" Margin="0,0,0,15" Foreground="{StaticResource PrimaryBrush}"/>
+                    
+                    <TextBlock Text="Auteurs" Style="{StaticResource LabelStyle}"/>
+                    <TextBox x:Name="CitAuthorsBox" Tag="Smith J, Doe A..."/>
+
+                    <TextBlock Text="Année" Style="{StaticResource LabelStyle}"/>
+                    <TextBox x:Name="CitYearBox" Width="100" HorizontalAlignment="Left" Tag="2024"/>
+
+                    <TextBlock Text="Titre de l'article / Ouvrage" Style="{StaticResource LabelStyle}"/>
+                    <TextBox x:Name="CitTitleBox" Height="60" TextWrapping="Wrap" AcceptsReturn="True" Tag="Titre complet du document..."/>
+
+                    <TextBlock Text="Source / Journal" Style="{StaticResource LabelStyle}"/>
+                    <TextBox x:Name="CitSourceBox" Tag="Lancet, Nature, EM-Consulte..."/>
+
+                    <!-- Pending Group Card -->
+                    <Border Background="#E8EAF6" CornerRadius="12" Padding="15" Margin="0,20,0,0">
+                        <StackPanel>
+                             <Button Content="⬇️ Ajouter ce document à la citation groupée" Click="AddToPending_Click" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+                             
+                             <TextBlock Text="Documents sélectionnés pour cette citation :" FontSize="11" FontWeight="Bold" Foreground="#3F51B5" Margin="0,0,0,8"/>
+                             <ListBox x:Name="PendingCitationsBox" Height="100" Background="Transparent" BorderThickness="0">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Background="White" CornerRadius="5" Margin="0,0,0,5" Padding="8">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="📄" Margin="0,0,10,0"/>
+                                                <TextBlock Text="{Binding Title}" FontSize="11" FontWeight="Medium" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                             </ListBox>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Footer Actions -->
+            <Border Grid.Row="2" Background="#F5F5F5" Padding="25,15" CornerRadius="0,0,19,19">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Annuler" Click="Cancel_Click" Style="{StaticResource SecondaryButtonStyle}" Width="100" Height="40" Margin="0,0,15,0"/>
+                    <Button Content="Insérer dans le texte" Click="Confirm_Click" Style="{StaticResource ModernButtonStyle}" Width="180" Height="40" FontWeight="Bold"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

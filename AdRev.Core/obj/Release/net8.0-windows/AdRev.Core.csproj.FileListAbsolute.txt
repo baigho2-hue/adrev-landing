@@ -1,0 +1,15 @@
+C:\Users\HP\Documents\AdRev\AdRev.Core\bin\Release\net8.0-windows\AdRev.Core.deps.json
+C:\Users\HP\Documents\AdRev\AdRev.Core\bin\Release\net8.0-windows\AdRev.Core.dll
+C:\Users\HP\Documents\AdRev\AdRev.Core\bin\Release\net8.0-windows\AdRev.Core.pdb
+C:\Users\HP\Documents\AdRev\AdRev.Core\bin\Release\net8.0-windows\AdRev.Domain.dll
+C:\Users\HP\Documents\AdRev\AdRev.Core\bin\Release\net8.0-windows\AdRev.Domain.pdb
+C:\Users\HP\Documents\AdRev\AdRev.Core\obj\Release\net8.0-windows\AdRev.Core.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\AdRev\AdRev.Core\obj\Release\net8.0-windows\AdRev.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\AdRev\AdRev.Core\obj\Release\net8.0-windows\AdRev.Core.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\AdRev\AdRev.Core\obj\Release\net8.0-windows\AdRev.Core.AssemblyInfo.cs
+C:\Users\HP\Documents\AdRev\AdRev.Core\obj\Release\net8.0-windows\AdRev.Core.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\AdRev\AdRev.Core\obj\Release\net8.0-windows\AdRev.Core.csproj.Up2Date
+C:\Users\HP\Documents\AdRev\AdRev.Core\obj\Release\net8.0-windows\AdRev.Core.dll
+C:\Users\HP\Documents\AdRev\AdRev.Core\obj\Release\net8.0-windows\refint\AdRev.Core.dll
+C:\Users\HP\Documents\AdRev\AdRev.Core\obj\Release\net8.0-windows\AdRev.Core.pdb
+C:\Users\HP\Documents\AdRev\AdRev.Core\obj\Release\net8.0-windows\ref\AdRev.Core.dll

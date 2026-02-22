@@ -1,0 +1,166 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "AdRev.LicenseGenerator/1.0.0": {
+        "dependencies": {
+          "AdRev.Core": "1.0.0",
+          "AdRev.Domain": "1.0.0"
+        },
+        "runtime": {
+          "AdRev.LicenseGenerator.dll": {}
+        }
+      },
+      "DocumentFormat.OpenXml/3.4.1": {
+        "dependencies": {
+          "DocumentFormat.OpenXml.Framework": "3.4.1"
+        },
+        "runtime": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
+            "assemblyVersion": "3.4.1.0",
+            "fileVersion": "3.4.1.0"
+          }
+        }
+      },
+      "DocumentFormat.OpenXml.Framework/3.4.1": {
+        "dependencies": {
+          "System.IO.Packaging": "8.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
+            "assemblyVersion": "3.4.1.0",
+            "fileVersion": "3.4.1.0"
+          }
+        }
+      },
+      "MathNet.Numerics/5.0.0": {
+        "runtime": {
+          "lib/net6.0/MathNet.Numerics.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "System.CodeDom/10.0.2": {
+        "runtime": {
+          "lib/net8.0/System.CodeDom.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.225.61305"
+          }
+        }
+      },
+      "System.IO.Packaging/8.0.1": {
+        "runtime": {
+          "lib/net8.0/System.IO.Packaging.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1024.46610"
+          }
+        }
+      },
+      "System.Management/10.0.2": {
+        "dependencies": {
+          "System.CodeDom": "10.0.2"
+        },
+        "runtime": {
+          "lib/net8.0/System.Management.dll": {
+            "assemblyVersion": "10.0.0.2",
+            "fileVersion": "10.0.225.61305"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Management.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.2",
+            "fileVersion": "10.0.225.61305"
+          }
+        }
+      },
+      "AdRev.Core/1.0.0": {
+        "dependencies": {
+          "AdRev.Domain": "1.0.0",
+          "DocumentFormat.OpenXml": "3.4.1",
+          "MathNet.Numerics": "5.0.0",
+          "System.Management": "10.0.2"
+        },
+        "runtime": {
+          "AdRev.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "AdRev.Domain/1.0.0": {
+        "runtime": {
+          "AdRev.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AdRev.LicenseGenerator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DocumentFormat.OpenXml/3.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iM7k4Spo6ZxxudxLVGcvFLIcF6XJ65aOAsJ24o75CaKGBTuj33cL1O7qnGkQW0+ONOUFff+mWafpZYaa7rNBbg==",
+      "path": "documentformat.openxml/3.4.1",
+      "hashPath": "documentformat.openxml.3.4.1.nupkg.sha512"
+    },
+    "DocumentFormat.OpenXml.Framework/3.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H7l8l84uRb+LTjijpe6PuVDlIDM28s7f//zxss6f1yK1qnaxAEZwRecPkjfE3vjFM7QZ7X4XGF4nicnIynJrBw==",
+      "path": "documentformat.openxml.framework/3.4.1",
+      "hashPath": "documentformat.openxml.framework.3.4.1.nupkg.sha512"
+    },
+    "MathNet.Numerics/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pg1W2VwaEQMAiTpGK840hZgzavnqjlCMTVSbtVCXVyT+7AX4mc1o89SPv4TBlAjhgCOo9c1Y+jZ5m3ti2YgGgA==",
+      "path": "mathnet.numerics/5.0.0",
+      "hashPath": "mathnet.numerics.5.0.0.nupkg.sha512"
+    },
+    "System.CodeDom/10.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eih1MnL4tnSjHUhzae0dmpu50Sm0s54faHZc8yhzYfmubAubkBIIulYYN28fasD1m41mhl6Cenhs9/F0aLv3FA==",
+      "path": "system.codedom/10.0.2",
+      "hashPath": "system.codedom.10.0.2.nupkg.sha512"
+    },
+    "System.IO.Packaging/8.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KYkIOAvPexQOLDxPO2g0BVoWInnQhPpkFzRqvNrNrMhVT6kqhVr0zEb6KCHlptLFukxnZrjuMVAnxK7pOGUYrw==",
+      "path": "system.io.packaging/8.0.1",
+      "hashPath": "system.io.packaging.8.0.1.nupkg.sha512"
+    },
+    "System.Management/10.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eFftuy3i844lVKCb4lJvvjKfcvPVcW8KrAdSaIOcRL42/Fisj46hwUs8Bky+4avzMe5Snm5t7aSayOI1mybYXg==",
+      "path": "system.management/10.0.2",
+      "hashPath": "system.management.10.0.2.nupkg.sha512"
+    },
+    "AdRev.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AdRev.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

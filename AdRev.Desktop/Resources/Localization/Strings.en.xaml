@@ -1,0 +1,291 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    
+    <!-- Title Bar & Window -->
+    <sys:String x:Key="AppTitle">AdRev - Science Suite</sys:String>
+    <sys:String x:Key="TooltipSave">Save</sys:String>
+    <sys:String x:Key="TooltipOpen">Open</sys:String>
+    <sys:String x:Key="TooltipShare">Share</sys:String>
+    <sys:String x:Key="TooltipMinimize">Minimize</sys:String>
+    <sys:String x:Key="TooltipMaximize">Maximize/Restore</sys:String>
+    <sys:String x:Key="TooltipClose">Close</sys:String>
+
+    <!-- Ribbon Tabs -->
+    <sys:String x:Key="TabFile">File</sys:String>
+    <sys:String x:Key="TabHelp">Help</sys:String>
+
+    <!-- Ribbon Actions -->
+    <sys:String x:Key="BtnHome">Home</sys:String>
+    <sys:String x:Key="BtnNewProject">New Project</sys:String>
+    <sys:String x:Key="BtnTeam">Team</sys:String>
+    <sys:String x:Key="BtnShare">Share</sys:String>
+    <sys:String x:Key="BtnDoc">Documentation</sys:String>
+    <sys:String x:Key="BtnSupport">Support</sys:String>
+    <sys:String x:Key="BtnAbout">About</sys:String>
+    <sys:String x:Key="BtnProfile">My Profile</sys:String>
+
+    <!-- Dashboard -->
+    <sys:String x:Key="DashboardTitle">Scientific Dashboard</sys:String>
+    <sys:String x:Key="DashboardSubtitle">Overview of your research and analysis</sys:String>
+    <sys:String x:Key="CardOngoingTitle">Ongoing Projects</sys:String>
+    <sys:String x:Key="CardOngoingStatus">Active</sys:String>
+    <sys:String x:Key="CardValidatedTitle">Validated Protocols</sys:String>
+    <sys:String x:Key="CardValidatedStatus">Completed</sys:String>
+    <sys:String x:Key="CardAnalysisTitle">Quick Analysis</sys:String>
+    <sys:String x:Key="CardAnalysisSubtitle">Import CSV/Excel</sys:String>
+    <sys:String x:Key="CardImportTitle">Import Folder</sys:String>
+    <sys:String x:Key="CardImportSubtitle">Load from PC</sys:String>
+
+    <!-- License & Network -->
+    <sys:String x:Key="LicenseTitle">AdRev License 🔑</sys:String>
+    <sys:String x:Key="LicenseLoading">Loading...</sys:String>
+    <sys:String x:Key="BtnUpgrade">🚀 UPGRADE</sys:String>
+    <sys:String x:Key="ConnectTitle">AdRev Connect 🌐</sys:String>
+    <sys:String x:Key="ConnectSubtitle">Shared projects</sys:String>
+    <sys:String x:Key="LabelServerIP">Server / IP:</sys:String>
+    <sys:String x:Key="BtnConnectNetwork">Network Connect</sys:String>
+    <sys:String x:Key="LabelConnected">Connected</sys:String>
+    <sys:String x:Key="BtnDisconnect">Disconnect</sys:String>
+
+    <!-- Projects List -->
+    <sys:String x:Key="SectionRecentProjects">YOUR RECENT PROJECTS</sys:String>
+    <sys:String x:Key="SectionTeamProjects">TEAM PROJECTS</sys:String>
+    <sys:String x:Key="SectionIndividualProjects">PERSONAL PROJECTS</sys:String>
+    <sys:String x:Key="SectionArchiveProjects">ARCHIVES / COMPLETED</sys:String>
+    <sys:String x:Key="TagTeam">TEAM</sys:String>
+    <sys:String x:Key="TagPersonal">PERSONAL</sys:String>
+    <sys:String x:Key="LabelCreatedOn">Created on {0:dd/MM/yyyy}</sys:String>
+
+    <!-- New Project View -->
+    <sys:String x:Key="NewProjectTitle">Initialize New Project</sys:String>
+    <sys:String x:Key="LabelProjectTitle">Project Title</sys:String>
+    <sys:String x:Key="PlaceholderProjectTitle">Enter your research project title here...</sys:String>
+    <sys:String x:Key="LabelInstitution">Institution / Organization</sys:String>
+    <sys:String x:Key="PlaceholderInstitution">Ex: University of Paris, Central Hospital...</sys:String>
+    <sys:String x:Key="LabelDomain">Scientific Domain</sys:String>
+    <sys:String x:Key="LabelStudyType">Study Type</sys:String>
+    <sys:String x:Key="LabelAuthors">Authors (separated by commas)</sys:String>
+    <sys:String x:Key="PlaceholderAuthors">List authors (Last First), separated by commas...</sys:String>
+    <sys:String x:Key="LabelLocation">Project Location (Local)</sys:String>
+    <sys:String x:Key="BtnValidateCreate">Validate and Create Project</sys:String>
+
+    <!-- Status Bar -->
+    <sys:String x:Key="StatusReady">Ready</sys:String>
+    <sys:String x:Key="StatusCopyright">AdRev Science Suite v1.0.0 (First Edition) | © 2024-2026 AdRev Team</sys:String>
+
+    <sys:String x:Key="LabelLanguage">Language</sys:String>
+
+    <!-- Messages -->
+    <sys:String x:Key="MsgLicenseRequired">A valid license is required to use AdRev Desktop.&#x0a;The application will close.</sys:String>
+    <sys:String x:Key="MsgProjectImported">The project '{0}' has been successfully imported.</sys:String>
+    <sys:String x:Key="MsgImportError">Error during import: {0}</sys:String>
+    <sys:String x:Key="MsgEnterTitle">Please enter a title.</sys:String>
+    <sys:String x:Key="MsgConfirmDelete">Are you sure you want to delete the project '{0}'?</sys:String>
+    <sys:String x:Key="MsgProjectDeleted">Project successfully deleted.</sys:String>
+    <sys:String x:Key="MsgSaveSuccess">Project and data saved.</sys:String>
+    <sys:String x:Key="MsgSaveError">Error during save: {0}</sys:String>
+    <sys:String x:Key="MsgWindowsOpen">Project windows are still open. Are you sure you want to close the main application?&#x0a;(All project windows will be closed)</sys:String>
+
+    <!-- Titles & Buttons for Code-behind -->
+    <sys:String x:Key="AccessDenied">Access Denied</sys:String>
+    <sys:String x:Key="MsgUpgradePrompt">Please contact AdRev support or your local reseller to upgrade your license and unlock all features (Regression Analysis, Qualitative Workshop, etc.)!</sys:String>
+    <sys:String x:Key="NoProjectOpen">No project open</sys:String>
+    <sys:String x:Key="MsgOpenOrCreateProject">Please open or create a project first to manage the team.</sys:String>
+    <sys:String x:Key="Success">Success</sys:String>
+    <sys:String x:Key="Error">Error</sys:String>
+    <sys:String x:Key="ConfirmDelete">Confirm Delete</sys:String>
+    <sys:String x:Key="ErrorSave">Save Error</sys:String>
+    <sys:String x:Key="ConfirmClose">Confirm Close</sys:String>
+
+    <!-- ProjectWindow -->
+    <sys:String x:Key="StepProtocol">PROTOCOL</sys:String>
+    <sys:String x:Key="StepVariables">VARIABLES</sys:String>
+    <sys:String x:Key="StepData">COLLECTION</sys:String>
+    <sys:String x:Key="StepAnalysis">ANALYSIS</sys:String>
+    <sys:String x:Key="StepReport">PUBLICATION</sys:String>
+    <sys:String x:Key="RibbonProtocol">Protocol</sys:String>
+    <sys:String x:Key="RibbonVariables">Variables</sys:String>
+    <sys:String x:Key="RibbonEntry">Data Entry</sys:String>
+    <sys:String x:Key="RibbonStats">Stats</sys:String>
+    <sys:String x:Key="RibbonQualiDash">Quali Dashboard</sys:String>
+    <sys:String x:Key="RibbonCoding">Coding Workshop</sys:String>
+    <sys:String x:Key="RibbonDiscussion">Discussion</sys:String>
+    <sys:String x:Key="RibbonReport">Report</sys:String>
+    <sys:String x:Key="RibbonArticle">Article</sys:String>
+    <sys:String x:Key="RibbonQuality">Quality</sys:String>
+    <sys:String x:Key="LabelProjectStatus">Project Status:</sys:String>
+    <sys:String x:Key="LabelLastSaved">Last saved:</sys:String>
+    <sys:String x:Key="StatusNever">Never</sys:String>
+
+    <!-- Gating & Tooltips -->
+    <sys:String x:Key="TooltipQualiLocked">🔒 Qualitative Workshop (Elite Edition Exclusive)</sys:String>
+    <sys:String x:Key="TooltipCodingLocked">🔒 Thematic Coding (Elite Edition Exclusive)</sys:String>
+    <sys:String x:Key="TooltipQualiDash">Qualitative Dashboard</sys:String>
+    <sys:String x:Key="TooltipCodingDash">Coding Workshop / Verbatims</sys:String>
+    <sys:String x:Key="TooltipQualityLocked">🔒 CONSORT/STROBE Quality Checklists (Pro/Elite Edition Exclusive)</sys:String>
+
+    <!-- Help Section Area -->
+    <sys:String x:Key="HelpTitle">Help Center &amp; Resources</sys:String>
+    <sys:String x:Key="HelpSubtitle">Everything you need to master AdRev.</sys:String>
+    <sys:String x:Key="CardDocDesc">Comprehensive user guides.</sys:String>
+    <sys:String x:Key="CardTutorialTitle">Video Tutorials</sys:String>
+    <sys:String x:Key="CardTutorialDesc">Learn by watching.</sys:String>
+    <sys:String x:Key="CardSupportTitle">Technical Support</sys:String>
+    <sys:String x:Key="CardSupportDesc">A question? Contact us.</sys:String>
+    <sys:String x:Key="CardSubscriptionTitle">Subscription</sys:String>
+    <sys:String x:Key="CardSubscriptionDesc">Manage your Pro / USB license.</sys:String>
+
+    <!-- Library Section -->
+    <sys:String x:Key="ColActions">Actions</sys:String>
+    <sys:String x:Key="TooltipMarkAccepted">Mark as Accepted</sys:String>
+    <sys:String x:Key="TooltipMarkPublished">Mark as Published</sys:String>
+    <sys:String x:Key="TooltipOpenProject">Open Project</sys:String>
+
+    <!-- ProtocolView -->
+    <sys:String x:Key="MenuFile">File</sys:String>
+    <sys:String x:Key="MenuNew">New</sys:String>
+    <sys:String x:Key="MenuSave">Save</sys:String>
+    <sys:String x:Key="MenuExportWord">Export to Word (.docx)</sys:String>
+    <sys:String x:Key="MenuEdit">Edit</sys:String>
+    <sys:String x:Key="MenuCopy">Copy</sys:String>
+    <sys:String x:Key="MenuPaste">Paste</sys:String>
+    <sys:String x:Key="MenuDiscussionAssistant">Discussion Assistant 💬</sys:String>
+    <sys:String x:Key="TooltipDiscussion">Open the discussion help window</sys:String>
+
+    <sys:String x:Key="Step1GeneralInfo">1. General Information</sys:String>
+    <sys:String x:Key="Step2IntroContext">2. Introduction &amp; Context</sys:String>
+    <sys:String x:Key="Step3Objectives">3. Study Objectives</sys:String>
+    <sys:String x:Key="Step4ConceptualModel">4. Conceptual Framework</sys:String>
+    <sys:String x:Key="Step5DesignSetting">5. Design &amp; Setting</sys:String>
+    <sys:String x:Key="Step6PopulationCriteria">6. Population &amp; Criteria</sys:String>
+    <sys:String x:Key="Step7Sampling">7. Sampling</sys:String>
+    <sys:String x:Key="Step8DataCollection">8. Data Collection</sys:String>
+    <sys:String x:Key="Step9Budget">9. Budget &amp; Resources</sys:String>
+    <sys:String x:Key="Step10Ethics">10. Ethical Considerations</sys:String>
+    <sys:String x:Key="Step11AnalysisPlan">11. Analysis Plan (SAP/TAP)</sys:String>
+    <sys:String x:Key="Step12ExpectedResults">12. Expected Results</sys:String>
+    <sys:String x:Key="Step13Conclusion">13. Conclusion</sys:String>
+    <sys:String x:Key="Step14References">14. References</sys:String>
+
+    <sys:String x:Key="HeaderStep1">Step 1/14: General Information</sys:String>
+    <sys:String x:Key="LabelProtocolTitle">Protocol Title</sys:String>
+    <sys:String x:Key="LabelResearchDomain">Research Domain</sys:String>
+    <sys:String x:Key="LabelRefStyle">Bibliographic Reference Style</sys:String>
+    <sys:String x:Key="LabelPrincipalAuthor">Principal Author</sys:String>
+    <sys:String x:Key="BtnOpenDesigner">VARIABLE DESIGNER</sys:String>
+    <sys:String x:Key="LabelTitle">Title</sys:String>
+    <sys:String x:Key="LabelFirstName">First Name</sys:String>
+    <sys:String x:Key="LabelLastName">Last Name</sys:String>
+    <sys:String x:Key="LabelEmail">Email</sys:String>
+    <sys:String x:Key="LabelCoAuthors">Co-Authors</sys:String>
+    <sys:String x:Key="LabelAddCoAuthor">Add a co-author:</sys:String>
+    <sys:String x:Key="BtnRemoveSelection">🗑️ Remove selection</sys:String>
+
+    <sys:String x:Key="HeaderStep2">Step 2/14: Introduction &amp; Context</sys:String>
+    <sys:String x:Key="LabelIntroStructure">Introduction Structure (Max 2000 words)</sys:String>
+    <sys:String x:Key="LabelContext">1. Context (Main Definitions...)</sys:String>
+    <sys:String x:Key="BtnCiteSource">➕ Cite a source</sys:String>
+    <sys:String x:Key="LabelJustification">2. Problem Justification (Data, Gaps...)</sys:String>
+    <sys:String x:Key="BtnCite">➕ Cite</sys:String>
+    <sys:String x:Key="LabelResearchQuestion">3. Research Question (Max 3)</sys:String>
+    <sys:String x:Key="LabelHypotheses">4. Hypotheses (Max 2)</sys:String>
+
+    <sys:String x:Key="HeaderStep3">Step 3/14: Study Objectives</sys:String>
+    <sys:String x:Key="LabelStudyObjectives">Study Objectives</sys:String>
+    <sys:String x:Key="LabelGeneralObjective">General Objective (Max 2)</sys:String>
+    <sys:String x:Key="LabelBloomTaxonomy">Use precise action verbs (Bloom's Taxonomy).</sys:String>
+    <sys:String x:Key="LabelSpecificObjectives">Specific Objectives (Max 4 per GO)</sys:String>
+    <sys:String x:Key="BtnLinkToOG">Link to GO 🔗</sys:String>
+    <sys:String x:Key="BtnAjustNumber">🔢 Adjust No.</sys:String>
+
+    <sys:String x:Key="BtnPrevious">⬅️ Previous</sys:String>
+    <sys:String x:Key="BtnNext">Next ➡️</sys:String>
+
+    <sys:String x:Key="HeaderStep4">Step 4/14: Conceptual Framework</sys:String>
+    <sys:String x:Key="LabelConcepts">Key Concepts Definition</sys:String>
+    <sys:String x:Key="LabelConceptualModel">Conceptual Model (Optional)</sys:String>
+    <sys:String x:Key="LabelConceptualModelDesc">Describe the relationships between variables.</sys:String>
+
+    <sys:String x:Key="HeaderStep5">Step 5/14: Methodology - Design &amp; Setting</sys:String>
+    <sys:String x:Key="LabelQualitativeSampling">Qualitative Sampling</sys:String>
+    <sys:String x:Key="LabelDesignPrecision">Design Precision (Methodology)</sys:String>
+    <sys:String x:Key="LabelStudySetting">Study Setting (Location, Period)</sys:String>
+    <sys:String x:Key="HeaderQualityGuidelines">✅ Methodological Quality Criteria</sys:String>
+    <sys:String x:Key="LabelQualityGuidelinesDesc">Check items as you integrate them:</sys:String>
+
+    <sys:String x:Key="HeaderStep6">Step 6/14: Methodology - Population &amp; Criteria</sys:String>
+    <sys:String x:Key="LabelPopulation">Study Population</sys:String>
+    <sys:String x:Key="LabelMulticentric">Multicentric Study</sys:String>
+    <sys:String x:Key="LabelStudyCenters">Participating Centers (one per line):</sys:String>
+    <sys:String x:Key="LabelInclusionCriteria">Inclusion Criteria</sys:String>
+    <sys:String x:Key="LabelExclusionCriteria">Exclusion Criteria</sys:String>
+
+    <sys:String x:Key="HeaderStep7">Step 7/14: Methodology - Sampling</sys:String>
+    <sys:String x:Key="HeaderSamplingConfig">⚙️ Sampling Configuration</sys:String>
+    <sys:String x:Key="LabelSamplingType">Sampling Type:</sys:String>
+    <sys:String x:Key="LabelStratifiedSampling">Stratified Sampling</sys:String>
+    <sys:String x:Key="LabelStratificationCriteria">Stratification Criteria:</sys:String>
+    <sys:String x:Key="LabelClusterSampling">Cluster Sampling</sys:String>
+    <sys:String x:Key="LabelClusterSize">Average Cluster Size:</sys:String>
+    <sys:String x:Key="LabelDesignEffect">Design Effect:</sys:String>
+    <sys:String x:Key="HeaderAttrition">Loss to Follow-up Management (Attrition)</sys:String>
+    <sys:String x:Key="LabelEstimatedRate">Estimated Rate:</sys:String>
+    <sys:String x:Key="LabelAttritionDesc">This rate will be added to the calculated size to ensure statistical power.</sys:String>
+    <sys:String x:Key="HeaderSampleCalculator">➗ Sample Size Calculator Assistant</sys:String>
+    <sys:String x:Key="LabelCalculationMethod">Method:</sys:String>
+    <sys:String x:Key="TitleCochran">Cochran / Schwartz Formula (Finite or Infinite Population)</sys:String>
+    <sys:String x:Key="LabelPrevP">Prevalence p (%)</sys:String>
+    <sys:String x:Key="LabelPrecisionD">Precision d (%)</sys:String>
+    <sys:String x:Key="LabelPopulationN">Population N</sys:String>
+    <sys:String x:Key="LabelConfidenceZ">Confidence (Z)</sys:String>
+    <sys:String x:Key="BtnCalculate">Calculate</sys:String>
+    <sys:String x:Key="TitleComparison">Comparison of Two Proportions (Case-Control / Cohort)</sys:String>
+    <sys:String x:Key="LabelP1">P1 (Exposed/Cases) %</sys:String>
+    <sys:String x:Key="LabelP2">P2 (Controls/Non) %</sys:String>
+    <sys:String x:Key="LabelAlpha">Confidence (Alpha)</sys:String>
+    <sys:String x:Key="LabelPower">Power (1-Beta)</sys:String>
+    <sys:String x:Key="LabelMatched">Matched?</sys:String>
+    <sys:String x:Key="LabelFinalSamplingText">Final Sampling Text:</sys:String>
+
+    <!-- DataGrid Columns -->
+    <sys:String x:Key="ColTitle">Title</sys:String>
+    <sys:String x:Key="ColType">Type</sys:String>
+    <sys:String x:Key="ColDate">Date</sys:String>
+    <sys:String x:Key="ColAuthor">Author</sys:String>
+    <sys:String x:Key="ColStatus">Status</sys:String>
+
+    <sys:String x:Key="HeaderStep9">Step 9/14: Budget &amp; Resources</sys:String>
+    <sys:String x:Key="LabelBudgetEstimation">Resource Estimation &amp; Budget</sys:String>
+    <sys:String x:Key="LabelBudgetSuggestions">💡 Suggestions based on your method:</sys:String>
+    <sys:String x:Key="LabelBudgetDetail">Budget Details</sys:String>
+    <sys:String x:Key="LabelBudgetTotal">Estimated Total (Local currency):</sys:String>
+
+    <sys:String x:Key="HeaderStep10">Step 10/14: Ethical Considerations</sys:String>
+    <sys:String x:Key="LabelEthicsTitle">Ethical Considerations</sys:String>
+    <sys:String x:Key="LabelEthicsDesc">Describe measures taken to protect participants (consent, confidentiality, ethical approval...).</sys:String>
+
+    <sys:String x:Key="HeaderStep11">Step 11/14: Data Analysis Plan</sys:String>
+    <sys:String x:Key="LabelAnalysisPlanDesc">This section is CRUCIAL: it defines how you will answer your objectives.</sys:String>
+    <sys:String x:Key="LabelAnalysisPlanTitle">Analysis Plan Description</sys:String>
+    <sys:String x:Key="BtnAutoPlan">✨ Generate Automatic Plan</sys:String>
+    <sys:String x:Key="LabelAnalysisInfo">The plan written here will be automatically available in the 'Analysis' tab of the main window.</sys:String>
+
+    <sys:String x:Key="HeaderStep12">Step 12/14: Expected Results</sys:String>
+    <sys:String x:Key="LabelExpectedResultsTitle">Expected Results</sys:String>
+    <sys:String x:Key="LabelExpectedResultsDesc">What are the expected results and their impact?</sys:String>
+
+    <sys:String x:Key="HeaderStep13">Step 13/13: Conclusion</sys:String>
+    <sys:String x:Key="LabelConclusionTitle">Conclusion</sys:String>
+    <sys:String x:Key="LabelConclusionDesc">Summary, impact, and recommendations.</sys:String>
+
+    <sys:String x:Key="HeaderStep14">Step 14/14: Bibliographic References</sys:String>
+    <sys:String x:Key="LabelReferencesTitle">Bibliographic References</sys:String>
+    <sys:String x:Key="LabelReferencesAutoDesc">Automatically generated list:</sys:String>
+    <sys:String x:Key="BtnRegenerateRefs">🔄 Regenerate list</sys:String>
+
+    <sys:String x:Key="BtnValidateSave">Validate and Save</sys:String>
+
+    <!-- Final touches -->
+    <sys:String x:Key="LabelServer">Server:</sys:String>
+</ResourceDictionary>

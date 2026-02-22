@@ -1,0 +1,129 @@
+<Window x:Class="AdRev.Desktop.WelcomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bienvenue sur AdRev" Height="500" Width="600"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"
+        Background="Transparent" AllowsTransparency="True">
+    
+    <Border CornerRadius="20" Background="White" BorderBrush="{StaticResource PrimaryBrush}" BorderThickness="1">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="20" Color="#AAAAAA" ShadowDepth="5" Opacity="0.5"/>
+        </Border.Effect>
+        
+        <Grid Margin="40">
+            <!-- Close Button (Top Right) -->
+            <Button Content="&#xE8BB;" Click="Close_Click" FontFamily="Segoe MDL2 Assets" FontSize="14" 
+                    HorizontalAlignment="Right" VerticalAlignment="Top" 
+                    Margin="0,-30,-30,0" Width="40" Height="40" Background="Transparent" BorderThickness="0" 
+                    Foreground="{StaticResource PrimaryBrush}" Cursor="Hand" ToolTip="Fermer"/>
+            
+            <StackPanel VerticalAlignment="Center">
+                <!-- Logo / Icon -->
+                <Image Source="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png" Width="80" Height="80" Margin="0,0,0,20"/>
+                
+                <TextBlock Text="Bienvenue sur AdRev" FontSize="28" FontWeight="Bold" Foreground="{StaticResource PrimaryBrush}" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                <TextBlock Text="Faisons connaissance pour mieux personnaliser votre expérience." FontSize="14" Foreground="#666" HorizontalAlignment="Center" Margin="0,0,0,30"/>
+                
+                <Grid Margin="0,0,0,20" HorizontalAlignment="Center" Width="400">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!-- Row 1: Title & Name -->
+                    <Grid Grid.Row="0" Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <StackPanel>
+                            <TextBlock Text="Titre" Foreground="#888" Margin="0,0,0,5"/>
+                            <ComboBox x:Name="TitleBox" Height="40" VerticalContentAlignment="Center" FontSize="16" SelectedIndex="0">
+                                <ComboBoxItem Content="Dr"/>
+                                <ComboBoxItem Content="Pr"/>
+                                <ComboBoxItem Content="M."/>
+                                <ComboBoxItem Content="Mme"/>
+                            </ComboBox>
+                        </StackPanel>
+                        
+                        <StackPanel Grid.Column="2">
+                            <TextBlock Text="Votre Nom" Foreground="#888" Margin="0,0,0,5"/>
+                            <TextBox x:Name="NameBox" Height="40" VerticalContentAlignment="Center" FontSize="16" Padding="5"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- Row 2: Email -->
+                    <StackPanel Grid.Row="1" Margin="0,0,0,15">
+                        <TextBlock Text="Email Professionnel" Foreground="#888" Margin="0,0,0,5"/>
+                        <TextBox x:Name="EmailBox" Height="40" VerticalContentAlignment="Center" FontSize="16" Padding="5"/>
+                    </StackPanel>
+
+                     <!-- Row 3: License Request -->
+                    <Grid Grid.Row="2" Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <StackPanel>
+                            <TextBlock Text="Type de Licence Souhaité" Foreground="#888" Margin="0,0,0,5"/>
+                            <ComboBox x:Name="LicenseTypeBox" Height="40" VerticalContentAlignment="Center" FontSize="14" SelectedIndex="0">
+                                <ComboBoxItem Content="Professionnelle (Standards)"/>
+                                <ComboBoxItem Content="Étudiant (Tarif Réduit)"/>
+                                <ComboBoxItem Content="Entreprise (Multi-postes)"/>
+                                <ComboBoxItem Content="Annuelle"/>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2">
+                            <TextBlock Text="Code Machine (HWID)" Foreground="#888" Margin="0,0,0,5"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="HwidBox" IsReadOnly="True" Height="40" VerticalContentAlignment="Center" FontSize="12" Padding="5" Background="#F5F5F5" FontFamily="Consolas"/>
+                                <Button Grid.Column="1" Content="Copier" Width="50" Height="40" Margin="5,0,0,0" x:Name="CopyHwidBtn" Click="CopyHwid_Click" ToolTip="Copier les infos de commande"/>
+                            </Grid>
+                            <TextBlock Text="N'oubliez pas de joindre votre preuve de paiement !" FontSize="10" Foreground="#d9534f" Margin="0,2,0,0" FontStyle="Italic" HorizontalAlignment="Right"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- Row 4: License Key -->
+                    <StackPanel Grid.Row="3" Margin="0,0,0,15">
+                        <TextBlock Text="Clé de Licence (Optionnel)" Foreground="#888" Margin="0,0,0,5"/>
+                        <TextBox x:Name="LicenseBox" Height="40" VerticalContentAlignment="Center" FontSize="14" Padding="5" FontFamily="Consolas"/>
+                        <TextBlock Text="Laisser vide pour commencer un essai gratuit." FontSize="11" Foreground="#999" Margin="0,2,0,0" FontStyle="Italic"/>
+                    </StackPanel>
+                </Grid>
+                
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Activer" Click="Activate_Click" x:Name="BtnActivate"
+                            Width="120" Height="50" FontSize="16" FontWeight="Bold" Margin="0,0,10,0"
+                            Background="{StaticResource PrimaryBrush}" Foreground="White" BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="25"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
+                    <Button Content="Essai 7 Jours" Click="Trial_Click" x:Name="BtnTrial"
+                            Width="150" Height="50" FontSize="16" FontWeight="SemiBold"
+                            Background="White" Foreground="{StaticResource PrimaryBrush}" BorderBrush="{StaticResource PrimaryBrush}" BorderThickness="2">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="25"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

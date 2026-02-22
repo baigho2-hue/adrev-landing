@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Version>1.0.0</Version>
+    <NoWarn>$(NoWarn);NU1701</NoWarn>
+    <ApplicationIcon>Assets\AppIcon.ico</ApplicationIcon>
+    
+    <!-- Optimized Publishing Settings to protect source code -->
+    <PublishSingleFile>false</PublishSingleFile>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdRev.Core\AdRev.Core.csproj" />
+    <ProjectReference Include="..\AdRev.Domain\AdRev.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\**\*.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.4.1" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.3.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3800.47" />
+    <PackageReference Include="Obfuscar" Version="2.2.50">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Management" Version="10.0.2" />
+    <PackageReference Include="QRCoder" Version="1.4.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="10.0.2" />
+    <PackageReference Include="UglyToad.PdfPig" Version="1.7.0-custom-5" />
+  </ItemGroup>
+
+  <Target Name="Obfuscate" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Release' ">
+    <Exec Command="&quot;$(Obfuscar)&quot; obfuscar.xml" />
+  </Target>
+</Project>

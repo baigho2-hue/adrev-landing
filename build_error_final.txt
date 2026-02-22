@@ -1,0 +1,15 @@
+  Identification des projets ├á restaurer...
+  Tous les projets sont ├á jour pour la restauration.
+  AdRev.Domain -> C:\Users\HP\Documents\AdRev\AdRev.Domain\bin\Debug\net8.0\AdRev.Domain.dll
+C:\Users\HP\Documents\AdRev\AdRev.Core\Services\DataImportService.cs(215,33): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Core\AdRev.Core.csproj]
+  AdRev.Core -> C:\Users\HP\Documents\AdRev\AdRev.Core\bin\Debug\net8.0-windows\AdRev.Core.dll
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Windows\ExportOptionsWindow.xaml(10,15): error MC1000: Erreur de build inconnue, 'MC3072┬á: la propri├®t├® 'Padding' n'existe pas dans l'espace de noms XML 'http://schemas.microsoft.com/winfx/2006/xaml/presentation'. Ligne 10 Position 15.'  [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+
+├ëCHEC de la build.
+
+C:\Users\HP\Documents\AdRev\AdRev.Core\Services\DataImportService.cs(215,33): warning CS8602: D├®r├®f├®rencement d'une ├®ventuelle r├®f├®rence null. [C:\Users\HP\Documents\AdRev\AdRev.Core\AdRev.Core.csproj]
+C:\Users\HP\Documents\AdRev\AdRev.Desktop\Windows\ExportOptionsWindow.xaml(10,15): error MC1000: Erreur de build inconnue, 'MC3072┬á: la propri├®t├® 'Padding' n'existe pas dans l'espace de noms XML 'http://schemas.microsoft.com/winfx/2006/xaml/presentation'. Ligne 10 Position 15.'  [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]
+    1 Avertissement(s)
+    1 Erreur(s)
+
+Temps ├®coul├® 00:00:06.59

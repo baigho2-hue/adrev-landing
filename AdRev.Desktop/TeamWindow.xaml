@@ -1,0 +1,153 @@
+<Window x:Class="AdRev.Desktop.TeamWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AdRev.Desktop"
+        Title="Gestion de l'équipe" Height="500" Width="700"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Icon="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png"
+        Background="#F9F9F9">
+    
+    <Window.Resources>
+        <local:EnumDescriptionConverter x:Key="EnumDescriptionConverter"/>
+    </Window.Resources>
+    
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border BorderBrush="#DDD" BorderThickness="0,0,0,1" Padding="0,0,0,15" Margin="0,0,0,15">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="pack://application:,,,/AdRev.Desktop;component/Assets/AppIcon.png" Width="32" Height="32" Margin="0,0,15,0" VerticalAlignment="Center"/>
+                <StackPanel>
+                    <TextBlock Text="Travail en Équipe" FontSize="22" FontWeight="Bold" Foreground="#333"/>
+                    <TextBlock Text="Invitez des collaborateurs pour travailler sur ce projet." FontSize="14" Foreground="#777"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Content -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/> <!-- List -->
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="1.5*"/> <!-- Form -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Team List -->
+            <DockPanel>
+                <TextBlock Text="Membres du projet" DockPanel.Dock="Top" FontWeight="SemiBold" Margin="0,0,0,10"/>
+                <Grid>
+                    <ListBox x:Name="TeamListBox" BorderThickness="0" Background="Transparent" AlternationCount="2">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border Background="White" CornerRadius="8" Padding="10" Margin="0,0,0,10">
+                                    <Border.Effect>
+                                        <DropShadowEffect BlurRadius="5" Color="#DDD" Opacity="0.3" ShadowDepth="2"/>
+                                    </Border.Effect>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="40"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <!-- Avatar Placeholder -->
+                                        <Border Background="#5C6BC0" CornerRadius="20" Width="40" Height="40">
+                                            <TextBlock Text="👤" 
+                                                       HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontWeight="Bold"/>
+                                        </Border>
+                                        
+                                        <StackPanel Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding LastName}" FontWeight="Bold" FontSize="14"/>
+                                            <TextBlock Text="{Binding Email}" FontSize="12" Foreground="#888"/>
+                                        </StackPanel>
+                                        
+                                        <!-- Role Badge & Access -->
+                                        <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                            <Border Background="#E8EAF6" CornerRadius="4" Padding="8,4" HorizontalAlignment="Right" Margin="0,0,0,5">
+                                                <TextBlock Text="{Binding Role, Converter={StaticResource EnumDescriptionConverter}}" Foreground="#3F51B5" FontSize="11" FontWeight="SemiBold"/>
+                                            </Border>
+                                            <TextBlock Text="{Binding AccessLevel}" FontSize="10" Foreground="#AAA" HorizontalAlignment="Right"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <!-- Empty State -->
+                    <TextBlock Text="Aucun membre dans l'équipe pour le moment." 
+                               VerticalAlignment="Center" HorizontalAlignment="Center" 
+                               Foreground="#BBB" FontSize="14" FontStyle="Italic" TextWrapping="Wrap"
+                               IsHitTestVisible="False">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=TeamListBox, Path=HasItems}" Value="False">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+            </DockPanel>
+
+            <!-- Invite Form -->
+            <Border Grid.Column="2" Background="White" CornerRadius="10" Padding="15">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="10" Color="#DDD" Opacity="0.2"/>
+                </Border.Effect>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="0,0,5,0">
+                    <StackPanel>
+                        <TextBlock Text="Inviter un collaborateur" FontWeight="Bold" Margin="0,0,0,15" Foreground="#5C6BC0"/>
+                        
+                        <TextBlock Text="Nom" FontSize="12" Foreground="#666"/>
+                        <TextBox x:Name="NewNameBox" Height="45" FontSize="14" VerticalContentAlignment="Center" Margin="0,0,0,10"/>
+                        
+                        <TextBlock Text="Titre / Rôle" FontSize="12" Foreground="#666"/>
+                         <ComboBox x:Name="NewRoleBox" Height="45" FontSize="14" VerticalContentAlignment="Center" Margin="0,0,0,10" SelectedIndex="0">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+
+                        <TextBlock Text="Niveau d'Accès" FontSize="12" Foreground="#666"/>
+                        <ComboBox x:Name="NewAccessBox" Height="45" FontSize="14" VerticalContentAlignment="Center" Margin="0,0,0,10" SelectedIndex="1">
+                            <ComboBoxItem Content="Lecture Seule"/>
+                            <ComboBoxItem Content="Éditeur (Standard)"/>
+                            <ComboBoxItem Content="Chef de Projet (Admin)"/>
+                        </ComboBox>
+
+                        <TextBlock Text="Email" FontSize="12" Foreground="#666"/>
+                        <TextBox x:Name="NewEmailBox" Height="45" FontSize="14" VerticalContentAlignment="Center" Margin="0,0,0,20"/>
+
+                        <Button Content="Envoyer l'invitation" Click="Invite_Click" 
+                                Background="#5C6BC0" Foreground="White" BorderThickness="0" Height="45"
+                                Cursor="Hand">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        
+                        <TextBlock Text="Une notification sera envoyée par email." FontSize="10" Foreground="#AAA" Margin="0,10,0,0" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+
+        <!-- Footer -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Content="Fermer" Click="Close_Click" Width="100" Height="35" Background="Transparent" Foreground="#666" BorderThickness="0"/>
+        </StackPanel>
+    </Grid>
+</Window>
