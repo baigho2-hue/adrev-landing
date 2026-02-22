@@ -33,4 +33,8 @@ Releases/
 *.dll
 *.pdb
 AdRev.Desktop/Obfuscated/
-AdRev.Setup/AdRevSetup.msi
+## Web artifacts (Vite / Node)
+node_modules/
+dist/
+.env*
+.DS_Store
