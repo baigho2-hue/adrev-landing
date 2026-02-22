@@ -8,31 +8,53 @@ public partial class DashboardPage : ContentPage
     private readonly DatabaseService _dbService;
     private readonly ApiClient _apiClient;
     private readonly ImportService _importService;
+    private readonly BillingService _billingService;
 
-    public DashboardPage(DatabaseService dbService, ApiClient apiClient, ImportService importService)
+    public DashboardPage(DatabaseService dbService, ApiClient apiClient, ImportService importService, BillingService billingService)
     {
         InitializeComponent();
         _dbService = dbService;
         _apiClient = apiClient;
         _importService = importService;
+        _billingService = billingService;
     }
 
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        LoadProfile();
+        await LoadProfile();
         await RefreshStats();
     }
 
-    private void LoadProfile()
+    private async Task LoadProfile()
     {
         UserNameLabel.Text = Preferences.Default.Get("UserName", "Utilisateur AdRev");
         UserTitleLabel.Text = Preferences.Default.Get("UserTitle", "Chercheur");
 
-        bool isFull = Preferences.Default.Get("IsUniversalLicense", false);
-        LicenseLabel.Text = isFull ? "FULL / UNIVERSAL" : "LITE";
-        LicenseBadge.BackgroundColor = isFull ? Color.FromArgb("#4CAF50") : Color.FromArgb("#E0E0E0");
-        LicenseLabel.TextColor = isFull ? Colors.White : Colors.Gray;
+        bool isUniversal = Preferences.Default.Get("IsUniversalLicense", false);
+        bool isPro = await _billingService.IsProUserAsync();
+
+        bool hasPremiumFeatures = isUniversal || isPro;
+
+        LicenseLabel.Text = hasPremiumFeatures ? (isUniversal ? "FULL / UNIVERSAL" : "MOBILE PRO") : "LITE (Gratuit)";
+        LicenseBadge.BackgroundColor = hasPremiumFeatures ? Color.FromArgb("#4CAF50") : Color.FromArgb("#E0E0E0");
+        LicenseLabel.TextColor = hasPremiumFeatures ? Colors.White : Colors.Gray;
+
+        UpgradeFrame.IsVisible = !hasPremiumFeatures;
+    }
+
+    private async void OnUpgradeClicked(object sender, EventArgs e)
+    {
+        bool success = await _billingService.PurchaseProLicenceAsync();
+        if (success)
+        {
+            await DisplayAlert("Félicitations", "Vous êtes maintenant membre Pro ! Toutes les fonctionnalités sont débloquées.", "Génial");
+            await LoadProfile();
+        }
+        else
+        {
+            await DisplayAlert("Achat", "L'achat n'a pas pu être complété.", "OK");
+        }
     }
 
     private async void OnProfileTapped(object sender, EventArgs e)
@@ -45,7 +67,7 @@ public partial class DashboardPage : ContentPage
             if (title != null)
             {
                 Preferences.Default.Set("UserTitle", title);
-                LoadProfile();
+                await LoadProfile();
             }
         }
         else
@@ -81,6 +103,20 @@ public partial class DashboardPage : ContentPage
 
     private async void OnNewEntryClicked(object sender, EventArgs e)
     {
+        // Check limits for Lite users
+        bool isUniversal = Preferences.Default.Get("IsUniversalLicense", false);
+        bool isPro = await _billingService.IsProUserAsync();
+
+        if (!isUniversal && !isPro)
+        {
+            var dataCount = (await _dbService.GetCollectedDataAsync()).Count;
+            if (dataCount >= 20)
+            {
+                await DisplayAlert("Limite Atteinte", "La version gratuite est limitée à 20 enregistrements. Passez à la version Pro pour continuer.", "Voir les options");
+                return;
+            }
+        }
+
         // Navigate to FormsPage tab
         await Shell.Current.GoToAsync("//FormsPage");
     }
@@ -130,6 +166,16 @@ public partial class DashboardPage : ContentPage
             }
             else if (action == "CSV (Données de collecte)")
             {
+                // Check Pro license for advanced export
+                bool isUniversal = Preferences.Default.Get("IsUniversalLicense", false);
+                bool isPro = await _billingService.IsProUserAsync();
+
+                if (!isUniversal && !isPro)
+                {
+                    await DisplayAlert("Version Pro Requise", "L'exportation CSV/Excel est une fonctionnalité Pro.", "D'accord");
+                    return;
+                }
+
                 if (data.Count == 0) { await DisplayAlert("Erreur", "Aucune donnée collectée à exporter.", "OK"); return; }
                 
                 // For CSV, we need a list of variables. We'll take them from the first available questionnaire if possible, or all.
@@ -210,6 +256,7 @@ public partial class DashboardPage : ContentPage
                         await DisplayAlert("Succès", $"Importation terminée.\n+{qCount} Protocoles\n+{dCount} Données", "OK");
                     }
                 }
+            }
         }
         catch (Exception ex)
         {
@@ -256,11 +303,11 @@ public partial class DashboardPage : ContentPage
 
     private async void OnWebsiteTapped(object sender, TappedEventArgs e)
     {
-        await Launcher.Default.OpenAsync("https://adrev.science");
+        await Launcher.Default.OpenAsync("https://adrev-landing.onrender.com");
     }
 
     private async void OnPrivacyTapped(object sender, TappedEventArgs e)
     {
-        await Launcher.Default.OpenAsync("https://adrev.science/privacy");
+        await Launcher.Default.OpenAsync("https://adrev-landing.onrender.com/privacy.html");
     }
 }

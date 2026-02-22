@@ -1,10 +1,7 @@
 using AdRev.Domain.Enums;
 using System.Collections.Generic;
-<<<<<<< HEAD
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-=======
->>>>>>> origin/main
 
 namespace AdRev.Domain.Variables
 {
@@ -12,22 +9,16 @@ namespace AdRev.Domain.Variables
     /// Représente une variable d'étude (une question dans le masque de saisie)
     /// Inspiré de la structure de métadonnées d'Epi Info 7
     /// </summary>
-<<<<<<< HEAD
     public class StudyVariable : INotifyPropertyChanged
     {
         private string _name = string.Empty;
         private string _prompt = string.Empty;
         private string _groupName = "SECTION 1";
 
-=======
-    public class StudyVariable
-    {
->>>>>>> origin/main
         /// <summary>
         /// Nom de la variable dans la base de données (ex: "DATENAISS")
         /// Doit être court, sans espace, unique.
         /// </summary>
-<<<<<<< HEAD
         public string Name
         {
             get => _name;
@@ -39,10 +30,6 @@ namespace AdRev.Domain.Variables
             get => _prompt;
             set { if (_prompt != value) { _prompt = value; OnPropertyChanged(); } }
         }
-=======
-        public string Name { get; set; } = string.Empty;
-        public string Prompt { get; set; } = string.Empty;
->>>>>>> origin/main
 
         /// <summary>
         /// Le type de données (Texte, Nombre, Date...)
@@ -55,14 +42,11 @@ namespace AdRev.Domain.Variables
         public bool IsRequired { get; set; }
 
         /// <summary>
-<<<<<<< HEAD
         /// Donnée sensible (PII) - Sera masquée en mode sécurité stricte
         /// </summary>
         public bool IsSensitive { get; set; }
 
         /// <summary>
-=======
->>>>>>> origin/main
         /// Pour les types numériques : valeur minimale acceptée
         /// </summary>
         public double? MinValue { get; set; }
@@ -87,15 +71,11 @@ namespace AdRev.Domain.Variables
         /// Groupe ou Section auquel appartient la variable (pour organiser la page)
         /// Ex: "Données Sociodémographiques", "Données Cliniques"
         /// </summary>
-<<<<<<< HEAD
         public string GroupName
         {
             get => _groupName;
             set { if (_groupName != value) { _groupName = value; OnPropertyChanged(); } }
         }
-=======
-        public string GroupName { get; set; } = string.Empty;
->>>>>>> origin/main
 
         /// <summary>
         /// Pour les études qualitatives déductives : Thème majeur de codification
@@ -153,17 +133,12 @@ namespace AdRev.Domain.Variables
             IsRequired = false;
         }
 
-<<<<<<< HEAD
-        public List<RecodeInstruction> RecodingInstructions { get; set; } = new List<RecodeInstruction>();
-
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-=======
->>>>>>> origin/main
         public override string ToString()
         {
             return $"{Name} ({Type}) - {Prompt}";

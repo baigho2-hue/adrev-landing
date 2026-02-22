@@ -12,13 +12,13 @@
         <Entry x:Name="PinEntry" Placeholder="PIN" 
                Keyboard="Numeric" IsPassword="True" MaxLength="6"
                FontSize="30" HorizontalTextAlignment="Center" TextColor="White"
-               BackgroundColor="Transparent" BorderColor="White" />
+               BackgroundColor="Transparent" />
         
         <Button Text="Déverrouiller" Clicked="OnUnlockClicked" 
                 BackgroundColor="White" TextColor="#512BD4"
                 HeightRequest="50" CornerRadius="25" />
 
         <Label x:Name="ErrorLabel" Text="PIN Incorrect" TextColor="Red" 
-               HorizontalOptions="Center" Visibility="Hidden" />
+               HorizontalOptions="Center" IsVisible="False" />
     </VerticalStackLayout>
 </ContentPage>

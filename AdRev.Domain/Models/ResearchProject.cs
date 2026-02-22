@@ -35,10 +35,7 @@ namespace AdRev.Domain.Models
         public string TargetJournalName { get; set; } = string.Empty;
         // Serialized JSON of journal criteria if needed, or just the name to lookup
         public string TargetJournalCriteriaJson { get; set; } = string.Empty; 
-<<<<<<< HEAD
         public ReferenceStyle ReferenceStyle { get; set; } = ReferenceStyle.Vancouver;
-=======
->>>>>>> origin/main
 
         public string Authors { get; set; } = string.Empty;
         public string Institution { get; set; } = string.Empty;
@@ -65,15 +62,11 @@ namespace AdRev.Domain.Models
         // This holds the textual SAP from the protocol
         public string DataAnalysisPlan { get; set; } = string.Empty;
 
-<<<<<<< HEAD
         // Structured Analysis Plan & Results (Persisted)
         public List<AnalysisPlanItem> AnalysisPlan { get; set; } = new List<AnalysisPlanItem>();
         
         // Generated Report Content (FlowDocument XAML or HTML)
         public string ReportContent { get; set; } = string.Empty;
-
-=======
->>>>>>> origin/main
         // Results & Discussion (Persisted)
         public string DiscussionContent { get; set; } = string.Empty;
         public string LimitationsContent { get; set; } = string.Empty;
@@ -85,8 +78,6 @@ namespace AdRev.Domain.Models
         // Qualitative Data
         public List<QualitativeSource> QualitativeSources { get; set; } = new List<QualitativeSource>();
         public List<QualitativeCode> QualitativeCodes { get; set; } = new List<QualitativeCode>();
-<<<<<<< HEAD
-
         // Quantitative Data (Added for linkage)
         public List<Dictionary<string, object>> DataRows { get; set; } = new List<Dictionary<string, object>>();
 
@@ -97,7 +88,5 @@ namespace AdRev.Domain.Models
         // Security
         public string? PasswordHash { get; set; } // If null, project is not password protected
         public List<AuditLogEntry> AuditLogs { get; set; } = new List<AuditLogEntry>();
-=======
->>>>>>> origin/main
     }
 }

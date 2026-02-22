@@ -4,29 +4,18 @@ namespace AdRev.Domain.Models
 {
     public enum LicenseType
     {
-<<<<<<< HEAD
         Student,
         Pro,
         Elite,
         Enterprise,
         Unlimited,
-=======
-        Lifetime,
-        Annual,
-        Enterprise,
-        Student,
->>>>>>> origin/main
         Trial
     }
 
     public class LicenseMetadata
     {
         public string Hwid { get; set; } = string.Empty;
-<<<<<<< HEAD
         public LicenseType Type { get; set; } = LicenseType.Unlimited;
-=======
-        public LicenseType Type { get; set; } = LicenseType.Lifetime;
->>>>>>> origin/main
         public DateTime ExpiryDate { get; set; } = DateTime.MaxValue;
         public int MaxSeats { get; set; } = 1;
         

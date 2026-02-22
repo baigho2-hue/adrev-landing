@@ -107,10 +107,19 @@
                         Clicked="OnImportCsvMaskClicked"/>
             </Grid>
             
+            <!-- Upgrade to PRO Section -->
+            <Frame x:Name="UpgradeFrame" CornerRadius="10" Padding="15" BackgroundColor="#E3F2FD" BorderColor="#2196F3" IsVisible="False">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="🚀 Passez à la vitesse supérieure !" FontAttributes="Bold" TextColor="#0D47A1" HorizontalOptions="Center"/>
+                    <Label Text="Débloquez les projets illimités et l'exportation Excel avancée avec AdRev Pro." FontSize="13" TextColor="#1565C0" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                    <Button Text="Débloquer AdRev Pro" BackgroundColor="#2196F3" TextColor="White" HeightRequest="40" CornerRadius="20" Clicked="OnUpgradeClicked"/>
+                </VerticalStackLayout>
+            </Frame>
+            
             <!-- Footer Links -->
             <VerticalStackLayout Spacing="5" Margin="0,20,0,10">
                 <Label Text="AdRev Collect v1.5" FontSize="12" TextColor="Gray" HorizontalOptions="Center"/>
-                <Label Text="Site Web : adrev.science" FontSize="14" TextColor="#512BD4" HorizontalOptions="Center">
+                <Label Text="adrev-landing.onrender.com" FontSize="14" TextColor="#512BD4" HorizontalOptions="Center">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnWebsiteTapped"/>
                     </Label.GestureRecognizers>

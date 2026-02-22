@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0-windows"
+          "net9.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-windows7.0": {
-            "targetAlias": "net8.0-windows",
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows",
             "projectReferences": {
               "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj": {
                 "projectPath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj"
@@ -55,13 +55,13 @@
         "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
           "dependencies": {
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.24, )",
+              "version": "[9.0.13, )",
               "autoReferenced": true
             }
           },
@@ -79,19 +79,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[8.0.24, 8.0.24]"
+              "version": "[9.0.13, 9.0.13]"
             },
             {
               "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
-              "version": "[8.0.24, 8.0.24]"
+              "version": "[9.0.13, 9.0.13]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[8.0.24, 8.0.24]"
+              "version": "[9.0.13, 9.0.13]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[8.0.24, 8.0.24]"
+              "version": "[9.0.13, 9.0.13]"
             }
           ],
           "frameworkReferences": {
@@ -126,7 +126,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0-windows"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -134,8 +134,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-windows7.0": {
-            "targetAlias": "net8.0-windows",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Domain\\AdRev.Domain.csproj": {
                 "projectPath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Domain\\AdRev.Domain.csproj"
@@ -156,12 +156,12 @@
         "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "DocumentFormat.OpenXml": {
               "target": "Package",
-              "version": "[3.4.1, )"
+              "version": "[3.0.1, )"
             },
             "MathNet.Numerics": {
               "target": "Package",
@@ -169,11 +169,11 @@
             },
             "System.Management": {
               "target": "Package",
-              "version": "[10.0.2, )"
+              "version": "[9.0.1, )"
             },
             "UglyToad.PdfPig": {
               "target": "Package",
-              "version": "[1.7.0-custom-5, )"
+              "version": "[0.1.13, )"
             }
           },
           "imports": [
@@ -190,9 +190,6 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
@@ -217,7 +214,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -225,8 +222,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -243,8 +240,8 @@
         "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "imports": [
             "net461",
             "net462",

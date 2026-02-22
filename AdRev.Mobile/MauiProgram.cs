@@ -28,6 +28,7 @@ public static class MauiProgram
             builder.Services.AddSingleton<Services.DatabaseService>();
             builder.Services.AddSingleton<Services.ApiClient>();
             builder.Services.AddSingleton<Services.ImportService>();
+            builder.Services.AddSingleton<Services.BillingService>();
 
             builder.Services.AddSingleton<DashboardPage>();
             builder.Services.AddSingleton<MainPage>();

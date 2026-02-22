@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {
-      "DocumentFormat.OpenXml/3.4.1": {
+    "net9.0-windows7.0": {
+      "DocumentFormat.OpenXml/3.0.1": {
         "type": "package",
         "dependencies": {
-          "DocumentFormat.OpenXml.Framework": "3.4.1"
+          "DocumentFormat.OpenXml.Framework": "3.0.1"
         },
         "compile": {
           "lib/net8.0/DocumentFormat.OpenXml.dll": {
@@ -18,10 +18,10 @@
           }
         }
       },
-      "DocumentFormat.OpenXml.Framework/3.4.1": {
+      "DocumentFormat.OpenXml.Framework/3.0.1": {
         "type": "package",
         "dependencies": {
-          "System.IO.Packaging": "8.0.1"
+          "System.IO.Packaging": "8.0.0"
         },
         "compile": {
           "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
@@ -47,21 +47,21 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.24": {
+      "Microsoft.NET.ILLink.Tasks/9.0.13": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "System.CodeDom/10.0.2": {
+      "System.CodeDom/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/net8.0/System.CodeDom.dll": {
+          "lib/net9.0/System.CodeDom.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.CodeDom.dll": {
+          "lib/net9.0/System.CodeDom.dll": {
             "related": ".xml"
           }
         },
@@ -69,7 +69,7 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "System.IO.Packaging/8.0.1": {
+      "System.IO.Packaging/8.0.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/System.IO.Packaging.dll": {
@@ -85,18 +85,18 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Management/10.0.2": {
+      "System.Management/9.0.1": {
         "type": "package",
         "dependencies": {
-          "System.CodeDom": "10.0.2"
+          "System.CodeDom": "9.0.1"
         },
         "compile": {
-          "lib/net8.0/System.Management.dll": {
+          "lib/net9.0/System.Management.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Management.dll": {
+          "lib/net9.0/System.Management.dll": {
             "related": ".xml"
           }
         },
@@ -104,125 +104,32 @@
           "buildTransitive/net8.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Management.dll": {
+          "runtimes/win/lib/net9.0/System.Management.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
         }
       },
-      "UglyToad.PdfPig/1.7.0-custom-5": {
-        "type": "package",
-        "dependencies": {
-          "UglyToad.PdfPig.Core": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Fonts": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Tokenization": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Tokens": "1.7.0-custom-5"
-        },
-        "compile": {
-          "lib/net6.0/UglyToad.PdfPig.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/UglyToad.PdfPig.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "UglyToad.PdfPig.Core/1.7.0-custom-5": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/UglyToad.PdfPig.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/UglyToad.PdfPig.Core.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "UglyToad.PdfPig.Fonts/1.7.0-custom-5": {
-        "type": "package",
-        "dependencies": {
-          "UglyToad.PdfPig.Core": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Tokenization": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Tokens": "1.7.0-custom-5"
-        },
-        "compile": {
-          "lib/net6.0/UglyToad.PdfPig.Fonts.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/UglyToad.PdfPig.Fonts.dll": {
-            "related": ".xml"
-          }
-        },
-        "contentFiles": {
-          "contentFiles/any/any/_._": {
-            "buildAction": "None",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          }
-        }
-      },
-      "UglyToad.PdfPig.Tokenization/1.7.0-custom-5": {
-        "type": "package",
-        "dependencies": {
-          "UglyToad.PdfPig.Core": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Tokens": "1.7.0-custom-5"
-        },
-        "compile": {
-          "lib/net6.0/UglyToad.PdfPig.Tokenization.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/UglyToad.PdfPig.Tokenization.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "UglyToad.PdfPig.Tokens/1.7.0-custom-5": {
-        "type": "package",
-        "dependencies": {
-          "UglyToad.PdfPig.Core": "1.7.0-custom-5"
-        },
-        "compile": {
-          "lib/net6.0/UglyToad.PdfPig.Tokens.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/UglyToad.PdfPig.Tokens.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "AdRev.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "AdRev.Domain": "1.0.0",
-          "DocumentFormat.OpenXml": "3.4.1",
+          "DocumentFormat.OpenXml": "3.0.1",
           "MathNet.Numerics": "5.0.0",
-          "System.Management": "10.0.2",
-          "UglyToad.PdfPig": "1.7.0-custom-5"
+          "System.Management": "9.0.1",
+          "UglyToad.PdfPig": "0.1.13"
         },
         "compile": {
           "bin/placeholder/AdRev.Core.dll": {}
         },
         "runtime": {
           "bin/placeholder/AdRev.Core.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
+        }
       },
       "AdRev.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
           "bin/placeholder/AdRev.Domain.dll": {}
         },
@@ -231,11 +138,11 @@
         }
       }
     },
-    "net8.0-windows7.0/win-x64": {
-      "DocumentFormat.OpenXml/3.4.1": {
+    "net9.0-windows7.0/win-x64": {
+      "DocumentFormat.OpenXml/3.0.1": {
         "type": "package",
         "dependencies": {
-          "DocumentFormat.OpenXml.Framework": "3.4.1"
+          "DocumentFormat.OpenXml.Framework": "3.0.1"
         },
         "compile": {
           "lib/net8.0/DocumentFormat.OpenXml.dll": {
@@ -248,10 +155,10 @@
           }
         }
       },
-      "DocumentFormat.OpenXml.Framework/3.4.1": {
+      "DocumentFormat.OpenXml.Framework/3.0.1": {
         "type": "package",
         "dependencies": {
-          "System.IO.Packaging": "8.0.1"
+          "System.IO.Packaging": "8.0.0"
         },
         "compile": {
           "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
@@ -277,21 +184,21 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.24": {
+      "Microsoft.NET.ILLink.Tasks/9.0.13": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "System.CodeDom/10.0.2": {
+      "System.CodeDom/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/net8.0/System.CodeDom.dll": {
+          "lib/net9.0/System.CodeDom.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.CodeDom.dll": {
+          "lib/net9.0/System.CodeDom.dll": {
             "related": ".xml"
           }
         },
@@ -299,7 +206,7 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "System.IO.Packaging/8.0.1": {
+      "System.IO.Packaging/8.0.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/System.IO.Packaging.dll": {
@@ -315,18 +222,18 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Management/10.0.2": {
+      "System.Management/9.0.1": {
         "type": "package",
         "dependencies": {
-          "System.CodeDom": "10.0.2"
+          "System.CodeDom": "9.0.1"
         },
         "compile": {
-          "lib/net8.0/System.Management.dll": {
+          "lib/net9.0/System.Management.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "runtimes/win/lib/net8.0/System.Management.dll": {
+          "runtimes/win/lib/net9.0/System.Management.dll": {
             "related": ".xml"
           }
         },
@@ -334,119 +241,26 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "UglyToad.PdfPig/1.7.0-custom-5": {
-        "type": "package",
-        "dependencies": {
-          "UglyToad.PdfPig.Core": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Fonts": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Tokenization": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Tokens": "1.7.0-custom-5"
-        },
-        "compile": {
-          "lib/net6.0/UglyToad.PdfPig.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/UglyToad.PdfPig.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "UglyToad.PdfPig.Core/1.7.0-custom-5": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/UglyToad.PdfPig.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/UglyToad.PdfPig.Core.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "UglyToad.PdfPig.Fonts/1.7.0-custom-5": {
-        "type": "package",
-        "dependencies": {
-          "UglyToad.PdfPig.Core": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Tokenization": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Tokens": "1.7.0-custom-5"
-        },
-        "compile": {
-          "lib/net6.0/UglyToad.PdfPig.Fonts.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/UglyToad.PdfPig.Fonts.dll": {
-            "related": ".xml"
-          }
-        },
-        "contentFiles": {
-          "contentFiles/any/any/_._": {
-            "buildAction": "None",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          }
-        }
-      },
-      "UglyToad.PdfPig.Tokenization/1.7.0-custom-5": {
-        "type": "package",
-        "dependencies": {
-          "UglyToad.PdfPig.Core": "1.7.0-custom-5",
-          "UglyToad.PdfPig.Tokens": "1.7.0-custom-5"
-        },
-        "compile": {
-          "lib/net6.0/UglyToad.PdfPig.Tokenization.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/UglyToad.PdfPig.Tokenization.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "UglyToad.PdfPig.Tokens/1.7.0-custom-5": {
-        "type": "package",
-        "dependencies": {
-          "UglyToad.PdfPig.Core": "1.7.0-custom-5"
-        },
-        "compile": {
-          "lib/net6.0/UglyToad.PdfPig.Tokens.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/UglyToad.PdfPig.Tokens.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "AdRev.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "AdRev.Domain": "1.0.0",
-          "DocumentFormat.OpenXml": "3.4.1",
+          "DocumentFormat.OpenXml": "3.0.1",
           "MathNet.Numerics": "5.0.0",
-          "System.Management": "10.0.2",
-          "UglyToad.PdfPig": "1.7.0-custom-5"
+          "System.Management": "9.0.1",
+          "UglyToad.PdfPig": "0.1.13"
         },
         "compile": {
           "bin/placeholder/AdRev.Core.dll": {}
         },
         "runtime": {
           "bin/placeholder/AdRev.Core.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
+        }
       },
       "AdRev.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
           "bin/placeholder/AdRev.Domain.dll": {}
         },
@@ -457,19 +271,16 @@
     }
   },
   "libraries": {
-    "DocumentFormat.OpenXml/3.4.1": {
-      "sha512": "iM7k4Spo6ZxxudxLVGcvFLIcF6XJ65aOAsJ24o75CaKGBTuj33cL1O7qnGkQW0+ONOUFff+mWafpZYaa7rNBbg==",
+    "DocumentFormat.OpenXml/3.0.1": {
+      "sha512": "DCK1cwFUJ1FGGyYyo++HWl9H1RkqMWIu+FGOLRy6E4L4y0/HIhlJ7N/n1HKboFfOwKn1cMBRxt1RCuDbIEy5YQ==",
       "type": "package",
-      "path": "documentformat.openxml/3.4.1",
+      "path": "documentformat.openxml/3.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "documentformat.openxml.3.4.1.nupkg.sha512",
+        "documentformat.openxml.3.0.1.nupkg.sha512",
         "documentformat.openxml.nuspec",
         "icon.png",
-        "lib/net10.0/DocumentFormat.OpenXml.dll",
-        "lib/net10.0/DocumentFormat.OpenXml.xml",
         "lib/net35/DocumentFormat.OpenXml.dll",
         "lib/net35/DocumentFormat.OpenXml.xml",
         "lib/net40/DocumentFormat.OpenXml.dll",
@@ -482,19 +293,16 @@
         "lib/netstandard2.0/DocumentFormat.OpenXml.xml"
       ]
     },
-    "DocumentFormat.OpenXml.Framework/3.4.1": {
-      "sha512": "H7l8l84uRb+LTjijpe6PuVDlIDM28s7f//zxss6f1yK1qnaxAEZwRecPkjfE3vjFM7QZ7X4XGF4nicnIynJrBw==",
+    "DocumentFormat.OpenXml.Framework/3.0.1": {
+      "sha512": "ifyI7OW7sggz7LQMIAD2aUsY/zVUON9QaHrpZ4MK33iVMeHlTG4uhUE2aLWb31nry+LCs2ALDAwf8OfUJGjgBg==",
       "type": "package",
-      "path": "documentformat.openxml.framework/3.4.1",
+      "path": "documentformat.openxml.framework/3.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "documentformat.openxml.framework.3.4.1.nupkg.sha512",
+        "documentformat.openxml.framework.3.0.1.nupkg.sha512",
         "documentformat.openxml.framework.nuspec",
         "icon.png",
-        "lib/net10.0/DocumentFormat.OpenXml.Framework.dll",
-        "lib/net10.0/DocumentFormat.OpenXml.Framework.xml",
         "lib/net35/DocumentFormat.OpenXml.Framework.dll",
         "lib/net35/DocumentFormat.OpenXml.Framework.xml",
         "lib/net40/DocumentFormat.OpenXml.Framework.dll",
@@ -531,10 +339,10 @@
         "mathnet.numerics.nuspec"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/8.0.24": {
-      "sha512": "1gnadp//+DoGJvV4AFdzPqYPxkypaWYjYMCr7KAacV0iadsHz1nU+rrkoxBCna4FCmeKH49CisEwa7g94/MbEg==",
+    "Microsoft.NET.ILLink.Tasks/9.0.13": {
+      "sha512": "f7t15I9ZXV7fNk3FIzPAlkJNG1A1tkSeDpRh+TFWEToGGqA+uj6uqU15I8YOkkYICNY2tqOVm2CMe6ScPFPwEg==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/8.0.24",
+      "path": "microsoft.net.illink.tasks/9.0.13",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -548,7 +356,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.8.0.24.nupkg.sha512",
+        "microsoft.net.illink.tasks.9.0.13.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -566,38 +374,37 @@
         "tools/net472/build/Microsoft.NET.ILLink.Analyzers.props",
         "tools/net472/build/Microsoft.NET.ILLink.Tasks.props",
         "tools/net472/build/Microsoft.NET.ILLink.targets",
-        "tools/net8.0/ILLink.Tasks.deps.json",
-        "tools/net8.0/ILLink.Tasks.dll",
-        "tools/net8.0/Mono.Cecil.Mdb.dll",
-        "tools/net8.0/Mono.Cecil.Pdb.dll",
-        "tools/net8.0/Mono.Cecil.Rocks.dll",
-        "tools/net8.0/Mono.Cecil.dll",
-        "tools/net8.0/Sdk/Sdk.props",
-        "tools/net8.0/build/Microsoft.NET.ILLink.Analyzers.props",
-        "tools/net8.0/build/Microsoft.NET.ILLink.Tasks.props",
-        "tools/net8.0/build/Microsoft.NET.ILLink.targets",
-        "tools/net8.0/illink.deps.json",
-        "tools/net8.0/illink.dll",
-        "tools/net8.0/illink.runtimeconfig.json",
+        "tools/net9.0/ILLink.Tasks.deps.json",
+        "tools/net9.0/ILLink.Tasks.dll",
+        "tools/net9.0/Mono.Cecil.Mdb.dll",
+        "tools/net9.0/Mono.Cecil.Pdb.dll",
+        "tools/net9.0/Mono.Cecil.Rocks.dll",
+        "tools/net9.0/Mono.Cecil.dll",
+        "tools/net9.0/Sdk/Sdk.props",
+        "tools/net9.0/build/Microsoft.NET.ILLink.Analyzers.props",
+        "tools/net9.0/build/Microsoft.NET.ILLink.Tasks.props",
+        "tools/net9.0/build/Microsoft.NET.ILLink.targets",
+        "tools/net9.0/illink.deps.json",
+        "tools/net9.0/illink.dll",
+        "tools/net9.0/illink.runtimeconfig.json",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.CodeDom/10.0.2": {
-      "sha512": "eih1MnL4tnSjHUhzae0dmpu50Sm0s54faHZc8yhzYfmubAubkBIIulYYN28fasD1m41mhl6Cenhs9/F0aLv3FA==",
+    "System.CodeDom/9.0.1": {
+      "sha512": "2J5uq+2smnj+u1jlyVJ6BGGqaK9fHcK/EwN7mbsuPqTI6dZr86br8Cg6o/5B+icQ9ANTvTDpJjnhDNtYYZijHQ==",
       "type": "package",
-      "path": "system.codedom/10.0.2",
+      "path": "system.codedom/9.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/System.CodeDom.targets",
         "buildTransitive/net462/_._",
         "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/System.CodeDom.targets",
-        "lib/net10.0/System.CodeDom.dll",
-        "lib/net10.0/System.CodeDom.xml",
         "lib/net462/System.CodeDom.dll",
         "lib/net462/System.CodeDom.xml",
         "lib/net8.0/System.CodeDom.dll",
@@ -606,15 +413,15 @@
         "lib/net9.0/System.CodeDom.xml",
         "lib/netstandard2.0/System.CodeDom.dll",
         "lib/netstandard2.0/System.CodeDom.xml",
-        "system.codedom.10.0.2.nupkg.sha512",
+        "system.codedom.9.0.1.nupkg.sha512",
         "system.codedom.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.IO.Packaging/8.0.1": {
-      "sha512": "KYkIOAvPexQOLDxPO2g0BVoWInnQhPpkFzRqvNrNrMhVT6kqhVr0zEb6KCHlptLFukxnZrjuMVAnxK7pOGUYrw==",
+    "System.IO.Packaging/8.0.0": {
+      "sha512": "8g1V4YRpdGAxFcK8v9OjuMdIOJSpF30Zb1JGicwVZhly3I994WFyBdV6mQEo8d3T+URQe55/M0U0eIH0Hts1bg==",
       "type": "package",
-      "path": "system.io.packaging/8.0.1",
+      "path": "system.io.packaging/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -635,25 +442,24 @@
         "lib/net8.0/System.IO.Packaging.xml",
         "lib/netstandard2.0/System.IO.Packaging.dll",
         "lib/netstandard2.0/System.IO.Packaging.xml",
-        "system.io.packaging.8.0.1.nupkg.sha512",
+        "system.io.packaging.8.0.0.nupkg.sha512",
         "system.io.packaging.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Management/10.0.2": {
-      "sha512": "eFftuy3i844lVKCb4lJvvjKfcvPVcW8KrAdSaIOcRL42/Fisj46hwUs8Bky+4avzMe5Snm5t7aSayOI1mybYXg==",
+    "System.Management/9.0.1": {
+      "sha512": "CLEo9O6FuO4GQ3ZQkGssg9CJ2w2TN7GMFf3wHTc7YVWJV4xoyJRPw+XIDQnCcSUJCrHhrAWOO60cAX29EV5LFQ==",
       "type": "package",
-      "path": "system.management/10.0.2",
+      "path": "system.management/9.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/System.Management.targets",
-        "lib/net10.0/System.Management.dll",
-        "lib/net10.0/System.Management.xml",
         "lib/net462/_._",
         "lib/net8.0/System.Management.dll",
         "lib/net8.0/System.Management.xml",
@@ -661,159 +467,13 @@
         "lib/net9.0/System.Management.xml",
         "lib/netstandard2.0/System.Management.dll",
         "lib/netstandard2.0/System.Management.xml",
-        "runtimes/win/lib/net10.0/System.Management.dll",
-        "runtimes/win/lib/net10.0/System.Management.xml",
         "runtimes/win/lib/net8.0/System.Management.dll",
         "runtimes/win/lib/net8.0/System.Management.xml",
         "runtimes/win/lib/net9.0/System.Management.dll",
         "runtimes/win/lib/net9.0/System.Management.xml",
-        "system.management.10.0.2.nupkg.sha512",
+        "system.management.9.0.1.nupkg.sha512",
         "system.management.nuspec",
         "useSharedDesignerContext.txt"
-      ]
-    },
-    "UglyToad.PdfPig/1.7.0-custom-5": {
-      "sha512": "mddnoBg+XV5YZJg+lp/LlXQ9NY9/oV/MoNjLbbLHw0uTymfyuinVePQB4ff/ELRv3s6n0G7h8q3Ycb3KYg+hgQ==",
-      "type": "package",
-      "path": "uglytoad.pdfpig/1.7.0-custom-5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net451/UglyToad.PdfPig.dll",
-        "lib/net451/UglyToad.PdfPig.xml",
-        "lib/net452/UglyToad.PdfPig.dll",
-        "lib/net452/UglyToad.PdfPig.xml",
-        "lib/net46/UglyToad.PdfPig.dll",
-        "lib/net46/UglyToad.PdfPig.xml",
-        "lib/net461/UglyToad.PdfPig.dll",
-        "lib/net461/UglyToad.PdfPig.xml",
-        "lib/net462/UglyToad.PdfPig.dll",
-        "lib/net462/UglyToad.PdfPig.xml",
-        "lib/net47/UglyToad.PdfPig.dll",
-        "lib/net47/UglyToad.PdfPig.xml",
-        "lib/net6.0/UglyToad.PdfPig.dll",
-        "lib/net6.0/UglyToad.PdfPig.xml",
-        "lib/netstandard2.0/UglyToad.PdfPig.dll",
-        "lib/netstandard2.0/UglyToad.PdfPig.xml",
-        "uglytoad.pdfpig.1.7.0-custom-5.nupkg.sha512",
-        "uglytoad.pdfpig.nuspec"
-      ]
-    },
-    "UglyToad.PdfPig.Core/1.7.0-custom-5": {
-      "sha512": "bChQUAYApM6/vgBis0+fBTZyAVqjXdqshjZDCgI3dgwUplfLJxXRrnkCOdNj0a6JNcF32R4aLpnGpTc9QmmVmg==",
-      "type": "package",
-      "path": "uglytoad.pdfpig.core/1.7.0-custom-5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net451/UglyToad.PdfPig.Core.dll",
-        "lib/net451/UglyToad.PdfPig.Core.xml",
-        "lib/net452/UglyToad.PdfPig.Core.dll",
-        "lib/net452/UglyToad.PdfPig.Core.xml",
-        "lib/net46/UglyToad.PdfPig.Core.dll",
-        "lib/net46/UglyToad.PdfPig.Core.xml",
-        "lib/net461/UglyToad.PdfPig.Core.dll",
-        "lib/net461/UglyToad.PdfPig.Core.xml",
-        "lib/net462/UglyToad.PdfPig.Core.dll",
-        "lib/net462/UglyToad.PdfPig.Core.xml",
-        "lib/net47/UglyToad.PdfPig.Core.dll",
-        "lib/net47/UglyToad.PdfPig.Core.xml",
-        "lib/net6.0/UglyToad.PdfPig.Core.dll",
-        "lib/net6.0/UglyToad.PdfPig.Core.xml",
-        "lib/netstandard2.0/UglyToad.PdfPig.Core.dll",
-        "lib/netstandard2.0/UglyToad.PdfPig.Core.xml",
-        "uglytoad.pdfpig.core.1.7.0-custom-5.nupkg.sha512",
-        "uglytoad.pdfpig.core.nuspec"
-      ]
-    },
-    "UglyToad.PdfPig.Fonts/1.7.0-custom-5": {
-      "sha512": "Z6SBBAIL8wRkJNhXGYaz0CrHnNrNeuNtmwRbBtQUA1b3TDhRQppOmHCIuhjb6Vu/Rirp6FIOtzAU1lXsGik90w==",
-      "type": "package",
-      "path": "uglytoad.pdfpig.fonts/1.7.0-custom-5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/Resources/AdobeFontMetrics/MustRead.html",
-        "contentFiles/any/net451/Resources/AdobeFontMetrics/MustRead.html",
-        "contentFiles/any/net452/Resources/AdobeFontMetrics/MustRead.html",
-        "contentFiles/any/net46/Resources/AdobeFontMetrics/MustRead.html",
-        "contentFiles/any/net461/Resources/AdobeFontMetrics/MustRead.html",
-        "contentFiles/any/net462/Resources/AdobeFontMetrics/MustRead.html",
-        "contentFiles/any/net47/Resources/AdobeFontMetrics/MustRead.html",
-        "contentFiles/any/net6.0/Resources/AdobeFontMetrics/MustRead.html",
-        "contentFiles/any/netstandard2.0/Resources/AdobeFontMetrics/MustRead.html",
-        "lib/net451/UglyToad.PdfPig.Fonts.dll",
-        "lib/net451/UglyToad.PdfPig.Fonts.xml",
-        "lib/net452/UglyToad.PdfPig.Fonts.dll",
-        "lib/net452/UglyToad.PdfPig.Fonts.xml",
-        "lib/net46/UglyToad.PdfPig.Fonts.dll",
-        "lib/net46/UglyToad.PdfPig.Fonts.xml",
-        "lib/net461/UglyToad.PdfPig.Fonts.dll",
-        "lib/net461/UglyToad.PdfPig.Fonts.xml",
-        "lib/net462/UglyToad.PdfPig.Fonts.dll",
-        "lib/net462/UglyToad.PdfPig.Fonts.xml",
-        "lib/net47/UglyToad.PdfPig.Fonts.dll",
-        "lib/net47/UglyToad.PdfPig.Fonts.xml",
-        "lib/net6.0/UglyToad.PdfPig.Fonts.dll",
-        "lib/net6.0/UglyToad.PdfPig.Fonts.xml",
-        "lib/netstandard2.0/UglyToad.PdfPig.Fonts.dll",
-        "lib/netstandard2.0/UglyToad.PdfPig.Fonts.xml",
-        "uglytoad.pdfpig.fonts.1.7.0-custom-5.nupkg.sha512",
-        "uglytoad.pdfpig.fonts.nuspec"
-      ]
-    },
-    "UglyToad.PdfPig.Tokenization/1.7.0-custom-5": {
-      "sha512": "U8VVH7VJjv6czP7qWyzDq6CRaiJQe7/sESUCL8H3kiEa3zi0l9TonIKlD/YidQ5DlgTumracii6zjLyKPEFKwA==",
-      "type": "package",
-      "path": "uglytoad.pdfpig.tokenization/1.7.0-custom-5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net451/UglyToad.PdfPig.Tokenization.dll",
-        "lib/net451/UglyToad.PdfPig.Tokenization.xml",
-        "lib/net452/UglyToad.PdfPig.Tokenization.dll",
-        "lib/net452/UglyToad.PdfPig.Tokenization.xml",
-        "lib/net46/UglyToad.PdfPig.Tokenization.dll",
-        "lib/net46/UglyToad.PdfPig.Tokenization.xml",
-        "lib/net461/UglyToad.PdfPig.Tokenization.dll",
-        "lib/net461/UglyToad.PdfPig.Tokenization.xml",
-        "lib/net462/UglyToad.PdfPig.Tokenization.dll",
-        "lib/net462/UglyToad.PdfPig.Tokenization.xml",
-        "lib/net47/UglyToad.PdfPig.Tokenization.dll",
-        "lib/net47/UglyToad.PdfPig.Tokenization.xml",
-        "lib/net6.0/UglyToad.PdfPig.Tokenization.dll",
-        "lib/net6.0/UglyToad.PdfPig.Tokenization.xml",
-        "lib/netstandard2.0/UglyToad.PdfPig.Tokenization.dll",
-        "lib/netstandard2.0/UglyToad.PdfPig.Tokenization.xml",
-        "uglytoad.pdfpig.tokenization.1.7.0-custom-5.nupkg.sha512",
-        "uglytoad.pdfpig.tokenization.nuspec"
-      ]
-    },
-    "UglyToad.PdfPig.Tokens/1.7.0-custom-5": {
-      "sha512": "m/j5RVfL4eF/OwX6ASprzK+yzD3l7xdgQ7zQPgENhjxfuXD+hj6FSeZlmxSTt9ywvWcTCjGKAILl9XTK9iQgCQ==",
-      "type": "package",
-      "path": "uglytoad.pdfpig.tokens/1.7.0-custom-5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net451/UglyToad.PdfPig.Tokens.dll",
-        "lib/net451/UglyToad.PdfPig.Tokens.xml",
-        "lib/net452/UglyToad.PdfPig.Tokens.dll",
-        "lib/net452/UglyToad.PdfPig.Tokens.xml",
-        "lib/net46/UglyToad.PdfPig.Tokens.dll",
-        "lib/net46/UglyToad.PdfPig.Tokens.xml",
-        "lib/net461/UglyToad.PdfPig.Tokens.dll",
-        "lib/net461/UglyToad.PdfPig.Tokens.xml",
-        "lib/net462/UglyToad.PdfPig.Tokens.dll",
-        "lib/net462/UglyToad.PdfPig.Tokens.xml",
-        "lib/net47/UglyToad.PdfPig.Tokens.dll",
-        "lib/net47/UglyToad.PdfPig.Tokens.xml",
-        "lib/net6.0/UglyToad.PdfPig.Tokens.dll",
-        "lib/net6.0/UglyToad.PdfPig.Tokens.xml",
-        "lib/netstandard2.0/UglyToad.PdfPig.Tokens.dll",
-        "lib/netstandard2.0/UglyToad.PdfPig.Tokens.xml",
-        "uglytoad.pdfpig.tokens.1.7.0-custom-5.nupkg.sha512",
-        "uglytoad.pdfpig.tokens.nuspec"
       ]
     },
     "AdRev.Core/1.0.0": {
@@ -828,10 +488,10 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": [
+    "net9.0-windows7.0": [
       "AdRev.Core >= 1.0.0",
       "AdRev.Domain >= 1.0.0",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.24"
+      "Microsoft.NET.ILLink.Tasks >= 9.0.13"
     ]
   },
   "packageFolders": {
@@ -856,7 +516,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0-windows"
+        "net9.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -864,8 +524,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
           "projectReferences": {
             "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj": {
               "projectPath": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Core\\AdRev.Core.csproj"
@@ -889,13 +549,13 @@
       "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
-      "net8.0-windows7.0": {
-        "targetAlias": "net8.0-windows",
+      "net9.0-windows7.0": {
+        "targetAlias": "net9.0-windows",
         "dependencies": {
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.24, )",
+            "version": "[9.0.13, )",
             "autoReferenced": true
           }
         },
@@ -913,19 +573,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[8.0.24, 8.0.24]"
+            "version": "[9.0.13, 9.0.13]"
           },
           {
             "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
-            "version": "[8.0.24, 8.0.24]"
+            "version": "[9.0.13, 9.0.13]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[8.0.24, 8.0.24]"
+            "version": "[9.0.13, 9.0.13]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[8.0.24, 8.0.24]"
+            "version": "[9.0.13, 9.0.13]"
           }
         ],
         "frameworkReferences": {
@@ -941,5 +601,17 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1103",
+      "level": "Error",
+      "message": "Package stable UglyToad.PdfPig avec la version (>= 0.1.13) introuvable\r\n  - Version(s) 2 trouvée(s) dans nuget.org [version la plus proche : 1.7.0-custom-5]\r\n  - Version(s) 0 trouvée(s) dans Microsoft Visual Studio Offline Packages\r\n  - Version(s) 0 trouvée(s) dans C:\\Program Files\\dotnet\\library-packs",
+      "libraryId": "UglyToad.PdfPig",
+      "targetGraphs": [
+        "net9.0-windows7.0",
+        "net9.0-windows7.0/win-x64"
+      ]
+    }
+  ]
 }
