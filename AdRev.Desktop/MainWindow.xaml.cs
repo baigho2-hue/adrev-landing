@@ -110,12 +110,12 @@ namespace AdRev.Desktop
                                     ? Visibility.Visible : Visibility.Collapsed;
         }
 
-        private void SwitchView_Click(object sender, RoutedEventArgs e)
+        public void SwitchView_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button btn && btn.Tag is string tag)
             {
                 DashboardContent.Visibility = Visibility.Collapsed;
-                ActiveViewContent.Visibility = Visibility.Collapsed;
+                ActiveViewScroll.Visibility = Visibility.Collapsed;
                 PageTitle.Text = tag;
 
                 UpdateActiveMenu(btn);
@@ -128,11 +128,50 @@ namespace AdRev.Desktop
                         break;
                     case "Projects":
                         ActiveViewContent.Content = new AdRev.Desktop.Views.Project.ProjectListView();
-                        ActiveViewContent.Visibility = Visibility.Visible;
+                        ActiveViewScroll.Visibility = Visibility.Visible;
+                        break;
+                    case "Quality":
+                        var qualityView = new AdRev.Desktop.Views.Project.QualityCheckView();
+                        qualityView.LoadProject(new ResearchProject { Title = "Analyse Qualité Rapide" });
+                        ActiveViewContent.Content = qualityView;
+                        ActiveViewScroll.Visibility = Visibility.Visible;
+                        PageTitle.Text = "Contrôle Qualité";
                         break;
                     case "Analysis":
-                        // Quick Analysis logic
-                        MessageBox.Show("Analyse rapide sélectionnée (À implémenter)");
+                        var intro = new QuickAnalysisIntroWindow();
+                        intro.Owner = this;
+                        if (intro.ShowDialog() == true)
+                        {
+                            var analysisView = new AdRev.Desktop.Views.Project.AnalysisView();
+                            var quickProject = new ResearchProject 
+                            { 
+                                Title = intro.ProjectTitle, 
+                                Authors = intro.AuthorName,
+                                CreatedOn = DateTime.Now,
+                                Status = ProjectStatus.Ongoing
+                            };
+                            analysisView.LoadProject(quickProject);
+                            ActiveViewContent.Content = analysisView;
+                            ActiveViewScroll.Visibility = Visibility.Visible;
+                            PageTitle.Text = "Analyse Rapide : " + intro.ProjectTitle;
+                        }
+                        else
+                        {
+                            DashboardContent.Visibility = Visibility.Visible;
+                            PageTitle.Text = "Tableau de bord";
+                        }
+                        break;
+                    case "ExportFolder":
+                        ActiveViewContent.Content = new AdRev.Desktop.Views.Project.LibraryView(); // Using LibraryView as a folder management view
+                        ActiveViewScroll.Visibility = Visibility.Visible;
+                        break;
+                    case "MobileSync":
+                        var syncWindow = new MobileSyncWindow();
+                        syncWindow.Owner = this;
+                        syncWindow.ShowDialog();
+                        
+                        DashboardContent.Visibility = Visibility.Visible;
+                        PageTitle.Text = "Tableau de bord";
                         break;
                     default:
                         DashboardContent.Visibility = Visibility.Visible;
@@ -143,7 +182,7 @@ namespace AdRev.Desktop
 
         private void UpdateActiveMenu(Button activeBtn)
         {
-            var buttons = new List<Button> { BtnDashboard, BtnProjects, BtnAnalysis, BtnExportFolder, BtnMobileSync };
+            var buttons = new List<Button> { BtnDashboard, BtnProjects, BtnAnalysis, BtnQuality, BtnExportFolder, BtnMobileSync };
             foreach (var btn in buttons)
             {
                 if (btn == null) continue;

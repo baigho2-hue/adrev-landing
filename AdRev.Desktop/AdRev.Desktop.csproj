@@ -6,13 +6,13 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <Version>1.0.0</Version>
+    <Version>1.0.4</Version>
     <NoWarn>$(NoWarn);NU1701</NoWarn>
     <ApplicationIcon>Assets\AppIcon.ico</ApplicationIcon>
     
     <!-- Optimized Publishing Settings to protect source code -->
     <PublishSingleFile>false</PublishSingleFile>
-    <PublishReadyToRun>true</PublishReadyToRun>
+    <PublishReadyToRun>false</PublishReadyToRun>
     <SelfContained>true</SelfContained>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>

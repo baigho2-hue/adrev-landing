@@ -14,140 +14,142 @@
         </Style>
     </UserControl.Resources>
 
-    <Border Background="{StaticResource CalmBackgroundBrush}" Padding="30">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <!-- Header -->
-            <StackPanel Grid.Row="0" Margin="0,0,0,30">
-                <TextBlock Text="TABLEAU DE BORD DU PROJET" FontSize="26" FontWeight="Black" Foreground="{StaticResource CalmHeaderBrush}"/>
-                <TextBlock x:Name="ProjectTitleText" Text="Chargement du projet..." FontSize="18" Foreground="{StaticResource PrimaryBrush}" FontWeight="SemiBold"/>
-            </StackPanel>
-
-            <!-- Key Figures (Stats) -->
-            <Grid Grid.Row="1" Margin="0,0,0,30">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Border Grid.Column="0" Background="White" CornerRadius="12" Padding="20" Margin="0,0,10,0" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
-                    <StackPanel>
-                        <materialDesign:PackIcon Kind="Library" Foreground="{StaticResource PrimaryBrush}" Width="32" Height="32"/>
-                        <TextBlock x:Name="SourceCount" Text="0" FontSize="28" FontWeight="Bold" Margin="0,10,0,0"/>
-                        <TextBlock Text="Sources Bibliographiques" FontSize="12" Foreground="{StaticResource CalmSubHeaderBrush}" Opacity="0.7"/>
-                    </StackPanel>
-                </Border>
-
-                <Border Grid.Column="1" Background="White" CornerRadius="12" Padding="20" Margin="15,0" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
-                    <StackPanel>
-                        <materialDesign:PackIcon Kind="ProgressCheck" Foreground="#2ecc71" Width="32" Height="32"/>
-                        <TextBlock x:Name="ReadingProgressText" Text="0%" FontSize="28" FontWeight="Bold" Margin="0,10,0,0"/>
-                        <TextBlock Text="Progression de Lecture" FontSize="12" Foreground="{StaticResource CalmSubHeaderBrush}" Opacity="0.7"/>
-                    </StackPanel>
-                </Border>
-
-                <Border Grid.Column="2" Background="White" CornerRadius="12" Padding="20" Margin="15,0" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
-                    <StackPanel>
-                        <materialDesign:PackIcon Kind="Variable" Foreground="#e67e22" Width="32" Height="32"/>
-                        <TextBlock x:Name="VariableCount" Text="0" FontSize="28" FontWeight="Bold" Margin="0,10,0,0"/>
-                        <TextBlock Text="Variables de Recherche" FontSize="12" Foreground="{StaticResource CalmSubHeaderBrush}" Opacity="0.7"/>
-                    </StackPanel>
-                </Border>
-
-                <Border Grid.Column="3" Background="White" CornerRadius="12" Padding="20" Margin="0" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
-                    <StackPanel>
-                        <materialDesign:PackIcon Kind="FileDocument" Foreground="#3498db" Width="32" Height="32"/>
-                        <TextBlock x:Name="ProtocolStatus" Text="Validé" FontSize="24" FontWeight="Bold" Margin="0,12,0,0"/>
-                        <TextBlock Text="Statut du Protocole" FontSize="12" Foreground="{StaticResource CalmSubHeaderBrush}" Opacity="0.7"/>
-                    </StackPanel>
-                </Border>
-            </Grid>
-
-            <!-- Roadmap & Reminders -->
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1.5*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Border Grid.Column="0" Background="White" CornerRadius="12" Padding="25" Margin="0,0,20,0" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
-                    <StackPanel>
-                        <TextBlock Text="FEUILLE DE ROUTE DE LA RECHERCHE" FontSize="14" FontWeight="Bold" Foreground="{StaticResource CalmHeaderBrush}" Margin="0,0,0,25"/>
-                        
-                        <!-- Step 1 -->
-                        <Grid Margin="0,0,0,20">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <materialDesign:PackIcon Kind="CheckCircle" Foreground="#2ecc71" VerticalAlignment="Center" Width="30" Height="30" Margin="0,0,15,0"/>
-                            <StackPanel Grid.Column="1">
-                                <TextBlock Text="Conception du Protocole" FontWeight="Bold"/>
-                                <ProgressBar Value="100" Height="4" Foreground="#2ecc71" Margin="0,5,0,0"/>
-                            </StackPanel>
-                            <TextBlock Grid.Column="2" Text="Terminé" VerticalAlignment="Center" Margin="15,0,0,0" Foreground="#2ecc71" FontWeight="Bold"/>
-                        </Grid>
-
-                        <!-- Step 2 -->
-                        <Grid Margin="0,0,0,20">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <materialDesign:PackIcon Kind="CircleEditOutline" Foreground="{StaticResource PrimaryBrush}" VerticalAlignment="Center" Width="30" Height="30" Margin="0,0,15,0"/>
-                            <StackPanel Grid.Column="1">
-                                <TextBlock Text="Revue de Littérature (Bibliothèque)" FontWeight="Bold"/>
-                                <ProgressBar x:Name="LibraryProgress" Value="40" Height="4" Foreground="{StaticResource PrimaryBrush}" Margin="0,5,0,0"/>
-                            </StackPanel>
-                            <TextBlock Grid.Column="2" x:Name="LibraryStatusText" Text="En cours" VerticalAlignment="Center" Margin="15,0,0,0" Foreground="{StaticResource PrimaryBrush}" FontWeight="Bold"/>
-                        </Grid>
-
-                        <!-- Step 3 -->
-                        <Grid Margin="0,0,0,20">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <materialDesign:PackIcon Kind="CircleOutline" Foreground="#95a5a6" VerticalAlignment="Center" Width="30" Height="30" Margin="0,0,15,0"/>
-                            <StackPanel Grid.Column="1" Opacity="0.5">
-                                <TextBlock Text="Collecte et Saisie des Données" FontWeight="Bold"/>
-                                <ProgressBar Value="0" Height="4" Foreground="#95a5a6" Margin="0,5,0,0"/>
-                            </StackPanel>
-                            <TextBlock Grid.Column="2" Text="En attente" VerticalAlignment="Center" Margin="15,0,0,0" Foreground="#95a5a6" Opacity="0.5"/>
-                        </Grid>
-                    </StackPanel>
-                </Border>
-
-                <!-- Activity & Assistance -->
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="CONSEILS ADREV" FontSize="14" FontWeight="Bold" Foreground="{StaticResource CalmHeaderBrush}" Margin="0,0,0,15"/>
-                    <Border Background="#E1F5FE" Padding="20" CornerRadius="12" Margin="0,0,0,15">
-                        <StackPanel>
-                            <materialDesign:PackIcon Kind="LightbulbOn" Foreground="#0288D1" Margin="0,0,0,10"/>
-                            <TextBlock Text="Citations" FontWeight="Bold" Foreground="#01579B"/>
-                            <TextBlock Text="Pensez à marquer vos sources comme 'Citées' une fois intégrées dans votre rapport." FontSize="11" TextWrapping="Wrap" Margin="0,5,0,0"/>
-                        </StackPanel>
-                    </Border>
-
-                    <Border Background="#FFF3E0" Padding="20" CornerRadius="12">
-                        <StackPanel>
-                            <materialDesign:PackIcon Kind="Security" Foreground="#F57C00" Margin="0,0,0,10"/>
-                            <TextBlock Text="Sauvegarde" FontWeight="Bold" Foreground="#E65100"/>
-                            <TextBlock Text="Tous vos documents sont stockés localement dans le dossier du projet pour une sécurité maximale." FontSize="11" TextWrapping="Wrap" Margin="0,5,0,0"/>
-                        </StackPanel>
-                    </Border>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Border Background="{StaticResource CalmBackgroundBrush}" Padding="30">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+    
+                <!-- Header -->
+                <StackPanel Grid.Row="0" Margin="0,0,0,30">
+                    <TextBlock Text="TABLEAU DE BORD DU PROJET" FontSize="26" FontWeight="Black" Foreground="{StaticResource CalmHeaderBrush}"/>
+                    <TextBlock x:Name="ProjectTitleText" Text="Chargement du projet..." FontSize="18" Foreground="{StaticResource PrimaryBrush}" FontWeight="SemiBold"/>
                 </StackPanel>
+    
+                <!-- Key Figures (Stats) -->
+                <Grid Grid.Row="1" Margin="0,0,0,30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+    
+                    <Border Grid.Column="0" Background="White" CornerRadius="12" Padding="20" Margin="0,0,10,0" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
+                        <StackPanel>
+                            <materialDesign:PackIcon Kind="Library" Foreground="{StaticResource PrimaryBrush}" Width="32" Height="32"/>
+                            <TextBlock x:Name="SourceCount" Text="0" FontSize="28" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="Sources Bibliographiques" FontSize="12" Foreground="{StaticResource CalmSubHeaderBrush}" Opacity="0.7"/>
+                        </StackPanel>
+                    </Border>
+    
+                    <Border Grid.Column="1" Background="White" CornerRadius="12" Padding="20" Margin="15,0" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
+                        <StackPanel>
+                            <materialDesign:PackIcon Kind="ProgressCheck" Foreground="#2ecc71" Width="32" Height="32"/>
+                            <TextBlock x:Name="ReadingProgressText" Text="0%" FontSize="28" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="Progression de Lecture" FontSize="12" Foreground="{StaticResource CalmSubHeaderBrush}" Opacity="0.7"/>
+                        </StackPanel>
+                    </Border>
+    
+                    <Border Grid.Column="2" Background="White" CornerRadius="12" Padding="20" Margin="15,0" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
+                        <StackPanel>
+                            <materialDesign:PackIcon Kind="Variable" Foreground="#e67e22" Width="32" Height="32"/>
+                            <TextBlock x:Name="VariableCount" Text="0" FontSize="28" FontWeight="Bold" Margin="0,10,0,0"/>
+                            <TextBlock Text="Variables de Recherche" FontSize="12" Foreground="{StaticResource CalmSubHeaderBrush}" Opacity="0.7"/>
+                        </StackPanel>
+                    </Border>
+    
+                    <Border Grid.Column="3" Background="White" CornerRadius="12" Padding="20" Margin="0" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
+                        <StackPanel>
+                            <materialDesign:PackIcon Kind="FileDocument" Foreground="#3498db" Width="32" Height="32"/>
+                            <TextBlock x:Name="ProtocolStatus" Text="Validé" FontSize="24" FontWeight="Bold" Margin="0,12,0,0"/>
+                            <TextBlock Text="Statut du Protocole" FontSize="12" Foreground="{StaticResource CalmSubHeaderBrush}" Opacity="0.7"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+    
+                <!-- Roadmap & Reminders -->
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+    
+                    <Border Grid.Column="0" Background="White" CornerRadius="12" Padding="25" Margin="0,0,20,0" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
+                        <StackPanel>
+                            <TextBlock Text="FEUILLE DE ROUTE DE LA RECHERCHE" FontSize="14" FontWeight="Bold" Foreground="{StaticResource CalmHeaderBrush}" Margin="0,0,0,25"/>
+                            
+                            <!-- Step 1 -->
+                            <Grid Margin="0,0,0,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Kind="CheckCircle" Foreground="#2ecc71" VerticalAlignment="Center" Width="30" Height="30" Margin="0,0,15,0"/>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="Conception du Protocole" FontWeight="Bold"/>
+                                    <ProgressBar Value="100" Height="4" Foreground="#2ecc71" Margin="0,5,0,0"/>
+                                </StackPanel>
+                                <TextBlock Grid.Column="2" Text="Terminé" VerticalAlignment="Center" Margin="15,0,0,0" Foreground="#2ecc71" FontWeight="Bold"/>
+                            </Grid>
+    
+                            <!-- Step 2 -->
+                            <Grid Margin="0,0,0,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Kind="CircleEditOutline" Foreground="{StaticResource PrimaryBrush}" VerticalAlignment="Center" Width="30" Height="30" Margin="0,0,15,0"/>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="Revue de Littérature (Bibliothèque)" FontWeight="Bold"/>
+                                    <ProgressBar x:Name="LibraryProgress" Value="40" Height="4" Foreground="{StaticResource PrimaryBrush}" Margin="0,5,0,0"/>
+                                </StackPanel>
+                                <TextBlock Grid.Column="2" x:Name="LibraryStatusText" Text="En cours" VerticalAlignment="Center" Margin="15,0,0,0" Foreground="{StaticResource PrimaryBrush}" FontWeight="Bold"/>
+                            </Grid>
+    
+                            <!-- Step 3 -->
+                            <Grid Margin="0,0,0,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Kind="CircleOutline" Foreground="#95a5a6" VerticalAlignment="Center" Width="30" Height="30" Margin="0,0,15,0"/>
+                                <StackPanel Grid.Column="1" Opacity="0.5">
+                                    <TextBlock Text="Collecte et Saisie des Données" FontWeight="Bold"/>
+                                    <ProgressBar Value="0" Height="4" Foreground="#95a5a6" Margin="0,5,0,0"/>
+                                </StackPanel>
+                                <TextBlock Grid.Column="2" Text="En attente" VerticalAlignment="Center" Margin="15,0,0,0" Foreground="#95a5a6" Opacity="0.5"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+    
+                    <!-- Activity & Assistance -->
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="CONSEILS ADREV" FontSize="14" FontWeight="Bold" Foreground="{StaticResource CalmHeaderBrush}" Margin="0,0,0,15"/>
+                        <Border Background="#E1F5FE" Padding="20" CornerRadius="12" Margin="0,0,0,15">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="LightbulbOn" Foreground="#0288D1" Margin="0,0,0,10"/>
+                                <TextBlock Text="Citations" FontWeight="Bold" Foreground="#01579B"/>
+                                <TextBlock Text="Pensez à marquer vos sources comme 'Citées' une fois intégrées dans votre rapport." FontSize="11" TextWrapping="Wrap" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </Border>
+    
+                        <Border Background="#FFF3E0" Padding="20" CornerRadius="12">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="Security" Foreground="#F57C00" Margin="0,0,0,10"/>
+                                <TextBlock Text="Sauvegarde" FontWeight="Bold" Foreground="#E65100"/>
+                                <TextBlock Text="Tous vos documents sont stockés localement dans le dossier du projet pour une sécurité maximale." FontSize="11" TextWrapping="Wrap" Margin="0,5,0,0"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Grid>
             </Grid>
-        </Grid>
-    </Border>
+        </Border>
+    </ScrollViewer>
 </UserControl>

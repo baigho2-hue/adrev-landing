@@ -27,8 +27,8 @@
             <TextBlock Text="Informations Générales" Style="{StaticResource MaterialDesignSubtitle1TextBlock}" Opacity="0.6"/>
         </StackPanel>
 
-        <Grid Grid.Row="1">
-            <StackPanel>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="0,0,10,0">
                 <TextBox x:Name="TitleTextBox" materialDesign:HintAssist.Hint="Titre du Projet" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,0,20"/>
                 
                 <Grid Margin="0,0,0,20">
@@ -96,7 +96,7 @@
                     </ItemsControl>
                 </StackPanel>
             </StackPanel>
-        </Grid>
+        </ScrollViewer>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
             <Button Content="Annuler" IsCancel="True" Style="{StaticResource MaterialDesignFlatButton}" Margin="0,0,10,0"/>
