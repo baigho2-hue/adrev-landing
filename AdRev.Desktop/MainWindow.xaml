@@ -18,7 +18,7 @@
         <WindowChrome CaptionHeight="60" ResizeBorderThickness="5" GlassFrameThickness="0" CornerRadius="0"/>
     </WindowChrome.WindowChrome>
 
-    <Border Background="#F5F7F9" CornerRadius="10" BorderBrush="#E0E0E0" BorderThickness="1" Margin="0,25,0,25">
+    <Border Background="#F5F7F9" CornerRadius="10" BorderBrush="#E0E0E0" BorderThickness="1" Margin="5">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="260"/>
@@ -41,42 +41,51 @@
                     </StackPanel>
 
                     <!-- Menu -->
-                    <StackPanel Grid.Row="1" WindowChrome.IsHitTestVisibleInChrome="True">
-                        <Button x:Name="BtnDashboard" Click="SwitchView_Click" Tag="Dashboard" Style="{StaticResource MaterialDesignFlatButton}" Height="50" HorizontalContentAlignment="Left" Foreground="#6366F1" Background="#EEF2FF" Margin="0,0,0,10">
-                            <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="ViewDashboard" Margin="10,0,15,0"/>
-                                <TextBlock Text="Tableau de bord"/>
-                            </StackPanel>
-                        </Button>
-                        
-                        <Button x:Name="BtnProjects" Click="SwitchView_Click" Tag="Projects" Style="{StaticResource MaterialDesignFlatButton}" Height="50" HorizontalContentAlignment="Left" Foreground="#64748B" Margin="0,0,0,10">
-                            <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="FolderOpen" Margin="10,0,15,0"/>
-                                <TextBlock Text="Liste de projet"/>
-                            </StackPanel>
-                        </Button>
-
-                        <Button x:Name="BtnAnalysis" Click="SwitchView_Click" Tag="Analysis" Style="{StaticResource MaterialDesignFlatButton}" Height="50" HorizontalContentAlignment="Left" Foreground="#64748B" Margin="0,0,0,10">
-                            <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="ChartBar" Margin="10,0,15,0"/>
-                                <TextBlock Text="Analyse rapide"/>
-                            </StackPanel>
-                        </Button>
-                        
-                        <Button x:Name="BtnExportFolder" Click="SwitchView_Click" Tag="ExportFolder" Style="{StaticResource MaterialDesignFlatButton}" Height="50" HorizontalContentAlignment="Left" Foreground="#64748B" Margin="0,0,0,10">
-                            <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="FolderUpload" Margin="10,0,15,0"/>
-                                <TextBlock Text="Exporter un Dossier"/>
-                            </StackPanel>
-                        </Button>
-
-                        <Button x:Name="BtnMobileSync" Click="SwitchView_Click" Tag="MobileSync" Style="{StaticResource MaterialDesignFlatButton}" Height="50" HorizontalContentAlignment="Left" Foreground="#64748B" Margin="0,0,0,10">
-                            <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="CellphoneArrowDown" Margin="10,0,15,0"/>
-                                <TextBlock Text="Partage Mobile"/>
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                        <StackPanel WindowChrome.IsHitTestVisibleInChrome="True">
+                            <Button x:Name="BtnDashboard" Click="SwitchView_Click" Tag="Dashboard" Style="{StaticResource MaterialDesignFlatButton}" Height="45" HorizontalContentAlignment="Left" Foreground="#6366F1" Background="#EEF2FF" Margin="0,0,0,8">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="ViewDashboard" Margin="10,0,15,0"/>
+                                    <TextBlock Text="Tableau de bord"/>
+                                </StackPanel>
+                            </Button>
+                            
+                            <Button x:Name="BtnProjects" Click="SwitchView_Click" Tag="Projects" Style="{StaticResource MaterialDesignFlatButton}" Height="45" HorizontalContentAlignment="Left" Foreground="#64748B" Margin="0,0,0,8">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="FolderOpen" Margin="10,0,15,0"/>
+                                    <TextBlock Text="Liste de projet"/>
+                                </StackPanel>
+                            </Button>
+    
+                            <Button x:Name="BtnAnalysis" Click="SwitchView_Click" Tag="Analysis" Style="{StaticResource MaterialDesignFlatButton}" Height="45" HorizontalContentAlignment="Left" Foreground="#64748B" Margin="0,0,0,8">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="ChartBar" Margin="10,0,15,0"/>
+                                    <TextBlock Text="Analyse rapide"/>
+                                </StackPanel>
+                            </Button>
+    
+                            <Button x:Name="BtnQuality" Click="SwitchView_Click" Tag="Quality" Style="{StaticResource MaterialDesignFlatButton}" Height="45" HorizontalContentAlignment="Left" Foreground="#64748B" Margin="0,0,0,8">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="PlaylistCheck" Margin="10,0,15,0"/>
+                                    <TextBlock Text="Contrôle Qualité"/>
+                                </StackPanel>
+                            </Button>
+                            
+                            <Button x:Name="BtnExportFolder" Click="SwitchView_Click" Tag="ExportFolder" Style="{StaticResource MaterialDesignFlatButton}" Height="45" HorizontalContentAlignment="Left" Foreground="#64748B" Margin="0,0,0,8">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="FolderUpload" Margin="10,0,15,0"/>
+                                    <TextBlock Text="Exporter un Dossier"/>
+                                </StackPanel>
+                            </Button>
+    
+                            <Button x:Name="BtnMobileSync" Click="SwitchView_Click" Tag="MobileSync" Style="{StaticResource MaterialDesignFlatButton}" Height="45" HorizontalContentAlignment="Left" Foreground="#64748B" Margin="0,0,0,8">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="CellphoneArrowDown" Margin="10,0,15,0"/>
+                                    <TextBlock Text="Partage Mobile"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </ScrollViewer>
 
                     <!-- User Profile (Clickable to edit) -->
                     <Border Grid.Row="2" Padding="15" Background="#F8FAFC" CornerRadius="8" Cursor="Hand" MouseLeftButtonDown="EditProfile_Click">
@@ -99,7 +108,7 @@
                 </Grid.RowDefinitions>
 
                 <!-- Custom Title Bar / Header -->
-                <Grid Grid.Row="0" Height="40" Background="Transparent">
+                <Grid Grid.Row="0" Height="60" Background="Transparent">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
@@ -143,8 +152,8 @@
                                     <TextBlock Text="Voici un aperçu de vos activités de recherche récentes." FontSize="16" Foreground="#64748B"/>
                                 </StackPanel>
                                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center">
-                                    <Button Click="ImportProjectFolder_Click" Content="Importer Dossier" Width="180" Height="45" Background="#10B981" BorderBrush="#10B981" Margin="0,0,10,0"/>
-                                    <Button Click="NewProject_Click" Content="Nouveau Projet" Width="180" Height="45" Background="#6366F1" BorderBrush="#6366F1"/>
+                                    <Button Click="ImportProjectFolder_Click" Content="Importer" Width="130" Height="40" Background="#10B981" BorderBrush="#10B981" Margin="0,0,10,0"/>
+                                    <Button Click="NewProject_Click" Content="Nouveau Projet" Width="140" Height="40" Background="#6366F1" BorderBrush="#6366F1"/>
                                 </StackPanel>
                             </Grid>
 
@@ -216,7 +225,9 @@
                     </ScrollViewer>
 
                     <!-- Dynamic Content -->
-                    <ContentControl x:Name="ActiveViewContent" Visibility="Collapsed" WindowChrome.IsHitTestVisibleInChrome="True"/>
+                    <ScrollViewer x:Name="ActiveViewScroll" VerticalScrollBarVisibility="Auto" Visibility="Collapsed">
+                        <ContentControl x:Name="ActiveViewContent" WindowChrome.IsHitTestVisibleInChrome="True" Padding="20"/>
+                    </ScrollViewer>
                 </Grid>
             </Grid>
         </Grid>

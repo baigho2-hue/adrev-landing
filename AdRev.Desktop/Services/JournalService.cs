@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using AdRev.Domain.Models;
 
 namespace AdRev.Desktop.Services
@@ -109,7 +109,6 @@ namespace AdRev.Desktop.Services
                     CitationStyle = "APA",
                     SubmissionUrl = "https://eujournal.org/index.php/esj/about/submissions",
                     GuidelinesUrl = "https://eujournal.org/index.php/esj/about/submissions"
-<<<<<<< HEAD
                 },
 
                 // 7. The Lancet Global Health
@@ -178,8 +177,6 @@ namespace AdRev.Desktop.Services
                     CitationStyle = "Vancouver",
                     SubmissionUrl = "http://www.malimedical.org",
                     GuidelinesUrl = "http://www.malimedical.org/instructions-aux-auteurs"
-=======
->>>>>>> origin/main
                 }
             };
         }

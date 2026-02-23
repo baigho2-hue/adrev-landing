@@ -452,15 +452,17 @@ namespace AdRev.Desktop.Views.Project
                 case FunctionalRole.Methodologist:
                     return (step != 9);
                 case FunctionalRole.Statistician:
-                    return (step == 7 || step == 8 || step == 11 || step == 12);
+                    return (step == 1 || step == 7 || step == 8 || step == 11 || step == 12);
                 case FunctionalRole.DataManager:
                     return (step == 1 || step == 8 || step == 9 || step == 11);
                 case FunctionalRole.CoInvestigator:
                     return (step != 9 && step != 10);
                 case FunctionalRole.Student:
                     return (step <= 6 || step == 12 || step == 13);
-                default:
+                case FunctionalRole.Monitor:
                     return false;
+                default:
+                    return true;
             }
         }
 
@@ -470,6 +472,7 @@ namespace AdRev.Desktop.Views.Project
             {
                 tb.IsReadOnly = isReadOnly;
                 tb.Opacity = isReadOnly ? 0.8 : 1.0;
+                if (!isReadOnly) tb.IsEnabled = true;
             }
 
             foreach (var cb in FindVisualChildren<ComboBox>(this))
@@ -486,8 +489,7 @@ namespace AdRev.Desktop.Views.Project
 
             foreach (var btn in FindVisualChildren<Button>(this))
             {
-                // On désactive les boutons d'action spécifiques si en lecture seule
-                if (btn.Content is string s && (s.Contains("➕") || s.Contains("🗑️") || s.Contains("Calculer") || s.Contains("Générer") || s.Contains("Add") || s.Contains("Validate") || s.Contains("Save")))
+                if (btn.Content is string s && (s.Contains("➕") || s.Contains("🗑️") || s.Contains("Calculer") || s.Contains("Générer") || s.Contains("Add") || s.Contains("Validate") || s.Contains("Save") || s.Contains("RENUMÉROTER") || s.Contains("LIER")))
                 {
                     btn.IsEnabled = !isReadOnly;
                 }

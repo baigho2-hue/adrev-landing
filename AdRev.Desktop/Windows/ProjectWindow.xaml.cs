@@ -14,6 +14,7 @@ namespace AdRev.Desktop.Windows
     public partial class ProjectWindow : Window
     {
         private ResearchProject _project;
+        public ResearchProject Project => _project;
         private readonly ResearchProjectService _projectService = new ResearchProjectService();
         private readonly FeatureManager _featureManager;
 

@@ -116,7 +116,7 @@
       }
     },
     "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Desktop\\AdRev.Desktop.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.4",
       "restore": {
         "projectUniqueName": "C:\\Users\\HP\\Documents\\AdRev\\AdRev.Desktop\\AdRev.Desktop.csproj",
         "projectName": "AdRev.Desktop",
@@ -233,10 +233,6 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[9.0.13, 9.0.13]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
               "version": "[9.0.13, 9.0.13]"
             },
             {

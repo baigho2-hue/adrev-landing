@@ -35,7 +35,6 @@
             <Setter Property="Padding" Value="24"/>
             <Setter Property="UniformCornerRadius" Value="12"/>
             <Setter Property="Background" Value="White"/>
-            <Setter Property="materialDesign:ShadowAssist.ShadowDepth" Value="Depth1"/>
         </Style>
     </Window.Resources>
 
@@ -76,7 +75,7 @@
         </Border>
 
         <!-- Tool Bar -->
-        <materialDesign:ColorZone Grid.Row="1" Mode="Standard" Padding="8" materialDesign:ShadowAssist.ShadowDepth="Depth2">
+        <materialDesign:ColorZone Grid.Row="1" Mode="Standard" Padding="8">
             <StackPanel Orientation="Horizontal">
                 <Button x:Name="MenuFileSave" Content="ENREGISTRER" Style="{StaticResource MaterialDesignFlatMidPrimaryButton}" Click="CreateProtocol_Click" Margin="0,0,8,0">
                      <Button.ContentTemplate>
@@ -121,24 +120,26 @@
 
             <!-- Navigation -->
             <Border Grid.Column="0" Background="{StaticResource CalmAltBackgroundBrush}" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="0,0,1,0">
-                <ListBox x:Name="SideMenuListBox" SelectionChanged="SideMenu_SelectionChanged" Style="{StaticResource MaterialDesignNavigationPrimaryListBox}" Background="Transparent">
-                    <ListBoxItem Content="1. Informations Générales" Tag="1"/>
-                    <ListBoxItem Content="2. Introduction &amp; Contexte" Tag="2"/>
-                    <ListBoxItem Content="3. Objectifs" Tag="3"/>
-                    <ListBoxItem Content="4. Cadre Conceptuel" Tag="4"/>
-                    <ListBoxItem Content="5. Design &amp; Cadre" Tag="5"/>
-                    <ListBoxItem Content="6. Population" Tag="6"/>
-                    <ListBoxItem Content="7. Échantillonnage" Tag="7"/>
-                    <ListBoxItem Content="8. Collecte de données" Tag="8"/>
-                    <ListBoxItem Content="9. Budget" Tag="9"/>
-                    <ListBoxItem Content="10. Éthique" Tag="10"/>
-                    <ListBoxItem Content="11. Analyse Statistique" Tag="11"/>
-                    <ListBoxItem Content="12. Résultats Attendus" Tag="12"/>
-                    <ListBoxItem Content="13. Conclusion" Tag="13"/>
-                    <ListBoxItem Content="14. Références" Tag="14"/>
-                    <ListBoxItem Content="15. Annexes" Tag="16"/>
-                    <ListBoxItem Content="16. Historique / Logs" Tag="15"/>
-                </ListBox>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ListBox x:Name="SideMenuListBox" SelectionChanged="SideMenu_SelectionChanged" Style="{StaticResource MaterialDesignNavigationPrimaryListBox}" Background="Transparent">
+                        <ListBoxItem Content="1. Informations Générales" Tag="1"/>
+                        <ListBoxItem Content="2. Introduction &amp; Contexte" Tag="2"/>
+                        <ListBoxItem Content="3. Objectifs" Tag="3"/>
+                        <ListBoxItem Content="4. Cadre Conceptuel" Tag="4"/>
+                        <ListBoxItem Content="5. Design &amp; Cadre" Tag="5"/>
+                        <ListBoxItem Content="6. Population" Tag="6"/>
+                        <ListBoxItem Content="7. Échantillonnage" Tag="7"/>
+                        <ListBoxItem Content="8. Collecte de données" Tag="8"/>
+                        <ListBoxItem Content="9. Budget" Tag="9"/>
+                        <ListBoxItem Content="10. Éthique" Tag="10"/>
+                        <ListBoxItem Content="11. Analyse Statistique" Tag="11"/>
+                        <ListBoxItem Content="12. Résultats Attendus" Tag="12"/>
+                        <ListBoxItem Content="13. Conclusion" Tag="13"/>
+                        <ListBoxItem Content="14. Références" Tag="14"/>
+                        <ListBoxItem Content="15. Annexes" Tag="16"/>
+                        <ListBoxItem Content="16. Historique / Logs" Tag="15"/>
+                    </ListBox>
+                </ScrollViewer>
             </Border>
 
             <!-- Content Area -->

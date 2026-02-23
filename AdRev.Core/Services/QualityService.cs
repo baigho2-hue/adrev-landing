@@ -1,8 +1,13 @@
+using AdRev.Domain.Models;
 using AdRev.Domain.Quality;
 using AdRev.Domain.Protocols;
 using AdRev.Domain.Enums;
-using AdRev.Domain.Models;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using System;
 
 namespace AdRev.Core.Services
 {
@@ -20,6 +25,64 @@ namespace AdRev.Core.Services
                 GetCONSORT(),
                 GetGRAMMS()
             };
+        }
+
+        public QualityChecklist ImportChecklistFromExcel(string filePath)
+        {
+            var checklist = new QualityChecklist { Name = Path.GetFileNameWithoutExtension(filePath), Sections = new List<ChecklistSection>() };
+            
+            using (SpreadsheetDocument doc = SpreadsheetDocument.Open(filePath, false))
+            {
+                var workbookPart = doc.WorkbookPart;
+                if (workbookPart == null) return checklist;
+                var sheet = workbookPart.Workbook.Sheets?.GetFirstChild<Sheet>();
+                if (sheet == null || sheet.Id == null) return checklist;
+                var worksheetPart = (WorksheetPart)workbookPart.GetPartById(sheet.Id!);
+                var sheetData = worksheetPart.Worksheet.GetFirstChild<SheetData>();
+                if (sheetData == null) return checklist;
+
+                var sharedStringTable = workbookPart.SharedStringTablePart?.SharedStringTable;
+                var rows = sheetData.Elements<Row>().Skip(1).ToList(); // Skip header (Section | Item | Description)
+
+                ChecklistSection? currentSection = null;
+
+                foreach (var row in rows)
+                {
+                    string sectionName = GetCellValue(row, 0, sharedStringTable);
+                    string requirement = GetCellValue(row, 1, sharedStringTable);
+                    string description = GetCellValue(row, 2, sharedStringTable);
+
+                    if (string.IsNullOrWhiteSpace(requirement)) continue;
+
+                    if (currentSection == null || (!string.IsNullOrWhiteSpace(sectionName) && sectionName != currentSection.Name))
+                    {
+                        currentSection = new ChecklistSection { Name = string.IsNullOrWhiteSpace(sectionName) ? "Général" : sectionName, Items = new List<ChecklistItem>() };
+                        checklist.Sections.Add(currentSection);
+                    }
+
+                    currentSection.Items.Add(new ChecklistItem 
+                    { 
+                        Id = Guid.NewGuid().ToString().Substring(0, 4),
+                        Requirement = requirement, 
+                        Description = description 
+                    });
+                }
+            }
+
+            return checklist;
+        }
+
+        private string GetCellValue(Row row, int cellIndex, SharedStringTable? sharedStringTable)
+        {
+            var cell = row.Elements<Cell>().ElementAtOrDefault(cellIndex);
+            if (cell == null || cell.CellValue == null) return string.Empty;
+            string value = cell.CellValue.InnerText;
+
+            if (cell.DataType != null && cell.DataType.Value == CellValues.SharedString && sharedStringTable != null)
+            {
+                return sharedStringTable.ElementAt(int.Parse(value)).InnerText;
+            }
+            return value;
         }
 
         public List<QualityChecklist> GetRecommendedChecklists(ResearchProject project)

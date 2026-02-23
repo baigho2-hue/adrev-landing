@@ -127,6 +127,11 @@ namespace AdRev.Domain.Variables
         public double? DefaultLatitude { get; set; }
         public double? DefaultLongitude { get; set; }
 
+        /// <summary>
+        /// Règles de recodage définies pour cette variable
+        /// </summary>
+        public List<RecodeInstruction> RecodingInstructions { get; set; } = new List<RecodeInstruction>();
+
         public StudyVariable()
         {
             Type = VariableType.Text;

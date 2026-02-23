@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -10,10 +10,7 @@ using AdRev.Domain.Enums;
 using AdRev.Domain.Variables;
 using AdRev.Domain.Models;
 using Microsoft.Win32;
-<<<<<<< HEAD
 using AdRev.Desktop.Helpers;
-=======
->>>>>>> origin/main
 
 namespace AdRev.Desktop.Views.Project
 {
@@ -28,7 +25,6 @@ namespace AdRev.Desktop.Views.Project
         private DateTime _recordingStartTime;
         private TextBlock? _recordingStatusText;
         private TextBlock? _recordingTimerText;
-<<<<<<< HEAD
         
         // Auto-Save & Validation
         private System.Windows.Threading.DispatcherTimer? _autoSaveTimer;
@@ -46,13 +42,10 @@ namespace AdRev.Desktop.Views.Project
 
         private Dictionary<string, UIElement> _controlMap = new Dictionary<string, UIElement>();
         private DataEntryRecord? _currentEditingRecord = null;
-=======
->>>>>>> origin/main
 
         public DataEntryView()
         {
             InitializeComponent();
-<<<<<<< HEAD
             SetupAutoSave();
         }
 
@@ -70,8 +63,6 @@ namespace AdRev.Desktop.Views.Project
             {
                 await SaveRecordInternal(true);
             }
-=======
->>>>>>> origin/main
         }
 
         public void LoadProject(ResearchProject project)
@@ -84,7 +75,6 @@ namespace AdRev.Desktop.Views.Project
         private void LoadRecords()
         {
             RecordsListBox.Items.Clear();
-<<<<<<< HEAD
             
             if (_project != null && _project.DataRows != null)
             {
@@ -105,19 +95,12 @@ namespace AdRev.Desktop.Views.Project
                 }
                 TxtRecordCount.Text = $"{RecordsListBox.Items.Count} entrée(s) enregistrée(s)";
             }
-=======
-            // In a real app, load from project data
-            TxtRecordCount.Text = "0 entrée(s) enregistrée(s)";
->>>>>>> origin/main
         }
 
         private void GenerateDataEntryForm()
         {
             DataEntryFormPanel.Children.Clear();
-<<<<<<< HEAD
             _controlMap.Clear();
-=======
->>>>>>> origin/main
 
             if (_project != null && (_project.StudyType == StudyType.Qualitative || _project.StudyType == StudyType.Mixed))
             {
@@ -129,11 +112,7 @@ namespace AdRev.Desktop.Views.Project
                 DataEntryFormPanel.Children.Add(new TextBlock 
                 { 
                     Text = "Aucune variable définie. Utilisez le 'Concepteur de Variables' pour créer votre formulaire.",
-<<<<<<< HEAD
                     Foreground = (Brush)Application.Current.FindResource("MaterialDesignBody"),
-=======
-                    Foreground = Brushes.Gray,
->>>>>>> origin/main
                     FontStyle = FontStyles.Italic
                 });
                 return;
@@ -143,7 +122,6 @@ namespace AdRev.Desktop.Views.Project
 
             foreach (var group in groups)
             {
-<<<<<<< HEAD
                 // Group Header
                 var groupCard = new MaterialDesignThemes.Wpf.Card
                 {
@@ -305,67 +283,6 @@ namespace AdRev.Desktop.Views.Project
                     }
 
                     groupStack.Children.Add(fieldPanel);
-=======
-                var groupBorder = new Border {
-                    Background = new SolidColorBrush(Color.FromRgb(245, 247, 249)),
-                    Padding = new Thickness(15, 10, 15, 10),
-                    Margin = new Thickness(0, 15, 0, 15),
-                    CornerRadius = new CornerRadius(6),
-                    BorderBrush = new SolidColorBrush(Color.FromRgb(224, 230, 237)),
-                    BorderThickness = new Thickness(1)
-                };
-                
-                groupBorder.Child = new TextBlock { 
-                    Text = string.IsNullOrWhiteSpace(group.Key) ? "Informations Générales" : group.Key, 
-                    FontWeight = FontWeights.Bold, 
-                    Foreground = new SolidColorBrush(Color.FromRgb(30, 136, 229)),
-                    FontSize = 14
-                };
-                
-                DataEntryFormPanel.Children.Add(groupBorder);
-
-                foreach (var variable in group)
-                {
-                    var fieldPanel = new StackPanel { Margin = new Thickness(10, 0, 0, 20) };
-                    var labelText = variable.Prompt;
-                    if (variable.IsRequired) labelText += " *";
-                    
-                    var label = new TextBlock
-                    {
-                        Text = labelText,
-                        FontWeight = FontWeights.SemiBold,
-                        Foreground = new SolidColorBrush(Color.FromRgb(55, 71, 79)),
-                        Margin = new Thickness(0, 0, 0, 5),
-                        FontSize = 13
-                    };
-                    fieldPanel.Children.Add(label);
-
-                    UIElement? inputControl = null;
-                    switch (variable.Type)
-                    {
-                        case VariableType.Text:
-                            inputControl = new TextBox { Padding = new Thickness(5), Height = 30 };
-                            break;
-                        case VariableType.Memo:
-                            inputControl = new TextBox { Padding = new Thickness(5), Height = 80, TextWrapping = TextWrapping.Wrap, AcceptsReturn = true };
-                            break;
-                        case VariableType.QualitativeBinary:
-                            var spYesNo = new StackPanel { Orientation = Orientation.Horizontal };
-                            spYesNo.Children.Add(new RadioButton { Content = "Oui", Margin = new Thickness(0,0,15,0) });
-                            spYesNo.Children.Add(new RadioButton { Content = "Non" });
-                            inputControl = spYesNo;
-                            break;
-                        // Add more cases from the original code
-                        default:
-                            inputControl = new TextBox { Height = 30 };
-                            break;
-                    }
-                    
-                    if (inputControl != null)
-                        fieldPanel.Children.Add(inputControl);
-
-                    DataEntryFormPanel.Children.Add(fieldPanel);
->>>>>>> origin/main
                 }
             }
         }
@@ -374,13 +291,8 @@ namespace AdRev.Desktop.Views.Project
         {
             var recorderBorder = new Border
             {
-<<<<<<< HEAD
                 Background = (Brush)Application.Current.FindResource("RecorderBackgroundBrush"),
                 BorderBrush = (Brush)Application.Current.FindResource("RecorderBorderBrush"),
-=======
-                Background = new SolidColorBrush(Color.FromRgb(255, 243, 224)),
-                BorderBrush = new SolidColorBrush(Color.FromRgb(255, 152, 0)),
->>>>>>> origin/main
                 BorderThickness = new Thickness(1),
                 CornerRadius = new CornerRadius(8),
                 Padding = new Thickness(15),
@@ -394,11 +306,7 @@ namespace AdRev.Desktop.Views.Project
             var headerStack = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 0, 0, 15) };
             headerStack.Children.Add(new TextBlock { Text = "🎙️", FontSize = 24, Margin = new Thickness(0, 0, 10, 0) });
             var titleStack = new StackPanel();
-<<<<<<< HEAD
             titleStack.Children.Add(new TextBlock { Text = "Dictaphone Numérique", FontWeight = FontWeights.Bold, FontSize = 16, Foreground = (Brush)Application.Current.FindResource("RecorderForegroundBrush") });
-=======
-            titleStack.Children.Add(new TextBlock { Text = "Dictaphone Numérique", FontWeight = FontWeights.Bold, FontSize = 16, Foreground = new SolidColorBrush(Color.FromRgb(230, 81, 0)) });
->>>>>>> origin/main
             headerStack.Children.Add(titleStack);
             grid.Children.Add(headerStack);
 
@@ -464,7 +372,6 @@ namespace AdRev.Desktop.Views.Project
 
         private void BtnNewRecord_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
             _currentEditingRecord = null;
             TxtRecordName.Text = string.Empty;
             BtnSaveRecordActual.Content = "💾 Sauvegarder l'entrée";
@@ -636,33 +543,15 @@ namespace AdRev.Desktop.Views.Project
                     chk.IsChecked = parts.Contains(chk.Content.ToString());
                 }
             }
-=======
-            TxtRecordName.Text = string.Empty;
-            GenerateDataEntryForm();
-        }
-
-        private void BtnSaveRecord_Click(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(TxtRecordName.Text)) return;
-            var record = new { RecordName = TxtRecordName.Text, Timestamp = DateTime.Now.ToString() };
-            RecordsListBox.Items.Insert(0, record);
-            TxtRecordCount.Text = $"{RecordsListBox.Items.Count} entrée(s) enregistrée(s)";
-            TxtRecordName.Text = string.Empty;
->>>>>>> origin/main
         }
 
         private void TxtSearchRecords_TextChanged(object sender, TextChangedEventArgs e)
         {
-<<<<<<< HEAD
             // Filter logic would go here
-=======
-            // Simple filtering logic
->>>>>>> origin/main
         }
 
         private void RecordsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-<<<<<<< HEAD
             if (RecordsListBox.SelectedItem is DataEntryRecord record)
             {
                 _currentEditingRecord = record;
@@ -705,21 +594,12 @@ namespace AdRev.Desktop.Views.Project
                 // Refresh Form
                 GenerateDataEntryForm();
             }
-=======
-            // Load selected record
-        }
-
-        private void OpenVariableDesigner_Click(object sender, RoutedEventArgs e)
-        {
-            // Potentially open VariableDesignView or a designer window
->>>>>>> origin/main
         }
 
         private void CloseDataEntryMap_Click(object sender, RoutedEventArgs e)
         {
             MapPanel.Visibility = Visibility.Collapsed;
         }
-<<<<<<< HEAD
         private async void BtnExportData_Click(object sender, RoutedEventArgs e)
         {
             if (_project == null || _project.DataRows.Count == 0)
@@ -763,7 +643,5 @@ namespace AdRev.Desktop.Views.Project
                 }
             }
         }
-=======
->>>>>>> origin/main
     }
 }

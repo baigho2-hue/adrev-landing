@@ -29,6 +29,7 @@
                         <RowDefinition Height="Auto"/> <!-- Variables List -->
                         <RowDefinition Height="Auto"/> <!-- Analysis Plan List -->
                         <RowDefinition Height="Auto"/> <!-- Add Form -->
+                        <RowDefinition Height="Auto"/> <!-- Excel Criteria Check -->
                     </Grid.RowDefinitions>
 
                 <!-- 1. Header -->
@@ -61,7 +62,7 @@
                             <TextBlock Text="{Binding}" FontWeight="SemiBold" FontSize="14"/>
                         </DataTemplate>
                     </Expander.HeaderTemplate>
-                        <Border Background="{DynamicResource MaterialDesignPaper}" CornerRadius="4" BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="1" Height="200">
+                        <Border Background="{DynamicResource MaterialDesignPaper}" CornerRadius="4" BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="1" MaxHeight="200">
                             <ListView x:Name="VariablesList" BorderThickness="0" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Padding="0">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
@@ -141,7 +142,16 @@
                             <CheckBox x:Name="CheckIncludeChart" Content="Graphique" IsChecked="True" Foreground="{StaticResource CalmTextBrush}"/>
                         </StackPanel>
 
-                        <Button Content="Ajouter au Plan" Click="AddToPlan_Click" Style="{StaticResource MaterialDesignRaisedButton}" Background="{StaticResource CalmSubHeaderBrush}" Foreground="White"/>
+                <Button Content="Ajouter au Plan" Click="AddToPlan_Click" Style="{StaticResource MaterialDesignRaisedButton}" Background="{StaticResource CalmSubHeaderBrush}" Foreground="White"/>
+                    </StackPanel>
+                </materialDesign:Card>
+
+                <!-- 6. Excel Criteria Check -->
+                <materialDesign:Card Grid.Row="5" Padding="16" Margin="0,20,0,0" Background="White" UniformCornerRadius="8" BorderBrush="{StaticResource CalmBorderBrush}" BorderThickness="1">
+                    <StackPanel>
+                        <TextBlock Text="VÉRIFICATION CRITÈRES" FontWeight="SemiBold" FontSize="10" Foreground="{StaticResource CalmSubHeaderBrush}" Margin="0,0,0,10"/>
+                        <TextBlock Text="Utilisez une feuille Excel de critères pour valider votre protocole ou vos données." FontSize="11" Foreground="{StaticResource CalmTextBrush}" Opacity="0.7" TextWrapping="Wrap" Margin="0,0,0,12"/>
+                        <Button Content="Lancer Vérification Excel" Click="OpenQualityCheck_Click" Style="{StaticResource MaterialDesignOutlinedButton}" Foreground="{StaticResource CalmSubHeaderBrush}" BorderBrush="{StaticResource CalmBorderBrush}"/>
                     </StackPanel>
                 </materialDesign:Card>
 

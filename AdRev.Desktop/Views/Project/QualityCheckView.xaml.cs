@@ -7,6 +7,7 @@ using System.Windows.Media;
 using AdRev.Domain.Models;
 using AdRev.Domain.Quality;
 using AdRev.Core.Services;
+using Microsoft.Win32;
 
 namespace AdRev.Desktop.Views.Project
 {
@@ -122,6 +123,43 @@ namespace AdRev.Desktop.Views.Project
         private void GenerateQualityReport_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Rapport de conformité généré (Simulation).", "AdRev Quality");
+        }
+
+        private void ImportCustomChecklist_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*",
+                Title = "Sélectionner une feuille de critères Excel"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    var customChecklist = _qualityService.ImportChecklistFromExcel(openFileDialog.FileName);
+                    if (customChecklist != null && customChecklist.Sections.Count > 0)
+                    {
+                        var list = (List<QualityChecklist>)QualityChecklistCombo.ItemsSource;
+                        if (list == null) list = new List<QualityChecklist>();
+                        else list = new List<QualityChecklist>(list); // Create copy to trigger update if needed
+
+                        list.Add(customChecklist);
+                        QualityChecklistCombo.ItemsSource = list;
+                        QualityChecklistCombo.SelectedItem = customChecklist;
+                        
+                        MessageBox.Show($"Checklist '{customChecklist.Name}' importée avec succès.", "Importation Réussie");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Le fichier Excel ne semble pas contenir de critères valides. Assurez-vous d'avoir les colonnes : Section | Critère | Description.", "Format Invalide", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erreur d'importation : {ex.Message}", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }

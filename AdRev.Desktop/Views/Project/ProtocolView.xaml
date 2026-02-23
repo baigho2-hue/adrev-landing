@@ -76,7 +76,7 @@
                          SelectionChanged="SideMenu_SelectionChanged">
                     <ListBox.Resources>
                         <Style TargetType="ListBoxItem">
-                            <Padding Setter="Padding" Value="20,12"/>
+                            <Setter Property="Padding" Value="20,12"/>
                             <Setter Property="FontSize" Value="14"/>
                             <Setter Property="Cursor" Value="Hand"/>
                             <Setter Property="Margin" Value="0,2"/>

@@ -213,6 +213,23 @@ Renamed Types:
 	System.Func`2<AdRev.Domain.Models.LibraryItem,System.String> [AdRev.Core]System.Func`2<AdRev.Domain.Models.LibraryItem,System.String> AdRev.Core.Services.LibrarySearchService/<>c::<>9__2_0 ->  
 }
 
+[AdRev.Core]AdRev.Core.Services.QualityService/<>c -> [AdRev.Core]AdRev.Core.Services.QualityService/ 
+{
+	[AdRev.Core]AdRev.Core.Services.QualityService/<>c::<EvaluateCOREQ>b__18_0[1]( [AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix ) ->  
+	[AdRev.Core]AdRev.Core.Services.QualityService/<>c::<EvaluateCOREQ>b__18_1[1]( [AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix ) ->  
+	[AdRev.Core]AdRev.Core.Services.QualityService/<>c::<EvaluateSTROBE>b__19_0[1]( [AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix ) ->  
+	[AdRev.Core]AdRev.Core.Services.QualityService/<>c::<EvaluatePRISMA>b__23_0[1]( [AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix ) ->  
+
+	[AdRev.Core]AdRev.Core.Services.QualityService/<>c::.cctor[0]( ) skipped:  special name
+	[AdRev.Core]AdRev.Core.Services.QualityService/<>c::.ctor[0]( ) skipped:  special name
+
+	AdRev.Core.Services.QualityService/<>c [AdRev.Core]AdRev.Core.Services.QualityService/<>c AdRev.Core.Services.QualityService/<>c::<>9 ->  
+	System.Func`2<AdRev.Domain.Models.ProtocolAppendix,System.Boolean> [AdRev.Core]System.Func`2<AdRev.Domain.Models.ProtocolAppendix,System.Boolean> AdRev.Core.Services.QualityService/<>c::<>9__18_0 ->  
+	System.Func`2<AdRev.Domain.Models.ProtocolAppendix,System.Boolean> [AdRev.Core]System.Func`2<AdRev.Domain.Models.ProtocolAppendix,System.Boolean> AdRev.Core.Services.QualityService/<>c::<>9__18_1 ->  
+	System.Func`2<AdRev.Domain.Models.ProtocolAppendix,System.Boolean> [AdRev.Core]System.Func`2<AdRev.Domain.Models.ProtocolAppendix,System.Boolean> AdRev.Core.Services.QualityService/<>c::<>9__19_0 ->  
+	System.Func`2<AdRev.Domain.Models.ProtocolAppendix,System.Boolean> [AdRev.Core]System.Func`2<AdRev.Domain.Models.ProtocolAppendix,System.Boolean> AdRev.Core.Services.QualityService/<>c::<>9__23_0 ->  
+}
+
 [AdRev.Core]AdRev.Core.Services.QuestionnaireGenerator/<>c -> [AdRev.Core]AdRev.Core.Services.QuestionnaireGenerator/ 
 {
 	[AdRev.Core]AdRev.Core.Services.QuestionnaireGenerator/<>c::<GenerateMarkdownQuestionnaire>b__0_0[1]( [AdRev.Domain]AdRev.Domain.Variables.StudyVariable ) ->  
@@ -501,13 +518,13 @@ Renamed Types:
 
 [AdRev.Desktop]AdRev.Desktop.App/<>c -> [AdRev.Desktop]AdRev.Desktop.App/ 
 {
-	[AdRev.Desktop]AdRev.Desktop.App/<>c::<SetLanguage>b__4_0[1]( [PresentationFramework]System.Windows.ResourceDictionary ) ->  
+	[AdRev.Desktop]AdRev.Desktop.App/<>c::<SetLanguage>b__5_0[1]( [PresentationFramework]System.Windows.ResourceDictionary ) ->  
 
 	[AdRev.Desktop]AdRev.Desktop.App/<>c::.cctor[0]( ) skipped:  special name
 	[AdRev.Desktop]AdRev.Desktop.App/<>c::.ctor[0]( ) skipped:  special name
 
 	AdRev.Desktop.App/<>c [AdRev.Desktop]AdRev.Desktop.App/<>c AdRev.Desktop.App/<>c::<>9 ->  
-	System.Func`2<System.Windows.ResourceDictionary,System.Boolean> [AdRev.Desktop]System.Func`2<System.Windows.ResourceDictionary,System.Boolean> AdRev.Desktop.App/<>c::<>9__4_0 ->  
+	System.Func`2<System.Windows.ResourceDictionary,System.Boolean> [AdRev.Desktop]System.Func`2<System.Windows.ResourceDictionary,System.Boolean> AdRev.Desktop.App/<>c::<>9__5_0 ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.CitationEntryWindow/<>O -> [AdRev.Desktop]AdRev.Desktop.CitationEntryWindow/ 
@@ -549,14 +566,31 @@ Renamed Types:
 	System.Func`2<AdRev.Domain.Models.Citation,System.String> [AdRev.Desktop]System.Func`2<AdRev.Domain.Models.Citation,System.String> AdRev.Desktop.DiscussionWindow/<>c::<>9__38_3 ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c__DisplayClass18_0 -> [AdRev.Desktop]AdRev.Desktop.MainWindow/ 
+[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c -> [AdRev.Desktop]AdRev.Desktop.MainWindow/ 
 {
-	[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c__DisplayClass18_0::<OpenProjectWindow>b__0[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c::<LoadProjects>b__14_0[1]( [AdRev.Domain]AdRev.Domain.Models.ResearchProject ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c::<LoadProjects>b__14_1[1]( [AdRev.Domain]AdRev.Domain.Models.ResearchProject ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c::<LoadProjects>b__14_2[1]( [AdRev.Domain]AdRev.Domain.Models.ResearchProject ) ->  
 
-	[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c__DisplayClass18_0::.ctor[0]( ) skipped:  special name
+	[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c::.cctor[0]( ) skipped:  special name
+	[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c::.ctor[0]( ) skipped:  special name
 
-	AdRev.Desktop.MainWindow [AdRev.Desktop]AdRev.Desktop.MainWindow AdRev.Desktop.MainWindow/<>c__DisplayClass18_0::<>4__this ->  
-	AdRev.Desktop.Windows.ProjectWindow [AdRev.Desktop]AdRev.Desktop.Windows.ProjectWindow AdRev.Desktop.MainWindow/<>c__DisplayClass18_0::pWin ->  
+	AdRev.Desktop.MainWindow/<>c [AdRev.Desktop]AdRev.Desktop.MainWindow/<>c AdRev.Desktop.MainWindow/<>c::<>9 ->  
+	System.Func`2<AdRev.Domain.Models.ResearchProject,System.DateTime> [AdRev.Desktop]System.Func`2<AdRev.Domain.Models.ResearchProject,System.DateTime> AdRev.Desktop.MainWindow/<>c::<>9__14_0 ->  
+	System.Func`2<AdRev.Domain.Models.ResearchProject,System.Boolean> [AdRev.Desktop]System.Func`2<AdRev.Domain.Models.ResearchProject,System.Boolean> AdRev.Desktop.MainWindow/<>c::<>9__14_1 ->  
+	System.Func`2<AdRev.Domain.Models.ResearchProject,System.Boolean> [AdRev.Desktop]System.Func`2<AdRev.Domain.Models.ResearchProject,System.Boolean> AdRev.Desktop.MainWindow/<>c::<>9__14_2 ->  
+}
+
+[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c__DisplayClass21_0 -> [AdRev.Desktop]AdRev.Desktop.MainWindow/ 
+{
+	[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c__DisplayClass21_0::<OpenProjectWindow>b__0[1]( [AdRev.Desktop]AdRev.Desktop.Windows.ProjectWindow ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c__DisplayClass21_0::<OpenProjectWindow>b__1[2]( [System.Runtime]System.Object, [System.Runtime]System.EventArgs ) ->  
+
+	[AdRev.Desktop]AdRev.Desktop.MainWindow/<>c__DisplayClass21_0::.ctor[0]( ) skipped:  special name
+
+	AdRev.Domain.Models.ResearchProject [AdRev.Desktop]AdRev.Domain.Models.ResearchProject AdRev.Desktop.MainWindow/<>c__DisplayClass21_0::project ->  
+	AdRev.Desktop.MainWindow [AdRev.Desktop]AdRev.Desktop.MainWindow AdRev.Desktop.MainWindow/<>c__DisplayClass21_0::<>4__this ->  
+	AdRev.Desktop.Windows.ProjectWindow [AdRev.Desktop]AdRev.Desktop.Windows.ProjectWindow AdRev.Desktop.MainWindow/<>c__DisplayClass21_0::win ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.MobileSyncWindow/<>c__DisplayClass13_0 -> [AdRev.Desktop]AdRev.Desktop.MobileSyncWindow/ 
@@ -611,56 +645,27 @@ Renamed Types:
 	System.Runtime.CompilerServices.TaskAwaiter [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter AdRev.Desktop.MobileSyncWindow/<StartServerButton_Click>d__8::<>u__1 ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c -> [AdRev.Desktop]AdRev.Desktop.ProtocolWindow/ 
+[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1 -> [AdRev.Desktop]AdRev.Desktop.ProtocolWindow/ `1
 {
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c::<UpdateSamplingTypes>b__48_0[1]( [AdRev.Domain]AdRev.Domain.Enums.SamplingType ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c::<UpdateSamplingTypes>b__48_1[1]( [AdRev.Domain]AdRev.Domain.Enums.SamplingType ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c::<UpdateQualityGuidelines>b__49_0[1]( [AdRev.Domain]AdRev.Domain.Quality.QualityChecklist ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c::<UpdateQualityGuidelines>b__49_1[1]( [AdRev.Domain]AdRev.Domain.Quality.ChecklistSection ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c::<LoadAuditLogs>b__66_0[1]( [AdRev.Domain]AdRev.Domain.Models.AuditLogEntry ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::System.IDisposable.Dispose[0]( ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::<>m__Finally1[0]( ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::System.Collections.IEnumerator.Reset[0]( ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::System.Collections.Generic.IEnumerable<T>.GetEnumerator[0]( ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::System.Collections.IEnumerable.GetEnumerator[0]( ) ->  
 
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c::.cctor[0]( ) skipped:  special name
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c::.ctor[0]( ) skipped:  special name
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::.ctor[1]( [System.Runtime]System.Int32 ) skipped:  special name
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::MoveNext[0]( ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::System.Collections.Generic.IEnumerator<T>.get_Current[0]( ) skipped:  skipping properties
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::System.Collections.IEnumerator.get_Current[0]( ) skipped:  skipping properties
 
-	AdRev.Desktop.ProtocolWindow/<>c [AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c AdRev.Desktop.ProtocolWindow/<>c::<>9 ->  
-	System.Func`2<AdRev.Domain.Enums.SamplingType,System.Boolean> [AdRev.Desktop]System.Func`2<AdRev.Domain.Enums.SamplingType,System.Boolean> AdRev.Desktop.ProtocolWindow/<>c::<>9__48_0 ->  
-	System.Func`2<AdRev.Domain.Enums.SamplingType,System.Boolean> [AdRev.Desktop]System.Func`2<AdRev.Domain.Enums.SamplingType,System.Boolean> AdRev.Desktop.ProtocolWindow/<>c::<>9__48_1 ->  
-	System.Func`2<AdRev.Domain.Quality.QualityChecklist,System.Collections.Generic.IEnumerable`1<AdRev.Domain.Quality.ChecklistSection>> [AdRev.Desktop]System.Func`2<AdRev.Domain.Quality.QualityChecklist,System.Collections.Generic.IEnumerable`1<AdRev.Domain.Quality.ChecklistSection>> AdRev.Desktop.ProtocolWindow/<>c::<>9__49_0 ->  
-	System.Func`2<AdRev.Domain.Quality.ChecklistSection,System.Collections.Generic.IEnumerable`1<AdRev.Domain.Quality.ChecklistItem>> [AdRev.Desktop]System.Func`2<AdRev.Domain.Quality.ChecklistSection,System.Collections.Generic.IEnumerable`1<AdRev.Domain.Quality.ChecklistItem>> AdRev.Desktop.ProtocolWindow/<>c::<>9__49_1 ->  
-	System.Func`2<AdRev.Domain.Models.AuditLogEntry,System.DateTime> [AdRev.Desktop]System.Func`2<AdRev.Domain.Models.AuditLogEntry,System.DateTime> AdRev.Desktop.ProtocolWindow/<>c::<>9__66_0 ->  
-}
-
-[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c__DisplayClass55_0 -> [AdRev.Desktop]AdRev.Desktop.ProtocolWindow/ 
-{
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c__DisplayClass55_0::<InsertResource_Click>b__0[1]( [AdRev.Domain]AdRev.Domain.Models.ProtocolResource ) ->  
-
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<>c__DisplayClass55_0::.ctor[0]( ) skipped:  special name
-
-	AdRev.Domain.Models.ProtocolResource [AdRev.Desktop]AdRev.Domain.Models.ProtocolResource AdRev.Desktop.ProtocolWindow/<>c__DisplayClass55_0::res ->  
-}
-
-[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1 -> [AdRev.Desktop]AdRev.Desktop.ProtocolWindow/ `1
-{
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::System.IDisposable.Dispose[0]( ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::<>m__Finally1[0]( ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::System.Collections.IEnumerator.Reset[0]( ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::System.Collections.Generic.IEnumerable<T>.GetEnumerator[0]( ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::System.Collections.IEnumerable.GetEnumerator[0]( ) ->  
-
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::.ctor[1]( [System.Runtime]System.Int32 ) skipped:  special name
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::MoveNext[0]( ) skipped:  external base class or interface
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::System.Collections.Generic.IEnumerator<T>.get_Current[0]( ) skipped:  skipping properties
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::System.Collections.IEnumerator.get_Current[0]( ) skipped:  skipping properties
-
-	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::<>1__state ->  
-	T [AdRev.Desktop]T AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::<>2__current ->  
-	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::<>l__initialThreadId ->  
-	System.Windows.DependencyObject [AdRev.Desktop]System.Windows.DependencyObject AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::depObj ->  
-	System.Windows.DependencyObject [AdRev.Desktop]System.Windows.DependencyObject AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::<>3__depObj ->  
-	AdRev.Desktop.ProtocolWindow [AdRev.Desktop]AdRev.Desktop.ProtocolWindow AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::<>4__this ->  
-	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::<i>5__2 ->  
-	System.Windows.DependencyObject [AdRev.Desktop]System.Windows.DependencyObject AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::<child>5__3 ->  
-	System.Collections.Generic.IEnumerator`1<T> [AdRev.Desktop]System.Collections.Generic.IEnumerator`1<T> AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__65`1::<>7__wrap3 ->  
+	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::<>1__state ->  
+	T [AdRev.Desktop]T AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::<>2__current ->  
+	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::<>l__initialThreadId ->  
+	System.Windows.DependencyObject [AdRev.Desktop]System.Windows.DependencyObject AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::depObj ->  
+	System.Windows.DependencyObject [AdRev.Desktop]System.Windows.DependencyObject AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::<>3__depObj ->  
+	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::<i>5__2 ->  
+	System.Windows.DependencyObject [AdRev.Desktop]System.Windows.DependencyObject AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::<child>5__3 ->  
+	System.Collections.Generic.IEnumerator`1<T> [AdRev.Desktop]System.Collections.Generic.IEnumerator`1<T> AdRev.Desktop.ProtocolWindow/<FindVisualChildren>d__57`1::<>7__wrap3 ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.VariableDesignerWindow/<>c -> [AdRev.Desktop]AdRev.Desktop.VariableDesignerWindow/ 
@@ -694,41 +699,41 @@ Renamed Types:
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GeneratePieChart>b__19_0[1]( [System.Runtime]System.Object ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GeneratePieChart>b__19_1[1]( [System.Linq]System.Linq.IGrouping`2<[System.Runtime]System.String,[System.Runtime]System.Object> ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GeneratePieChart>b__19_2[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_0[1]( [System.Runtime]System.Object ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_1[1]( [System.Linq]System.Linq.IGrouping`2<[System.Runtime]System.String,[System.Runtime]System.Object> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_2[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_3[1]( [System.Runtime]System.Object ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_4[1]( [System.Linq]System.Linq.IGrouping`2<[System.Runtime]System.String,[System.Runtime]System.Object> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_5[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_6[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_7[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_8[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_9[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_10[1]( [System.Runtime]System.Object ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_11[1]( [System.Runtime]System.String ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_12[1]( [System.Runtime]System.String ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_13[1]( [System.Runtime]System.Object ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_14[1]( [System.Runtime]System.String ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_15[1]( [System.Runtime]System.String ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_16[1]( [System.Runtime]System.Double ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_18[1]( [System.Runtime]System.Object ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_19[1]( [System.Runtime]System.String ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_20[1]( [System.Runtime]System.String ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_21[1]( [System.Runtime]System.Double ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_22[1]( [System.Runtime]System.Double ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_23[1]( [System.Linq]System.Linq.IGrouping`2<[System.Runtime]System.Double,[System.Runtime]System.Double> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_24[1]( [AdRev.Desktop].<>f__AnonymousType5`2<[System.Runtime]System.Double,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_25[1]( [AdRev.Desktop].<>f__AnonymousType5`2<[System.Runtime]System.Double,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_26[1]( [AdRev.Desktop].<>f__AnonymousType5`2<[System.Runtime]System.Double,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_27[1]( [AdRev.Desktop].<>f__AnonymousType5`2<[System.Runtime]System.Double,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__21_28[1]( [AdRev.Desktop].<>f__AnonymousType5`2<[System.Runtime]System.Double,[System.Runtime]System.Int32> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GenerateFrequencyTable>b__23_0[1]( [System.Runtime]System.Object ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GenerateFrequencyTable>b__23_2[1]( [AdRev.Desktop].<>f__AnonymousType6`3<[System.Runtime]System.String,[System.Runtime]System.Int32,[System.Runtime]System.Double> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GenerateFrequencyTable>b__23_3[1]( [AdRev.Desktop].<>f__AnonymousType6`3<[System.Runtime]System.String,[System.Runtime]System.Int32,[System.Runtime]System.Double> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GenerateFrequencyTable>b__23_4[1]( [AdRev.Desktop].<>f__AnonymousType6`3<[System.Runtime]System.String,[System.Runtime]System.Int32,[System.Runtime]System.Double> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GenerateFrequencyTable>b__23_5[1]( [AdRev.Desktop].<>f__AnonymousType6`3<[System.Runtime]System.String,[System.Runtime]System.Int32,[System.Runtime]System.Double> ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<RecodeVariable_Click>b__29_1[1]( [System.Runtime]System.Object ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<RecodeVariable_Click>b__29_2[1]( [System.Runtime]System.Object ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_0[1]( [System.Runtime]System.Object ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_1[1]( [System.Linq]System.Linq.IGrouping`2<[System.Runtime]System.String,[System.Runtime]System.Object> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_2[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_3[1]( [System.Runtime]System.Object ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_4[1]( [System.Linq]System.Linq.IGrouping`2<[System.Runtime]System.String,[System.Runtime]System.Object> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_5[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_6[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_7[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_8[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_9[1]( [AdRev.Desktop].<>f__AnonymousType4`2<[System.Runtime]System.String,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_10[1]( [System.Runtime]System.Object ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_11[1]( [System.Runtime]System.String ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_12[1]( [System.Runtime]System.String ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_13[1]( [System.Runtime]System.Object ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_14[1]( [System.Runtime]System.String ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_15[1]( [System.Runtime]System.String ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_16[1]( [System.Runtime]System.Double ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_18[1]( [System.Runtime]System.Object ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_19[1]( [System.Runtime]System.String ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_20[1]( [System.Runtime]System.String ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_21[1]( [System.Runtime]System.Double ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_22[1]( [System.Runtime]System.Double ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_23[1]( [System.Linq]System.Linq.IGrouping`2<[System.Runtime]System.Double,[System.Runtime]System.Double> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_24[1]( [AdRev.Desktop].<>f__AnonymousType5`2<[System.Runtime]System.Double,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_25[1]( [AdRev.Desktop].<>f__AnonymousType5`2<[System.Runtime]System.Double,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_26[1]( [AdRev.Desktop].<>f__AnonymousType5`2<[System.Runtime]System.Double,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_27[1]( [AdRev.Desktop].<>f__AnonymousType5`2<[System.Runtime]System.Double,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<ReplaceChart>b__22_28[1]( [AdRev.Desktop].<>f__AnonymousType5`2<[System.Runtime]System.Double,[System.Runtime]System.Int32> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GenerateFrequencyTable>b__24_0[1]( [System.Runtime]System.Object ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GenerateFrequencyTable>b__24_2[1]( [AdRev.Desktop].<>f__AnonymousType6`3<[System.Runtime]System.String,[System.Runtime]System.Int32,[System.Runtime]System.Double> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GenerateFrequencyTable>b__24_3[1]( [AdRev.Desktop].<>f__AnonymousType6`3<[System.Runtime]System.String,[System.Runtime]System.Int32,[System.Runtime]System.Double> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GenerateFrequencyTable>b__24_4[1]( [AdRev.Desktop].<>f__AnonymousType6`3<[System.Runtime]System.String,[System.Runtime]System.Int32,[System.Runtime]System.Double> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<GenerateFrequencyTable>b__24_5[1]( [AdRev.Desktop].<>f__AnonymousType6`3<[System.Runtime]System.String,[System.Runtime]System.Int32,[System.Runtime]System.Double> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<RecodeVariable_Click>b__30_1[1]( [System.Runtime]System.Object ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::<RecodeVariable_Click>b__30_2[1]( [System.Runtime]System.Object ) ->  
 
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::.cctor[0]( ) skipped:  special name
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c::.ctor[0]( ) skipped:  special name
@@ -748,41 +753,41 @@ Renamed Types:
 	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__19_0 ->  
 	System.Func`2<System.Linq.IGrouping`2<System.String,System.Object>,<>f__AnonymousType4`2<System.String,System.Int32>> [AdRev.Desktop]System.Func`2<System.Linq.IGrouping`2<System.String,System.Object>,<>f__AnonymousType4`2<System.String,System.Int32>> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__19_1 ->  
 	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__19_2 ->  
-	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_0 ->  
-	System.Func`2<System.Linq.IGrouping`2<System.String,System.Object>,<>f__AnonymousType4`2<System.String,System.Int32>> [AdRev.Desktop]System.Func`2<System.Linq.IGrouping`2<System.String,System.Object>,<>f__AnonymousType4`2<System.String,System.Int32>> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_1 ->  
-	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_2 ->  
-	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_3 ->  
-	System.Func`2<System.Linq.IGrouping`2<System.String,System.Object>,<>f__AnonymousType4`2<System.String,System.Int32>> [AdRev.Desktop]System.Func`2<System.Linq.IGrouping`2<System.String,System.Object>,<>f__AnonymousType4`2<System.String,System.Int32>> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_4 ->  
-	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_5 ->  
-	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_6 ->  
-	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.String> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_7 ->  
-	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_8 ->  
-	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.String> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_9 ->  
-	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_10 ->  
-	System.Func`2<System.String,System.Boolean> [AdRev.Desktop]System.Func`2<System.String,System.Boolean> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_11 ->  
-	System.Func`2<System.String,System.Double> [AdRev.Desktop]System.Func`2<System.String,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_12 ->  
-	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_13 ->  
-	System.Func`2<System.String,System.Boolean> [AdRev.Desktop]System.Func`2<System.String,System.Boolean> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_14 ->  
-	System.Func`2<System.String,System.Double> [AdRev.Desktop]System.Func`2<System.String,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_15 ->  
-	System.Func`2<System.Double,System.Double> [AdRev.Desktop]System.Func`2<System.Double,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_16 ->  
-	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_18 ->  
-	System.Func`2<System.String,System.Boolean> [AdRev.Desktop]System.Func`2<System.String,System.Boolean> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_19 ->  
-	System.Func`2<System.String,System.Double> [AdRev.Desktop]System.Func`2<System.String,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_20 ->  
-	System.Func`2<System.Double,System.Double> [AdRev.Desktop]System.Func`2<System.Double,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_21 ->  
-	System.Func`2<System.Double,System.Double> [AdRev.Desktop]System.Func`2<System.Double,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_22 ->  
-	System.Func`2<System.Linq.IGrouping`2<System.Double,System.Double>,<>f__AnonymousType5`2<System.Double,System.Int32>> [AdRev.Desktop]System.Func`2<System.Linq.IGrouping`2<System.Double,System.Double>,<>f__AnonymousType5`2<System.Double,System.Int32>> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_23 ->  
-	System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Double> [AdRev.Desktop]System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_24 ->  
-	System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_25 ->  
-	System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.String> [AdRev.Desktop]System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_26 ->  
-	System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_27 ->  
-	System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.String> [AdRev.Desktop]System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__21_28 ->  
-	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__23_0 ->  
-	System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__23_2 ->  
-	System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__23_3 ->  
-	System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Double> [AdRev.Desktop]System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__23_4 ->  
-	System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Collections.Generic.KeyValuePair`2<System.String,System.Double>> [AdRev.Desktop]System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Collections.Generic.KeyValuePair`2<System.String,System.Double>> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__23_5 ->  
-	System.Func`2<System.Object,System.Boolean> [AdRev.Desktop]System.Func`2<System.Object,System.Boolean> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__29_1 ->  
-	System.Func`2<System.Object,System.Object> [AdRev.Desktop]System.Func`2<System.Object,System.Object> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__29_2 ->  
+	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_0 ->  
+	System.Func`2<System.Linq.IGrouping`2<System.String,System.Object>,<>f__AnonymousType4`2<System.String,System.Int32>> [AdRev.Desktop]System.Func`2<System.Linq.IGrouping`2<System.String,System.Object>,<>f__AnonymousType4`2<System.String,System.Int32>> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_1 ->  
+	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_2 ->  
+	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_3 ->  
+	System.Func`2<System.Linq.IGrouping`2<System.String,System.Object>,<>f__AnonymousType4`2<System.String,System.Int32>> [AdRev.Desktop]System.Func`2<System.Linq.IGrouping`2<System.String,System.Object>,<>f__AnonymousType4`2<System.String,System.Int32>> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_4 ->  
+	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_5 ->  
+	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_6 ->  
+	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.String> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_7 ->  
+	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_8 ->  
+	System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.String> [AdRev.Desktop]System.Func`2<<>f__AnonymousType4`2<System.String,System.Int32>,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_9 ->  
+	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_10 ->  
+	System.Func`2<System.String,System.Boolean> [AdRev.Desktop]System.Func`2<System.String,System.Boolean> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_11 ->  
+	System.Func`2<System.String,System.Double> [AdRev.Desktop]System.Func`2<System.String,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_12 ->  
+	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_13 ->  
+	System.Func`2<System.String,System.Boolean> [AdRev.Desktop]System.Func`2<System.String,System.Boolean> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_14 ->  
+	System.Func`2<System.String,System.Double> [AdRev.Desktop]System.Func`2<System.String,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_15 ->  
+	System.Func`2<System.Double,System.Double> [AdRev.Desktop]System.Func`2<System.Double,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_16 ->  
+	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_18 ->  
+	System.Func`2<System.String,System.Boolean> [AdRev.Desktop]System.Func`2<System.String,System.Boolean> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_19 ->  
+	System.Func`2<System.String,System.Double> [AdRev.Desktop]System.Func`2<System.String,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_20 ->  
+	System.Func`2<System.Double,System.Double> [AdRev.Desktop]System.Func`2<System.Double,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_21 ->  
+	System.Func`2<System.Double,System.Double> [AdRev.Desktop]System.Func`2<System.Double,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_22 ->  
+	System.Func`2<System.Linq.IGrouping`2<System.Double,System.Double>,<>f__AnonymousType5`2<System.Double,System.Int32>> [AdRev.Desktop]System.Func`2<System.Linq.IGrouping`2<System.Double,System.Double>,<>f__AnonymousType5`2<System.Double,System.Int32>> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_23 ->  
+	System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Double> [AdRev.Desktop]System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_24 ->  
+	System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_25 ->  
+	System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.String> [AdRev.Desktop]System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_26 ->  
+	System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_27 ->  
+	System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.String> [AdRev.Desktop]System.Func`2<<>f__AnonymousType5`2<System.Double,System.Int32>,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__22_28 ->  
+	System.Func`2<System.Object,System.String> [AdRev.Desktop]System.Func`2<System.Object,System.String> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__24_0 ->  
+	System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__24_2 ->  
+	System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Int32> [AdRev.Desktop]System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Int32> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__24_3 ->  
+	System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Double> [AdRev.Desktop]System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Double> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__24_4 ->  
+	System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Collections.Generic.KeyValuePair`2<System.String,System.Double>> [AdRev.Desktop]System.Func`2<<>f__AnonymousType6`3<System.String,System.Int32,System.Double>,System.Collections.Generic.KeyValuePair`2<System.String,System.Double>> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__24_5 ->  
+	System.Func`2<System.Object,System.Boolean> [AdRev.Desktop]System.Func`2<System.Object,System.Boolean> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__30_1 ->  
+	System.Func`2<System.Object,System.Object> [AdRev.Desktop]System.Func`2<System.Object,System.Object> AdRev.Desktop.Views.Project.AnalysisView/<>c::<>9__30_2 ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass12_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
@@ -860,70 +865,70 @@ Renamed Types:
 	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass20_0::settingsBtn ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
 {
-
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_0::.ctor[0]( ) skipped:  special name
-
-	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_0::binCount ->  
-	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_0::i ->  
-}
-
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_1 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
-{
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_1::<ReplaceChart>b__17[1]( [System.Runtime]System.Double ) ->  
-
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_1::.ctor[0]( ) skipped:  special name
-
-	System.Double [AdRev.Desktop]System.Double AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_1::l ->  
-	System.Double [AdRev.Desktop]System.Double AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_1::h ->  
-	AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_0 [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_0 AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass21_1::CS$<>8__locals1 ->  
-}
-
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
-{
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_0::<GenerateDescriptiveTable>b__0[1]( [System.Runtime]System.Double ) ->  
 
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_0::.ctor[0]( ) skipped:  special name
 
-	System.Double [AdRev.Desktop]System.Double AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_0::mean ->  
+	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_0::binCount ->  
+	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_0::i ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass23_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_1 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
 {
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass23_0::<GenerateFrequencyTable>b__1[1]( [System.Linq]System.Linq.IGrouping`2<[System.Runtime]System.String,[System.Runtime]System.Object> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_1::<ReplaceChart>b__17[1]( [System.Runtime]System.Double ) ->  
+
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_1::.ctor[0]( ) skipped:  special name
+
+	System.Double [AdRev.Desktop]System.Double AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_1::l ->  
+	System.Double [AdRev.Desktop]System.Double AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_1::h ->  
+	AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_0 [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_0 AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass22_1::CS$<>8__locals1 ->  
+}
+
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass23_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
+{
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass23_0::<GenerateDescriptiveTable>b__0[1]( [System.Runtime]System.Double ) ->  
 
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass23_0::.ctor[0]( ) skipped:  special name
 
-	System.Collections.Generic.List`1<System.Object> [AdRev.Desktop]System.Collections.Generic.List`1<System.Object> AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass23_0::values ->  
+	System.Double [AdRev.Desktop]System.Double AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass23_0::mean ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass24_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass24_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
 {
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass24_0::<AddMovableInterpretation>b__0[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass24_0::<GenerateFrequencyTable>b__1[1]( [System.Linq]System.Linq.IGrouping`2<[System.Runtime]System.String,[System.Runtime]System.Object> ) ->  
 
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass24_0::.ctor[0]( ) skipped:  special name
 
-	AdRev.Desktop.Views.Project.AnalysisView [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass24_0::<>4__this ->  
-	System.Windows.Documents.BlockUIContainer [AdRev.Desktop]System.Windows.Documents.BlockUIContainer AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass24_0::container ->  
+	System.Collections.Generic.List`1<System.Object> [AdRev.Desktop]System.Collections.Generic.List`1<System.Object> AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass24_0::values ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass29_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass25_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
 {
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass29_0::<RecodeVariable_Click>b__0[1]( [System.Collections]System.Collections.Generic.Dictionary`2<[System.Runtime]System.String,[System.Runtime]System.Object> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass25_0::<AddMovableInterpretation>b__0[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
 
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass29_0::.ctor[0]( ) skipped:  special name
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass25_0::.ctor[0]( ) skipped:  special name
 
-	AdRev.Domain.Variables.StudyVariable [AdRev.Desktop]AdRev.Domain.Variables.StudyVariable AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass29_0::selectedVar ->  
+	AdRev.Desktop.Views.Project.AnalysisView [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass25_0::<>4__this ->  
+	System.Windows.Documents.BlockUIContainer [AdRev.Desktop]System.Windows.Documents.BlockUIContainer AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass25_0::container ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass29_1 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/​
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass30_0 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/ 
 {
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass29_1::<RecodeVariable_Click>b__3[1]( [AdRev.Domain]AdRev.Domain.Variables.StudyVariable ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass30_0::<RecodeVariable_Click>b__0[1]( [System.Collections]System.Collections.Generic.Dictionary`2<[System.Runtime]System.String,[System.Runtime]System.Object> ) ->  
 
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass29_1::.ctor[0]( ) skipped:  special name
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass30_0::.ctor[0]( ) skipped:  special name
 
-	System.String [AdRev.Desktop]System.String AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass29_1::newName ->  
+	AdRev.Domain.Variables.StudyVariable [AdRev.Desktop]AdRev.Domain.Variables.StudyVariable AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass30_0::selectedVar ->  
+}
+
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass30_1 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/​
+{
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass30_1::<RecodeVariable_Click>b__3[1]( [AdRev.Domain]AdRev.Domain.Variables.StudyVariable ) ->  
+
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass30_1::.ctor[0]( ) skipped:  special name
+
+	System.String [AdRev.Desktop]System.String AdRev.Desktop.Views.Project.AnalysisView/<>c__DisplayClass30_1::newName ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ExecuteAnalysis>d__17 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/‐
@@ -938,15 +943,15 @@ Renamed Types:
 	AdRev.Desktop.Views.Project.AnalysisView [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView AdRev.Desktop.Views.Project.AnalysisView/<ExecuteAnalysis>d__17::<>4__this ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__28 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/‑
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__29 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/‑
 {
 
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__28::MoveNext[0]( ) skipped:  external base class or interface
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__28::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__29::MoveNext[0]( ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__29::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
 
-	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__28::<>1__state ->  
-	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [AdRev.Desktop]System.Runtime.CompilerServices.AsyncVoidMethodBuilder AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__28::<>t__builder ->  
-	System.Runtime.CompilerServices.TaskAwaiter [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__28::<>u__1 ->  
+	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__29::<>1__state ->  
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [AdRev.Desktop]System.Runtime.CompilerServices.AsyncVoidMethodBuilder AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__29::<>t__builder ->  
+	System.Runtime.CompilerServices.TaskAwaiter [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter AdRev.Desktop.Views.Project.AnalysisView/<ExportReport_Click>d__29::<>u__1 ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ImportData_Click>d__12 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/‒
@@ -965,36 +970,36 @@ Renamed Types:
 	System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<System.Collections.Generic.Dictionary`2<System.String,System.Object>>> [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter`1<System.Collections.Generic.List`1<System.Collections.Generic.Dictionary`2<System.String,System.Object>>> AdRev.Desktop.Views.Project.AnalysisView/<ImportData_Click>d__12::<>u__2 ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__29 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/–
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__30 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/–
 {
 
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__29::MoveNext[0]( ) skipped:  external base class or interface
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__29::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__30::MoveNext[0]( ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__30::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
 
-	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__29::<>1__state ->  
-	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [AdRev.Desktop]System.Runtime.CompilerServices.AsyncVoidMethodBuilder AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__29::<>t__builder ->  
-	System.Object [AdRev.Desktop]System.Object AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__29::sender ->  
-	AdRev.Desktop.Views.Project.AnalysisView [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__29::<>4__this ->  
-	System.Object [AdRev.Desktop]System.Object AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__29::<>7__wrap1 ->  
-	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__29::<>7__wrap2 ->  
-	System.Runtime.CompilerServices.TaskAwaiter [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__29::<>u__1 ->  
+	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__30::<>1__state ->  
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [AdRev.Desktop]System.Runtime.CompilerServices.AsyncVoidMethodBuilder AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__30::<>t__builder ->  
+	System.Object [AdRev.Desktop]System.Object AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__30::sender ->  
+	AdRev.Desktop.Views.Project.AnalysisView [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__30::<>4__this ->  
+	System.Object [AdRev.Desktop]System.Object AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__30::<>7__wrap1 ->  
+	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__30::<>7__wrap2 ->  
+	System.Runtime.CompilerServices.TaskAwaiter [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter AdRev.Desktop.Views.Project.AnalysisView/<RecodeVariable_Click>d__30::<>u__1 ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/—
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/—
 {
 
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::MoveNext[0]( ) skipped:  external base class or interface
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::MoveNext[0]( ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
 
-	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::<>1__state ->  
-	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [AdRev.Desktop]System.Runtime.CompilerServices.AsyncVoidMethodBuilder AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::<>t__builder ->  
-	System.Windows.Controls.Grid [AdRev.Desktop]System.Windows.Controls.Grid AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::grid ->  
-	System.String [AdRev.Desktop]System.String AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::type ->  
-	System.Collections.Generic.List`1<System.Object> [AdRev.Desktop]System.Collections.Generic.List`1<System.Object> AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::values ->  
-	AdRev.Domain.Variables.StudyVariable [AdRev.Desktop]AdRev.Domain.Variables.StudyVariable AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::variable ->  
-	LiveCharts.Wpf.Charts.Base.Chart [AdRev.Desktop]LiveCharts.Wpf.Charts.Base.Chart AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::<newChart>5__2 ->  
-	System.Linq.IOrderedEnumerable`1<<>f__AnonymousType5`2<System.Double,System.Int32>> [AdRev.Desktop]System.Linq.IOrderedEnumerable`1<<>f__AnonymousType5`2<System.Double,System.Int32>> AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::<groups>5__3 ->  
-	System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean> [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean> AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__21::<>u__1 ->  
+	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::<>1__state ->  
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [AdRev.Desktop]System.Runtime.CompilerServices.AsyncVoidMethodBuilder AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::<>t__builder ->  
+	System.Windows.Controls.Grid [AdRev.Desktop]System.Windows.Controls.Grid AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::grid ->  
+	System.String [AdRev.Desktop]System.String AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::type ->  
+	System.Collections.Generic.List`1<System.Object> [AdRev.Desktop]System.Collections.Generic.List`1<System.Object> AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::values ->  
+	AdRev.Domain.Variables.StudyVariable [AdRev.Desktop]AdRev.Domain.Variables.StudyVariable AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::variable ->  
+	LiveCharts.Wpf.Charts.Base.Chart [AdRev.Desktop]LiveCharts.Wpf.Charts.Base.Chart AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::<newChart>5__2 ->  
+	System.Linq.IOrderedEnumerable`1<<>f__AnonymousType5`2<System.Double,System.Int32>> [AdRev.Desktop]System.Linq.IOrderedEnumerable`1<<>f__AnonymousType5`2<System.Double,System.Int32>> AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::<groups>5__3 ->  
+	System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean> [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter`1<System.Boolean> AdRev.Desktop.Views.Project.AnalysisView/<ReplaceChart>d__22::<>u__1 ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<RunPlanItem_Click>d__16 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/―
@@ -1011,16 +1016,16 @@ Renamed Types:
 	System.Runtime.CompilerServices.TaskAwaiter [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter AdRev.Desktop.Views.Project.AnalysisView/<RunPlanItem_Click>d__16::<>u__1 ->  
 }
 
-[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__27 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/•
+[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__28 -> [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/•
 {
 
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__27::MoveNext[0]( ) skipped:  external base class or interface
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__27::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__28::MoveNext[0]( ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__28::SetStateMachine[1]( [System.Runtime]System.Runtime.CompilerServices.IAsyncStateMachine ) skipped:  external base class or interface
 
-	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__27::<>1__state ->  
-	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [AdRev.Desktop]System.Runtime.CompilerServices.AsyncVoidMethodBuilder AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__27::<>t__builder ->  
-	AdRev.Desktop.Views.Project.AnalysisView [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__27::<>4__this ->  
-	System.Runtime.CompilerServices.TaskAwaiter [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__27::<>u__1 ->  
+	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__28::<>1__state ->  
+	System.Runtime.CompilerServices.AsyncVoidMethodBuilder [AdRev.Desktop]System.Runtime.CompilerServices.AsyncVoidMethodBuilder AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__28::<>t__builder ->  
+	AdRev.Desktop.Views.Project.AnalysisView [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__28::<>4__this ->  
+	System.Runtime.CompilerServices.TaskAwaiter [AdRev.Desktop]System.Runtime.CompilerServices.TaskAwaiter AdRev.Desktop.Views.Project.AnalysisView/<SaveToProject_Click>d__28::<>u__1 ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.Views.Project.DataEntryView/<>c -> [AdRev.Desktop]AdRev.Desktop.Views.Project.DataEntryView/ 
@@ -1307,14 +1312,16 @@ Renamed Types:
 [AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c -> [AdRev.Desktop]AdRev.Desktop.Services.WordExportService/ 
 {
 	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c::<ExportGlobalReport>b__4_1[1]( [AdRev.Domain]AdRev.Domain.Models.Citation ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c::<ExportVariableSheetToWord>b__5_1[1]( [AdRev.Domain]AdRev.Domain.Variables.StudyVariable ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c::<ExportAppendicesOnly>b__5_1[2]( [AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix, [System.Runtime]System.Int32 ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c::<ExportVariableSheetToWord>b__6_1[1]( [AdRev.Domain]AdRev.Domain.Variables.StudyVariable ) ->  
 
 	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c::.cctor[0]( ) skipped:  special name
 	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c::.ctor[0]( ) skipped:  special name
 
 	AdRev.Desktop.Services.WordExportService/<>c [AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c AdRev.Desktop.Services.WordExportService/<>c::<>9 ->  
 	System.Func`2<AdRev.Domain.Models.Citation,System.String> [AdRev.Desktop]System.Func`2<AdRev.Domain.Models.Citation,System.String> AdRev.Desktop.Services.WordExportService/<>c::<>9__4_1 ->  
-	System.Func`2<AdRev.Domain.Variables.StudyVariable,System.String> [AdRev.Desktop]System.Func`2<AdRev.Domain.Variables.StudyVariable,System.String> AdRev.Desktop.Services.WordExportService/<>c::<>9__5_1 ->  
+	System.Func`3<AdRev.Domain.Models.ProtocolAppendix,System.Int32,System.ValueTuple`2<AdRev.Domain.Models.ProtocolAppendix,System.Int32>> [AdRev.Desktop]System.Func`3<AdRev.Domain.Models.ProtocolAppendix,System.Int32,System.ValueTuple`2<AdRev.Domain.Models.ProtocolAppendix,System.Int32>> AdRev.Desktop.Services.WordExportService/<>c::<>9__5_1 ->  
+	System.Func`2<AdRev.Domain.Variables.StudyVariable,System.String> [AdRev.Desktop]System.Func`2<AdRev.Domain.Variables.StudyVariable,System.String> AdRev.Desktop.Services.WordExportService/<>c::<>9__6_1 ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c__DisplayClass3_0 -> [AdRev.Desktop]AdRev.Desktop.Services.WordExportService/ 
@@ -1339,12 +1346,23 @@ Renamed Types:
 
 [AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c__DisplayClass5_0 -> [AdRev.Desktop]AdRev.Desktop.Services.WordExportService/ 
 {
-	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c__DisplayClass5_0::<ExportVariableSheetToWord>b__0[1]( [DocumentFormat.OpenXml]DocumentFormat.OpenXml.Wordprocessing.Body ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c__DisplayClass5_0::<ExportAppendicesOnly>b__0[1]( [DocumentFormat.OpenXml]DocumentFormat.OpenXml.Wordprocessing.Body ) ->  
 
 	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c__DisplayClass5_0::.ctor[0]( ) skipped:  special name
 
 	AdRev.Desktop.Services.WordExportService [AdRev.Desktop]AdRev.Desktop.Services.WordExportService AdRev.Desktop.Services.WordExportService/<>c__DisplayClass5_0::<>4__this ->  
-	AdRev.Domain.Protocols.ResearchProtocol [AdRev.Desktop]AdRev.Domain.Protocols.ResearchProtocol AdRev.Desktop.Services.WordExportService/<>c__DisplayClass5_0::protocol ->  
+	System.String [AdRev.Desktop]System.String AdRev.Desktop.Services.WordExportService/<>c__DisplayClass5_0::projectTitle ->  
+	System.Collections.Generic.List`1<AdRev.Domain.Models.ProtocolAppendix> [AdRev.Desktop]System.Collections.Generic.List`1<AdRev.Domain.Models.ProtocolAppendix> AdRev.Desktop.Services.WordExportService/<>c__DisplayClass5_0::appendices ->  
+}
+
+[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c__DisplayClass6_0 -> [AdRev.Desktop]AdRev.Desktop.Services.WordExportService/ 
+{
+	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c__DisplayClass6_0::<ExportVariableSheetToWord>b__0[1]( [DocumentFormat.OpenXml]DocumentFormat.OpenXml.Wordprocessing.Body ) ->  
+
+	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService/<>c__DisplayClass6_0::.ctor[0]( ) skipped:  special name
+
+	AdRev.Desktop.Services.WordExportService [AdRev.Desktop]AdRev.Desktop.Services.WordExportService AdRev.Desktop.Services.WordExportService/<>c__DisplayClass6_0::<>4__this ->  
+	AdRev.Domain.Protocols.ResearchProtocol [AdRev.Desktop]AdRev.Domain.Protocols.ResearchProtocol AdRev.Desktop.Services.WordExportService/<>c__DisplayClass6_0::protocol ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.MobileSync.Services.MobileApiServer/<<StartAsync>b__16_0>d -> [AdRev.Desktop]AdRev.Desktop.MobileSync.Services.MobileApiServer/ 
@@ -1702,9 +1720,9 @@ Skipped Types:
 	[AdRev.Domain]AdRev.Domain.Variables.StudyVariable::set_DefaultLatitude[1]( [System.Runtime]System.Nullable`1<[System.Runtime]System.Double> ) skipped:  skipping properties
 	[AdRev.Domain]AdRev.Domain.Variables.StudyVariable::get_DefaultLongitude[0]( ) skipped:  skipping properties
 	[AdRev.Domain]AdRev.Domain.Variables.StudyVariable::set_DefaultLongitude[1]( [System.Runtime]System.Nullable`1<[System.Runtime]System.Double> ) skipped:  skipping properties
-	[AdRev.Domain]AdRev.Domain.Variables.StudyVariable::.ctor[0]( ) skipped:  special name
 	[AdRev.Domain]AdRev.Domain.Variables.StudyVariable::get_RecodingInstructions[0]( ) skipped:  skipping properties
 	[AdRev.Domain]AdRev.Domain.Variables.StudyVariable::set_RecodingInstructions[1]( [System.Collections]System.Collections.Generic.List`1<[AdRev.Domain]AdRev.Domain.Variables.RecodeInstruction> ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Variables.StudyVariable::.ctor[0]( ) skipped:  special name
 	[AdRev.Domain]AdRev.Domain.Variables.StudyVariable::add_PropertyChanged[1]( [System.ObjectModel]System.ComponentModel.PropertyChangedEventHandler ) skipped:  external base class or interface
 	[AdRev.Domain]AdRev.Domain.Variables.StudyVariable::remove_PropertyChanged[1]( [System.ObjectModel]System.ComponentModel.PropertyChangedEventHandler ) skipped:  external base class or interface
 	[AdRev.Domain]AdRev.Domain.Variables.StudyVariable::OnPropertyChanged[1]( [System.Runtime]System.String ) skipped:  KeepPublicApi option in configuration
@@ -1893,6 +1911,8 @@ Skipped Types:
 	[AdRev.Domain]AdRev.Domain.Protocols.ResearchProtocol::set_Citations[1]( [System.Collections]System.Collections.Generic.List`1<[AdRev.Domain]AdRev.Domain.Models.Citation> ) skipped:  skipping properties
 	[AdRev.Domain]AdRev.Domain.Protocols.ResearchProtocol::get_Resources[0]( ) skipped:  skipping properties
 	[AdRev.Domain]AdRev.Domain.Protocols.ResearchProtocol::set_Resources[1]( [System.Collections]System.Collections.Generic.List`1<[AdRev.Domain]AdRev.Domain.Models.ProtocolResource> ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Protocols.ResearchProtocol::get_Appendices[0]( ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Protocols.ResearchProtocol::set_Appendices[1]( [System.Collections]System.Collections.Generic.List`1<[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix> ) skipped:  skipping properties
 	[AdRev.Domain]AdRev.Domain.Protocols.ResearchProtocol::.ctor[0]( ) skipped:  special name
 
 	System.String [AdRev.Domain]System.String AdRev.Domain.Protocols.ResearchProtocol::<Id>k__BackingField ->  
@@ -1940,6 +1960,7 @@ Skipped Types:
 	AdRev.Domain.Enums.ReferenceStyle [AdRev.Domain]AdRev.Domain.Enums.ReferenceStyle AdRev.Domain.Protocols.ResearchProtocol::<ReferenceStyle>k__BackingField ->  
 	System.Collections.Generic.List`1<AdRev.Domain.Models.Citation> [AdRev.Domain]System.Collections.Generic.List`1<AdRev.Domain.Models.Citation> AdRev.Domain.Protocols.ResearchProtocol::<Citations>k__BackingField ->  
 	System.Collections.Generic.List`1<AdRev.Domain.Models.ProtocolResource> [AdRev.Domain]System.Collections.Generic.List`1<AdRev.Domain.Models.ProtocolResource> AdRev.Domain.Protocols.ResearchProtocol::<Resources>k__BackingField ->  
+	System.Collections.Generic.List`1<AdRev.Domain.Models.ProtocolAppendix> [AdRev.Domain]System.Collections.Generic.List`1<AdRev.Domain.Models.ProtocolAppendix> AdRev.Domain.Protocols.ResearchProtocol::<Appendices>k__BackingField ->  
 }
 
 [AdRev.Domain]AdRev.Domain.Models.AnalysisPlanItem skipped:  KeepPublicApi option in configuration
@@ -2271,6 +2292,29 @@ Skipped Types:
 	System.String [AdRev.Domain]System.String AdRev.Domain.Models.LicenseMetadata::<RegisteredEmail>k__BackingField ->  
 	System.String [AdRev.Domain]System.String AdRev.Domain.Models.LicenseMetadata::<FeaturesLabel>k__BackingField ->  
 	System.String [AdRev.Domain]System.String AdRev.Domain.Models.LicenseMetadata::<Signature>k__BackingField ->  
+}
+
+[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix skipped:  KeepPublicApi option in configuration
+{
+
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::ToString[0]( ) skipped:  external base class or interface
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::get_Id[0]( ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::set_Id[1]( [System.Runtime]System.String ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::get_Title[0]( ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::set_Title[1]( [System.Runtime]System.String ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::get_Type[0]( ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::set_Type[1]( [AdRev.Domain]AdRev.Domain.Enums.AppendixType ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::get_Content[0]( ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::set_Content[1]( [System.Runtime]System.String ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::get_FilePath[0]( ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::set_FilePath[1]( [System.Runtime]System.String ) skipped:  skipping properties
+	[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix::.ctor[0]( ) skipped:  special name
+
+	System.String [AdRev.Domain]System.String AdRev.Domain.Models.ProtocolAppendix::<Id>k__BackingField ->  
+	System.String [AdRev.Domain]System.String AdRev.Domain.Models.ProtocolAppendix::<Title>k__BackingField ->  
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Models.ProtocolAppendix::<Type>k__BackingField ->  
+	System.String [AdRev.Domain]System.String AdRev.Domain.Models.ProtocolAppendix::<Content>k__BackingField ->  
+	System.String [AdRev.Domain]System.String AdRev.Domain.Models.ProtocolAppendix::<FilePath>k__BackingField ->  
 }
 
 [AdRev.Domain]AdRev.Domain.Models.ResourceType skipped:  KeepPublicApi option in configuration
@@ -2768,6 +2812,25 @@ Skipped Types:
 	AdRev.Domain.Enums.AcademicLevel [AdRev.Domain]AdRev.Domain.Enums.AcademicLevel AdRev.Domain.Enums.AcademicLevel::Other skipped:  KeepPublicApi option in configuration
 }
 
+[AdRev.Domain]AdRev.Domain.Enums.AppendixType skipped:  KeepPublicApi option in configuration
+{
+
+	System.Int32 [AdRev.Domain]System.Int32 AdRev.Domain.Enums.AppendixType::value__ skipped:  special name
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::Questionnaire skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::InterviewGuide skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::InformedConsent skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::InformedAssent skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::ObservationGrid skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::DataCollectionForm skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::EthicalApproval skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::InformationNotice skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::ConfidentialityAgreement skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::SearchStrategy skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::BudgetData skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::CurriculumVitae skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.AppendixType [AdRev.Domain]AdRev.Domain.Enums.AppendixType AdRev.Domain.Enums.AppendixType::Other skipped:  KeepPublicApi option in configuration
+}
+
 [AdRev.Domain]AdRev.Domain.Enums.EpidemiologicalStudyType skipped:  KeepPublicApi option in configuration
 {
 
@@ -2813,6 +2876,7 @@ Skipped Types:
 	AdRev.Domain.Enums.QualitativeApproach [AdRev.Domain]AdRev.Domain.Enums.QualitativeApproach AdRev.Domain.Enums.QualitativeApproach::Descriptive skipped:  KeepPublicApi option in configuration
 	AdRev.Domain.Enums.QualitativeApproach [AdRev.Domain]AdRev.Domain.Enums.QualitativeApproach AdRev.Domain.Enums.QualitativeApproach::Inductive skipped:  KeepPublicApi option in configuration
 	AdRev.Domain.Enums.QualitativeApproach [AdRev.Domain]AdRev.Domain.Enums.QualitativeApproach AdRev.Domain.Enums.QualitativeApproach::Deductive skipped:  KeepPublicApi option in configuration
+	AdRev.Domain.Enums.QualitativeApproach [AdRev.Domain]AdRev.Domain.Enums.QualitativeApproach AdRev.Domain.Enums.QualitativeApproach::Mixed skipped:  KeepPublicApi option in configuration
 }
 
 [AdRev.Domain]AdRev.Domain.Enums.ReferenceStyle skipped:  KeepPublicApi option in configuration
@@ -3121,7 +3185,7 @@ Skipped Types:
 {
 	[AdRev.Desktop]AdRev.Desktop.App::LogException[2]( [System.Runtime]System.Exception, [System.Runtime]System.String ) ->  
 	[AdRev.Desktop]AdRev.Desktop.App::App_DispatcherUnhandledException[2]( [System.Runtime]System.Object, [WindowsBase]System.Windows.Threading.DispatcherUnhandledExceptionEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.App::<.ctor>b__0_0[2]( [System.Runtime]System.Object, [System.Runtime]System.UnhandledExceptionEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.App::<.ctor>b__1_0[2]( [System.Runtime]System.Object, [System.Runtime]System.UnhandledExceptionEventArgs ) ->  
 
 	[AdRev.Desktop]AdRev.Desktop.App::.ctor[0]( ) skipped:  special name
 	[AdRev.Desktop]AdRev.Desktop.App::OnStartup[1]( [PresentationFramework]System.Windows.StartupEventArgs ) skipped:  external base class or interface
@@ -3130,6 +3194,7 @@ Skipped Types:
 	[AdRev.Desktop]AdRev.Desktop.App::InitializeComponent[0]( ) skipped:  KeepPublicApi option in configuration
 	[AdRev.Desktop]AdRev.Desktop.App::Main[0]( ) skipped:  KeepPublicApi option in configuration
 
+	AdRev.Core.Services.LicensingService [AdRev.Desktop]AdRev.Core.Services.LicensingService AdRev.Desktop.App::_licensingService ->  
 	System.Boolean [AdRev.Desktop]System.Boolean AdRev.Desktop.App::_contentLoaded ->  
 }
 
@@ -3259,28 +3324,36 @@ Skipped Types:
 	[AdRev.Desktop]AdRev.Desktop.ProjectViewModel::set_Status[1]( [System.Runtime]System.String ) skipped:  skipping properties
 	[AdRev.Desktop]AdRev.Desktop.ProjectViewModel::get_LastModified[0]( ) skipped:  skipping properties
 	[AdRev.Desktop]AdRev.Desktop.ProjectViewModel::set_LastModified[1]( [System.Runtime]System.String ) skipped:  skipping properties
+	[AdRev.Desktop]AdRev.Desktop.ProjectViewModel::get_Project[0]( ) skipped:  skipping properties
+	[AdRev.Desktop]AdRev.Desktop.ProjectViewModel::set_Project[1]( [AdRev.Domain]AdRev.Domain.Models.ResearchProject ) skipped:  skipping properties
 	[AdRev.Desktop]AdRev.Desktop.ProjectViewModel::.ctor[0]( ) skipped:  special name
 
 	System.String [AdRev.Desktop]System.String AdRev.Desktop.ProjectViewModel::<Name>k__BackingField ->  
 	System.String [AdRev.Desktop]System.String AdRev.Desktop.ProjectViewModel::<Type>k__BackingField ->  
 	System.String [AdRev.Desktop]System.String AdRev.Desktop.ProjectViewModel::<Status>k__BackingField ->  
 	System.String [AdRev.Desktop]System.String AdRev.Desktop.ProjectViewModel::<LastModified>k__BackingField ->  
+	AdRev.Domain.Models.ResearchProject [AdRev.Desktop]AdRev.Domain.Models.ResearchProject AdRev.Desktop.ProjectViewModel::<Project>k__BackingField ->  
 }
 
 [AdRev.Desktop]AdRev.Desktop.MainWindow skipped:  KeepPublicApi option in configuration
 {
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::LoadUserProfile[0]( ) ->  
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::EditProfile_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::EnsureProjectViews[0]( ) ->  
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::SwitchView_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::MainWindow_Loaded[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::CheckLicense[0]( ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::LoadUserProfile[0]( ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::LoadProjects[0]( ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::UpdateLicenseDisplay[0]( ) ->  
 	[AdRev.Desktop]AdRev.Desktop.MainWindow::UpdateActiveMenu[1]( [PresentationFramework]System.Windows.Controls.Button ) ->  
 	[AdRev.Desktop]AdRev.Desktop.MainWindow::NewProject_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::OpenProjectWindow[2]( [AdRev.Domain]AdRev.Domain.Models.ResearchProject, [System.Runtime]System.Int32 ) ->  
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::Minimize_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::Maximize_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::Close_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::OpenProject_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::ChangeLanguage_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::ImportProjectFolder_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::OpenProject_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::OpenProjectWindow[1]( [AdRev.Domain]AdRev.Domain.Models.ResearchProject ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::EditProfile_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.MouseButtonEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::ChangeLanguage_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::Minimize_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::Maximize_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::Close_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::OpenUpgrade_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::OpenActivation_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
 	[AdRev.Desktop]AdRev.Desktop.MainWindow::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) ->  
 	[AdRev.Desktop]AdRev.Desktop.MainWindow::System.Windows.Markup.IStyleConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) ->  
 
@@ -3288,25 +3361,32 @@ Skipped Types:
 	[AdRev.Desktop]AdRev.Desktop.MainWindow::get_RecentProjects[0]( ) skipped:  skipping properties
 	[AdRev.Desktop]AdRev.Desktop.MainWindow::set_RecentProjects[1]( [System.ObjectModel]System.Collections.ObjectModel.ObservableCollection`1<[AdRev.Desktop]AdRev.Desktop.ProjectViewModel> ) skipped:  skipping properties
 	[AdRev.Desktop]AdRev.Desktop.MainWindow::.ctor[0]( ) skipped:  special name
-	[AdRev.Desktop]AdRev.Desktop.MainWindow::OnClosing[1]( [System.ComponentModel]System.ComponentModel.CancelEventArgs ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.MainWindow::SwitchView_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) skipped:  KeepPublicApi option in configuration
 
+	AdRev.Core.Common.ResearchProjectService [AdRev.Desktop]AdRev.Core.Common.ResearchProjectService AdRev.Desktop.MainWindow::_projectService ->  
+	AdRev.Core.Services.LicensingService [AdRev.Desktop]AdRev.Core.Services.LicensingService AdRev.Desktop.MainWindow::_licensingService ->  
+	AdRev.Core.Services.FeatureManager [AdRev.Desktop]AdRev.Core.Services.FeatureManager AdRev.Desktop.MainWindow::_featureManager ->  
+	AdRev.Core.Services.ResearcherProfileService [AdRev.Desktop]AdRev.Core.Services.ResearcherProfileService AdRev.Desktop.MainWindow::_profileService ->  
 	System.Collections.ObjectModel.ObservableCollection`1<AdRev.Desktop.ProjectViewModel> [AdRev.Desktop]System.Collections.ObjectModel.ObservableCollection`1<AdRev.Desktop.ProjectViewModel> AdRev.Desktop.MainWindow::<RecentProjects>k__BackingField ->  
 	AdRev.Domain.Models.ResearchProject [AdRev.Desktop]AdRev.Domain.Models.ResearchProject AdRev.Desktop.MainWindow::_currentProject ->  
-	System.Collections.Generic.List`1<System.Windows.Window> [AdRev.Desktop]System.Collections.Generic.List`1<System.Windows.Window> AdRev.Desktop.MainWindow::_openProtocolWindows ->  
-	AdRev.Core.Services.ResearcherProfileService [AdRev.Desktop]AdRev.Core.Services.ResearcherProfileService AdRev.Desktop.MainWindow::_profileService ->  
-	AdRev.Desktop.Views.Project.DataEntryView [AdRev.Desktop]AdRev.Desktop.Views.Project.DataEntryView AdRev.Desktop.MainWindow::_dataEntryView ->  
-	AdRev.Desktop.Views.Project.AnalysisView [AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView AdRev.Desktop.MainWindow::_analysisView ->  
-	AdRev.Desktop.Views.Project.DiscussionView [AdRev.Desktop]AdRev.Desktop.Views.Project.DiscussionView AdRev.Desktop.MainWindow::_discussionView ->  
-	AdRev.Desktop.Views.Project.FinalReportView [AdRev.Desktop]AdRev.Desktop.Views.Project.FinalReportView AdRev.Desktop.MainWindow::_finalReportView ->  
+	System.Collections.Generic.List`1<System.Windows.Window> [AdRev.Desktop]System.Collections.Generic.List`1<System.Windows.Window> AdRev.Desktop.MainWindow::_openProjectWindows ->  
 	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.MainWindow::BtnDashboard ->  
 	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.MainWindow::BtnProjects ->  
 	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.MainWindow::BtnAnalysis ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.MainWindow::BtnExportFolder ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.MainWindow::BtnMobileSync ->  
+	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.MainWindow::BtnQuality ->  
+	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.MainWindow::BtnExportFolder ->  
+	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.MainWindow::BtnMobileSync ->  
 	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.MainWindow::UserProfileName ->  
 	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.MainWindow::UserProfileTitle ->  
 	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.MainWindow::PageTitle ->  
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.MainWindow::DashboardContent ->  
+	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.MainWindow::DashboardTitle ->  
+	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.MainWindow::StatOngoing ->  
+	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.MainWindow::StatValidated ->  
+	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.MainWindow::LicenseStatusText ->  
+	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.MainWindow::BtnUpgrade ->  
+	System.Windows.Controls.DataGrid [AdRev.Desktop]System.Windows.Controls.DataGrid AdRev.Desktop.MainWindow::RecentProjectsDataGrid ->  
+	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.MainWindow::ActiveViewScroll ->  
 	System.Windows.Controls.ContentControl [AdRev.Desktop]System.Windows.Controls.ContentControl AdRev.Desktop.MainWindow::ActiveViewContent ->  
 	System.Boolean [AdRev.Desktop]System.Boolean AdRev.Desktop.MainWindow::_contentLoaded ->  
 }
@@ -3397,6 +3477,18 @@ Skipped Types:
 	System.Boolean [AdRev.Desktop]System.Boolean AdRev.Desktop.NewProjectWindow::_contentLoaded ->  
 }
 
+[AdRev.Desktop]AdRev.Desktop.NullToVisibilityConverter skipped:  KeepPublicApi option in configuration
+{
+
+	[AdRev.Desktop]AdRev.Desktop.NullToVisibilityConverter::Convert[4]( [System.Runtime]System.Object, [System.Runtime]System.Type, [System.Runtime]System.Object, [System.Runtime]System.Globalization.CultureInfo ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.NullToVisibilityConverter::ConvertBack[4]( [System.Runtime]System.Object, [System.Runtime]System.Type, [System.Runtime]System.Object, [System.Runtime]System.Globalization.CultureInfo ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.NullToVisibilityConverter::get_Invert[0]( ) skipped:  skipping properties
+	[AdRev.Desktop]AdRev.Desktop.NullToVisibilityConverter::set_Invert[1]( [System.Runtime]System.Boolean ) skipped:  skipping properties
+	[AdRev.Desktop]AdRev.Desktop.NullToVisibilityConverter::.ctor[0]( ) skipped:  special name
+
+	System.Boolean [AdRev.Desktop]System.Boolean AdRev.Desktop.NullToVisibilityConverter::<Invert>k__BackingField ->  
+}
+
 [AdRev.Desktop]AdRev.Desktop.ProtocolWindow skipped:  KeepPublicApi option in configuration
 {
 	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::InitializeUI[0]( ) ->  
@@ -3406,57 +3498,49 @@ Skipped Types:
 	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::CanUserEditStep[1]( [System.Runtime]System.Int32 ) ->  
 	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::SetProtocolReadOnly[1]( [System.Runtime]System.Boolean ) ->  
 	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::SideMenu_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::PrevSection_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::NextSection_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
 	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::UpdateView[0]( ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::Minimize_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::Close_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::DomainComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::RefStyleCombo_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::AddCoAuthor_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::RemoveCoAuthor_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::StudyTypeComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::RefreshAudit_LostFocus[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::QualitativeSamplingComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::EpidemiologyTypeComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsMulticentricCheckBox_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsMulticentricCheckBox_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::SamplingTypeComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsStratifiedCheckBox_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsStratifiedCheckBox_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsClusterCheckBox_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsClusterCheckBox_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::CalculatorSelector_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::CalculateCochran_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ​
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::CalculateComparison_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‐
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::OpenVariableDesigner_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‑
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::GenerateProtocolPlan_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‒
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::RegenerateReferences_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> –
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::UpdateSamplingTypes[1]( [AdRev.Domain]AdRev.Domain.Enums.StudyType ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::UpdateQualityGuidelines[1]( [AdRev.Domain]AdRev.Domain.Enums.StudyType ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::CreateProtocol_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> —
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::ExportWord_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ―
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::MenuDiscussion_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> •
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::MenuFileNew_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ․
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::MenuHome_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‥
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::InsertResource_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‧
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::ToRoman[1]( [System.Runtime]System.Int32 ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::AddCitation_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::TextBox_GotFocus[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::TextBox_TextChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.TextChangedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::Minimize_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::Close_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::CreateProtocol_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::ExportWord_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::MenuDiscussion_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::AddAppendix_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::RemoveAppendix_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::AddCoAuthor_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::RemoveCoAuthor_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::StudyTypeComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::DomainComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::RefStyleCombo_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::ActiveRoleComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::ActiveAccessComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::MenuFileNew_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::MenuHome_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::InsertResource_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::AddCitation_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::GeneralObjectiveTextBox_TextChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.TextChangedEventArgs ) ->  
 	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::ObjectiveTextBox_PreviewKeyDown[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.Input.KeyEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::GeneralObjectiveTextBox_TextChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.TextChangedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::SpecificObjectivesTextBox_TextChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.TextChangedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::LinkOSToOG_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‪
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::RenumberOS_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‫
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::FindVisualChildren[1]( [WindowsBase]System.Windows.DependencyObject ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::LoadAuditLogs[0]( ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::SpecificObjectivesTextBox_TextChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.TextChangedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::LinkOSToOG_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ​
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::RenumberOS_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‐
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::RefreshAudit_LostFocus[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‑
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::EpidemiologyTypeComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsMulticentricCheckBox_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‒
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsMulticentricCheckBox_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> –
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::SamplingTypeComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsStratifiedCheckBox_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> —
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsStratifiedCheckBox_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ―
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsClusterCheckBox_Checked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> •
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::IsClusterCheckBox_Unchecked[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ․
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::CalculatorSelector_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::CalculateCochran_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‥
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::QualitativeApproachComboBox_SelectionChanged[2]( [System.Runtime]System.Object, [PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs ) ->  
 	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) ->  
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::<.ctor>b__13_0[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‬
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::System.Windows.Markup.IStyleConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) ->  
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::<.ctor>b__13_0[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) -> ‧
 
 	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::InitializeComponent[0]( ) skipped:  external base class or interface
-	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::OnClosed[1]( [System.Runtime]System.EventArgs ) skipped:  external base class or interface
 	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::.ctor[3]( [AdRev.Domain]AdRev.Domain.Models.ResearchProject, [AdRev.Domain]AdRev.Domain.Models.FunctionalRole, [AdRev.Domain]AdRev.Domain.Models.UserAccessLevel ) skipped:  special name
+	[AdRev.Desktop]AdRev.Desktop.ProtocolWindow::FindVisualChildren[1]( [WindowsBase]System.Windows.DependencyObject ) skipped:  KeepPublicApi option in configuration
 
 	AdRev.Core.Protocols.ProtocolService [AdRev.Desktop]AdRev.Core.Protocols.ProtocolService AdRev.Desktop.ProtocolWindow::_service ->  
 	AdRev.Core.Services.QualityService [AdRev.Desktop]AdRev.Core.Services.QualityService AdRev.Desktop.ProtocolWindow::_qualityService ->  
@@ -3469,126 +3553,89 @@ Skipped Types:
 	AdRev.Domain.Models.ResearchProject [AdRev.Desktop]AdRev.Domain.Models.ResearchProject AdRev.Desktop.ProtocolWindow::_project ->  
 	AdRev.Domain.Models.FunctionalRole [AdRev.Desktop]AdRev.Domain.Models.FunctionalRole AdRev.Desktop.ProtocolWindow::_currentRole ->  
 	AdRev.Domain.Models.UserAccessLevel [AdRev.Desktop]AdRev.Domain.Models.UserAccessLevel AdRev.Desktop.ProtocolWindow::_currentAccessLevel ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::_activeTextBox ->  
+	System.Collections.ObjectModel.ObservableCollection`1<AdRev.Domain.Models.ProtocolAppendix> [AdRev.Desktop]System.Collections.ObjectModel.ObservableCollection`1<AdRev.Domain.Models.ProtocolAppendix> AdRev.Desktop.ProtocolWindow::_tempAppendices ->  
 	System.Int32 [AdRev.Desktop]System.Int32 AdRev.Desktop.ProtocolWindow::_currentStep ->  
 	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::ProjectTitleTextBlock ->  
 	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::SharingRolePanel ->  
 	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::ActiveRoleComboBox ->  
 	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::ActiveAccessComboBox ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::BtnMinimize ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::BtnClose ->  
-	System.Windows.Controls.MenuItem [AdRev.Desktop]System.Windows.Controls.MenuItem AdRev.Desktop.ProtocolWindow::MenuFileNew ->  
-	System.Windows.Controls.MenuItem [AdRev.Desktop]System.Windows.Controls.MenuItem AdRev.Desktop.ProtocolWindow::MenuFileSave ->  
-	System.Windows.Controls.MenuItem [AdRev.Desktop]System.Windows.Controls.MenuItem AdRev.Desktop.ProtocolWindow::MenuFileExport ->  
-	System.Windows.Controls.MenuItem [AdRev.Desktop]System.Windows.Controls.MenuItem AdRev.Desktop.ProtocolWindow::MenuInsertResource ->  
-	System.Windows.Controls.MenuItem [AdRev.Desktop]System.Windows.Controls.MenuItem AdRev.Desktop.ProtocolWindow::MenuDiscussion ->  
+	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::MenuFileSave ->  
+	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::MenuFileExport ->  
+	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::MenuDiscussion ->  
 	System.Windows.Controls.ListBox [AdRev.Desktop]System.Windows.Controls.ListBox AdRev.Desktop.ProtocolWindow::SideMenuListBox ->  
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Step1 ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::TitleTextBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::TitleTextBox ->  
 	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::DomainComboBox ->  
 	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::RefStyleComboStep1 ->  
 	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::AuthorTitleBox ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::AuthorFirstNameBox ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::AuthorLastNameBox ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::AuthorInstitutionBox ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::AuthorEmailBox ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::CoAuthFirst ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::CoAuthLast ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::CoAuthInst ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::CoAuthEmail ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::AuthorFirstNameBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::AuthorLastNameBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::AuthorInstitutionBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::AuthorEmailBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::CoAuthFirst ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::CoAuthLast ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::CoAuthInst ->  
 	System.Windows.Controls.ListBox [AdRev.Desktop]System.Windows.Controls.ListBox AdRev.Desktop.ProtocolWindow::CoAuthorsListBox ->  
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Introduction ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::BtnInsert_Context ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ContextTextBox ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::BtnInsert_Problem ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ProblemTextBox ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ResearchQuestionTextBox ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::HypothesesTextBox -> ​
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ContextTextBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ProblemTextBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ResearchQuestionTextBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::HypothesesTextBox ->  
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Objectives ->  
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::OGCountAlert ->  
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::OGBloomAlert ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::GeneralObjectiveTextBox -> ‐
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::OSSuggestions ->  
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::OSCountAlert ->  
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::OSBloomAlert ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::SpecificObjectivesTextBox -> ‑
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::GeneralObjectiveTextBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::SpecificObjectivesTextBox -> ​
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_ConceptualFramework ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ConceptsTextBox -> ‒
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ConceptualModelTextBox -> –
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ConceptsTextBox -> ‐
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ConceptualModelTextBox -> ‑
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Methodology_Design ->  
 	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::StudyTypeComboBox ->  
-	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::QualitativeTypePanel ->  
-	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::QualitativeApproachComboBox ->  
-	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::QualitativeSamplingComboBox ->  
-	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::EpidemiologyTypePanel ->  
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::DesignPrecisionLabel ->  
-	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::EpidemiologyTypeComboBox ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::BtnInsert_Setting ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::StudySettingTextBox -> —
-	System.Windows.Controls.Border [AdRev.Desktop]System.Windows.Controls.Border AdRev.Desktop.ProtocolWindow::PanelQualityGuidelines ->  
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::QualityStandardName ->  
-	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::QualityGuidelinesList ->  
-	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Methodology_Population ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::PopulationTextBox -> ―
+	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::EpidemiologyTypePanel ->  
+	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::EpidemiologyTypeComboBox ->  
+	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::QualitativeTypePanel ->  
+	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::QualitativeApproachComboBox ->  
+	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::QualitativeSamplingComboBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::StudySettingTextBox -> ‒
 	System.Windows.Controls.CheckBox [AdRev.Desktop]System.Windows.Controls.CheckBox AdRev.Desktop.ProtocolWindow::IsMulticentricCheckBox ->  
-	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::MulticentricDetailsPanel ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::StudyCentersTextBox -> •
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::InclusionTextBox -> ․
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ExclusionTextBox -> ‥
+	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::MulticentricDetailsPanel ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::StudyCentersTextBox -> –
+	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Methodology_Population ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::PopulationTextBox -> —
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::InclusionTextBox -> ―
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ExclusionTextBox -> •
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Methodology_Sampling ->  
 	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::SamplingTypeComboBox ->  
-	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::StratificationPanel ->  
+	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::StratificationPanel ->  
 	System.Windows.Controls.CheckBox [AdRev.Desktop]System.Windows.Controls.CheckBox AdRev.Desktop.ProtocolWindow::IsStratifiedCheckBox ->  
-	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::StratificationDetailsPanel ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::StratificationCriteriaTextBox -> ‧
-	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::ClusterPanel ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::StratificationCriteriaTextBox -> ․
+	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::ClusterPanel ->  
 	System.Windows.Controls.CheckBox [AdRev.Desktop]System.Windows.Controls.CheckBox AdRev.Desktop.ProtocolWindow::IsClusterCheckBox ->  
-	System.Windows.Controls.StackPanel [AdRev.Desktop]System.Windows.Controls.StackPanel AdRev.Desktop.ProtocolWindow::ClusterDetailsPanel ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ClusterSizeTextBox ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::DesignEffectTextBox ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ExpectedLossRateTextBox -> ‪
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ClusterSizeTextBox -> ‥
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::DesignEffectTextBox -> ‧
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ExpectedLossRateTextBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::SamplingTextBox ->  
 	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::CalculatorSelector ->  
-	System.Windows.Controls.Border [AdRev.Desktop]System.Windows.Controls.Border AdRev.Desktop.ProtocolWindow::PanelCochran ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::Calc_Cochran_P -> ‫
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::Calc_Cochran_D -> ‬
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::Calc_Cochran_N -> ‭
-	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::Calc_Cochran_Z ->  
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::ResultCochran ->  
-	System.Windows.Controls.Border [AdRev.Desktop]System.Windows.Controls.Border AdRev.Desktop.ProtocolWindow::PanelComparison ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::Calc_Comp_P1 -> ‮
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::Calc_Comp_P2 ->  
-	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::Calc_Comp_Alpha ->  
-	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::Calc_Comp_Power -> ​
-	System.Windows.Controls.CheckBox [AdRev.Desktop]System.Windows.Controls.CheckBox AdRev.Desktop.ProtocolWindow::Chk_Matched ->  
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::ResultComparison ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::BtnInsert_Sampling ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::SamplingTextBox -> ′
+	System.Windows.Controls.Border [AdRev.Desktop]System.Windows.Controls.Border AdRev.Desktop.ProtocolWindow::PanelCochran ->  
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Methodology_Data ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::BtnInsert_Collection ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::DataCollectionTextBox -> ‵
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::DataCollectionTextBox -> ‪
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Budget ->  
-	System.Windows.Controls.Border [AdRev.Desktop]System.Windows.Controls.Border AdRev.Desktop.ProtocolWindow::BudgetSuggestionsPanel ->  
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::BudgetSuggestionType ->  
-	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::BudgetSuggestionsText ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::BudgetTextBox -> ″
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::BudgetTotalBox -> ‶
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::BudgetTextBox -> ‫
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Ethics ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::EthicsTextBox -> ‾
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::EthicsTextBox -> ‬
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_DataAnalysis ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::BtnInsert_Analysis ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::DataAnalysisTextBox -> ⁇
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::DataAnalysisTextBox -> ‭
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Results ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::BtnInsert_Results ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ExpectedResultsTextBox -> ⁈
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ExpectedResultsTextBox -> ‮
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Conclusion ->  
-	System.Windows.Controls.Button [AdRev.Desktop]System.Windows.Controls.Button AdRev.Desktop.ProtocolWindow::BtnInsert_Conclusion ->  
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ConclusionTextBox -> ⁉
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ConclusionTextBox ->  
+	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::RefStyleComboStep13 ->  
 	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_References -> ​
-	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::RefStyleComboStep13 -> ‐
-	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ReferencesTextBox -> ⁊
-	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_AuditLogs -> ‐
-	System.Windows.Controls.DataGrid [AdRev.Desktop]System.Windows.Controls.DataGrid AdRev.Desktop.ProtocolWindow::AuditLogGrid ->  
-	System.Windows.Controls.ListBox [AdRev.Desktop]System.Windows.Controls.ListBox AdRev.Desktop.ProtocolWindow::ValidationMessagesListBox ->  
+	System.Windows.Controls.TextBox [AdRev.Desktop]System.Windows.Controls.TextBox AdRev.Desktop.ProtocolWindow::ReferencesTextBox -> ′
+	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_Appendices -> ‐
+	System.Windows.Controls.ListBox [AdRev.Desktop]System.Windows.Controls.ListBox AdRev.Desktop.ProtocolWindow::AppendicesListBox ->  
+	System.Windows.Controls.ComboBox [AdRev.Desktop]System.Windows.Controls.ComboBox AdRev.Desktop.ProtocolWindow::AppendixTypeComboBox ->  
+	System.Windows.Controls.ScrollViewer [AdRev.Desktop]System.Windows.Controls.ScrollViewer AdRev.Desktop.ProtocolWindow::View_AuditLogs -> ‑
+	System.Windows.Controls.ListBox [AdRev.Desktop]System.Windows.Controls.ListBox AdRev.Desktop.ProtocolWindow::AuditLogsListBox ->  
+	System.Windows.Controls.TextBlock [AdRev.Desktop]System.Windows.Controls.TextBlock AdRev.Desktop.ProtocolWindow::StatusInfo ->  
 	System.Boolean [AdRev.Desktop]System.Boolean AdRev.Desktop.ProtocolWindow::_contentLoaded ->  
 }
 
@@ -3765,6 +3812,7 @@ Skipped Types:
 	[AdRev.Desktop]AdRev.Desktop.Windows.ProjectWindow::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) ->  
 
 	[AdRev.Desktop]AdRev.Desktop.Windows.ProjectWindow::InitializeComponent[0]( ) skipped:  external base class or interface
+	[AdRev.Desktop]AdRev.Desktop.Windows.ProjectWindow::get_Project[0]( ) skipped:  skipping properties
 	[AdRev.Desktop]AdRev.Desktop.Windows.ProjectWindow::.ctor[2]( [AdRev.Domain]AdRev.Domain.Models.ResearchProject, [System.Runtime]System.Int32 ) skipped:  special name
 	[AdRev.Desktop]AdRev.Desktop.Windows.ProjectWindow::ApplyGating[0]( ) skipped:  KeepPublicApi option in configuration
 	[AdRev.Desktop]AdRev.Desktop.Windows.ProjectWindow::SyncVariablesToAllViews[0]( ) skipped:  KeepPublicApi option in configuration
@@ -3960,15 +4008,16 @@ Skipped Types:
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::GenerateHistogram[2]( [AdRev.Domain]AdRev.Domain.Variables.StudyVariable, [System.Collections]System.Collections.Generic.List`1<[System.Runtime]System.Object> ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::GeneratePieChart[2]( [AdRev.Domain]AdRev.Domain.Variables.StudyVariable, [System.Collections]System.Collections.Generic.List`1<[System.Runtime]System.Object> ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::CreateEditableChartContainer[3]( [AdRev.Domain]AdRev.Domain.Variables.StudyVariable, [LiveCharts.Wpf]LiveCharts.Wpf.Charts.Base.Chart, [System.Collections]System.Collections.Generic.List`1<[System.Runtime]System.Object> ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::OpenQualityCheck_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::ReplaceChart[4]( [PresentationFramework]System.Windows.Controls.Grid, [AdRev.Domain]AdRev.Domain.Variables.StudyVariable, [System.Collections]System.Collections.Generic.List`1<[System.Runtime]System.Object>, [System.Runtime]System.String ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::GenerateDescriptiveTable[2]( [AdRev.Domain]AdRev.Domain.Variables.StudyVariable, [System.Collections]System.Collections.Generic.List`1<[System.Runtime]System.Double> ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::GenerateFrequencyTable[2]( [AdRev.Domain]AdRev.Domain.Variables.StudyVariable, [System.Collections]System.Collections.Generic.List`1<[System.Runtime]System.Object> ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::AddMovableInterpretation[1]( [System.Runtime]System.String ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::CreateAnalysisHeader[1]( [System.Runtime]System.String ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::CreateRow[4]( [System.Runtime]System.String, [System.Runtime]System.String, [System.Runtime]System.Boolean, [System.Runtime]System.String ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::SaveToProject_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::ExportReport_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
-	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::RecodeVariable_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::SaveToProject_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::ExportReport_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::RecodeVariable_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.AnalysisView::System.Windows.Markup.IStyleConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) ->  
 
@@ -4500,6 +4549,7 @@ Skipped Types:
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.QualityCheckView::RenderQualityChecklist[1]( [AdRev.Domain]AdRev.Domain.Quality.QualityChecklist ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.QualityCheckView::UpdateQualityScore[1]( [AdRev.Domain]AdRev.Domain.Quality.QualityChecklist ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.QualityCheckView::GenerateQualityReport_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
+	[AdRev.Desktop]AdRev.Desktop.Views.Project.QualityCheckView::ImportCustomChecklist_Click[2]( [System.Runtime]System.Object, [PresentationCore]System.Windows.RoutedEventArgs ) ->  
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.QualityCheckView::System.Windows.Markup.IComponentConnector.Connect[2]( [System.Runtime]System.Int32, [System.Runtime]System.Object ) ->  
 
 	[AdRev.Desktop]AdRev.Desktop.Views.Project.QualityCheckView::InitializeComponent[0]( ) skipped:  external base class or interface
@@ -4603,6 +4653,7 @@ Skipped Types:
 
 	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService::ExportProtocolToWord[2]( [AdRev.Domain]AdRev.Domain.Protocols.ResearchProtocol, [System.Runtime]System.String ) skipped:  KeepPublicApi option in configuration
 	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService::ExportGlobalReport[2]( [AdRev.Domain]AdRev.Domain.Models.ResearchProject, [System.Runtime]System.String ) skipped:  KeepPublicApi option in configuration
+	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService::ExportAppendicesOnly[3]( [System.Collections]System.Collections.Generic.List`1<[AdRev.Domain]AdRev.Domain.Models.ProtocolAppendix>, [System.Runtime]System.String, [System.Runtime]System.String ) skipped:  KeepPublicApi option in configuration
 	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService::ExportVariableSheetToWord[2]( [AdRev.Domain]AdRev.Domain.Protocols.ResearchProtocol, [System.Runtime]System.String ) skipped:  KeepPublicApi option in configuration
 	[AdRev.Desktop]AdRev.Desktop.Services.WordExportService::.ctor[0]( ) skipped:  special name
 
@@ -4764,6 +4815,7 @@ Skipped Types:
 
 [AdRev.Core]AdRev.Core.Services.QualityService skipped:  KeepPublicApi option in configuration
 {
+	[AdRev.Core]AdRev.Core.Services.QualityService::GetCellValue[3]( [DocumentFormat.OpenXml]DocumentFormat.OpenXml.Spreadsheet.Row, [System.Runtime]System.Int32, [DocumentFormat.OpenXml]DocumentFormat.OpenXml.Spreadsheet.SharedStringTable ) ->  
 	[AdRev.Core]AdRev.Core.Services.QualityService::GetCOREQ[0]( ) ->  
 	[AdRev.Core]AdRev.Core.Services.QualityService::GetSTROBE[0]( ) ->  
 	[AdRev.Core]AdRev.Core.Services.QualityService::GetPRISMA[0]( ) ->  
@@ -4786,6 +4838,7 @@ Skipped Types:
 	[AdRev.Core]AdRev.Core.Services.QualityService::EvaluateCARE[2]( [AdRev.Domain]AdRev.Domain.Quality.ChecklistItem, [AdRev.Domain]AdRev.Domain.Protocols.ResearchProtocol ) ->  
 
 	[AdRev.Core]AdRev.Core.Services.QualityService::GetAllChecklists[0]( ) skipped:  KeepPublicApi option in configuration
+	[AdRev.Core]AdRev.Core.Services.QualityService::ImportChecklistFromExcel[1]( [System.Runtime]System.String ) skipped:  KeepPublicApi option in configuration
 	[AdRev.Core]AdRev.Core.Services.QualityService::GetRecommendedChecklists[1]( [AdRev.Domain]AdRev.Domain.Models.ResearchProject ) skipped:  KeepPublicApi option in configuration
 	[AdRev.Core]AdRev.Core.Services.QualityService::EvaluateProtocol[2]( [AdRev.Domain]AdRev.Domain.Quality.QualityChecklist, [AdRev.Domain]AdRev.Domain.Protocols.ResearchProtocol ) skipped:  KeepPublicApi option in configuration
 	[AdRev.Core]AdRev.Core.Services.QualityService::.ctor[0]( ) skipped:  special name
@@ -4841,6 +4894,12 @@ Skipped Types:
 	[AdRev.Core]AdRev.Core.Services.StatisticsService::GetSignificanceLevel[1]( [System.Runtime]System.Double ) skipped:  KeepPublicApi option in configuration
 	[AdRev.Core]AdRev.Core.Services.StatisticsService::ToRoman[1]( [System.Runtime]System.Int32 ) skipped:  KeepPublicApi option in configuration
 	[AdRev.Core]AdRev.Core.Services.StatisticsService::.ctor[0]( ) skipped:  special name
+}
+
+[AdRev.Core]AdRev.Core.Resources.AppendixTemplates skipped:  KeepPublicApi option in configuration
+{
+
+	[AdRev.Core]AdRev.Core.Resources.AppendixTemplates::GetTemplate[1]( [AdRev.Domain]AdRev.Domain.Enums.AppendixType ) skipped:  KeepPublicApi option in configuration
 }
 
 [AdRev.Core]AdRev.Core.Protocols.SamplingDescriptionGenerator skipped:  KeepPublicApi option in configuration

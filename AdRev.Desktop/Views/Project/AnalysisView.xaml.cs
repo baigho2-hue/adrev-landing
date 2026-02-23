@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -11,10 +11,7 @@ using AdRev.Domain.Variables;
 using AdRev.Domain.Enums;
 using AdRev.Core.Services;
 using Microsoft.Win32;
-<<<<<<< HEAD
 using AdRev.Desktop.Helpers;
-=======
->>>>>>> origin/main
 
 namespace AdRev.Desktop.Views.Project
 {
@@ -25,28 +22,20 @@ namespace AdRev.Desktop.Views.Project
         private List<Dictionary<string, object>> _projectData = new List<Dictionary<string, object>>();
         private ObservableCollection<StudyVariable> _importedVariables = new ObservableCollection<StudyVariable>();
         private readonly FeatureManager _featureManager;
-<<<<<<< HEAD
         private readonly InterpretationService _interpretationService;
         private readonly StatisticsService _statisticsService;
         
         private int _tableCount = 0;
         private int _figureCount = 0;
-=======
->>>>>>> origin/main
 
         public AnalysisView()
         {
             _featureManager = new FeatureManager(new LicensingService());
-<<<<<<< HEAD
             _interpretationService = new InterpretationService();
             _statisticsService = new StatisticsService();
             InitializeComponent();
             PlanItemsList.ItemsSource = _analysisPlan;
             VariablesList.ItemsSource = _importedVariables;
-=======
-            InitializeComponent();
-            PlanItemsList.ItemsSource = _analysisPlan;
->>>>>>> origin/main
             
             PopulateTestTypes();
         }
@@ -56,7 +45,6 @@ namespace AdRev.Desktop.Views.Project
             PlanTestTypeCombo.Items.Clear();
 
             // Baseline (Student+)
-<<<<<<< HEAD
             PlanTestTypeCombo.Items.Add(new ComboBoxItem { Content = "Analyse Univariée (Descriptif Complet)", Tag = "Descriptif" });
 
             // Professional+ Features
@@ -71,22 +59,6 @@ namespace AdRev.Desktop.Views.Project
             
             PlanTestTypeCombo.Items.Add(new ComboBoxItem { Content = "Analyse Multivariée (Modèle Global) " + (isElite ? "" : "🔒"), Tag = "Multivariate", IsEnabled = isElite });
             PlanTestTypeCombo.Items.Add(new ComboBoxItem { Content = "Régression Linéaire " + (isElite ? "" : "🔒"), Tag = "Regression", IsEnabled = isElite });
-=======
-            PlanTestTypeCombo.Items.Add(new ComboBoxItem { Content = "Description Simple", Tag = "Descriptif" });
-
-            // Professional+ Features
-            bool isPro = _featureManager.IsFeatureAvailable(AppFeature.InferentialStats);
-            var inferentialItem = new ComboBoxItem { Content = "Comparaison de Moyennes (T-Test) " + (isPro ? "" : "🔒"), Tag = "Comparaison", IsEnabled = isPro };
-            PlanTestTypeCombo.Items.Add(inferentialItem);
-            
-            var assocItem = new ComboBoxItem { Content = "Test d'Association (Chi2) " + (isPro ? "" : "🔒"), Tag = "Association", IsEnabled = isPro };
-            PlanTestTypeCombo.Items.Add(assocItem);
-
-            // Elite Features
-            bool isElite = _featureManager.IsFeatureAvailable(AppFeature.RegressionAnalysis);
-            PlanTestTypeCombo.Items.Add(new ComboBoxItem { Content = "Régression Linéaire " + (isElite ? "" : "🔒"), Tag = "Regression", IsEnabled = isElite });
-            PlanTestTypeCombo.Items.Add(new ComboBoxItem { Content = "Régression Logistique " + (isElite ? "" : "🔒"), Tag = "Logistic", IsEnabled = isElite });
->>>>>>> origin/main
 
             PlanTestTypeCombo.SelectedIndex = 0;
         }
@@ -95,7 +67,6 @@ namespace AdRev.Desktop.Views.Project
         {
             _project = project;
             
-<<<<<<< HEAD
             // Sync Analysis Plan
             _analysisPlan.Clear();
             if (_project.AnalysisPlan != null)
@@ -126,8 +97,6 @@ namespace AdRev.Desktop.Views.Project
                 catch { /* Ignore error on load, maybe invalid XAML */ }
             }
 
-=======
->>>>>>> origin/main
             // Gate the Qualitative Tab within this view
             if (this.Parent is TabControl tc || VisualTreeHelper.GetParent(this) is TabControl tc2)
             {
@@ -138,7 +107,6 @@ namespace AdRev.Desktop.Views.Project
             UpdateAnalysisVariables();
         }
 
-<<<<<<< HEAD
 
         private async void ImportData_Click(object sender, RoutedEventArgs e)
         {
@@ -257,24 +225,6 @@ namespace AdRev.Desktop.Views.Project
                     MaterialDesignThemes.Wpf.HintAssist.SetHint(ComboVariable1, "Variable Dépendante (Y)");
                     MaterialDesignThemes.Wpf.HintAssist.SetHint(ComboVariable2, "Variable Explicative (X)");
                 }
-=======
-        private void UpdateAnalysisVariables()
-        {
-            // Update UI with available variables
-            // In a real app, populate some variable selection combos
-        }
-
-        private void ImportData_Click(object sender, RoutedEventArgs e)
-        {
-            var openFileDialog = new OpenFileDialog { Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*" };
-            if (openFileDialog.ShowDialog() == true)
-            {
-                // Simple CSV parsing (mock)
-                ActiveDataSourceText.Text = System.IO.Path.GetFileName(openFileDialog.FileName);
-                _projectData = new List<Dictionary<string, object>>(); 
-                // In a real app, use a proper CSV service
-                 MessageBox.Show("Données importées avec succès (Simulation).", "Importation");
->>>>>>> origin/main
             }
         }
 
@@ -285,17 +235,13 @@ namespace AdRev.Desktop.Views.Project
             var selectedType = PlanTestTypeCombo.SelectedItem as ComboBoxItem;
             if (selectedType == null) return;
 
-<<<<<<< HEAD
             var v1 = ComboVariable1.SelectedItem as StudyVariable;
             var v2 = ComboVariable2.SelectedItem as StudyVariable;
 
-=======
->>>>>>> origin/main
             var newItem = new AnalysisPlanItem
             {
                 Title = PlanTitleBox.Text,
                 TestType = selectedType.Content?.ToString() ?? "N/A",
-<<<<<<< HEAD
                 Description = $"Généré le {DateTime.Now:dd/MM/yyyy}",
                 Variable1 = v1?.Name ?? "",
                 Variable2 = v2?.Name ?? "",
@@ -610,6 +556,23 @@ namespace AdRev.Desktop.Views.Project
 
             chartContainer.Child = grid;
             AnalysisDoc.Blocks.Add(chartContainer);
+        }
+
+        private void OpenQualityCheck_Click(object sender, RoutedEventArgs e)
+        {
+            // Try to find the MainWindow to switch view
+            var mainWindow = Application.Current.MainWindow as MainWindow;
+            if (mainWindow != null)
+            {
+                // We create a fake button to trigger the switch logic
+                var btn = new Button { Tag = "Quality" };
+                // Call the click handler (it's public in our case or we can just call the logic)
+                mainWindow.SwitchView_Click(btn, null);
+            }
+            else
+            {
+                 MessageBox.Show("Veuillez utiliser le menu latéral 'Contrôle Qualité' pour accéder aux critères Excel.", "Navigation");
+            }
         }
 
         private async void ReplaceChart(Grid grid, StudyVariable variable, List<object> values, string type)
@@ -975,51 +938,6 @@ namespace AdRev.Desktop.Views.Project
                     }
                 }
             }
-=======
-                Description = $"Généré le {DateTime.Now:dd/MM/yyyy}"
-            };
-
-            _analysisPlan.Add(newItem);
-            PlanTitleBox.Text = string.Empty;
-        }
-
-        private void RunPlanItem_Click(object sender, RoutedEventArgs e)
-        {
-            if (sender is Button btn && btn.Tag is AnalysisPlanItem item)
-            {
-                ExecuteAnalysis(item);
-            }
-        }
-
-        private void ExecuteAnalysis(AnalysisPlanItem item)
-        {
-            AnalysisDoc.Blocks.Clear();
-            
-            // Header
-            AnalysisDoc.Blocks.Add(new Paragraph(new Run(item.Title)) { FontSize = 18, FontWeight = FontWeights.Bold, Foreground = Brushes.Navy, TextAlignment = TextAlignment.Center });
-            AnalysisDoc.Blocks.Add(new Paragraph(new Run($"Test: {item.TestType} | Date: {DateTime.Now}")) { FontSize = 10, Foreground = Brushes.Gray, TextAlignment = TextAlignment.Center });
-
-            if (_projectData.Count == 0)
-            {
-                AnalysisDoc.Blocks.Add(new Paragraph(new Run("Veuillez d'abord importer des données.")) { Foreground = Brushes.Orange, Margin = new Thickness(0, 20, 0, 0) });
-                return;
-            }
-
-            // Mock rendering
-            AnalysisDoc.Blocks.Add(new Paragraph(new Run("Résultats de l'analyse (Simulés pour la démo)")) { Margin = new Thickness(0, 20, 0, 10), FontWeight = FontWeights.Bold });
-            AnalysisDoc.Blocks.Add(new Paragraph(new Run("• Population totale : " + _projectData.Count)));
-            AnalysisDoc.Blocks.Add(new Paragraph(new Run("• Test effectué avec succès.")));
-            
-            item.IsExecuted = true;
-            item.ResultSummary = "Exécuté";
-        }
-
-        private void GenerateSmartPlan_Click(object sender, RoutedEventArgs e)
-        {
-            // Simple logic from MainWindow
-            _analysisPlan.Add(new AnalysisPlanItem { Title = "Description de l'échantillon", TestType = "Descriptif" });
-            MessageBox.Show("Plan intelligent généré.", "Succès");
->>>>>>> origin/main
         }
     }
 }

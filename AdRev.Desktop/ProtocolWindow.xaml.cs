@@ -20,6 +20,7 @@ using AdRev.Core.Protocols;
 using AdRev.Desktop.Windows;
 using Microsoft.Win32;
 using System.IO;
+using AdRev.Desktop.Services;
 
 namespace AdRev.Desktop
 {
@@ -189,8 +190,12 @@ namespace AdRev.Desktop
             switch (_currentRole)
             {
                 case FunctionalRole.PrincipalInvestigator: return true;
-                case FunctionalRole.Statistician: return (step == 7 || step == 11 || step == 12);
                 case FunctionalRole.Methodologist: return (step != 9);
+                case FunctionalRole.Statistician: return (step == 1 || step == 7 || step == 8 || step == 11 || step == 12);
+                case FunctionalRole.DataManager: return (step == 1 || step == 8 || step == 9 || step == 11);
+                case FunctionalRole.CoInvestigator: return (step != 9 && step != 10);
+                case FunctionalRole.Student: return (step <= 6 || step == 12 || step == 13);
+                case FunctionalRole.Monitor: return false;
                 default: return true; 
             }
         }
@@ -201,6 +206,7 @@ namespace AdRev.Desktop
             {
                 tb.IsReadOnly = isReadOnly;
                 tb.Opacity = isReadOnly ? 0.8 : 1.0;
+                if (!isReadOnly) tb.IsEnabled = true;
             }
 
             foreach (var cb in FindVisualChildren<ComboBox>(this))
@@ -218,12 +224,11 @@ namespace AdRev.Desktop
 
             foreach (var btn in FindVisualChildren<Button>(this))
             {
-                if (btn.Name == "BtnMinimize" || btn.Name == "BtnClose") continue;
+                if (btn.Name == "BtnMinimize" || btn.Name == "BtnClose" || btn.Name == "BtnMaximize") continue;
                 
-                // Si on est en lecture seule, on désactive les boutons d'action (Ajouter, Calculer, Supprimer)
                 if (isReadOnly)
                 {
-                    if (btn.Content is string s && (s.Contains("AJOUTER") || s.Contains("CALCULER") || s.Contains("ENREGISTRER") || s.Contains("Supprimer")))
+                    if (btn.Content is string s && (s.Contains("AJOUTER") || s.Contains("CALCULER") || s.Contains("ENREGISTRER") || s.Contains("Supprimer") || s.Contains("Add") || s.Contains("Calculate") || s.Contains("Save") || s.Contains("Delete")))
                     {
                         btn.IsEnabled = false;
                     }
@@ -310,8 +315,8 @@ namespace AdRev.Desktop
             _protocol.ConceptualModel = ConceptualModelTextBox.Text;
 
             _protocol.StudyType = StudyTypeComboBox.SelectedItem is StudyType st ? st : StudyType.Quantitative;
-            _protocol.EpidemiologyType = EpidemiologyTypeComboBox.SelectedItem is EpidemiologicalStudyType et ? et : EpidemiologicalStudyType.CrossSectional;
-            _protocol.QualitativeApproach = QualitativeApproachComboBox.SelectedItem is QualitativeApproach qa ? qa : QualitativeApproach.Phenomenology;
+            _protocol.EpidemiologyType = EpidemiologyTypeComboBox.SelectedItem is EpidemiologicalStudyType et ? et : EpidemiologicalStudyType.CrossSectionalDescriptive;
+            _protocol.QualitativeApproach = QualitativeApproachComboBox.SelectedItem is QualitativeApproach qa ? qa : QualitativeApproach.Phenomenological;
             
             _protocol.StudySetting = StudySettingTextBox.Text;
             _protocol.IsMulticentric = IsMulticentricCheckBox.IsChecked ?? false;
@@ -321,12 +326,12 @@ namespace AdRev.Desktop
             _protocol.InclusionCriteria = InclusionTextBox.Text;
             _protocol.ExclusionCriteria = ExclusionTextBox.Text;
 
-            _protocol.SamplingType = SamplingTypeComboBox.SelectedItem is SamplingType sat ? sat : SamplingType.Random;
+            _protocol.SamplingType = SamplingTypeComboBox.SelectedItem is SamplingType sat ? sat : SamplingType.SimpleRandom;
             _protocol.IsStratified = IsStratifiedCheckBox.IsChecked ?? false;
             _protocol.StratificationCriteria = StratificationCriteriaTextBox.Text;
             _protocol.IsClusterSampling = IsClusterCheckBox.IsChecked ?? false;
             
-            if (double.TryParse(ClusterSizeTextBox.Text, out double cs)) _protocol.ClusterSize = cs;
+            if (double.TryParse(ClusterSizeTextBox.Text, out double cs)) _protocol.ClusterSize = (int)cs;
             if (double.TryParse(DesignEffectTextBox.Text, out double de)) _protocol.DesignEffect = de;
             if (double.TryParse(ExpectedLossRateTextBox.Text, out double elr)) _protocol.ExpectedLossRate = elr;
             
@@ -346,7 +351,7 @@ namespace AdRev.Desktop
             _protocol.Appendices.Clear();
             foreach (var app in _tempAppendices) _protocol.Appendices.Add(app);
 
-            _service.SaveProtocol(_protocol);
+            _service.Create(_protocol);
             MessageBox.Show("Protocole enregistré avec succès.");
         }
 
@@ -355,16 +360,26 @@ namespace AdRev.Desktop
             var dialog = new SaveFileDialog { Filter = "Word Document (*.docx)|*.docx", FileName = $"Protocole_{_protocol.Title}.docx" };
             if (dialog.ShowDialog() == true)
             {
-                _wordExportService.ExportProtocol(_protocol, dialog.FileName);
+                _wordExportService.ExportProtocolToWord(_protocol, dialog.FileName);
                 MessageBox.Show("Exportation terminée.");
             }
         }
 
         private void MenuDiscussion_Click(object sender, RoutedEventArgs e)
         {
-            var win = new DiscussionWindow(_protocol);
+            var win = new DiscussionWindow(
+                _protocol.StudyType,
+                _protocol.SpecificObjectives ?? string.Empty,
+                _protocol.DiscussionPlan ?? string.Empty,
+                _protocol.StudyLimitations ?? string.Empty,
+                1,
+                _protocol.ReferenceStyle);
             win.Owner = this;
-            win.ShowDialog();
+            if (win.ShowDialog() == true)
+            {
+                _protocol.DiscussionPlan = win.DiscussionPlan;
+                _protocol.StudyLimitations = win.Limitations;
+            }
         }
 
         private void AddAppendix_Click(object sender, RoutedEventArgs e)
@@ -420,28 +435,9 @@ namespace AdRev.Desktop
             }
         }
 
-        private void SideMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (SideMenuListBox.SelectedItem is ListBoxItem item && item.Tag != null && int.TryParse(item.Tag.ToString(), out int s))
-            {
-                _currentStep = s;
-                UpdateView();
-            }
-        }
 
         private void DomainComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
         private void RefStyleCombo_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
-
-        private void ActiveRoleAndAccess_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (ActiveRoleComboBox == null || ActiveAccessComboBox == null) return;
-            if (ActiveRoleComboBox.SelectedItem is FunctionalRole role && ActiveAccessComboBox.SelectedItem is UserAccessLevel access)
-            {
-                _currentRole = role;
-                _currentAccessLevel = access;
-                ApplyPermissions();
-            }
-        }
 
         private void ActiveRoleComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
         private void ActiveAccessComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
@@ -475,7 +471,7 @@ namespace AdRev.Desktop
                     StratificationPanel.Visibility = (st == SamplingType.Stratified || st == SamplingType.MultiStage) ? Visibility.Visible : Visibility.Collapsed;
                 
                 if (ClusterPanel != null)
-                    ClusterPanel.Visibility = (st == SamplingType.Cluster || st == SamplingType.MultiStage) ? Visibility.Visible : Visibility.Collapsed;
+                    ClusterPanel.Visibility = (st == SamplingType.ClusterSampling || st == SamplingType.MultiStage) ? Visibility.Visible : Visibility.Collapsed;
             }
         }
 

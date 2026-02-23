@@ -79,4 +79,52 @@
         </Style.Triggers>
     </Style>
 
+    <!-- Ribbon Tab Button Style (for RadioButtons used as Tabs) -->
+    <Style x:Key="RibbonTabButtonStyle" TargetType="RadioButton">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Margin" Value="0,0,10,0"/>
+        <Setter Property="Foreground" Value="#94A3B8"/>
+        <Setter Property="Padding" Value="16,0"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Border x:Name="border" Background="Transparent" BorderBrush="Transparent" BorderThickness="0,0,0,3">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}"/>
+                            <Setter TargetName="border" Property="Background" Value="#0A673AB7"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Card Style (for Borders used as Cards) -->
+    <Style x:Key="CardStyle" TargetType="Border">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="{StaticResource CalmBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Padding" Value="20"/>
+        <Setter Property="Margin" Value="0,0,0,15"/>
+    </Style>
+
+    <!-- Calm Card Style (for materialDesign:Card) -->
+    <Style x:Key="CalmCardStyle" TargetType="materialDesign:Card">
+        <Setter Property="Padding" Value="24"/>
+        <Setter Property="UniformCornerRadius" Value="12"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="materialDesign:ElevationAssist.Elevation" Value="Dp1"/>
+    </Style>
+
 </ResourceDictionary>

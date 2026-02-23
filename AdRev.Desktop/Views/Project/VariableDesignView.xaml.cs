@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -15,10 +15,7 @@ namespace AdRev.Desktop.Views.Project
         public ObservableCollection<StudyVariable> Variables { get; private set; } = new ObservableCollection<StudyVariable>();
         private StudyVariable? _selectedVariable;
         private bool _isQualitativeDeductive;
-<<<<<<< HEAD
         private ResearchProject? _project;
-=======
->>>>>>> origin/main
 
         public VariableDesignView()
         {
@@ -31,10 +28,7 @@ namespace AdRev.Desktop.Views.Project
         public void LoadProject(ResearchProject project)
         {
             if (project == null) return;
-<<<<<<< HEAD
             _project = project;
-=======
->>>>>>> origin/main
             LoadVariables(project.Variables ?? new List<StudyVariable>(), project.StudyType == StudyType.Qualitative);
         }
 
@@ -58,18 +52,13 @@ namespace AdRev.Desktop.Views.Project
             var newVar = new StudyVariable
             {
                 Name = "VAR_" + (Variables.Count + 1),
-<<<<<<< HEAD
                 Prompt = "Nouvelle variable à définir",
-=======
-                Prompt = "Nouvelle Question",
->>>>>>> origin/main
                 Type = VariableType.Text
             };
             Variables.Add(newVar);
             VariablesListBox.SelectedItem = newVar;
         }
 
-<<<<<<< HEAD
         private void BtnOpenFullDesigner_Click(object sender, RoutedEventArgs e)
         {
             var win = new VariableDesignerWindow(Variables.ToList(), _project?.Title ?? "Nouveau Projet", _isQualitativeDeductive);
@@ -84,8 +73,6 @@ namespace AdRev.Desktop.Views.Project
             }
         }
 
-=======
->>>>>>> origin/main
         private void BtnDeleteVariable_Click(object sender, RoutedEventArgs e)
         {
             if (VariablesListBox.SelectedItem is StudyVariable selected)

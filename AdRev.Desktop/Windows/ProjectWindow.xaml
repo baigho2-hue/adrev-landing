@@ -106,67 +106,72 @@
 
         <!-- 3. RIBBON FOR PROJECT -->
         <Border Grid.Row="2" Background="{StaticResource MenuBarBrush}" BorderBrush="#DDD" BorderThickness="0,0,0,1" Padding="12,5">
-            <StackPanel Orientation="Horizontal" Height="50">
-                <RadioButton x:Name="RibbonDashboard" Style="{StaticResource RibbonTabButtonStyle}" Content="TABLEAU DE BORD" IsChecked="True" Checked="Ribbon_Checked" Tag="0"/>
-                <RadioButton x:Name="RibbonStep1" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonProtocol}" Checked="Ribbon_Checked" Tag="1"/>
-                <RadioButton x:Name="RibbonLibrary" Style="{StaticResource RibbonTabButtonStyle}" Content="BIBLIOTHÈQUE" Checked="Ribbon_Checked" Tag="11"/>
-                <RadioButton x:Name="RibbonStep2" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonVariables}" Checked="Ribbon_Checked" Tag="2"/>
-                <RadioButton x:Name="RibbonStep3" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonEntry}" Checked="Ribbon_Checked" Tag="3"/>
-                <RadioButton x:Name="RibbonStep4" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonStats}" Checked="Ribbon_Checked" Tag="4"/>
-                <RadioButton x:Name="RibbonStep5" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonQualiDash}" Checked="Ribbon_Checked" Tag="5"/>
-                <RadioButton x:Name="RibbonStep5b" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonCoding}" Checked="Ribbon_Checked" Tag="6"/>
-                <RadioButton x:Name="RibbonStep6" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonDiscussion}" Checked="Ribbon_Checked" Tag="7"/>
-                <RadioButton x:Name="RibbonStep7" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonReport}" Checked="Ribbon_Checked" Tag="8"/>
-                <RadioButton x:Name="RibbonStep8" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonArticle}" Checked="Ribbon_Checked" Tag="9"/>
-                <RadioButton x:Name="RibbonStep9" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonQuality}" Checked="Ribbon_Checked" Tag="10"/>
-            </StackPanel>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                <StackPanel Orientation="Horizontal" Height="50">
+                    <RadioButton x:Name="RibbonDashboard" Style="{StaticResource RibbonTabButtonStyle}" Content="TABLEAU DE BORD" IsChecked="True" Checked="Ribbon_Checked" Tag="0"/>
+                    <RadioButton x:Name="RibbonStep1" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonProtocol}" Checked="Ribbon_Checked" Tag="1"/>
+                    <RadioButton x:Name="RibbonLibrary" Style="{StaticResource RibbonTabButtonStyle}" Content="BIBLIOTHÈQUE" Checked="Ribbon_Checked" Tag="11"/>
+                    <RadioButton x:Name="RibbonStep2" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonVariables}" Checked="Ribbon_Checked" Tag="2"/>
+                    <RadioButton x:Name="RibbonStep3" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonEntry}" Checked="Ribbon_Checked" Tag="3"/>
+                    <RadioButton x:Name="RibbonStep4" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonStats}" Checked="Ribbon_Checked" Tag="4"/>
+                    <RadioButton x:Name="RibbonStep5" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonQualiDash}" Checked="Ribbon_Checked" Tag="5"/>
+                    <RadioButton x:Name="RibbonStep5b" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonCoding}" Checked="Ribbon_Checked" Tag="6"/>
+                    <RadioButton x:Name="RibbonStep6" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonDiscussion}" Checked="Ribbon_Checked" Tag="7"/>
+                    <RadioButton x:Name="RibbonStep7" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonReport}" Checked="Ribbon_Checked" Tag="8"/>
+                    <RadioButton x:Name="RibbonStep8" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonArticle}" Checked="Ribbon_Checked" Tag="9"/>
+                    <RadioButton x:Name="RibbonStep9" Style="{StaticResource RibbonTabButtonStyle}" Content="{DynamicResource RibbonQuality}" Checked="Ribbon_Checked" Tag="10"/>
+                </StackPanel>
+            </ScrollViewer>
         </Border>
 
         <!-- 4. PROJECT CONTENT TABS -->
-        <TabControl x:Name="ProjectTabControl" Grid.Row="3" Background="Transparent" BorderThickness="0" Margin="0,-1,0,0" SelectedIndex="0">
-            <TabControl.Template>
-                <ControlTemplate TargetType="TabControl">
-                    <ContentPresenter ContentSource="SelectedContent" />
-                </ControlTemplate>
-            </TabControl.Template>
+        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto">
+            <TabControl x:Name="ProjectTabControl" Background="Transparent" BorderThickness="0" Margin="0,-1,0,0" SelectedIndex="0">
+                <TabControl.Template>
+                    <ControlTemplate TargetType="TabControl">
+                        <ContentPresenter ContentSource="SelectedContent" />
+                    </ControlTemplate>
+                </TabControl.Template>
+    
+                <TabItem x:Name="TabDashboard"> <!-- Index 0 -->
+                    <project:ProjectDashboardView x:Name="ViewDashboard"/>
+                </TabItem>
+                <TabItem x:Name="TabProtocol"> <!-- Index 1 -->
+                    <project:ProtocolView x:Name="ViewProtocol"/>
+                </TabItem>
+                <TabItem x:Name="TabVariables"> <!-- Index 2 -->
+                    <project:VariableDesignView x:Name="ViewVariableDesign"/>
+                </TabItem>
 
-            <TabItem x:Name="TabDashboard"> <!-- Index 0 -->
-                <project:ProjectDashboardView x:Name="ViewDashboard"/>
-            </TabItem>
-            <TabItem x:Name="TabProtocol"> <!-- Index 1 -->
-                <project:ProtocolView x:Name="ViewProtocol"/>
-            </TabItem>
-            <TabItem x:Name="TabVariables"> <!-- Index 2 -->
-                <project:VariableDesignView x:Name="ViewVariableDesign"/>
-            </TabItem>
-            <TabItem x:Name="TabDataEntry"> <!-- Index 3 -->
-                <project:DataEntryView x:Name="ViewDataEntry"/>
-            </TabItem>
-            <TabItem x:Name="TabAnalysis"> <!-- Index 4 -->
-                <project:AnalysisView x:Name="ViewAnalysis"/>
-            </TabItem>
-            <TabItem x:Name="TabQualitativeAnalysis"> <!-- Index 5 -->
-                <project:QualitativeAnalysisView x:Name="ViewQualitativeAnalysis"/>
-            </TabItem>
-            <TabItem x:Name="TabQualitativeCoding"> <!-- Index 6 -->
-                <project:QualitativeCodingView x:Name="ViewQualitativeCoding"/>
-            </TabItem>
-            <TabItem x:Name="TabDiscussion"> <!-- Index 7 -->
-                <project:DiscussionView x:Name="ViewDiscussion"/>
-            </TabItem>
-            <TabItem x:Name="TabFinalReport"> <!-- Index 8 -->
-                <project:FinalReportView x:Name="ViewFinalReport"/>
-            </TabItem>
-            <TabItem x:Name="TabJournal"> <!-- Index 9 -->
-                <project:JournalArticleView x:Name="ViewJournalArticle"/>
-            </TabItem>
-            <TabItem x:Name="TabQuality"> <!-- Index 10 -->
-                <project:QualityCheckView x:Name="ViewQualityCheck"/>
-            </TabItem>
-            <TabItem x:Name="TabLibrary"> <!-- Index 11 -->
-                <project:LibraryView x:Name="ViewLibrary"/>
-            </TabItem>
-        </TabControl>
+                <TabItem x:Name="TabDataEntry"> <!-- Index 3 -->
+                    <project:DataEntryView x:Name="ViewDataEntry"/>
+                </TabItem>
+                <TabItem x:Name="TabAnalysis"> <!-- Index 4 -->
+                    <project:AnalysisView x:Name="ViewAnalysis"/>
+                </TabItem>
+                <TabItem x:Name="TabQualitativeAnalysis"> <!-- Index 5 -->
+                    <project:QualitativeAnalysisView x:Name="ViewQualitativeAnalysis"/>
+                </TabItem>
+                <TabItem x:Name="TabQualitativeCoding"> <!-- Index 6 -->
+                    <project:QualitativeCodingView x:Name="ViewQualitativeCoding"/>
+                </TabItem>
+                <TabItem x:Name="TabDiscussion"> <!-- Index 7 -->
+                    <project:DiscussionView x:Name="ViewDiscussion"/>
+                </TabItem>
+                <TabItem x:Name="TabFinalReport"> <!-- Index 8 -->
+                    <project:FinalReportView x:Name="ViewFinalReport"/>
+                </TabItem>
+                <TabItem x:Name="TabJournal"> <!-- Index 9 -->
+                    <project:JournalArticleView x:Name="ViewJournalArticle"/>
+                </TabItem>
+                <TabItem x:Name="TabQuality"> <!-- Index 10 -->
+                    <project:QualityCheckView x:Name="ViewQualityCheck"/>
+                </TabItem>
+                <TabItem x:Name="TabLibrary"> <!-- Index 11 -->
+                    <project:LibraryView x:Name="ViewLibrary"/>
+                </TabItem>
+            </TabControl>
+        </ScrollViewer>
 
         <!-- 5. STATUS BAR -->
         <StatusBar Grid.Row="4" Background="{StaticResource CalmBackgroundBrush}">

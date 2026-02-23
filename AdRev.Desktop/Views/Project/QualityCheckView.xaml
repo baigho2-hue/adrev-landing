@@ -20,7 +20,9 @@
 
                 <TextBlock Text="Référentiel / Checklist" Style="{StaticResource LabelStyle}"/>
                 <ComboBox x:Name="QualityChecklistCombo" Height="35" Margin="0,0,0,10" SelectionChanged="QualityChecklistCombo_SelectionChanged" DisplayMemberPath="Name"/>
-                <TextBlock x:Name="QualityChecklistDesc" Text="Description du référentiel..." FontSize="11" Foreground="#888" TextWrapping="Wrap" Margin="0,0,0,20"/>
+                <TextBlock x:Name="QualityChecklistDesc" Text="Description du référentiel..." FontSize="11" Foreground="#888" TextWrapping="Wrap" Margin="0,0,0,10"/>
+                
+                <Button Content="Importer Critères (Excel)" Click="ImportCustomChecklist_Click" Style="{StaticResource MaterialDesignOutlinedButton}" Height="30" Padding="5,0"/>
 
                 <Border Background="#E8F5E9" Padding="15" CornerRadius="5" Margin="0,20,0,0">
                     <StackPanel>
