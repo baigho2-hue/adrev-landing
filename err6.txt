@@ -1,1 +1,0 @@
-C:\Users\HP\Documents\AdRev\AdRev.Desktop\ProtocolWindow.xaml(38,21): error MC2000: Erreur de build inconnue, 'MC4005┬á: impossible de trouver le Style Property 'ShadowDepth' sur le type 'MaterialDesignThemes.Wpf.ShadowAssist'. Ligne 38 Position 21.'  [C:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop.csproj]

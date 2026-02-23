@@ -1,7 +1,0 @@
-c:\Users\HP\Documents\AdRev\AdRev.Desktop\NewProjectWindow.xaml.cs(41,93): error CS0117: 'ScientificDomain' ne contient pas de définition pour 'PublicHealth' [c:\Users\HP\Documents\AdRev\AdRev.Desktop\AdRev.Desktop_5pjqpcis_wpftmp.csproj]
-
-ÉCHEC de la build.
-    5 Avertissement(s)
-    1 Erreur(s)
-
-Temps écoulé 00:00:02.84
